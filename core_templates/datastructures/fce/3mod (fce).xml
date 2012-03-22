@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+		<disableDataPreview>1</disableDataPreview>
+	</meta>
+	<ROOT type="array">
+		<tx_templavoila type="array">
+			<title>ROOT</title>
+			<description>Inner mapping to #root-mapping-hook</description>
+		</tx_templavoila>
+		<type>array</type>
+		<el type="array">
+			<field_module_distribution type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>Module Distribution</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+					<TypoScript>
+<![CDATA[
+10 = LOAD_REGISTER
+10.moduleDistribution.field = field_module_distribution
+]]>
+                    </TypoScript>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.131313</numIndex>
+								<numIndex index="1">131313</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.121414</numIndex>
+								<numIndex index="1">121414</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.141214</numIndex>
+								<numIndex index="1">141214</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.141412</numIndex>
+								<numIndex index="1">141412</numIndex>
+							</numIndex>
+						</items>
+						<default>131313</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.label</label>
+				</TCEforms>
+			</field_module_distribution>
+			<field_module_1_title type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 1: Title</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>input</eType>
+					<proc type="array">
+						<HSC type="integer">1</HSC>
+					</proc>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>input</type>
+						<size>48</size>
+						<eval>trim</eval>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.title</label>
+				</TCEforms>
+			</field_module_1_title>
+			<field_module_1_show_title type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 1: Show Title</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="1">0</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="1">1</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="1">2</numIndex>
+							</numIndex>
+						</items>
+						<default>0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.showTitle.label</label>
+				</TCEforms>
+			</field_module_1_show_title>
+			<field_module_1_bleed type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 1: Bleed</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>int</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>check</type>
+						<eval>int</eval>
+						<default type="integer">0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.bleed</label>
+				</TCEforms>
+			</field_module_1_bleed>
+			<field_module_1_frame type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 1: Column Style</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>int</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>check</type>
+						<eval>int</eval>
+						<default type="integer">0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.colStyle</label>
+				</TCEforms>
+			</field_module_1_frame>
+			<field_module_2_title type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 2: Title</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>input</eType>
+					<proc type="array">
+						<HSC type="integer">1</HSC>
+					</proc>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>input</type>
+						<size>48</size>
+						<eval>trim</eval>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.title</label>
+				</TCEforms>
+			</field_module_2_title>
+			<field_module_2_show_title type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 2: Show Title</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="1">0</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="1">1</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="1">2</numIndex>
+							</numIndex>
+						</items>
+						<default>0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.showTitle.label</label>
+				</TCEforms>
+			</field_module_2_show_title>
+			<field_module_2_bleed type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 2: Bleed</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>int</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>check</type>
+						<eval>int</eval>
+						<default type="integer">0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.bleed</label>
+				</TCEforms>
+			</field_module_2_bleed>
+			<field_module_2_frame type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 2: Column Style</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>int</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>check</type>
+						<eval>int</eval>
+						<default type="integer">0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.colStyle</label>
+				</TCEforms>
+			</field_module_2_frame>
+			<field_module_3_title type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 3: Title</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>input</eType>
+					<proc type="array">
+						<HSC type="integer">1</HSC>
+					</proc>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>input</type>
+						<size>48</size>
+						<eval>trim</eval>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.title</label>
+				</TCEforms>
+			</field_module_3_title>
+			<field_module_3_show_title type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 3: Show Title</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="1">0</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="1">1</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="1">2</numIndex>
+							</numIndex>
+						</items>
+						<default>0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.showTitle.label</label>
+				</TCEforms>
+			</field_module_3_show_title>
+			<field_module_3_bleed type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 3: Bleed</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>int</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>check</type>
+						<eval>int</eval>
+						<default type="integer">0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.bleed</label>
+				</TCEforms>
+			</field_module_3_bleed>
+			<field_module_3_frame type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>MODULE 3: Column Style</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>int</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>check</type>
+						<eval>int</eval>
+						<default type="integer">0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.colStyle</label>
+				</TCEforms>
+			</field_module_3_frame>
+			<field_module_group_library type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>Module Group Library</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>TypoScriptObject</eType>
+					<TypoScriptObjPath>moduleGroupSetup</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_module_group_library>
+			<field_module_1 type="array">
+				<tx_templavoila type="array">
+					<title>Module 1</title>
+					<description>Outer to first module</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>ce</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+10 = LOAD_REGISTER
+10 {
+	moduleGroupWidth.data = register:containerWidth
+	containerWidth.data = register:moduleWidth1
+	maxImageWidth.data = register:containerWidth
+	nestingLevel = 1
+	level1ContainerWidth.data = register:moduleGroupWidth
+	containerElementPresent = 1
+	defaultHeaderType.data = register:defaultHeaderInsideModule
+	defaultHeaderType.if.isFalse.field = field_module_1_frame
+}
+20 = COA
+20 {
+	stdWrap.dataWrap = <div class="moduleGroup tripleModuleGroup"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;margin-right:{register:moduleGutter}px;">|</div>
+	10 = TEXT
+	10.data = register:renderedModuleHeader1
+	20 = LOAD_REGISTER
+	20 {
+		containerWidth.data = register:bodyWidthMod1
+		maxImageWidth.data = register:containerWidth
+		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer1
+		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer1
+		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer1
+		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer1
+	}
+	30 = RECORDS
+	30 {
+		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth1}px;border-right-width:{register:moduleBodyWrapBorderWidth1}px;"><div class="{register:moduleBodyClass1}">|<div class="clearOnly">&nbsp;</div></div></div>
+		source.current = 1
+		tables = tt_content
+	}
+	50 = TEXT
+	50.data = register:renderedModuleFooter1
+}
+60 = LOAD_REGISTER
+60 {
+	containerWidth.data = register:moduleGroupWidth
+	maxImageWidth.data = register:containerWidth
+	defaultHeaderType = 0
+}
+]]>
+                    </TypoScript>
+					<enableDragDrop>1</enableDragDrop>
+					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tt_content</allowed>
+						<size>5</size>
+						<maxitems>200</maxitems>
+						<minitems>0</minitems>
+						<multiple>1</multiple>
+						<show_thumbs>1</show_thumbs>
+					</config>
+					<label></label>
+				</TCEforms>
+			</field_module_1>
+			<field_module_2 type="array">
+				<tx_templavoila type="array">
+					<title>Module 2</title>
+					<description>Outer to first module</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>ce</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+10 = LOAD_REGISTER
+10 {
+	moduleGroupWidth.data = register:containerWidth
+	containerWidth.data = register:moduleWidth2
+	maxImageWidth.data = register:containerWidth
+	defaultHeaderType.data = register:defaultHeaderInsideModule
+	defaultHeaderType.if.isFalse.field = field_module_2_frame
+}
+20 = COA
+20 {
+	stdWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution}" style="width:{register:moduleWidth2}px;float:left;">|</div>
+	10 = TEXT
+	10.data = register:renderedModuleHeader2
+	20 = LOAD_REGISTER
+	20 {
+		containerWidth.data = register:bodyWidthMod2
+		maxImageWidth.data = register:containerWidth
+		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer2
+		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer2
+		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer2
+		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer2
+	}
+	30 = RECORDS
+	30 {
+		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth2}px;border-right-width:{register:moduleBodyWrapBorderWidth2}px;"><div class="{register:moduleBodyClass2}">|<div class="clearOnly">&nbsp;</div></div></div>
+		source.current = 1
+		tables = tt_content
+	}
+	50 = TEXT
+	50.data = register:renderedModuleFooter2
+}
+60 = LOAD_REGISTER
+60 {
+	containerWidth.data = register:moduleGroupWidth
+	maxImageWidth.data = register:containerWidth
+	defaultHeaderType = 0
+}
+]]>
+                    </TypoScript>
+					<enableDragDrop>1</enableDragDrop>
+					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tt_content</allowed>
+						<size>5</size>
+						<maxitems>200</maxitems>
+						<minitems>0</minitems>
+						<multiple>1</multiple>
+						<show_thumbs>1</show_thumbs>
+					</config>
+					<label></label>
+				</TCEforms>
+			</field_module_2>
+			<field_module_3 type="array">
+				<tx_templavoila type="array">
+					<title>Module 3</title>
+					<description>Outer to third module</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>ce</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+10 = LOAD_REGISTER
+10 {
+	moduleGroupWidth.data = register:containerWidth
+	containerWidth.data = register:moduleWidth3
+	maxImageWidth.data = register:containerWidth
+	defaultHeaderType.data = register:defaultHeaderInsideModule
+	defaultHeaderType.if.isFalse.field = field_module_3_frame
+}
+20 = COA
+20	{
+	stdWrap.dataWrap = <div class="{register:classModule3}{register:classModule3Distribution}" style="width:{register:moduleWidth3}px;float:right;">|</div><div class="clearOnly">&nbsp;</div></div><!-- end .tripleModuleGroup  -->
+	10 = TEXT
+	10.data = register:renderedModuleHeader3
+	20 = LOAD_REGISTER
+	20 {
+		containerWidth.data = register:bodyWidthMod3
+		maxImageWidth.data = register:containerWidth
+		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer3
+		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer3
+		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer3
+		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer3
+	}
+	30 = RECORDS
+	30 {
+		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth3}px;border-right-width:{register:moduleBodyWrapBorderWidth3}px;"><div class="{register:moduleBodyClass3}">|<div class="clearOnly">&nbsp;</div></div></div>
+		source.current = 1
+		tables = tt_content
+	}
+	50 = TEXT
+	50.data = register:renderedModuleFooter3
+}
+60 = LOAD_REGISTER
+60 {
+	containerWidth.data = register:moduleGroupWidth
+	maxImageWidth.data = register:containerWidth
+	defaultHeaderType = 0
+	nestingLevel = 1
+}
+]]>
+                    </TypoScript>
+					<enableDragDrop>1</enableDragDrop>
+					<oldStyleColumnNumber type="integer">1</oldStyleColumnNumber>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tt_content</allowed>
+						<size>5</size>
+						<maxitems>200</maxitems>
+						<minitems>0</minitems>
+						<multiple>1</multiple>
+						<show_thumbs>1</show_thumbs>
+					</config>
+					<label></label>
+				</TCEforms>
+			</field_module_3>
+		</el>
+	</ROOT>
+</T3DataStructure>

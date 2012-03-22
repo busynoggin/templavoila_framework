@@ -1,0 +1,559 @@
+2011-05-05  jeff
+
+	* doc/manual.sxw: Updated ChangeLog in manual.
+
+2011-05-05  busynoggin
+
+	* core_templates/datastructures/page/f1 (page).xml,
+	  core_templates/datastructures/page/f2 (page).xml,
+	  core_templates/datastructures/page/f3 (page).xml: Fixed issue
+	  with pre and post feature code not showing up due to an earlier
+	  change from TS copy to reference
+
+2011-03-29  busynoggin
+
+	* core_templates/datastructures/fce/plain_image (fce).xml: Changed
+	  default on plain image FCE to be display:block
+
+2011-03-22  jeff
+
+	* doc/manual.sxw: Updated ChangeLog in manual.
+	* core_templates/typoscript/core_typoscript.ts: Temporarily
+	  disabled TemplaVoila's renderUnmapped setting to avoid page
+	  titles and other element showing up unexpectedly.
+
+2011-03-02  jeff
+
+	* ext_emconf.php: Changing version number back to 1.2-dev.
+	* doc/manual.sxw, ext_emconf.php: Release of TemplaVoila Framework
+	  1.2.2
+	* doc/manual.sxw: Updated changelog in manual.
+	* class.tx_templavoilaframework_lib.php: Don't pass pObj to hooks
+	  since we're using a static methodl
+
+2011-02-25  jeff
+
+	* core_templates/typoscript/core_typoscript.ts: Added TV
+	  renderUnmapped=false setting to ignore unmapped content areas.
+	* core_templates/datastructures/page/f1 (page).xml,
+	  core_templates/datastructures/page/f2 (page).xml,
+	  core_templates/datastructures/page/f3 (page).xml: Use references
+	  when checking if feature area has content.
+
+2010-11-06  busynoggin
+
+	* core_templates/typoscript/core_typoscript.ts: Change module
+	  graphic headlines from TS copies to a reference to accommodate
+	  for changing skin TS to come after core TS
+
+2010-10-22  jeff
+
+	* ext_emconf.php: Reset version number to 1.2-dev.
+	* ext_emconf.php: Updated emconf after TER release.
+
+2010-10-22  busynoggin
+
+	* core_templates/css/backend_typo3_4-3.css: CSS adjustment so top
+	  TV tabs in page module operate properly in TYPO3 4.3
+
+2010-10-22  jeff
+
+	* doc/manual.sxw: Updated Changelog in manual.
+
+2010-10-21  busynoggin
+
+	* core_templates/css/backend.css: CSS adjustment for default flag
+	  on CE
+
+2010-10-21  jeff
+
+	* ext_localconf.php: Load a different backend stylesheet for TYPO3
+	  4.3.
+
+2010-10-21  busynoggin
+
+	* core_templates/css/backend.css: darkening tone of BE columns
+	* core_templates/css/backend_typo3_4-3.css: Adding of stylesheet to
+	  use with TYPO3 version 4.3
+
+2010-10-19  jeff
+
+	* ext_emconf.php: Raised version number to 1.2-dev.
+	* ext_emconf.php: Updated emconf after TER release.
+	* doc/manual.sxw: Updated ChangeLog in manual.
+
+2010-10-19  busynoggin
+
+	* lang/locallang.xml: Added new entries for German, Dutch and
+	  Spanish
+
+2010-10-18  busynoggin
+
+	* core_templates/typoscript/core_typoscript.ts: Changed including
+	  of additionalDocHeadCode to a reference
+
+2010-10-13  busynoggin
+
+	* core_templates/css/backend.css: removed commented out styles
+	* core_templates/css/backend.css: Took out right margin on one of
+	  the CE header elements to helping wit overlapping CEs in nesting
+	  situations
+	* lang/locallang.xml: Updated Dutch to include new localized
+	  content tabs and FCE headers
+	* core_templates/css/backend.css: Widened content tabs and made
+	  font smaller to accommodate longer tab names
+	* lang/locallang.xml: Added Spanish translations for tabs FCE
+	  headers
+
+2010-10-08  busynoggin
+
+	* core_templates/css/backend.css: Added CSS to fix gap at top of
+	  the page module
+
+2010-10-06  busynoggin
+
+	* core_templates/typoscript/core_typoscript.ts: Changed the copying
+	  of TS objects to referencing of TS objects
+	* core_templates/js/backend.js: Adjusted backend JS adjusted so as
+	  not to conflict with TV 1.5
+	* core_templates/css/backend.css: Backend CSS adjusted for new look
+	  and markup in TV 1.5
+	* class.tx_templavoilaframework_lib.php: Now skin TypoScript and
+	  constants and included after the Core TypoScript and are only
+	  included once
+
+2010-10-05  jeff
+
+	* class.tx_templavoilaframework_lib.php,
+	  core_templates/datastructures/fce/1mod (fce).html,
+	  core_templates/datastructures/fce/2col (fce).html,
+	  core_templates/datastructures/fce/2mod (fce).html,
+	  core_templates/datastructures/fce/3col (fce).html,
+	  core_templates/datastructures/fce/3mod (fce).html,
+	  core_templates/datastructures/fce/4col (fce).html,
+	  core_templates/datastructures/fce/4mod (fce).html,
+	  core_templates/datastructures/fce/html_wrapper (fce).html,
+	  core_templates/datastructures/page/f1 (page).html,
+	  core_templates/datastructures/page/f2 (page).html,
+	  core_templates/datastructures/page/f3 (page).html,
+	  lang/locallang.xml: Added localization for backend layout (tabs,
+	  headers, etc) and data structure names. Fixes ticket #1687.
+	* core_templates/datastructures/page/f1 (page).html,
+	  core_templates/datastructures/page/f1 (page).xml,
+	  core_templates/datastructures/page/f2 (page).html,
+	  core_templates/datastructures/page/f2 (page).xml,
+	  core_templates/datastructures/page/f3 (page).html,
+	  core_templates/datastructures/page/f3 (page).xml: Follow up for
+	  ticket #1692. Externalized beLayout for pages also.
+	* core_templates/datastructures/fce/1mod (fce).html,
+	  core_templates/datastructures/fce/1mod (fce).xml,
+	  core_templates/datastructures/fce/2col (fce).html,
+	  core_templates/datastructures/fce/2col (fce).xml,
+	  core_templates/datastructures/fce/2mod (fce).html,
+	  core_templates/datastructures/fce/2mod (fce).xml,
+	  core_templates/datastructures/fce/3col (fce).html,
+	  core_templates/datastructures/fce/3col (fce).xml,
+	  core_templates/datastructures/fce/3mod (fce).html,
+	  core_templates/datastructures/fce/3mod (fce).xml,
+	  core_templates/datastructures/fce/4col (fce).html,
+	  core_templates/datastructures/fce/4col (fce).xml,
+	  core_templates/datastructures/fce/4mod (fce).html,
+	  core_templates/datastructures/fce/4mod (fce).xml,
+	  core_templates/datastructures/fce/html_wrapper (fce).html,
+	  core_templates/datastructures/fce/html_wrapper (fce).xml: Moved
+	  backend layout to external files. Fixes ticket #1692.
+	* ext_emconf.php: Raised TemplaVoila requirement to version 1.5.0.
+	  Fixes bug #1879.
+
+2010-09-22  jeff
+
+	* class.tx_templavoilaframework_lib.php: Add sorting for skin keys
+	* class.tx_templavoilaframework_skinselector.php, ext_autoload.php,
+	  ext_tables.php, xclass/class.ux_t3lib_tsparser_ext.php,
+	  xclass/class.ux_t3lib_tstemplate.php: Added autoloader support.
+	* class.tx_templavoilaframework_lib.php, ext_localconf.php,
+	  ext_tables.php: Reworked static data structure handling to
+	  support TemplaVoila 1.5 changes. Fixes bug #1869.
+
+2010-08-09  jeff
+
+	* core_templates/datastructures/fce/1mod (fce).xml,
+	  core_templates/datastructures/fce/2col (fce).xml,
+	  core_templates/datastructures/fce/2mod (fce).xml,
+	  core_templates/datastructures/fce/3col (fce).xml,
+	  core_templates/datastructures/fce/3mod (fce).xml,
+	  core_templates/datastructures/fce/4col (fce).xml,
+	  core_templates/datastructures/fce/4mod (fce).xml,
+	  core_templates/datastructures/fce/html_wrapper (fce).xml,
+	  core_templates/datastructures/page/f1 (page).xml,
+	  core_templates/datastructures/page/f2 (page).xml,
+	  core_templates/datastructures/page/f3 (page).xml: Added
+	  enableDragDrop for all content element contains. Fixes bug #1822.
+
+2010-08-07  busynoggin
+
+	* core_templates/datastructures/fce/2col (fce).xml,
+	  core_templates/datastructures/fce/2mod (fce).xml,
+	  core_templates/datastructures/fce/3col (fce).xml,
+	  core_templates/datastructures/fce/3mod (fce).xml,
+	  core_templates/datastructures/fce/4col (fce).xml,
+	  core_templates/datastructures/fce/4mod (fce).xml,
+	  core_templates/typoscript/core_typoscript.ts: Added distribution
+	  class to columns and modules (e.g. oneThird, oneHalf, etc.)
+	* core_templates/datastructures/fce/feature_image (fce).xml:
+	  Reformatted TS only no change in code.
+	* core_templates/datastructures/fce/plain_image (fce).xml: On plain
+	  image added class to the image (.plainImage) and on its link
+	  (.plainImageLink)
+
+2010-07-06  jeff
+
+	* ext_emconf.php: Changing version number to 1.1-dev after release
+	  and tagging.
+	* ext_emconf.php: Updated emconf after TER release.
+	* doc/manual.sxw: Updated ChangeLog in manual.
+
+2010-06-25  busynoggin
+
+	* lang/locallang.xml: Added Spanish to local lang
+	* core_templates/datastructures/fce/1mod (fce).xml,
+	  core_templates/datastructures/fce/2mod (fce).xml,
+	  core_templates/datastructures/fce/3mod (fce).xml,
+	  core_templates/datastructures/fce/4mod (fce).xml,
+	  core_templates/typoscript/core_constants.ts,
+	  core_templates/typoscript/core_typoscript.ts: Made adjustments so
+	  developer can specify the tag that wraps the module header.
+	  Default is h3 which is what was hard coded as well. The constant
+	  is called moduleTitleTag and can take values like h1, h2, h3, h4,
+	  h5, div, p
+	  
+	  Made adjustments so developer can specify what should be the
+	  normal header level of content elements within a framed module.
+	  The constant is called defaultHeaderInsideModule and its value
+	  can be numbers 1 through 5
+
+2010-06-22  jeff
+
+	* core_templates/js/core.js: Take unframed modules into account
+	  when doing equal height module calculations. Fixes ticket #1777.
+
+2010-06-15  busynoggin
+
+	* lang/locallang.xml: Added Dutch language support for the backend
+	* core_templates/datastructures/fce/3col (fce).xml,
+	  core_templates/datastructures/fce/4col (fce).xml: Added missing
+	  classes (column-1, column-2, etc.) on 3 and 4 column groups
+
+2010-05-12  jeff
+
+	* ext_emconf.php: Changed version number back to 1.0-dev.
+	* ext_emconf.php: Updated emconf after TER release.
+	* doc/manual.sxw: Updated ChangeLog in manual.
+
+2010-05-10  jeff
+
+	* doc/manual.sxw: Updated ChangeLog in manual.
+	* xclass/class.ux_t3lib_tsparser_ext.php,
+	  xclass/class.ux_t3lib_tstemplate.php: Make sure Static TypoScript
+	  Sources are included before Skin TypoScript.
+
+2010-05-06  jeff
+
+	* ext_emconf.php: Changed version number back to 1.0-dev.
+	* ext_emconf.php: Updated emconf after release to TYPO3.org
+	* doc/manual.sxw: Updated changelog in manual.
+	* core_templates/js/jquery-1.4.2.min.js,
+	  core_templates/js/jquery_library.js,
+	  core_templates/typoscript/core_typoscript.ts: Renamed jQuery
+	  library file to avoid caching issues with new versions.
+
+2010-05-05  jeff
+
+	* core_templates/typoscript/core_constants.ts,
+	  core_templates/typoscript/core_typoscript.ts: Added TypoScript
+	  constant for enableJQuery and set it on by default. Fixes bug
+	  #1691.
+	* core_templates/typoscript/core_typoscript.ts: Force jQuery to be
+	  loaded as a library and on top. Fixes bug #1694.
+	* doc/manual.sxw: Updated manual formatting for better rendering on
+	  TYPO3.org. Fixes #1688 (I hope)
+	* core_templates/typoscript/core_typoscript.ts: Use includJSlibs
+	  for jquery inclusion.
+
+2010-04-18  busynoggin
+
+	* doc/manual.sxw: Adjusted slightly the note about the conflict
+	  with TIMTAB changed the word "install" to "unistall."
+
+2010-04-12  jeff
+
+	* ext_localconf.php: Use new TYPO3 4.4 hook for skin inclusion that
+	  runs after static templates are included.
+
+2010-04-06  jeff
+
+	* class.tx_templavoilaframework_lib.php, ext_localconf.php,
+	  xclass/class.ux_t3lib_tsparser_ext.php,
+	  xclass/class.ux_t3lib_tstemplate.php: Added hook support instead
+	  of XCLASS for TYPO3 4.4 and greater.
+
+2010-04-05  jeff
+
+	* ext_emconf.php: Change version number for 1.0-dev.
+	* ext_emconf.php: Updated emconf after release to TYPO3.org
+	* doc/manual.sxw: Updated Changelog in manual.
+	* class.tx_templavoilaframework_pagelink.php,
+	  class.tx_templavoilaframework_t3dimport.php: Fixed copyright
+	  info.
+	* class.tx_templavoilaframework_pagelink.php,
+	  class.tx_templavoilaframework_t3dimport.php: Added missing XCLASS
+	  inclusion codes.
+
+2010-04-02  busynoggin
+
+	* doc/manual.sxw: Put in info about installing into TYPO3 dummy
+	  package and other edits to the manual
+
+2010-04-02  jeff
+
+	* doc/manual.sxw: Added updated manual from 1.0.1 release.
+	* class.tx_templavoilaframework_lib.php: Only load TypoScript if a
+	  skin has already been selected.
+
+2010-03-29  busynoggin
+
+	* core_templates/css/backend.css: Adjusted CSS so move icon appears
+	  over title bar of CE
+	* ext_emconf.php: Corrected misspelling of
+	  templavoila.busynoggin.com
+	* core_templates/typoscript/core_typoscript.ts: Too out line that
+	  unset page object before we define it. This is in case some
+	  extensions include page object code in their static templates
+
+2010-03-22  jeff
+
+	* class.tx_templavoilaframework_t3dimport.php: Further tweaks to
+	  Flash Message on successfull import.
+	* class.tx_templavoilaframework_t3dimport.php: Added success
+	  message when import is successful. Replaces warning message about
+	  existing templates for better usability.
+
+2010-03-20  busynoggin
+
+	* core_templates/css/backend.css: Adjusted height on text preview
+
+2010-03-19  jeff
+
+	* class.tx_templavoilaframework_pagelink.php: Tweak HTML for
+	  generating link popups so that TYPO3 is fed valid data. Fixes
+	  ticket #1660.
+
+2010-03-19  busynoggin
+
+	* core_templates/datastructures/fce/feature_image (fce).xml,
+	  core_templates/datastructures/fce/plain_image (fce).xml: Added
+	  <preview> tag to hide all data previews but image field on plain
+	  image and module feature FCEs
+
+2010-03-19  jeff
+
+	* core_templates/typoscript/core_typoscript.ts: Switch to
+	  noTrimWrap to reduce the number of HTML entities. Fixes ticket
+	  #1646.
+	* core_templates/typoscript/core_typoscript.ts: Add inline
+	  Javascript for jQuery noConflict. Fixed ticket #1658.
+	* core_templates/locallang.xml: Removed duplicated locallang file.
+	  Fixes ticket #1647.
+	* ext_conf_template.txt: Updated default skin path to fit better
+	  with TemplaVoila defaults. Fixes ticket #1661.
+	* core_templates/js/core.js: Don't set a height on single modules.
+
+2010-03-15  jeff
+
+	* ext_emconf.php: Raise version number to 1.0.0-dev.
+	* ext_emconf.php: Updated emconf after release to TER.
+	* ext_emconf.php: Tweak emconf.php settings.
+	* doc/manual.sxw: Add a few more updates to the manual.
+
+2010-03-15  busynoggin
+
+	* doc/manual.sxw: added initial doc text
+
+2010-03-15  jeff
+
+	* doc, doc/manual.sxw: Added shell of a manual.
+	* core_templates/typoscript/core_constants.ts: Rename logo constant
+	  to siteLogo for more consistency with other constants.
+
+2010-03-14  jeff
+
+	* core_templates/js/backend.js: Add some JS error checking for
+	  missing tabs.
+
+2010-03-13  jeff
+
+	* class.tx_templavoilaframework_t3dimport.php: Update import
+	  warning message.
+
+2010-03-12  jeff
+
+	* core_templates/typoscript/core_constants.ts: Update ordering on
+	  constants.
+	* class.tx_templavoilaframework_t3dimport.php,
+	  core_templates/typoscript/core_constants.ts: Updating warning
+	  message.
+	* core_templates/typoscript/core_constants.ts: Add constants for
+	  generated content and improve a few descriptions.
+	* ext_icon.gif: Updated extension icon.
+	* class.tx_templavoilaframework_lib.php: Correct typo in variable
+	  passed to skinpreview.
+	* class.tx_templavoilaframework_lib.php,
+	  core_templates/typoscript/core_typoscript.ts: Cleaned up skin
+	  constants so that they always contain a trailing slash.
+	* template_objects.t3d: Updated T3D file with new image thumbnails.
+	* ext_emconf.php: Remove bottom loading to work around issues with
+	  TIMTAB.
+	* ext_emconf.php, ext_tables.php: Tweak DS names, FCE thumbnail
+	  display, and load order.
+	* class.tx_templavoilaframework_lib.php: Use info.txt for skin
+	  metadata to avoid any security issues and make editing easier.
+
+2010-03-12  busynoggin
+
+	* core_templates/css/backend.css: Increased height of .tpm-preview
+	  so does not cut off mid-line
+
+2010-03-12  jeff
+
+	* class.tx_templavoilaframework_skinselector.php: Remove height on
+	  current skin selection.
+	* default_screenshot.gif, default_screenshot.jpg: Replace JPG
+	  screenshot with transparent gif.
+
+2010-03-11  jeff
+
+	* class.tx_templavoilaframework_lib.php,
+	  class.tx_templavoilaframework_skinselector.php: Use gif by
+	  default for screenshots.
+
+2010-03-10  jeff
+
+	* class.tx_templavoilaframework_pagelink.php: Remove null fields
+	  that produce Javascript errors in TYPO3 4.3
+	* class.tx_templavoilaframework_lib.php,
+	  core_templates/typoscript/core_typoscript.ts: Change TS prefix
+	  from bnTemplates to templavoila_framework.
+	* class.tx_templavoilaframework_skinselector.php: Remove one more
+	  bit of inline styling.
+	* class.tx_templavoilaframework_skinselector.php, locallang_db.xml:
+	  Bring skin selector in line with WEC Config.
+	* class.tx_templavoilaframework_skinselector.php: Remove inline
+	  styles from skin selector.
+	* class.tx_templavoilaframework_skinselector.php, locallang_db.xml:
+	  Added localization for skin selector.
+	* class.tx_templavoilaframework_lib.php: Add check for missing
+	  custom skins.
+	* class.tx_templavoilaframework_lib.php: Add skin type and path to
+	  the info array.
+	* core_templates/typoscript/core_typoscript.ts: Unset page object
+	  to make sure we don't bring anything along from higher in the
+	  pagetree.
+	* class.tx_templavoilaframework_lib.php: Support png and gif
+	  screenshots in addition to jpg.
+	* class.tx_templavoilaframework_lib.php,
+	  class.tx_templavoilaframework_skinselector.php: Improved error
+	  checking when no skin is selected.
+	* class.tx_templavoilaframework_skinselector.php: Clean up some
+	  dead code and comments.
+	* core_templates/typoscript/core_typoscript.ts: Force jQuery to the
+	  top.
+	* core_templates/typoscript/core_typoscript.ts: Split CSS and JS
+	  includes into individual lines.
+
+2010-03-09  jeff
+
+	* ext_emconf.php: Add templavoila dependency.
+	* class.tx_templavoilaframework_skinselector.php: Make sure
+	  framework library is included before using skin selector.
+	* class.tx_templavoilaframework_skinselector.php: Fix label for
+	  customized skins.
+	* class.tx_templavoilaframework_skinselector.php,
+	  default_screenshot.jpg: Include default thumbnail when skins do
+	  not provide one.
+	* class.tx_templavoilaframework_skinselector.php: Remove stray
+	  label.
+	* core_templates/typoscript/core_typoscript.ts: Add page object
+	  within core TS.
+	* core_templates/css/backend.css: Hide preview data when its too
+	  long.
+	* ext_emconf.php: Changed extension category to fe.
+	* class.tx_templavoilaframework_skinselector.php: Reverse test on
+	  whether skin copies are allowed.
+	* class.tx_templavoilaframework_skinselector.php: Added method to
+	  check if skin copying is allowed.
+	* class.tx_templavoilaframework_lib.php: Improved comments and
+	  internal skin identifiers.
+
+2010-03-03  jeff
+
+	* core_templates/typoscript/core_constants.ts: Minor cleanup for
+	  core constants.
+	* class.tx_templavoilaframework_lib.php: Added hook for setting
+	  skin based on frontend preview. Re-insert skin constants after
+	  core constants to allow for overrides.
+	* core_templates/js/jquery_library.js: Updated to the latest
+	  version of jQuery.
+
+2010-03-02  jeff
+
+	* core_templates/css/backend.css: Resync with latest backend CSS
+	  changes from Ron
+	* class.tx_templavoilaframework_lib.php,
+	  class.tx_templavoilaframework_skinselector.php: Added methods to
+	  copy a skin from the Web->Template module.
+	* ext_tables.php: Updated DS registration with new XML naming
+	  convention.
+	* template_objects.t3d: Updated T3D file with new XML naming
+	  conventions.
+	* core_templates/datastructures/fce/1mod (fce).xml,
+	  core_templates/datastructures/fce/1mod.xml,
+	  core_templates/datastructures/fce/2col (fce).xml,
+	  core_templates/datastructures/fce/2col.xml,
+	  core_templates/datastructures/fce/2mod (fce).xml,
+	  core_templates/datastructures/fce/2mod.xml,
+	  core_templates/datastructures/fce/3col (fce).xml,
+	  core_templates/datastructures/fce/3col.xml,
+	  core_templates/datastructures/fce/3mod (fce).xml,
+	  core_templates/datastructures/fce/3mod.xml,
+	  core_templates/datastructures/fce/4col (fce).xml,
+	  core_templates/datastructures/fce/4col.xml,
+	  core_templates/datastructures/fce/4mod (fce).xml,
+	  core_templates/datastructures/fce/4mod.xml,
+	  core_templates/datastructures/fce/WEC Help [datastructure]
+	  (fce).xml, core_templates/datastructures/fce/feature_image
+	  (fce).xml, core_templates/datastructures/fce/feature_image.xml,
+	  core_templates/datastructures/fce/html_wrapper (fce).xml,
+	  core_templates/datastructures/fce/html_wrapper.xml,
+	  core_templates/datastructures/fce/plain_image (fce).xml,
+	  core_templates/datastructures/fce/plain_image.xml: Resyncing FCE
+	  data structures with latest changes from Ron.
+	* core_templates/datastructures/page/f1 (page).xml,
+	  core_templates/datastructures/page/f1.xml,
+	  core_templates/datastructures/page/f2 (page).xml,
+	  core_templates/datastructures/page/f2.xml,
+	  core_templates/datastructures/page/f3 (page).xml,
+	  core_templates/datastructures/page/f3.xml: Resyncing page data
+	  structures with latest changes from Ron.
+	* core_templates/css/backend.css: Resyncing with latest changes
+	  from Ron.
+	* class.tx_templavoilaframework_skinselector.php: Tweak bottom
+	  border in skin selector.
+	* class.tx_templavoilaframework_skinselector.php, ext_tables.php:
+	  Added userFunc for skin selector rather than simple dropdown.
+	  Still a work in progress.
+
+2010-02-12  jeff
+
+	* .: Moving TV framework extension to trunk.
+	* Adding templavoila_framework extension.
+

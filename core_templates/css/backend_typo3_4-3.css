@@ -1,0 +1,137 @@
+.nobr {
+	white-space:normal;
+	}
+
+.tpm-element-title img {
+	margin-right: 5px;
+	float: left;
+	}
+
+.tpm-container-element {
+	width:100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.tvPropertyPreview {
+	display: none;
+}
+
+.fceTypeHeader {
+	background-color:#a1a5a7;
+	color:white;
+	margin:0;
+	text-align:center;
+	font-size:14px;
+	}
+
+.tvColumnWrap {
+	 background-color:#e1e3e5;
+	 margin:0;
+	 paddng:0;
+	}
+
+.tvColumnWrap .tvColumnWrap {
+	 background-color: #c8cacc;	
+	 }
+
+.tvColumnWrap .tvColumnWrap .tvColumnWrap {
+	 background-color: #afb1b3;
+	 }
+
+#tvContentOuterWrap .bgColor6 {
+	background: none;
+	}
+
+.tpm-element-control {
+	float: right;
+	}
+
+.tpm-titlebar,
+.tpm-titlebar-fromOtherPage {
+	background-color: #797D80;
+	vertical-align: top;
+	}
+
+.tpm-titlebar-fromOtherPage {
+	background-color: #41679c;
+	}
+
+.tpm-titlebar-fromOtherPage em {
+	color: white;
+	}
+
+.tpm-titlebar-fromOtherPage em:after {
+	content: " (this is a reference)";
+	}
+
+.tpm-titlebar td {
+	padding:  3px 5px;
+	}
+
+.tpm-titlebar td {
+	color: white;
+	font-weight:bold;
+	}
+
+#tvContentOuterWrap {margin: 10px;}
+
+.tvContentTab {
+	position: relative;
+	z-index: 1100;
+	float: left;
+	background-color: #c7cdd1;
+	padding: 4px 0 2px;
+	width: 115px;
+	margin: 0 5px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 12px;
+	color: #797d80;
+	text-align: center;
+	cursor: pointer;
+	}
+
+#tvTabBase {
+	height: 10px;
+	background-color: #797d80;
+	clear: both;
+	}
+
+.tvContent {
+	background-color: white;
+	padding: 0 20px;
+	border: 3px solid #797d80;
+	clear: both;
+	/*min-height: 100px;*/
+	}
+
+.tvContentTab.tvfwActiveTab {
+	background-color: #797d80;
+	color: white;
+	cursor: auto;
+	}
+
+div#contentMenu0 {
+	z-index: 1200;
+	}
+
+.tpm-preview {
+	height: 45px;
+	overflow: hidden;
+	}
+
+.sortable_handle {
+	cursor: move;
+	padding-bottom: 5px;
+	color: white;
+	font-weight: bold;
+	}
+
+.typo3-templavoila-pagemodule > #typo3-docbody {
+	top: 22px;
+	}
+
+.typo3-templavoila-pagemodule > #typo3-docbody > #typo3-docheader-row2 {
+	height: auto;
+	}

@@ -1,0 +1,6 @@
+# cat=basic//1; type=text; label=Custom Skin Path: Path (relative to TYPO3 root) of any custom skins. Public skins are distributed as TYPO3 extensions.
+customSkinPath = fileadmin/templates/skins/
+
+#cat=basic//2; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_t3dimport.php:&tx_templavoilaframework_t3dimport->main]; label=Import Template Objects: Using the template framework requires several TemplaVoila Template Objects. Select a storage folder and import these onto your site.
+templateObjectPID = 28
+
