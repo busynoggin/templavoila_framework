@@ -248,10 +248,6 @@ class tx_templavoilaframework_lib {
 				$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
 
 				$renderMode = self::getSkinRenderMode($skinConstants, $relSkinPath);
-				if ($GLOBALS['TSFE']) {
-					$GLOBALS['TSFE']->register['tvfwRenderMode'] = $renderMode;
-				}
-
 				$coreSubrow = array(
 					'constants' => t3lib_div::getUrl($absCorePath . 'typoscript/v' . $renderMode . '/core_constants.ts'),
 					'config' => t3lib_div::getUrl($absCorePath . 'typoscript/v' . $renderMode . '/core_typoscript.ts'),
