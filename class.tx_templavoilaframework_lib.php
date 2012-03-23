@@ -242,9 +242,19 @@ class tx_templavoilaframework_lib {
 			if ($relSkinPath) {
 				$relCorePath = t3lib_extMgm::siteRelPath('templavoila_framework') . 'core_templates/';
 				$absCorePath = PATH_site . $relCorePath;
+				$absSkinPath = PATH_site . $relSkinPath;
+
+				$skinConstants = @is_file($absSkinPath . 'typoscript/skin_constants.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '';
+				$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
+
+				$renderMode = self::getSkinRenderMode($skinConstants, $relSkinPath);
+				if ($GLOBALS['TSFE']) {
+					$GLOBALS['TSFE']->register['tvfwRenderMode'] = $renderMode;
+				}
+
 				$coreSubrow = array(
-					'constants' => t3lib_div::getUrl($absCorePath . 'typoscript/core_constants.ts'),
-					'config' => t3lib_div::getUrl($absCorePath . 'typoscript/core_typoscript.ts'),
+					'constants' => t3lib_div::getUrl($absCorePath . 'typoscript/v' . $renderMode . '/core_constants.ts'),
+					'config' => t3lib_div::getUrl($absCorePath . 'typoscript/v' . $renderMode . '/core_typoscript.ts'),
 					'editorcfg' => '',
 					'include_static' => '',
 					'include_static_file' => '',
@@ -257,10 +267,9 @@ class tx_templavoilaframework_lib {
 				$coreSubrow['constants'] .= chr(10) . 'templavoila_framework.corePath = ' . $relCorePath;
 				$pObj->processTemplate($coreSubrow, $idList.',templavoilaframework_core', $pid, 'templavoilaframework_core', $templateID);
 
-				$absSkinPath = PATH_site . $relSkinPath;
 				$skinSubrow = array(
-					'constants'=>	@is_file($absSkinPath . 'typoscript/skin_constants.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '',
-					'config'=>		@is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '',
+					'constants'=>	$skinConstants,
+					'config'=>		$skinSetup,
 					'editorcfg'=>	'',
 					'include_static'=>	'',
 					'include_static_file'=>	'',
@@ -274,6 +283,28 @@ class tx_templavoilaframework_lib {
 				$pObj->processTemplate($skinSubrow, $idList . ',templavoilaframework_skin_' . $skin, $pid, 'templavoilaframework_skin_' . $skin, $templateID);
 			}
 		}
+	}
+
+	/**
+	 * Gets the skin rendering mode, as defined in the constants. Defaults to 1 if no render mode is defined.
+	 *
+	 * @param string $constants
+	 * @param string $relativeSkinPath
+	 * @return string
+	 */
+	public static function getSkinRenderMode($constants, $relativeSkinPath) {
+		$tsParser = t3lib_div::makeInstance('t3lib_TSparser');
+		$tsParser->parse($constants);
+
+		$skinRenderingMode = $tsParser->setup['plugin.']['templavoila_framework.']['renderMode'];
+		if (!$skinRenderMode) {
+			t3lib_div::deprecationLog('The TemplaVoila Framework now requires that the render mode is set via tha \'plugin.templavoila_framework.renderMode\' TypoScript constant.' .
+			                          'This value currently defaults to 1 but will be removed in a future version of the TemplaVoila Framework.' .
+			                          'The skin at ' . $relativeSkinPath . ' should be updated to include this TypoScript constant.');
+			$skinRenderMode = 1;
+		}
+
+		return $skinRenderMode;
 	}
 
 	/**
