@@ -19,19 +19,13 @@ t3lib_extMgm::addPageTSConfig('
 	mod.web_txtemplavoilaM1.stylesheet = ' . t3lib_extMgm::extRelPath('templavoila_framework') . 'core_templates/css/' . $backendStylesheet . '
 ');
 
-/**
- * For TemplaVoila versions greater than or equal to 1.5, add static data structures as part of EXTCONF
- * For TemplaVoila versions less than 1.5, see ext_tables.php
- */
-if (tx_templavoilaframework_lib::getTemplaVoilaVersionAsInt() >= 1005000) {
-	$staticDataStructures = tx_templavoilaframework_lib::getStaticDataStructureArray(
-		'EXT:' . $_EXTKEY . '/core_templates/datastructures/page/',
-		'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/'
-	);
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'] = array_merge(
-		(array) $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'],
-		$staticDataStructures
-	);
-}
+$staticDataStructures = tx_templavoilaframework_lib::getStaticDataStructureArray(
+	'EXT:' . $_EXTKEY . '/core_templates/datastructures/page/',
+	'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/'
+);
+$GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'] = array_merge(
+	(array) $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'],
+	$staticDataStructures
+);
 
 ?>

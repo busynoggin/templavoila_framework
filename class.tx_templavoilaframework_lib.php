@@ -7,7 +7,7 @@
  * All rights reserved
  *
  * This file is part of the Web-Empowered Church (WEC)
- * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries 
+ * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries
  * International (http://CTMIinc.org). The WEC is developing TYPO3-based
  * (http://typo3.org) free software for churches around the world. Our desire
  * is to use the Internet to help offer new life through Jesus Christ. Please
@@ -434,45 +434,6 @@ class tx_templavoilaframework_lib {
 
 		return $staticDataStructureArray;
 	}
-
-	/**
-	 * Gets the current version of TemplaVoila as an integer.
-	 * For example, 1.15.3 = 1015003
-	 *
-	 * @return int
-	 */
-	public static function getTemplaVoilaVersionAsInt() {
-		return t3lib_div::int_from_ver(self::getTemplaVoilaVersion()); 
-	}
-
-
-	/**
-	 * Gets the current version of TemplaVoila as a string.
-	 *
-	 * @return string
-	 */
-	public static function getTemplaVoilaVersion() {
-		$key = 'templavoila';
-		if (method_exists('t3lib_extMgm', 'getExtensionVersion')) {
-			$version = t3lib_extMgm::getExtensionVersion($key);
-		} else {
-			// Copy of the core method in TYPO3 4.5
-			if (!is_string($key) || empty($key)) {
-				throw new InvalidArgumentException('Extension key must be a non-empty string.');
-			}
-			if (!t3lib_extMgm::isLoaded($key)) {
-				return '';
-			}
-
-			$_EXTKEY = $key;
-			include(t3lib_extMgm::extPath($key) . 'ext_emconf.php');
-
-			$version = $EM_CONF[$key]['version'];
-		}
-
-		return $version;
-	}
-
 }
 
 if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_lib.php'])	{
