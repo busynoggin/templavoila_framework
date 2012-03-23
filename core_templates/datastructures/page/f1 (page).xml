@@ -149,32 +149,54 @@
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+
+# 5 = LOAD_REGISTER
+# 5.tvfwRenderMode = 2
+
+10 = CASE
 10 {
-	containerWidth = {$containerWidth}
-	maxImageWidth = {$containerWidth}
-	originalContainerWidth.data = register:containerWidth
-	nestingLevel = 0
-}
-20 = COA
-20 {
-	wrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
-	10 = TEXT
-	10 {
-		data = page:title
-		htmlSpecialChars = 1
-		wrap = <h1 class="csc-firstHeader centralHeadline">|</h1>
-		if {
-			value.data = register:autoMainHeadline
-			equals = 0
-			negate = 1
+	key.data = register:tvfwRenderMode
+	1 = COA
+	1	{
+		10 = LOAD_REGISTER
+		10 {
+			containerWidth = {$containerWidth}
+			maxImageWidth = {$containerWidth}
+			originalContainerWidth.data = register:containerWidth
+			nestingLevel = 0
+		}
+		20 = COA
+		20 {
+			wrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+			10 = TEXT
+			10 {
+				data = page:title
+				htmlSpecialChars = 1
+				wrap = <h1 class="csc-firstHeader centralHeadline">|</h1>
+				if {
+					value.data = register:autoMainHeadline
+					equals = 0
+					negate = 1
+				}
+			}
+		}
+		20.20 = RECORDS
+		20.20 {
+			source.current = 1
+			tables = tt_content
 		}
 	}
-}
-20.20 = RECORDS
-20.20 {
-	source.current = 1
-	tables = tt_content
+	2 = COA
+	2 {
+		10 = TEXT
+		10.value = This is Version 2 Rendering
+	
+	}
+	default = COA
+	default {
+		10 = TEXT
+		10.value = You must declare a rendering mode in your skin constants
+	}
 }
 ]]>
 					</TypoScript>
