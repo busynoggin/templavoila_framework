@@ -156,7 +156,8 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwBlockWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		tvfwBlockBeginWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
 		containerWidth = {$containerWidth}
 	}
 	2 = LOAD_REGISTER
@@ -168,11 +169,13 @@
 			isInList = {$maxRenderMode}
 			negate = 1
 		}
-		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}{register:tvfwTemplateCheck}|{register:{$templateKey}{$fieldKey}endWrap}
+		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}{register:tvfwTemplateCheck}
+		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwBlockWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin--><h3 style="background:red;color:white;padding:10px;">You must declare a rendering mode in your skin constants <a href="http://www.busynoggin.com/" style="color:white;text-decoration:underline;">more info</a></h3>||<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		tvfwBlockBeginWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin--><h3 style="background:red;color:white;padding:10px;">You must declare a rendering mode in your skin constants <a href="http://www.busynoggin.com/" style="color:white;text-decoration:underline;">more info</a></h3>
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
 		containerWidth = {$containerWidth}
 	}
 }
@@ -185,7 +188,8 @@
 }
 30 = COA
 30 {
-	wrap.data = register:tvfwBlockWrap
+	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+	wrap.insertData = 1
 	10 = TEXT
 	10 {
 		data = page:title
@@ -280,18 +284,21 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwBlockWrap = <div id="generatedContent-1">|</div><!-- end #generatedContent-1  -->
+		tvfwBlockBeginWrap = <div id="generatedContent-1">
+		tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
 		containerWidth = {$containerWidth}
 		generatedContent-1contentsource = {$contentSource}
 	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+		tvfwBlockBeginWrap.dataWrap = register:{$templateKey}{$fieldKey}beginWrap
+		tvfwBlockEndWrap.dataWrap = register:{$templateKey}{$fieldKey}endWrap
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwBlockWrap = <div id="generatedContent-1">|</div><!-- end #generatedContent-1  -->
+		tvfwBlockBeginWrap = <div id="generatedContent-1">
+		tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
 		containerWidth = {$containerWidth}
 	}
 }
@@ -304,7 +311,8 @@
 }
 30 = CONTENT
 30 {
-	wrap.dataWrap = {register:tvfwBlockWrap}
+	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+	wrap.insertData = 1
 	table = tt_content
 	select {
 		pidInList.data = register:generatedContent-1contentsource
@@ -349,17 +357,20 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwBlockWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		tvfwBlockBeginWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
 		containerWidth = {$containerWidth}
 	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
+		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwBlockWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		tvfwBlockBeginWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
 		containerWidth = {$containerWidth}
 	}
 }
@@ -380,8 +391,8 @@
 	source.current = 1
 	tables = tt_content
 	stdWrap {
-		required = 1
-		data = register:tvfwBlockWrap
+		wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+		wrap.insertData = 1
 		## Set to load register only if content is present (required = 1) so that preCodeFeature & postCodeFeature is properly triggered
 		postCObject = LOAD_REGISTER
 		postCObject.contentElementsPresent = 1
@@ -470,18 +481,21 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwBlockWrap = <div id="generatedContent-2">|</div><!-- end #generatedContent-2  -->
+		tvfwBlockBeginWrap = <div id="generatedContent-2">
+		tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
 		containerWidth = {$containerWidth}
 		generatedContent-2contentsource = {$contentSource}
 	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
+		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwBlockWrap = <div id="generatedContent-2">|</div><!-- end #generatedContent-2  -->
+		tvfwBlockBeginWrap = <div id="generatedContent-2">
+		tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
 		containerWidth = {$containerWidth}
 	}
 }
@@ -494,7 +508,8 @@
 }
 30 = CONTENT
 30 {
-	wrap.dataWrap = {register:tvfwBlockWrap}
+	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+	wrap.insertData = 1
 	table = tt_content
 	select {
 		pidInList.data = register:generatedContent-2contentsource
