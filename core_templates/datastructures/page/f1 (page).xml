@@ -146,6 +146,8 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f1f.contentBlock-1}</containerWidth>
+<templateKey>f1a</templateKey>
+<fieldKey>contentBlock-1</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
@@ -183,7 +185,7 @@
 }
 30 = COA
 30 {
-	wrap.dataWrap = {register:tvfwBlockWrap}
+	wrap.data = register:tvfwBlockWrap
 	10 = TEXT
 	10 {
 		data = page:title
@@ -268,22 +270,46 @@
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f1f.generatedContent-1}</containerWidth>
 <contentSource>{$dsConfig.generatedContent-1.contentSource}</contentSource>
+<templateKey>f1a</templateKey>
+<fieldKey>generatedContent-1</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+10 = CASE
 10 {
-	containerWidth = {$containerWidth}
-	maxImageWidth = {$containerWidth}
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockWrap = <div id="generatedContent-1">|</div><!-- end #generatedContent-1  -->
+		containerWidth = {$containerWidth}
+		generatedContent-1contentsource = {$contentSource}
+	}
+	2 = LOAD_REGISTER
+	2 {
+		containerWidth.data = register:{$templateKey}{$fieldKey}width
+		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwBlockWrap = <div id="generatedContent-1">|</div><!-- end #generatedContent-1  -->
+		containerWidth = {$containerWidth}
+	}
+}
+
+20 = LOAD_REGISTER
+20 {
+	maxImageWidth.data = register:containerWidth
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
-20 = CONTENT
-20 {
-	wrap = <div id="generatedContent-1">|</div><!-- end #generatedContent-1  -->
+30 = CONTENT
+30 {
+	wrap.dataWrap = {register:tvfwBlockWrap}
 	table = tt_content
-	select.pidInList = {$contentSource}
-	select.languageField = sys_language_uid
+	select {
+		pidInList.data = register:generatedContent-1contentsource
+		languageField = sys_language_uid
+	}
 }
 ]]>
 					</TypoScript>
@@ -313,12 +339,34 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f1f.feature}</containerWidth>
+<templateKey>f1a</templateKey>
+<fieldKey>feature</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+10 = CASE
 10 {
-	tempContainerWidth = {$containerWidth}
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		containerWidth = {$containerWidth}
+	}
+	2 = LOAD_REGISTER
+	2 {
+		containerWidth.data = register:{$templateKey}{$fieldKey}width
+		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwBlockWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		containerWidth = {$containerWidth}
+	}
+}
+
+20 = LOAD_REGISTER
+20 {
+	tempContainerWidth.data = register:containerWidth
 	tempContainerWidth.dataWrap = | + {register:featureLeftPadding} + {register:featureRightPadding}
 	containerWidth.data = register:tempContainerWidth
 	containerWidth.prioriCalc = intval
@@ -327,20 +375,20 @@
 	nestingLevel = 0
 	containerElementPresent = 0
 }
-20 = RECORDS
-20 {
+30 = RECORDS
+30 {
 	source.current = 1
 	tables = tt_content
 	stdWrap {
 		required = 1
-		dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		data = register:tvfwBlockWrap
 		## Set to load register only if content is present (required = 1) so that preCodeFeature & postCodeFeature is properly triggered
 		postCObject = LOAD_REGISTER
 		postCObject.contentElementsPresent = 1
 	}
 }
-30 = LOAD_REGISTER
-30 {
+40 = LOAD_REGISTER
+40 {
 	noFeatureContentFlag = 1
 	noFeatureContentFlag.if.isLessThan.stdWrap.dataWrap = {register:contentElementsPresent}{register:containerElementPresent}
 	noFeatureContentFlag.if.value = 1
@@ -412,22 +460,46 @@
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f1f.generatedContent-2}</containerWidth>
 <contentSource>{$dsConfig.generatedContent-2.contentSource}</contentSource>
+<templateKey>f1a</templateKey>
+<fieldKey>generatedContent-2</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+10 = CASE
 10 {
-	containerWidth = {$containerWidth}
-	maxImageWidth = {$containerWidth}
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockWrap = <div id="generatedContent-2">|</div><!-- end #generatedContent-2  -->
+		containerWidth = {$containerWidth}
+		generatedContent-2contentsource = {$contentSource}
+	}
+	2 = LOAD_REGISTER
+	2 {
+		containerWidth.data = register:{$templateKey}{$fieldKey}width
+		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwBlockWrap = <div id="generatedContent-2">|</div><!-- end #generatedContent-2  -->
+		containerWidth = {$containerWidth}
+	}
+}
+
+20 = LOAD_REGISTER
+20 {
+	maxImageWidth.data = register:containerWidth
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
-20 = CONTENT
-20 {
-	wrap = <div id="generatedContent-2">|</div><!-- end #generatedContent-2  -->
+30 = CONTENT
+30 {
+	wrap.dataWrap = {register:tvfwBlockWrap}
 	table = tt_content
-	select.pidInList = {$contentSource}
-	select.languageField = sys_language_uid
+	select {
+		pidInList.data = register:generatedContent-2contentsource
+		languageField = sys_language_uid
+	}
 }
 ]]>
 					</TypoScript>

@@ -146,6 +146,8 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f3a.contentBlock-1}</containerWidth>
+<templateKey>f3a</templateKey>
+<fieldKey>contentBlock-1</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
@@ -254,13 +256,35 @@
 					<eType>ce</eType>
 					<tags>div:outer</tags>
 					<TypoScript_constants>
-<containerWidth>{$containerWidth.p1f.feature}</containerWidth>
+<containerWidth>{$containerWidth.f3a.feature}</containerWidth>
+<templateKey>f3a</templateKey>
+<fieldKey>feature</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+10 = CASE
 10 {
-	tempContainerWidth = {$containerWidth}
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		containerWidth = {$containerWidth}
+	}
+	2 = LOAD_REGISTER
+	2 {
+		containerWidth.data = register:{$templateKey}{$fieldKey}width
+		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}|{register:{$templateKey}{$fieldKey}endWrap}
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwBlockWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		containerWidth = {$containerWidth}
+	}
+}
+
+20 = LOAD_REGISTER
+20 {
+	tempContainerWidth.data = register:containerWidth
 	tempContainerWidth.dataWrap = | + {register:featureLeftPadding} + {register:featureRightPadding}
 	containerWidth.data = register:tempContainerWidth
 	containerWidth.prioriCalc = intval
@@ -269,19 +293,20 @@
 	nestingLevel = 0
 	containerElementPresent = 0
 }
-20 = RECORDS
-20 {
+30 = RECORDS
+30 {
 	source.current = 1
 	tables = tt_content
-	stdWrap{
+	stdWrap {
 		required = 1
-		dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		data = register:tvfwBlockWrap
+		## Set to load register only if content is present (required = 1) so that preCodeFeature & postCodeFeature is properly triggered
 		postCObject = LOAD_REGISTER
 		postCObject.contentElementsPresent = 1
 	}
 }
-30 = LOAD_REGISTER
-30 {
+40 = LOAD_REGISTER
+40 {
 	noFeatureContentFlag = 1
 	noFeatureContentFlag.if.isLessThan.stdWrap.dataWrap = {register:contentElementsPresent}{register:containerElementPresent}
 	noFeatureContentFlag.if.value = 1
@@ -352,22 +377,50 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f3a.contentBlock-2}</containerWidth>
+<templateKey>f3a</templateKey>
+<fieldKey>contentBlock-2</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+10 = CASE
 10 {
-	containerWidth = {$containerWidth}
-	maxImageWidth = {$containerWidth}
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockWrap = <div id="contentBlock-2"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
+	2 = LOAD_REGISTER
+	2 {
+		containerWidth.data = register:{$templateKey}{$fieldKey}width
+		tvfwTemplateCheck = <h3 style="background:red;color:white;padding:10px;">You must update your templates to use render mode 2 <a href="http://www.busynoggin.com/" style="color:white;text-decoration:underline;">more info</a></h3>
+		tvfwTemplateCheck.if {
+			value = 2
+			isInList = {$maxRenderMode}
+			negate = 1
+		}
+		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}{register:tvfwTemplateCheck}|{register:{$templateKey}{$fieldKey}endWrap}
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwBlockWrap = <div id="contentBlock-2"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
+}
+
+20 = LOAD_REGISTER
+20 {
+	maxImageWidth.data = register:containerWidth
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
-20 = RECORDS
-20 {
-	wrap = <div id="contentBlock-2"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+30 = RECORDS
+30 {
+	stdWrap.data = register:tvfwBlockWrap
 	source.current = 1
 	tables = tt_content
 }
+
 ]]>
 					</TypoScript>
 					<enableDragDrop>1</enableDragDrop>
@@ -422,22 +475,50 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f3a.contentBlock-3}</containerWidth>
+<templateKey>f3a</templateKey>
+<fieldKey>contentBlock-3</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+10 = CASE
 10 {
-	containerWidth = {$containerWidth}
-	maxImageWidth = {$containerWidth}
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockWrap = <div id="contentBlock-2"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
+	2 = LOAD_REGISTER
+	2 {
+		containerWidth.data = register:{$templateKey}{$fieldKey}width
+		tvfwTemplateCheck = <h3 style="background:red;color:white;padding:10px;">You must update your templates to use render mode 2 <a href="http://www.busynoggin.com/" style="color:white;text-decoration:underline;">more info</a></h3>
+		tvfwTemplateCheck.if {
+			value = 2
+			isInList = {$maxRenderMode}
+			negate = 1
+		}
+		tvfwBlockWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}{register:tvfwTemplateCheck}|{register:{$templateKey}{$fieldKey}endWrap}
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwBlockWrap = <div id="contentBlock-2"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
+}
+
+20 = LOAD_REGISTER
+20 {
+	maxImageWidth.data = register:containerWidth
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
-20 = RECORDS
-20 {
-	wrap = <div id="contentBlock-3"><!--TYPO3SEARCH_begin-->|<!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+30 = RECORDS
+30 {
+	stdWrap.data = register:tvfwBlockWrap
 	source.current = 1
 	tables = tt_content
 }
+
 ]]>
 					</TypoScript>
 					<enableDragDrop>1</enableDragDrop>
