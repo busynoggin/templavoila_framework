@@ -5,7 +5,7 @@ siteTitle =
 siteURL =
 
 # cat=Site Constants/general/c; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Site Logo: The path to the logo for your site which will appear in the header of every page (ex. fileadmin/images/mylogo.jpg). This setting is optional and may not be used by all skins.
-siteLogo =
+plugin.tx_templavoila_framework.siteLogo =
 
 # cat=Site Constants/general/d; type=string; label=Copyright: Copyright for the site. The current year will automatically be added before this value.
 copyright = 
@@ -20,10 +20,10 @@ timeFormat = %I:%M %p
 dateTimeFormat = %m/%d/%y %I:%M %p
 
 # cat=Site Constants/general/h; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 1: Page ID of the primary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
-generatedContent-1.source =
+plugin.tx_templavoila_framework.generatedContent-1.source =
 
 # cat=Site Constants/general/i; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 2: Page ID of the secondary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
-generatedContent-2.source =
+plugin.tx_templavoila_framework.generatedContent-2.source =
 
 # This includes jQuery, enables jQuery.noConflict, and includes core.js for equal height modules.
 # Alternatively, you can disable the parts individually
@@ -31,11 +31,298 @@ generatedContent-2.source =
 # page.includeJSlibs.tf_jquery >
 # page.includeJS.tf_core >
 # page.jsInline.1 >
-enableJQuery = 1
+plugin.tx_templavoila_framework.enableJQuery = 1
 
 # This sets the HTML tag to be used for wrapping the module titles.
 # Values could be h1, h2, h3, h4, h5, div, p
-moduleTitleTag = h3
+plugin.tx_templavoila_framework.moduleTitleTag = h3
 
 # This sets the header level for normal headers inside a framed module
-defaultHeaderInsideModule = {$content.defaultHeaderType}
+plugin.tx_templavoila_framework.defaultHeaderInsideModule = {$content.defaultHeaderType}
+
+
+## This setups the default rendering for the content blocks
+plugin.tx_templavoila_framework {
+	autoHeadlineWrap = <h1 class="main-headline">|</h1>
+	baseDefaults {
+		settings {
+			feature {
+				width = 960
+				tag = div
+				id = feature
+				class =
+			}
+			contentBlock-1 {
+				width = 960
+				tag = div
+				id = content-block-1
+				class =
+			}
+			contentBlock-2 {
+				width = 960
+				tag = div
+				id = content-block-2
+				class =
+			}
+			contentBlock-3 {
+				width = 960
+				tag = div
+				id = content-block-3
+				class =
+			}
+			generatedContent-1 {
+				width = 960
+				tag = div
+				id = generated-content-1
+				class =
+			}
+			generatedContent-2 {
+				width = 960
+				tag = div
+				id = generated-content-2
+				class =
+			}
+		}
+	}
+	f1a.settings < .baseDefaults.settings
+	f1a.wraps {
+		feature {
+			beginWrap = <{register:f1afeaturetag} {register:f1afeatureid} {register:f1afeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1afeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f1acontentBlock-1tag} {register:f1acontentBlock-1id} {register:f1acontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1acontentBlock-1tag}>
+		}
+	}
+	f1b.settings < .baseDefaults.settings
+	f1b.wraps {
+		feature {
+			beginWrap = <{register:f1bfeaturetag} {register:f1bfeatureid} {register:f1bfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1bfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f1bcontentBlock-1tag} {register:f1bcontentBlock-1id} {register:f1bcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1bcontentBlock-1tag}>
+		}
+	}
+	f1c.settings < .baseDefaults.settings
+	f1c.wraps {
+		feature {
+			beginWrap = <{register:f1cfeaturetag} {register:f1cfeatureid} {register:f1cfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1cfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f1ccontentBlock-1tag} {register:f1ccontentBlock-1id} {register:f1ccontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1ccontentBlock-1tag}>
+		}
+	}
+	f1d.settings < .baseDefaults.settings
+	f1d.wraps {
+		feature {
+			beginWrap = <{register:f1dfeaturetag} {register:f1dfeatureid} {register:f1dfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1dfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f1dcontentBlock-1tag} {register:f1dcontentBlock-1id} {register:f1dcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1dcontentBlock-1tag}>
+		}
+		generatedContent-1 {
+			beginWrap = <{register:f1dgeneratedContent-1tag} {register:f1dgeneratedContent-1id} {register:f1dgeneratedContent-1class}>
+			endWrap = <div class="clear-only">&nbsp;</div></{register:f1dgeneratedContent-1tag}>
+		}
+	}
+	f1e.settings < .baseDefaults.settings
+	f1e.wraps {
+		feature {
+			beginWrap = <{register:f1efeaturetag} {register:f1efeatureid} {register:f1efeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1efeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f1econtentBlock-1tag} {register:f1econtentBlock-1id} {register:f1econtentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1econtentBlock-1tag}>
+		}
+		generatedContent-2 {
+			beginWrap = <{register:f1egeneratedContent-2tag} {register:f1egeneratedContent-2id} {register:f1egeneratedContent-2class}>
+			endWrap = <div class="clear-only">&nbsp;</div></{register:f1egeneratedContent-2tag}>
+		}
+	}
+	f1f.settings < .baseDefaults.settings
+	f1f.wraps {
+		feature {
+			beginWrap = <{register:f1ffeaturetag} {register:f1ffeatureid} {register:f1ffeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1ffeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f1fcontentBlock-1tag} {register:f1fcontentBlock-1id} {register:f1fcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1fcontentBlock-1tag}>
+		}
+		generatedContent-1 {
+			beginWrap = <{register:f1fgeneratedContent-1tag} {register:f1fgeneratedContent-1id} {register:f1fgeneratedContent-1class}>
+			endWrap = <div class="clear-only">&nbsp;</div></{register:f1fgeneratedContent-1tag}>
+		}
+		generatedContent-2 {
+			beginWrap = <{register:f1fgeneratedContent-2tag} {register:f1fgeneratedContent-2id} {register:f1fgeneratedContent-2class}>
+			endWrap = <div class="clear-only">&nbsp;</div></{register:f1fgeneratedContent-2tag}>
+		}
+	}
+	f2a.settings < .baseDefaults.settings
+	f2a.wraps {
+		feature {
+			beginWrap = <{register:f2afeaturetag} {register:f2afeatureid} {register:f2afeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2afeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f2acontentBlock-1tag} {register:f2acontentBlock-1id} {register:f2acontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2acontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f2acontentBlock-2tag} {register:f2acontentBlock-2id} {register:f2acontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2acontentBlock-2tag}>
+		}
+	}
+	f2b.settings < .baseDefaults.settings
+	f2b.wraps {
+		feature {
+			beginWrap = <{register:f2bfeaturetag} {register:f2bfeatureid} {register:f2bfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2bfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f2bcontentBlock-1tag} {register:f2bcontentBlock-1id} {register:f2bcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2bcontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f2bcontentBlock-2tag} {register:f2bcontentBlock-2id} {register:f2bcontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2bcontentBlock-2tag}>
+		}
+	}
+	f2c.settings < .baseDefaults.settings
+	f2c.wraps {
+		feature {
+			beginWrap = <{register:f2cfeaturetag} {register:f2cfeatureid} {register:f2cfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2cfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f2ccontentBlock-1tag} {register:f2ccontentBlock-1id} {register:f2ccontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2ccontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f2ccontentBlock-2tag} {register:f2ccontentBlock-2id} {register:f2ccontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2ccontentBlock-2tag}>
+		}
+	}
+	f2d.settings < .baseDefaults.settings
+	f2d.wraps {
+		feature {
+			beginWrap = <{register:f2dfeaturetag} {register:f2dfeatureid} {register:f2dfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2dfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f2dcontentBlock-1tag} {register:f2dcontentBlock-1id} {register:f2dcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2dcontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f2dcontentBlock-2tag} {register:f2dcontentBlock-2id} {register:f2dcontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2dcontentBlock-2tag}>
+		}
+		generatedContent-1 {
+			beginWrap = <{register:f2dgeneratedContent-1tag} {register:f2dgeneratedContent-1id} {register:f2dgeneratedContent-1class}>
+			endWrap = <div class="clear-only">&nbsp;</div></{register:f2dgeneratedContent-1tag}>
+		}
+	}
+	f2e.settings < .baseDefaults.settings
+	f2e.wraps {
+		feature {
+			beginWrap = <{register:f2efeaturetag} {register:f2efeatureid} {register:f2efeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2efeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f2econtentBlock-1tag} {register:f2econtentBlock-1id} {register:f2econtentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2econtentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f2econtentBlock-2tag} {register:f2econtentBlock-2id} {register:f2econtentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2econtentBlock-2tag}>
+		}
+		generatedContent-2 {
+			beginWrap = <{register:f2egeneratedContent-2tag} {register:f2egeneratedContent-2id} {register:f2egeneratedContent-2class}>
+			endWrap = <div class="clear-only">&nbsp;</div></{register:f2egeneratedContent-2tag}>
+		}
+	}
+	f3a.settings < .baseDefaults.settings
+	f3a.wraps {
+		feature {
+			beginWrap = <{register:f3afeaturetag} {register:f3afeatureid} {register:f3afeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3afeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f3acontentBlock-1tag} {register:f3acontentBlock-1id} {register:f3acontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3acontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f3acontentBlock-2tag} {register:f3acontentBlock-2id} {register:f3acontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3acontentBlock-2tag}>
+		}
+		contentBlock-3 {
+			beginWrap = <{register:f3acontentBlock-3tag} {register:f3acontentBlock-3id} {register:f3acontentBlock-3class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3acontentBlock-3tag}>
+		}
+	}
+	f3b.settings < .baseDefaults.settings
+	f3b.wraps {
+		feature {
+			beginWrap = <{register:f3bfeaturetag} {register:f3bfeatureid} {register:f3bfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3bfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f3bcontentBlock-1tag} {register:f3bcontentBlock-1id} {register:f3bcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3bcontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f3bcontentBlock-2tag} {register:f3bcontentBlock-2id} {register:f3bcontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3bcontentBlock-2tag}>
+		}
+		contentBlock-3 {
+			beginWrap = <{register:f3bcontentBlock-3tag} {register:f3bcontentBlock-3id} {register:f3bcontentBlock-3class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3bcontentBlock-3tag}>
+		}
+	}
+	f3c.settings < .baseDefaults.settings
+	f3c.wraps {
+		feature {
+			beginWrap = <{register:f3cfeaturetag} {register:f3cfeatureid} {register:f3cfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3cfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f3ccontentBlock-1tag} {register:f3ccontentBlock-1id} {register:f3ccontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3ccontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f3ccontentBlock-2tag} {register:f3ccontentBlock-2id} {register:f3ccontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3ccontentBlock-2tag}>
+		}
+		contentBlock-3 {
+			beginWrap = <{register:f3ccontentBlock-3tag} {register:f3ccontentBlock-3id} {register:f3ccontentBlock-3class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3ccontentBlock-3tag}>
+		}
+	}
+	f3d.settings < .baseDefaults.settings
+	f3d.wraps {
+		feature {
+			beginWrap = <{register:f3dfeaturetag} {register:f3dfeatureid} {register:f3dfeatureclass}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3dfeaturetag}>
+		}
+		contentBlock-1 {
+			beginWrap = <{register:f3dcontentBlock-1tag} {register:f3dcontentBlock-1id} {register:f3dcontentBlock-1class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3dcontentBlock-1tag}>
+		}
+		contentBlock-2 {
+			beginWrap = <{register:f3dcontentBlock-2tag} {register:f3dcontentBlock-2id} {register:f3dcontentBlock-2class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3dcontentBlock-2tag}>
+		}
+		contentBlock-3 {
+			beginWrap = <{register:f3dcontentBlock-3tag} {register:f3dcontentBlock-3id} {register:f3dcontentBlock-3class}><!--TYPO3SEARCH_begin-->
+			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f3dcontentBlock-3tag}>
+		}
+	}
+}
