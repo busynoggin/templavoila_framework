@@ -31,7 +31,7 @@
 	plainImageMaxWidth2.data = register:containerWidth
 	plainImageMaxWidth2.if.isFalse.field = field_max_width
 	plainImageDisplay.field = field_display
-	10.plainImageDisplay.wrap = |;
+	plainImageDisplay.wrap = |;
 	plainImageMarginTop.field = field_margin_top
 	plainImageMarginTop.wrap = margin-top:|px;
 	plainImageMarginBottom.field = field_margin_bottom
