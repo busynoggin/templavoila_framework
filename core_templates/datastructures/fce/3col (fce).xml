@@ -296,7 +296,7 @@
 }
 30 = RECORDS
 30 {
-	stdWrap.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-c{register:tx_templavoila_pi1.parentRec.uid} last">|</div><div class="clear-only">&nbsp;</div></div><!-- end .three-column-group  -->
+	stdWrap.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div><div class="clear-only">&nbsp;</div></div><!-- end .three-column-group  -->
 	source.current = 1
 	tables = tt_content
 }
