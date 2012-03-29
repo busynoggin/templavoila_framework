@@ -114,7 +114,7 @@
 }
 40 = RECORDS
 40 {
-	stdWrap.dataWrap = <div class="{register:columnGroupClass} four-column-group"><div class="column one-quarter column-1 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
+	stdWrap.dataWrap = <div class="{register:columnGroupClass} four-column-group"><div class="column quarter column-1 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
 	source.current = 1
 	tables = tt_content
 }
@@ -193,7 +193,7 @@
 }
 30 = RECORDS
 30 {
-	stdWrap.dataWrap = <div class="column one-quarter column-2 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
+	stdWrap.dataWrap = <div class="column quarter column-2 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
 	source.current = 1
 	tables = tt_content
 }
@@ -273,7 +273,7 @@
 }
 30 = RECORDS
 30 {
-	stdWrap.dataWrap = <div class="column one-quarter column-3 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
+	stdWrap.dataWrap = <div class="column quarter column-3 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
 	source.current = 1
 	tables = tt_content
 }
@@ -353,7 +353,7 @@
 }
 30 = RECORDS
 30 {
-	stdWrap.dataWrap = <div class="column one-quarter column-4 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div><div class="clear-only">&nbsp;</div></div><!-- end .four-column-group  -->
+	stdWrap.dataWrap = <div class="column quarter column-4 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div><div class="clear-only">&nbsp;</div></div><!-- end .four-column-group  -->
 	source.current = 1
 	tables = tt_content
 }
