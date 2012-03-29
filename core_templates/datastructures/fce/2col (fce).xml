@@ -89,7 +89,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
-					<TypoScriptObjPath>plugin.tx_templavoila_framework.columnGroupSetup</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.columnGroupSetup</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_column_group_library>
 			<field_column_1 type="array">
@@ -124,7 +124,7 @@
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-1-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
@@ -151,7 +151,7 @@
 }
 40 = RECORDS
 40 {
-	stdWrap.dataWrap = <div class="{register:columnGroupClass} two-column-group{register:classColumnGroupDistribution}"><div class="column column-1{register:classColumn1Distribution} column-1-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
+	stdWrap.dataWrap = <div class="{register:columnGroupClass} two-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
 	source.current = 1
 	tables = tt_content
 }
@@ -209,7 +209,7 @@
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-2-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
@@ -225,7 +225,7 @@
 }
 30 = RECORDS
 30 {
-	stdWrap.dataWrap = <div class="column column-2{register:classColumn2Distribution} column-2-c{register:tx_templavoila_pi1.parentRec.uid} last">|</div><div class="clear-only">&nbsp;</div></div><!-- end .two-column-group  -->
+	stdWrap.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div><div class="clear-only">&nbsp;</div></div><!-- end .two-column-group  -->
 	source.current = 1
 	tables = tt_content
 }
