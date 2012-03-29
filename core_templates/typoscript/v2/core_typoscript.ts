@@ -1429,9 +1429,9 @@ plugin.tx_templavoilaframework {
 			columnWidth1.prioriCalc = intval
 			columnWidth2.data = register:tempColumnWidth
 			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = one-half
+			classColumn1Distribution = half
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = one-half
+			classColumn2Distribution = half
 			classColumn2Distribution.noTrimWrap = | ||
 			classColumnGroupDistribution = half-half
 			classColumnGroupDistribution.noTrimWrap = | ||
@@ -1448,7 +1448,7 @@ plugin.tx_templavoilaframework {
 			columnWidth2.prioriCalc = intval
 			classColumn1Distribution = third
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = two-third
+			classColumn2Distribution = two-thirds
 			classColumn2Distribution.noTrimWrap = | ||
 			classColumnGroupDistribution = third-two-thirds
 			classColumnGroupDistribution.noTrimWrap = | ||
@@ -1463,7 +1463,7 @@ plugin.tx_templavoilaframework {
 			columnWidth1.prioriCalc = intval
 			columnWidth2.data = register:tempColumnWidth2
 			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = two-third
+			classColumn1Distribution = two-thirds
 			classColumn1Distribution.noTrimWrap = | ||
 			classColumn2Distribution = third
 			classColumn2Distribution.noTrimWrap = | ||
@@ -1480,11 +1480,11 @@ plugin.tx_templavoilaframework {
 			columnWidth1.prioriCalc = intval
 			columnWidth2.data = register:tempColumnWidth2
 			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = three-quarter
+			classColumn1Distribution = three-quarters
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = one-quarter
+			classColumn2Distribution = quarter
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = three-quarter-quarter
+			classColumnGroupDistribution = three-quarters-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		1434 = LOAD_REGISTER
@@ -1497,11 +1497,11 @@ plugin.tx_templavoilaframework {
 			columnWidth1.prioriCalc = intval
 			columnWidth2.data = register:tempColumnWidth2
 			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = one-quarter
+			classColumn1Distribution = quarter
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = three-quarter
+			classColumn2Distribution = three-quarters
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = quarter-three-quarter
+			classColumnGroupDistribution = quarter-three-quarters
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		131313 = LOAD_REGISTER
@@ -1537,11 +1537,11 @@ plugin.tx_templavoilaframework {
 			columnWidth2.prioriCalc = intval
 			columnWidth3.data = register:tempColumnWidth3
 			columnWidth3.prioriCalc = intval
-			classColumn1Distribution = one-half
+			classColumn1Distribution = half
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = one-quarter
+			classColumn2Distribution = quarter
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumn3Distribution = one-quarter
+			classColumn3Distribution = quarter
 			classColumn3Distribution.noTrimWrap = | ||
 			classColumnGroupDistribution = half-quarter-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
@@ -1560,11 +1560,11 @@ plugin.tx_templavoilaframework {
 			columnWidth2.prioriCalc = intval
 			columnWidth3.data = register:tempColumnWidth3
 			columnWidth3.prioriCalc = intval
-			classColumn1Distribution = one-quarter
+			classColumn1Distribution = quarter
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = one-half
+			classColumn2Distribution = half
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumn3Distribution = one-quarter
+			classColumn3Distribution = quarter
 			classColumn3Distribution.noTrimWrap = | ||
 			classColumnGroupDistribution = quarter-half-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
@@ -1583,11 +1583,11 @@ plugin.tx_templavoilaframework {
 			columnWidth2.prioriCalc = intval
 			columnWidth3.data = register:tempColumnWidth3
 			columnWidth3.prioriCalc = intval
-			classColumn1Distribution = one-quarter
+			classColumn1Distribution = quarter
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = one-quarter
+			classColumn2Distribution = quarter
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumn3Distribution = one-half
+			classColumn3Distribution = half
 			classColumn3Distribution.noTrimWrap = | ||
 			classColumnGroupDistribution = quarter-quarter-half
 			classColumnGroupDistribution.noTrimWrap = | ||
