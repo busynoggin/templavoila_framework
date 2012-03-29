@@ -235,9 +235,21 @@ plugin.tx_templavoilaframework {
 			f1econtentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.contentBlock-1.beginWrap}
 			f1econtentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.contentBlock-1.endWrap}
 			
-			## f1e generatedContent-2
+			## f1e Generated Content 2
 			f1egeneratedContent-2width = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.width}
-			f1egeneratedContent-2wrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.wrap}
+			f1egeneratedContent-2tag = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.tag}
+			f1egeneratedContent-2id = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.id}
+			f1egeneratedContent-2id {
+				wrap = id="|"
+				required = 1
+			}
+			f1egeneratedContent-2class = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.class}
+			f1egeneratedContent-2class {
+				wrap = class="|"
+				required = 1
+			}
+			f1egeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.beginWrap}
+			f1egeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.endWrap}
 			
 			## f1f feature
 			f1ffeaturewidth = {$plugin.tx_templavoilaframework.f1f.settings.feature.width}

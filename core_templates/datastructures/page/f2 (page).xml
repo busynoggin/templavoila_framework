@@ -485,14 +485,8 @@
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwTemplateCheck = <h3 style="background:red;color:white;padding:10px;">You must update your templates to use render mode 2 <a href="http://www.busynoggin.com/" style="color:white;text-decoration:underline;">more info</a></h3>
-		tvfwTemplateCheck.if {
-			value = 2
-			isInList = {$maxRenderMode}
-			negate = 1
-		}
-		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}{register:tvfwTemplateCheck}
-		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
+		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 	}
 	default = LOAD_REGISTER
 	default {
