@@ -79,7 +79,7 @@
 10 {
 	columnGroupWidth.data = register:containerWidth
 	tempContainerWidth.data = register:containerWidth
-	tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+	tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 	containerWidth.data = register:tempContainerWidth
 	containerWidth.prioriCalc = intval
 	maxImageWidth.data = register:containerWidth
@@ -159,14 +159,14 @@
 	default = LOAD_REGISTER
 	default {
 		tempContainerWidth.data = register:containerWidth
-		tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
 	}
 	1 = LOAD_REGISTER
 	1 {
 		tempContainerWidth.data = register:originalColumnWidth4
-		tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
 	}
@@ -239,14 +239,14 @@
 	default = LOAD_REGISTER
 	default {
 		tempContainerWidth.data = register:containerWidth
-		tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
 	}
 	1 = LOAD_REGISTER
 	1 {
 		tempContainerWidth.data = register:originalColumnWidth4
-		tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
 	}
@@ -319,14 +319,14 @@
 	default = LOAD_REGISTER
 	default {
 		tempContainerWidth.data = register:containerWidth
-		tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
 	}
 	1 = LOAD_REGISTER
 	1 {
 		tempContainerWidth.data = register:originalColumnWidth4
-		tempContainerWidth.dataWrap = (|-({register:columnGutter}*3))/4
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
 	}
