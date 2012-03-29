@@ -292,7 +292,7 @@ class tx_templavoilaframework_lib {
 		$tsParser = t3lib_div::makeInstance('t3lib_TSparser');
 		$tsParser->parse($constants);
 
-		$skinRenderMode = $tsParser->setup['plugin.']['templavoila_framework.']['renderMode'];
+		$skinRenderMode = $tsParser->setup['plugin.']['tx_templavoilaframework.']['renderMode'];
 		if (!$skinRenderMode) {
 			t3lib_div::deprecationLog('The TemplaVoila Framework now requires that the render mode is set via tha \'plugin.templavoila_framework.renderMode\' TypoScript constant.' .
 			                          'This value currently defaults to 1 but will be removed in a future version of the TemplaVoila Framework.' .

@@ -84,7 +84,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
-					<TypoScriptObjPath>dsConfig</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.dsConfig</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_ds_config_library>
 			<field_pre_code_header type="array">
@@ -96,7 +96,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeHeader</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeHeader</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_header>
 			<field_header type="array">
@@ -108,7 +108,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>header</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.header</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_header>
 			<field_post_code_header type="array">
@@ -120,7 +120,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeHeader</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeHeader</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_header>
 			<field_pre_code_content_block_1 type="array">
@@ -132,7 +132,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContentBlock-1</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-1</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content_block_1>
 			<field_content_block_1 type="array">
@@ -235,7 +235,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeContentBlock-1</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-1</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_content_block_1>
 			<field_pre_code_content type="array">
@@ -247,7 +247,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContent</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContent</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content>
 			<field_feature type="array">
@@ -346,7 +346,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>evaluatedPreCodeFeature</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.evaluatedPreCodeFeature</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_feature>
 			<field_post_code_feature type="array">
@@ -358,7 +358,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>evaluatedPostCodeFeature</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.evaluatedPostCodeFeature</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_feature>
 			<field_pre_code_content_block_2 type="array">
@@ -370,7 +370,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContentBlock-2</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-2</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content_block_2>
 			<field_content_block_2 type="array">
@@ -460,7 +460,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeContentBlock-2</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-2</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_content_block_2>
 			<field_pre_code_content_block_3 type="array">
@@ -472,7 +472,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContentBlock-3</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-3</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content_block_3>
 			<field_content_block_3 type="array">
@@ -562,7 +562,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeContentBlock-3</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-3</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_content_block_3>
 			<field_pre_code_footer type="array">
@@ -574,7 +574,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeFooter</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeFooter</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_footer>
 			<field_footer type="array">
@@ -586,7 +586,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>footer</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.footer</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_footer>
 			<field_post_code_footer type="array">
@@ -598,7 +598,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeFooter</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeFooter</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_footer>
 		</el>

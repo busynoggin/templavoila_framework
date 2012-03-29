@@ -84,7 +84,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
-					<TypoScriptObjPath>dsConfig</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.dsConfig</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_ds_config_library>
 			<field_pre_code_header type="array">
@@ -96,7 +96,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeHeader</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeHeader</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_header>
 			<field_header type="array">
@@ -108,7 +108,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>header</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.header</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_header>
 			<field_post_code_header type="array">
@@ -120,7 +120,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeHeader</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeHeader</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_header>
 			<field_pre_code_content_block_1 type="array">
@@ -132,7 +132,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContentBlock-1</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-1</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content_block_1>
 			<field_content_block_1 type="array">
@@ -235,7 +235,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeContentBlock-1</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-1</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_content_block_1>
 			<field_pre_code_content type="array">
@@ -247,7 +247,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContent</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContent</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content>
 			<field_pre_code_generated_content_1 type="array">
@@ -259,7 +259,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeGeneratedContent-1</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeGeneratedContent-1</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_generated_content_1>
 			<field_generated_content_1 type="array">
@@ -273,7 +273,6 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f2d.generatedContent-1}</containerWidth>
-<contentSource>{$dsConfig.generatedContent-1.contentSource}</contentSource>
 <templateKey>f2a</templateKey>
 <fieldKey>generatedContent-1</fieldKey>
                     </TypoScript_constants>
@@ -287,13 +286,12 @@
 		tvfwBlockBeginWrap = <div id="generatedContent-1">
 		tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
 		containerWidth = {$containerWidth}
-		generatedContent-1contentsource = {$contentSource}
 	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwBlockBeginWrap.dataWrap = register:{$templateKey}{$fieldKey}beginWrap
-		tvfwBlockEndWrap.dataWrap = register:{$templateKey}{$fieldKey}endWrap
+		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
+		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 	}
 	default = LOAD_REGISTER
 	default {
@@ -333,7 +331,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeGeneratedContent-1</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeGeneratedContent-1</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_generated_content_1>
 			<field_feature type="array">
@@ -432,7 +430,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>evaluatedPreCodeFeature</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.evaluatedPreCodeFeature</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_feature>
 			<field_post_code_feature type="array">
@@ -444,7 +442,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>evaluatedPostCodeFeature</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.evaluatedPostCodeFeature</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_feature>
 			<field_pre_code_content_block_2 type="array">
@@ -456,7 +454,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeContentBlock-2</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-2</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_content_block_2>
 			<field_content_block_2 type="array">
@@ -546,7 +544,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeContentBlock-2</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-2</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_content_block_2>
 			<field_pre_code_generated_content_2 type="array">
@@ -558,7 +556,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeGeneratedContent-2</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeGeneratedContent-2</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_generated_content_2>
 			<field_generated_content_2 type="array">
@@ -572,7 +570,6 @@
 					<tags>div:outer</tags>
 					<TypoScript_constants>
 <containerWidth>{$containerWidth.f2e.generatedContent-2}</containerWidth>
-<contentSource>{$dsConfig.generatedContent-2.contentSource}</contentSource>
 <templateKey>f2a</templateKey>
 <fieldKey>generatedContent-2</fieldKey>
                     </TypoScript_constants>
@@ -586,7 +583,6 @@
 		tvfwBlockBeginWrap = <div id="generatedContent-2">
 		tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
 		containerWidth = {$containerWidth}
-		generatedContent-2contentsource = {$contentSource}
 	}
 	2 = LOAD_REGISTER
 	2 {
@@ -632,7 +628,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeGeneratedContent-2</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeGeneratedContent-2</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_generated_content_2>
 			<field_pre_code_footer type="array">
@@ -644,7 +640,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>preCodeFooter</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeFooter</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_pre_code_footer>
 			<field_footer type="array">
@@ -656,7 +652,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>footer</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.footer</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_footer>
 			<field_post_code_footer type="array">
@@ -668,7 +664,7 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
-					<TypoScriptObjPath>postCodeFooter</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeFooter</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_post_code_footer>
 		</el>

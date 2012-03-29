@@ -5,7 +5,7 @@ siteTitle =
 siteURL =
 
 # cat=Site Constants/general/c; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Site Logo: The path to the logo for your site which will appear in the header of every page (ex. fileadmin/images/mylogo.jpg). This setting is optional and may not be used by all skins.
-plugin.tx_templavoila_framework.siteLogo =
+plugin.tx_templavoilaframework.siteLogo =
 
 # cat=Site Constants/general/d; type=string; label=Copyright: Copyright for the site. The current year will automatically be added before this value.
 copyright = 
@@ -20,10 +20,10 @@ timeFormat = %I:%M %p
 dateTimeFormat = %m/%d/%y %I:%M %p
 
 # cat=Site Constants/general/h; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 1: Page ID of the primary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
-plugin.tx_templavoila_framework.generatedContent-1.source =
+plugin.tx_templavoilaframework.generatedContent-1.source =
 
 # cat=Site Constants/general/i; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 2: Page ID of the secondary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
-plugin.tx_templavoila_framework.generatedContent-2.source =
+plugin.tx_templavoilaframework.generatedContent-2.source =
 
 # This includes jQuery, enables jQuery.noConflict, and includes core.js for equal height modules.
 # Alternatively, you can disable the parts individually
@@ -31,19 +31,24 @@ plugin.tx_templavoila_framework.generatedContent-2.source =
 # page.includeJSlibs.tf_jquery >
 # page.includeJS.tf_core >
 # page.jsInline.1 >
-plugin.tx_templavoila_framework.enableJQuery = 1
+plugin.tx_templavoilaframework.enableJQuery = 1
 
 # This sets the HTML tag to be used for wrapping the module titles.
 # Values could be h1, h2, h3, h4, h5, div, p
-plugin.tx_templavoila_framework.moduleTitleTag = h3
+plugin.tx_templavoilaframework.moduleTitleTag = h3
 
 # This sets the header level for normal headers inside a framed module
-plugin.tx_templavoila_framework.defaultHeaderInsideModule = {$content.defaultHeaderType}
+plugin.tx_templavoilaframework.defaultHeaderInsideModule = {$content.defaultHeaderType}
+
+# Sets up the default for the skin CSS
+plugin.tx_templavoilaframework.skinCSS = {$templavoila_framework.skinPath}css/mainstyles.css
 
 
 ## This setups the default rendering for the content blocks
-plugin.tx_templavoila_framework {
+plugin.tx_templavoilaframework {
 	autoHeadlineWrap = <h1 class="main-headline">|</h1>
+	createColumnModuleCSS = 1
+	minFullImageWidth = 0
 	baseDefaults {
 		settings {
 			feature {
