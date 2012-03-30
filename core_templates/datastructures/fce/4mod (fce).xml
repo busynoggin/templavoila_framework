@@ -414,7 +414,7 @@
 }
 20 = COA
 20 {
-	stdWrap.dataWrap = <div class="moduleGroup quadModuleGroup"><div class="{register:classModule1} oneQuarter" style="width:{register:moduleWidth1}px;float:left;margin-right:{register:globalGutter}px;">|</div>
+	stdWrap.dataWrap = <div class="module-group quad-module-group"><div class="{register:classModule1} oneQuarter" style="width:{register:moduleWidth1}px;float:left;margin-right:{register:globalGutter}px;">|</div>
 	10 = TEXT
 	10.data = register:renderedModuleHeader1
 	20 = LOAD_REGISTER

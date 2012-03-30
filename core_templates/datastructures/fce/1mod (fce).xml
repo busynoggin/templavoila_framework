@@ -132,7 +132,7 @@
 }
 20 = COA
 20 {
-	stdWrap.dataWrap = <div class="moduleGroup singleModule"><div class="{register:classModule1}" style="width:{register:moduleWidth1}px;">|</div><div class="clearOnly">&nbsp;</div></div><!-- end .singleModule  -->
+	stdWrap.dataWrap = <div class="module-group single-module"><div class="{register:classModule1}" style="width:{register:moduleWidth1}px;">|</div><div class="clearOnly">&nbsp;</div></div><!-- end .singleModule  -->
 	10 = TEXT
 	10.data = register:renderedModuleHeader1
 	20 = LOAD_REGISTER
