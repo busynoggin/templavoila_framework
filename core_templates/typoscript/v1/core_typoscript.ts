@@ -153,7 +153,7 @@ containerWidth {
 moduleGroupSetup = COA
 moduleGroupSetup.10 = LOAD_REGISTER
 moduleGroupSetup.10 {
-	moduleGutter = {$globalGutter}
+	globalGutter = {$globalGutter}
 	moduleBodyWrapBorderWidth1 = {$moduleBodyWrapBorderWidth}
 	moduleBodyTopBuffer1 = {$moduleBodyTopBuffer}
 	moduleBodyLeftBuffer1 = {$moduleBodyLeftBuffer}
@@ -679,7 +679,7 @@ moduleGroupSetup.50.40 {
 columnGroupSetup = COA
 columnGroupSetup.10 = LOAD_REGISTER
 columnGroupSetup.10 {
-	columnGutter = {$globalGutter}
+	globalGutter = {$globalGutter}
 	columnRuleDefault = {$columnRuleDefault}
 }
 
@@ -707,7 +707,7 @@ columnGroupSetup.40 {
 	default = LOAD_REGISTER
 	default {
 		tempColumnWidth.data = register:containerWidth
-		tempColumnWidth.dataWrap = (|-{register:columnGutter})/2
+		tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 		columnWidth1.data = register:tempColumnWidth
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth
@@ -720,9 +720,9 @@ columnGroupSetup.40 {
 	1323 = LOAD_REGISTER
 	1323 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = (|-({register:columnGutter}*2))/3
+		tempColumnWidth1.dataWrap = (|-({register:globalGutter}*2))/3
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = (((|-({register:columnGutter}*2))/3)*2)+{register:columnGutter}
+		tempColumnWidth2.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2
@@ -735,9 +735,9 @@ columnGroupSetup.40 {
 	2313 = LOAD_REGISTER
 	2313 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = (((|-({register:columnGutter}*2))/3)*2)+{register:columnGutter}
+		tempColumnWidth1.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = (|-({register:columnGutter}*2))/3
+		tempColumnWidth2.dataWrap = (|-({register:globalGutter}*2))/3
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2
@@ -750,9 +750,9 @@ columnGroupSetup.40 {
 	3414 = LOAD_REGISTER
 	3414 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = (((|-({register:columnGutter}*3))/4)*3)+({register:columnGutter}*2)
+		tempColumnWidth1.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth2.dataWrap = (|-({register:globalGutter}*3))/4
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2
@@ -765,9 +765,9 @@ columnGroupSetup.40 {
 	1434 = LOAD_REGISTER
 	1434 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = (((|-({register:columnGutter}*3))/4)*3)+({register:columnGutter}*2)
+		tempColumnWidth2.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2
@@ -780,7 +780,7 @@ columnGroupSetup.40 {
 	131313 = LOAD_REGISTER
 	131313 {
 		tempColumnWidth.data = register:containerWidth
-		tempColumnWidth.dataWrap = (|-({register:columnGutter}*2))/3
+		tempColumnWidth.dataWrap = (|-({register:globalGutter}*2))/3
 		columnWidth1.data = register:tempColumnWidth
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth
@@ -797,11 +797,11 @@ columnGroupSetup.40 {
 	121414 = LOAD_REGISTER
 	121414 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = ((|-({register:columnGutter}*3))/2)+{register:columnGutter}
+		tempColumnWidth1.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth2.dataWrap = (|-({register:globalGutter}*3))/4
 		tempColumnWidth3.data = register:containerWidth
-		tempColumnWidth3.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth3.dataWrap = (|-({register:globalGutter}*3))/4
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2
@@ -818,11 +818,11 @@ columnGroupSetup.40 {
 	141214 = LOAD_REGISTER
 	141214 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = ((|-({register:columnGutter}*3))/2)+{register:columnGutter}
+		tempColumnWidth2.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 		tempColumnWidth3.data = register:containerWidth
-		tempColumnWidth3.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth3.dataWrap = (|-({register:globalGutter}*3))/4
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2
@@ -839,11 +839,11 @@ columnGroupSetup.40 {
 	141412 = LOAD_REGISTER
 	141412 {
 		tempColumnWidth1.data = register:containerWidth
-		tempColumnWidth1.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 		tempColumnWidth2.data = register:containerWidth
-		tempColumnWidth2.dataWrap = (|-({register:columnGutter}*3))/4
+		tempColumnWidth2.dataWrap = (|-({register:globalGutter}*3))/4
 		tempColumnWidth3.data = register:containerWidth
-		tempColumnWidth3.dataWrap = ((|-({register:columnGutter}*3))/2)+{register:columnGutter}
+		tempColumnWidth3.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 		columnWidth1.data = register:tempColumnWidth1
 		columnWidth1.prioriCalc = intval
 		columnWidth2.data = register:tempColumnWidth2

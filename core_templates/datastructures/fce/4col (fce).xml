@@ -117,7 +117,7 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:columnGutter}px;">
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	2 = LOAD_REGISTER
@@ -127,7 +127,7 @@
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:columnGutter}px;">
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 }
@@ -216,7 +216,7 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:columnGutter}px;">
+		tvfwColumnBeginWrap.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	2 = LOAD_REGISTER
@@ -226,7 +226,7 @@
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:columnGutter}px;">
+		tvfwColumnBeginWrap.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 }
@@ -422,7 +422,7 @@
 	2 = LOAD_REGISTER
 	2 {
 		tvfwColumnBeginWrap.dataWrap = <div class="column quarter column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwColumnEndWrap.dataWrap = </div><!-- end .four-column-group  -->
+		tvfwColumnEndWrap.dataWrap = </div></div><!-- end .four-column-group  -->
 	}
 	default = LOAD_REGISTER
 	default {
