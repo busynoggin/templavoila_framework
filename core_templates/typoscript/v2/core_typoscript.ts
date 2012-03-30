@@ -958,14 +958,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default.classModule1 = module module-2
+				default.classModule2 = module module-2
 				0 = LOAD_REGISTER
-				0.classModule1 = module module-2 title-no-show
+				0.classModule2 = module module-2 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1.classModule1 = module module-2
+			1.classModule2 = module module-2
 			2 = LOAD_REGISTER
-			2.classModule1 = module module-2 title-no-show
+			2.classModule2 = module module-2 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -990,14 +990,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default.classModule1 = module module-3
+				default.classModule3 = module module-3
 				0 = LOAD_REGISTER
-				0.classModule1 = module module-3 title-no-show
+				0.classModule3 = module module-3 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1.classModule1 = module module-3
+			1.classModule3 = module module-3
 			2 = LOAD_REGISTER
-			2.classModule1 = module module-3 title-no-show
+			2.classModule3 = module module-3 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -1023,14 +1023,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default.classModule1 = module module-4
+				default.classModule4 = module module-4
 				0 = LOAD_REGISTER
-				0.classModule1 = module module-4 title-no-show
+				0.classModule4 = module module-4 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1.classModule1 = module module-4
+			1.classModule4 = module module-4
 			2 = LOAD_REGISTER
-			2.classModule1 = module module-4 title-no-show
+			2.classModule4 = module module-4 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
