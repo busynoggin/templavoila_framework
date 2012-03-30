@@ -254,7 +254,7 @@
 	2 = LOAD_REGISTER
 	2 {
 		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwColumnEndWrap.dataWrap = </div><!-- end .threeColumnGroup  -->
+		tvfwColumnEndWrap.dataWrap = </div></div><!-- end .two-column-group  -->
 	}
 	default = LOAD_REGISTER
 	default {
