@@ -876,11 +876,27 @@ plugin.tx_templavoilaframework {
 		moduleBodyLeftBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyLeftBuffer}
 		moduleBodyRightBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyRightBuffer}
 		moduleBodyBottomBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyBottomBuffer}
-		graphicHeaderMod1.cObject =< graphicHeaderMod1
-		graphicHeaderMod2.cObject =< graphicHeaderMod2
-		graphicHeaderMod3.cObject =< graphicHeaderMod3
-		graphicHeaderMod4.cObject =< graphicHeaderMod4
-		defaultHeaderInsideModule = {$plugin.tx_templavoilaframework.defaultHeaderInsideModule}
+		defaultHeaderInsideModule = {$plugin.tx_templavoilaframework.defaultHeaderInsideModule}		
+		renderedModuleHeader1 {
+			field = field_module_1_title
+			parseFunc < lib.parseFunc
+			dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+		}
+		renderedModuleHeader2 {
+			field = field_module_2_title
+			parseFunc < lib.parseFunc
+			dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+		}
+		renderedModuleHeader3 {
+			field = field_module_3_title
+			parseFunc < lib.parseFunc
+			dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+		}
+		renderedModuleHeader4 {
+			field = field_module_4_title
+			parseFunc < lib.parseFunc
+			dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+		}
 	}
 
 	moduleGroupSetup.15 = CASE
@@ -910,30 +926,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default {
-					renderedModuleHeader1.field = field_module_1_title
-					renderedModuleHeader1.parseFunc < lib.parseFunc
-					renderedModuleHeader1.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod1}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule1 = module module-1
-				}
+				default.classModule1 = module module-1
 				0 = LOAD_REGISTER
-				0 {
-					renderedModuleHeader1 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule1 = module module-1
-				}
+				0.classModule1 = module module-1 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1 {
-				renderedModuleHeader1.field = field_module_1_title
-				renderedModuleHeader1.parseFunc < lib.parseFunc
-				renderedModuleHeader1.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod1}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule1 = module module-1
-			}
+			1.classModule1 = module module-1
 			2 = LOAD_REGISTER
-			2 {
-				renderedModuleHeader1 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule1 = module module-1
-			}
+			2.classModule1 = module module-1 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -958,30 +958,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default {
-					renderedModuleHeader2.field = field_module_2_title
-					renderedModuleHeader2.parseFunc < lib.parseFunc
-					renderedModuleHeader2.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod2}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule2 = module module-2
-				}
+				default.classModule1 = module module-2
 				0 = LOAD_REGISTER
-				0 {
-					renderedModuleHeader2 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule2 = module module-2
-				}
+				0.classModule1 = module module-2 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1 {
-				renderedModuleHeader2.field = field_module_2_title
-				renderedModuleHeader2.parseFunc < lib.parseFunc
-				renderedModuleHeader2.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod2}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule2 = module module-2
-			}
+			1.classModule1 = module module-2
 			2 = LOAD_REGISTER
-			2 {
-				renderedModuleHeader2 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule2 = module module-2
-			}
+			2.classModule1 = module module-2 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -1006,30 +990,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default {
-					renderedModuleHeader3.field = field_module_3_title
-					renderedModuleHeader3.parseFunc < lib.parseFunc
-					renderedModuleHeader3.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod3}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule3 = module module-3
-				}
+				default.classModule1 = module module-3
 				0 = LOAD_REGISTER
-				0 {
-					renderedModuleHeader3 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule3 = module module-3
-				}
+				0.classModule1 = module module-3 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1 {
-				renderedModuleHeader3.field = field_module_3_title
-				renderedModuleHeader3.parseFunc < lib.parseFunc
-				renderedModuleHeader3.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod3}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule3 = module module-3
-			}
+			1.classModule1 = module module-3
 			2 = LOAD_REGISTER
-			2 {
-				renderedModuleHeader3 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule3 = module module-3
-			}
+			2.classModule1 = module module-3 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -1055,30 +1023,14 @@ plugin.tx_templavoilaframework {
 			default {
 				key = {$plugin.tx_templavoilaframework.showModuleTitleDefault}
 				default = LOAD_REGISTER
-				default {
-					renderedModuleHeader4.field = field_module_4_title
-					renderedModuleHeader4.parseFunc < lib.parseFunc
-					renderedModuleHeader4.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod4}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule4 = module module-4
-				}
+				default.classModule1 = module module-4
 				0 = LOAD_REGISTER
-				0 {
-					renderedModuleHeader4 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-					classModule4 = module module-4
-				}
+				0.classModule1 = module module-4 title-no-show
 			}
 			1 = LOAD_REGISTER
-			1 {
-				renderedModuleHeader4.field = field_module_4_title
-				renderedModuleHeader4.parseFunc < lib.parseFunc
-				renderedModuleHeader4.dataWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span class="header-inner-wrap"><span {register:graphicHeaderMod4}>|&nbsp;</span></span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule4 = module module-4
-			}
+			1.classModule1 = module module-4
 			2 = LOAD_REGISTER
-			2 {
-				renderedModuleHeader4 = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header header-no-title"><span class="header-inner-wrap">&nbsp;</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
-				classModule4 = module module-4
-			}
+			2.classModule1 = module module-4 title-no-show
 		}
 		1 = LOAD_REGISTER
 		1 {
