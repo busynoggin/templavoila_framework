@@ -670,6 +670,8 @@ moduleGroupSetup.50.40 {
 	}
 }
 
+plugin.tx_templavoilaframework.moduleGroupSetup =< moduleGroupSetup
+
 ##############################################################
 # columnGroupSetup is the library used to load the register with
 # the various values needed by the column groups. There are default
