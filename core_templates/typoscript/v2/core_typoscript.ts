@@ -856,22 +856,22 @@ plugin.tx_templavoilaframework {
 	moduleGroupSetup = COA
 	moduleGroupSetup.10 = LOAD_REGISTER
 	moduleGroupSetup.10 {
-		moduleBodyWrapBorderWidth1 = {$plugin.tx_templavoilaframework.moduleBodyWrapBorderWidth}
+		moduleBodyBorderWidth1 = {$plugin.tx_templavoilaframework.moduleBodyBorderWidth}
 		moduleBodyTopBuffer1 = {$plugin.tx_templavoilaframework.moduleBodyTopBuffer}
 		moduleBodyLeftBuffer1 = {$plugin.tx_templavoilaframework.moduleBodyLeftBuffer}
 		moduleBodyRightBuffer1 = {$plugin.tx_templavoilaframework.moduleBodyRightBuffer}
 		moduleBodyBottomBuffer1 = {$plugin.tx_templavoilaframework.moduleBodyBottomBuffer}
-		moduleBodyWrapBorderWidth2 = {$plugin.tx_templavoilaframework.moduleBodyWrapBorderWidth}
+		moduleBodyBorderWidth2 = {$plugin.tx_templavoilaframework.moduleBodyBorderWidth}
 		moduleBodyTopBuffer2 = {$plugin.tx_templavoilaframework.moduleBodyTopBuffer}
 		moduleBodyLeftBuffer2 = {$plugin.tx_templavoilaframework.moduleBodyLeftBuffer}
 		moduleBodyRightBuffer2 = {$plugin.tx_templavoilaframework.moduleBodyRightBuffer}
 		moduleBodyBottomBuffer2 = {$plugin.tx_templavoilaframework.moduleBodyBottomBuffer}
-		moduleBodyWrapBorderWidth3 = {$plugin.tx_templavoilaframework.moduleBodyWrapBorderWidth}
+		moduleBodyBorderWidth3 = {$plugin.tx_templavoilaframework.moduleBodyBorderWidth}
 		moduleBodyTopBuffer3 = {$plugin.tx_templavoilaframework.moduleBodyTopBuffer}
 		moduleBodyLeftBuffer3 = {$plugin.tx_templavoilaframework.moduleBodyLeftBuffer}
 		moduleBodyRightBuffer3 = {$plugin.tx_templavoilaframework.moduleBodyRightBuffer}
 		moduleBodyBottomBuffer3 = {$plugin.tx_templavoilaframework.moduleBodyBottomBuffer}
-		moduleBodyWrapBorderWidth4 = {$plugin.tx_templavoilaframework.moduleBodyWrapBorderWidth}
+		moduleBodyBorderWidth4 = {$plugin.tx_templavoilaframework.moduleBodyBorderWidth}
 		moduleBodyTopBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyTopBuffer}
 		moduleBodyLeftBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyLeftBuffer}
 		moduleBodyRightBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyRightBuffer}
@@ -940,7 +940,7 @@ plugin.tx_templavoilaframework {
 			renderedModuleHeader1 = 
 			renderedModuleFooter1 =
 			classModule1 = module module-1 unframed
-			moduleBodyWrapBorderWidth1 = 0
+			moduleBodyBorderWidth1 = 0
 			moduleBodyTopBuffer1 = 0
 			moduleBodyLeftBuffer1 = 0
 			moduleBodyRightBuffer1 = 0
@@ -972,7 +972,7 @@ plugin.tx_templavoilaframework {
 			renderedModuleHeader2 = 
 			renderedModuleFooter2 =
 			classModule2 = module module-2 unframed
-			moduleBodyWrapBorderWidth2 = 0
+			moduleBodyBorderWidth2 = 0
 			moduleBodyTopBuffer2 = 0
 			moduleBodyLeftBuffer2 = 0
 			moduleBodyRightBuffer2 = 0
@@ -1004,7 +1004,7 @@ plugin.tx_templavoilaframework {
 			renderedModuleHeader3 = 
 			renderedModuleFooter3 =
 			classModule3 = module module-3 unframed
-			moduleBodyWrapBorderWidth3 = 0
+			moduleBodyBorderWidth3 = 0
 			moduleBodyTopBuffer3 = 0
 			moduleBodyLeftBuffer3 = 0
 			moduleBodyRightBuffer3 = 0
@@ -1037,7 +1037,7 @@ plugin.tx_templavoilaframework {
 			renderedModuleHeader4 = 
 			renderedModuleFooter4 =
 			classModule4 = module module-4 unframed
-			moduleBodyWrapBorderWidth4 = 0
+			moduleBodyBorderWidth4 = 0
 			moduleBodyTopBuffer4 = 0
 			moduleBodyLeftBuffer4 = 0
 			moduleBodyRightBuffer4 = 0
@@ -1249,7 +1249,7 @@ plugin.tx_templavoilaframework {
 		default = LOAD_REGISTER
 		default {
 			tempBodyWidthMod1.data = register:moduleWidth1
-			tempBodyWidthMod1.dataWrap = |-({register:moduleBodyLeftBuffer1}+{register:moduleBodyRightBuffer1})-(2*{register:moduleBodyWrapBorderWidth1})
+			tempBodyWidthMod1.dataWrap = |-({register:moduleBodyLeftBuffer1}+{register:moduleBodyRightBuffer1})-(2*{register:moduleBodyBorderWidth1})
 			bodyWidthMod1.data = register:tempBodyWidthMod1
 			bodyWidthMod1.prioriCalc = intval
 			moduleBodyClass1 = inner-wrap
@@ -1257,7 +1257,7 @@ plugin.tx_templavoilaframework {
 		1 = LOAD_REGISTER
 		1 {
 			tempBodyWidthMod1.data = register:moduleWidth1
-			tempBodyWidthMod1.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth1})
+			tempBodyWidthMod1.dataWrap = |-(2*{register:moduleBodyBorderWidth1})
 			bodyWidthMod1.data = register:tempBodyWidthMod1
 			bodyWidthMod1.prioriCalc = intval
 			moduleBodyTopBuffer1 = 0
@@ -1273,7 +1273,7 @@ plugin.tx_templavoilaframework {
 		default = LOAD_REGISTER
 		default {
 			tempBodyWidthMod2.data = register:moduleWidth2
-			tempBodyWidthMod2.dataWrap = |-({register:moduleBodyLeftBuffer2}+{register:moduleBodyRightBuffer2})-(2*{register:moduleBodyWrapBorderWidth2})
+			tempBodyWidthMod2.dataWrap = |-({register:moduleBodyLeftBuffer2}+{register:moduleBodyRightBuffer2})-(2*{register:moduleBodyBorderWidth2})
 			bodyWidthMod2.data = register:tempBodyWidthMod2
 			bodyWidthMod2.prioriCalc = intval
 			moduleBodyClass2 = inner-wrap
@@ -1281,7 +1281,7 @@ plugin.tx_templavoilaframework {
 		1 = LOAD_REGISTER
 		1 {
 			tempBodyWidthMod2.data = register:moduleWidth2
-			tempBodyWidthMod2.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth2})
+			tempBodyWidthMod2.dataWrap = |-(2*{register:moduleBodyBorderWidth2})
 			bodyWidthMod2.data = register:tempBodyWidthMod2
 			bodyWidthMod2.prioriCalc = intval
 			moduleBodyTopBuffer2 = 0
@@ -1298,7 +1298,7 @@ plugin.tx_templavoilaframework {
 		default = LOAD_REGISTER
 		default {
 			tempBodyWidthMod3.data = register:moduleWidth3
-			tempBodyWidthMod3.dataWrap = |-({register:moduleBodyLeftBuffer3}+{register:moduleBodyRightBuffer3})-(2*{register:moduleBodyWrapBorderWidth3})
+			tempBodyWidthMod3.dataWrap = |-({register:moduleBodyLeftBuffer3}+{register:moduleBodyRightBuffer3})-(2*{register:moduleBodyBorderWidth3})
 			bodyWidthMod3.data = register:tempBodyWidthMod3
 			bodyWidthMod3.prioriCalc = intval
 			moduleBodyClass3 = inner-wrap
@@ -1306,7 +1306,7 @@ plugin.tx_templavoilaframework {
 		1 = LOAD_REGISTER
 		1 {
 			tempBodyWidthMod3.data = register:moduleWidth3
-			tempBodyWidthMod3.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth3})
+			tempBodyWidthMod3.dataWrap = |-(2*{register:moduleBodyBorderWidth3})
 			bodyWidthMod3.data = register:tempBodyWidthMod3
 			bodyWidthMod3.prioriCalc = intval
 			moduleBodyTopBuffer3 = 0
@@ -1323,7 +1323,7 @@ plugin.tx_templavoilaframework {
 		default = LOAD_REGISTER
 		default {
 			tempBodyWidthMod4.data = register:moduleWidth4
-			tempBodyWidthMod4.dataWrap = |-({register:moduleBodyLeftBuffer4}+{register:moduleBodyRightBuffer4})-(2*{register:moduleBodyWrapBorderWidth4})
+			tempBodyWidthMod4.dataWrap = |-({register:moduleBodyLeftBuffer4}+{register:moduleBodyRightBuffer4})-(2*{register:moduleBodyBorderWidth4})
 			bodyWidthMod4.data = register:tempBodyWidthMod4
 			bodyWidthMod4.prioriCalc = intval
 			moduleBodyClass4 = inner-wrap
@@ -1331,7 +1331,7 @@ plugin.tx_templavoilaframework {
 		1 = LOAD_REGISTER
 		1 {
 			tempBodyWidthMod4.data = register:moduleWidth4
-			tempBodyWidthMod4.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth4})
+			tempBodyWidthMod4.dataWrap = |-(2*{register:moduleBodyBorderWidth4})
 			bodyWidthMod4.data = register:tempBodyWidthMod4
 			bodyWidthMod4.prioriCalc = intval
 			moduleBodyTopBuffer4 = 0

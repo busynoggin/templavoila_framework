@@ -428,7 +428,7 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth1}px;border-right-width:{register:moduleBodyWrapBorderWidth1}px;"><div class="{register:moduleBodyClass1}">|<div class="clearOnly">&nbsp;</div></div></div>
+		stdWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;"><div class="{register:moduleBodyClass1}">|<div class="clearOnly">&nbsp;</div></div></div>
 		source.current = 1
 		tables = tt_content
 	}
@@ -495,7 +495,7 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth2}px;border-right-width:{register:moduleBodyWrapBorderWidth2}px;"><div class="{register:moduleBodyClass2}">|<div class="clearOnly">&nbsp;</div></div></div>
+		stdWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth2}px;border-right-width:{register:moduleBodyBorderWidth2}px;"><div class="{register:moduleBodyClass2}">|<div class="clearOnly">&nbsp;</div></div></div>
 		source.current = 1
 		tables = tt_content
 	}
@@ -562,7 +562,7 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth3}px;border-right-width:{register:moduleBodyWrapBorderWidth3}px;"><div class="{register:moduleBodyClass3}">|<div class="clearOnly">&nbsp;</div></div></div>
+		stdWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth3}px;border-right-width:{register:moduleBodyBorderWidth3}px;"><div class="{register:moduleBodyClass3}">|<div class="clearOnly">&nbsp;</div></div></div>
 		source.current = 1
 		tables = tt_content
 	}
@@ -629,7 +629,7 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="moduleBodyWrap" style="border-left-width:{register:moduleBodyWrapBorderWidth4}px;border-right-width:{register:moduleBodyWrapBorderWidth4}px;"><div class="{register:moduleBodyClass4}">|<div class="clearOnly">&nbsp;</div></div></div>
+		stdWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth4}px;border-right-width:{register:moduleBodyBorderWidth4}px;"><div class="{register:moduleBodyClass4}">|<div class="clearOnly">&nbsp;</div></div></div>
 		source.current = 1
 		tables = tt_content
 	}
