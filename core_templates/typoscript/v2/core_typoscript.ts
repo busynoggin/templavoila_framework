@@ -2258,12 +2258,12 @@ page {
 		}
 		20 = TEXT
 		20 {
-			value = .column-group .column-1, .three-column-group .column-2, .four-column-group .column-2, .four-column-group .column-3, .double-module-group .module-1, .triple-module-group .module-1, .triple-module-group .module-2, .quad-module-group .module-1, .quad-module-group .module-2, .quad-module-group .module-3 {float:left;}
+			value = .column-group .column-1, .three-column-group .column-2, .four-column-group .column-2, .four-column-group .column-3, .dual-module-group .module-1, .triple-module-group .module-1, .triple-module-group .module-2, .quad-module-group .module-1, .quad-module-group .module-2, .quad-module-group .module-3 {float:left;}
 			if.isTrue.data = register:createColumnModuleCSS
 		}
 		30 = TEXT
 		30 {
-			value = .two-column-group .column-2, .three-column-group .column-3, .four-column-group .column-4, .double-module-group .module-2, .triple-module-group .module-3, .quad-module-group .module-4 {float:right;}
+			value = .two-column-group .column-2, .three-column-group .column-3, .four-column-group .column-4, .dual-module-group .module-2, .triple-module-group .module-3, .quad-module-group .module-4 {float:right;}
 			if.isTrue.data = register:createColumnModuleCSS
 		}
 		40 = TEXT

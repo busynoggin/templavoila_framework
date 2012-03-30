@@ -348,10 +348,36 @@
 	containerElementPresent = 1
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_1_frame
+	tempAggregateCss.data = register:aggregateCss
+	thisCss {
+		data = register:containerWidth
+		dataWrap = .module-1-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {width:|px;}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = COA
+20 = CASE
 20 {
-	stdWrap.dataWrap = <div class="module-group triple-module-group"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;margin-right:{register:globalGutter}px;">|</div>
+	key.data = register:tvfwRenderMode
+	2 = LOAD_REGISTER
+	2 {
+		tvfwModuleBeginWrap.dataWrap = <div class="module-group triple-module-group"><div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleEndWrap.dataWrap = </div>
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass1}">
+		tvfwModuleBodyEndWrap.dataWrap = </div></div>
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwModuleBeginWrap.dataWrap = <div class="module-group triple-module-group"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;">
+		tvfwModuleEndWrap.dataWrap = </div>
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;"><div class="{register:moduleBodyClass1}">
+		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
+	}
+}
+30 = COA
+30 {
+	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
+	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader1
 	20 = LOAD_REGISTER
@@ -365,15 +391,16 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="body" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;"><div class="{register:moduleBodyClass1}">|<div class="clearOnly">&nbsp;</div></div></div>
+		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
+		wrap.insertData = 1
 		source.current = 1
 		tables = tt_content
 	}
 	50 = TEXT
 	50.data = register:renderedModuleFooter1
 }
-60 = LOAD_REGISTER
-60 {
+90 = LOAD_REGISTER
+90 {
 	containerWidth.data = register:moduleGroupWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType = 0
@@ -415,10 +442,36 @@
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_2_frame
+	tempAggregateCss.data = register:aggregateCss
+	thisCss {
+		data = register:containerWidth
+		dataWrap = .module-2-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {width:|px;}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = COA
+20 = CASE
 20 {
-	stdWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution}" style="width:{register:moduleWidth2}px;float:left;">|</div>
+	key.data = register:tvfwRenderMode
+	2 = LOAD_REGISTER
+	2 {
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution} module-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleEndWrap.dataWrap = </div>
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass2}">
+		tvfwModuleBodyEndWrap.dataWrap = </div></div>
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution}" style="width:{register:moduleWidth2}px;float:left;">
+		tvfwModuleEndWrap.dataWrap = </div>
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth2}px;border-right-width:{register:moduleBodyBorderWidth2}px;"><div class="{register:moduleBodyClass2}">
+		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
+	}
+}
+30 = COA
+30 {
+	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
+	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader2
 	20 = LOAD_REGISTER
@@ -432,15 +485,16 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="body" style="border-left-width:{register:moduleBodyBorderWidth2}px;border-right-width:{register:moduleBodyBorderWidth2}px;"><div class="{register:moduleBodyClass2}">|<div class="clearOnly">&nbsp;</div></div></div>
+		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
+		wrap.insertData = 1
 		source.current = 1
 		tables = tt_content
 	}
 	50 = TEXT
 	50.data = register:renderedModuleFooter2
 }
-60 = LOAD_REGISTER
-60 {
+90 = LOAD_REGISTER
+90 {
 	containerWidth.data = register:moduleGroupWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType = 0
@@ -482,10 +536,36 @@
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_3_frame
+	tempAggregateCss.data = register:aggregateCss
+	thisCss {
+		data = register:containerWidth
+		dataWrap = .module-3-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {width:|px;}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = COA
-20	{
-	stdWrap.dataWrap = <div class="{register:classModule3}{register:classModule3Distribution}" style="width:{register:moduleWidth3}px;float:right;">|</div><div class="clearOnly">&nbsp;</div></div><!-- end .tripleModuleGroup  -->
+20 = CASE
+20 {
+	key.data = register:tvfwRenderMode
+	2 = LOAD_REGISTER
+	2 {
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule3}{register:classModule3Distribution} module-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleEndWrap.dataWrap = </div></div><!-- end .triple-module-group  -->
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass3}">
+		tvfwModuleBodyEndWrap.dataWrap = </div></div>
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule3}{register:classModule3Distribution}" style="width:{register:moduleWidth3}px;float:right;">
+		tvfwModuleEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .tripleModuleGroup  -->
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth3}px;border-right-width:{register:moduleBodyBorderWidth3}px;"><div class="{register:moduleBodyClass3}">
+		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
+	}
+}
+30 = COA
+30	{
+	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
+	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader3
 	20 = LOAD_REGISTER
@@ -499,15 +579,16 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="body" style="border-left-width:{register:moduleBodyBorderWidth3}px;border-right-width:{register:moduleBodyBorderWidth3}px;"><div class="{register:moduleBodyClass3}">|<div class="clearOnly">&nbsp;</div></div></div>
+		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
+		wrap.insertData = 1
 		source.current = 1
 		tables = tt_content
 	}
 	50 = TEXT
 	50.data = register:renderedModuleFooter3
 }
-60 = LOAD_REGISTER
-60 {
+90 = LOAD_REGISTER
+90 {
 	containerWidth.data = register:moduleGroupWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType = 0

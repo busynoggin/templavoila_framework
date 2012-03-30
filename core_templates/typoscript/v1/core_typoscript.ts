@@ -154,22 +154,22 @@ moduleGroupSetup = COA
 moduleGroupSetup.10 = LOAD_REGISTER
 moduleGroupSetup.10 {
 	globalGutter = {$globalGutter}
-	moduleBodyWrapBorderWidth1 = {$moduleBodyWrapBorderWidth}
+	moduleBodyBorderWidth1 = {$moduleBodyWrapBorderWidth}
 	moduleBodyTopBuffer1 = {$moduleBodyTopBuffer}
 	moduleBodyLeftBuffer1 = {$moduleBodyLeftBuffer}
 	moduleBodyRightBuffer1 = {$moduleBodyRightBuffer}
 	moduleBodyBottomBuffer1 = {$moduleBodyBottomBuffer}
-	moduleBodyWrapBorderWidth2 = {$moduleBodyWrapBorderWidth}
+	moduleBodyBorderWidth2 = {$moduleBodyWrapBorderWidth}
 	moduleBodyTopBuffer2 = {$moduleBodyTopBuffer}
 	moduleBodyLeftBuffer2 = {$moduleBodyLeftBuffer}
 	moduleBodyRightBuffer2 = {$moduleBodyRightBuffer}
 	moduleBodyBottomBuffer2 = {$moduleBodyBottomBuffer}
-	moduleBodyWrapBorderWidth3 = {$moduleBodyWrapBorderWidth}
+	moduleBodyBorderWidth3 = {$moduleBodyWrapBorderWidth}
 	moduleBodyTopBuffer3 = {$moduleBodyTopBuffer}
 	moduleBodyLeftBuffer3 = {$moduleBodyLeftBuffer}
 	moduleBodyRightBuffer3 = {$moduleBodyRightBuffer}
 	moduleBodyBottomBuffer3 = {$moduleBodyBottomBuffer}
-	moduleBodyWrapBorderWidth4 = {$moduleBodyWrapBorderWidth}
+	moduleBodyBorderWidth4 = {$moduleBodyWrapBorderWidth}
 	moduleBodyTopBuffer4 = {$moduleBodyTopBuffer}
 	moduleBodyLeftBuffer4 = {$moduleBodyLeftBuffer}
 	moduleBodyRightBuffer4 = {$moduleBodyRightBuffer}
@@ -585,7 +585,7 @@ moduleGroupSetup.50.10 {
 	1 = LOAD_REGISTER
 	1 {
 		tempBodyWidthMod1.data = register:moduleWidth1
-		tempBodyWidthMod1.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth1})
+		tempBodyWidthMod1.dataWrap = |-(2*{register:moduleBodyBorderWidth1})
 		bodyWidthMod1.data = register:tempBodyWidthMod1
 		bodyWidthMod1.prioriCalc = intval
 		moduleBodyTopBuffer1 = 0
@@ -601,7 +601,7 @@ moduleGroupSetup.50.20 {
 	default = LOAD_REGISTER
 	default {
 		tempBodyWidthMod2.data = register:moduleWidth2
-		tempBodyWidthMod2.dataWrap = |-({register:moduleBodyLeftBuffer2}+{register:moduleBodyRightBuffer2})-(2*{register:moduleBodyWrapBorderWidth2})
+		tempBodyWidthMod2.dataWrap = |-({register:moduleBodyLeftBuffer2}+{register:moduleBodyRightBuffer2})-(2*{register:moduleBodyBorderWidth2})
 		bodyWidthMod2.data = register:tempBodyWidthMod2
 		bodyWidthMod2.prioriCalc = intval
 		moduleBodyClass2 = moduleBody
@@ -609,7 +609,7 @@ moduleGroupSetup.50.20 {
 	1 = LOAD_REGISTER
 	1 {
 		tempBodyWidthMod2.data = register:moduleWidth2
-		tempBodyWidthMod2.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth2})
+		tempBodyWidthMod2.dataWrap = |-(2*{register:moduleBodyBorderWidth2})
 		bodyWidthMod2.data = register:tempBodyWidthMod2
 		bodyWidthMod2.prioriCalc = intval
 		moduleBodyTopBuffer2 = 0
@@ -626,7 +626,7 @@ moduleGroupSetup.50.30 {
 	default = LOAD_REGISTER
 	default {
 		tempBodyWidthMod3.data = register:moduleWidth3
-		tempBodyWidthMod3.dataWrap = |-({register:moduleBodyLeftBuffer3}+{register:moduleBodyRightBuffer3})-(2*{register:moduleBodyWrapBorderWidth3})
+		tempBodyWidthMod3.dataWrap = |-({register:moduleBodyLeftBuffer3}+{register:moduleBodyRightBuffer3})-(2*{register:moduleBodyBorderWidth3})
 		bodyWidthMod3.data = register:tempBodyWidthMod3
 		bodyWidthMod3.prioriCalc = intval
 		moduleBodyClass3 = moduleBody
@@ -634,7 +634,7 @@ moduleGroupSetup.50.30 {
 	1 = LOAD_REGISTER
 	1 {
 		tempBodyWidthMod3.data = register:moduleWidth3
-		tempBodyWidthMod3.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth3})
+		tempBodyWidthMod3.dataWrap = |-(2*{register:moduleBodyBorderWidth3})
 		bodyWidthMod3.data = register:tempBodyWidthMod3
 		bodyWidthMod3.prioriCalc = intval
 		moduleBodyTopBuffer3 = 0
@@ -651,7 +651,7 @@ moduleGroupSetup.50.40 {
 	default = LOAD_REGISTER
 	default {
 		tempBodyWidthMod4.data = register:moduleWidth4
-		tempBodyWidthMod4.dataWrap = |-({register:moduleBodyLeftBuffer4}+{register:moduleBodyRightBuffer4})-(2*{register:moduleBodyWrapBorderWidth4})
+		tempBodyWidthMod4.dataWrap = |-({register:moduleBodyLeftBuffer4}+{register:moduleBodyRightBuffer4})-(2*{register:moduleBodyBorderWidth4})
 		bodyWidthMod4.data = register:tempBodyWidthMod4
 		bodyWidthMod4.prioriCalc = intval
 		moduleBodyClass4 = moduleBody
@@ -659,7 +659,7 @@ moduleGroupSetup.50.40 {
 	1 = LOAD_REGISTER
 	1 {
 		tempBodyWidthMod4.data = register:moduleWidth4
-		tempBodyWidthMod4.dataWrap = |-(2*{register:moduleBodyWrapBorderWidth4})
+		tempBodyWidthMod4.dataWrap = |-(2*{register:moduleBodyBorderWidth4})
 		bodyWidthMod4.data = register:tempBodyWidthMod4
 		bodyWidthMod4.prioriCalc = intval
 		moduleBodyTopBuffer4 = 0

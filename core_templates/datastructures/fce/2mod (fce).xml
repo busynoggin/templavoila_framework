@@ -275,20 +275,19 @@
 20 = CASE
 20 {
 	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwModuleBeginWrap.dataWrap = <div class="module-group dual-module-group"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;">
-		tvfwModuleEndWrap.dataWrap = </div>
-	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleBeginWrap.dataWrap = <div class="module-group dual-module-group"><div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div>
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass1}">
+		tvfwModuleBodyEndWrap.dataWrap = </div></div>
 	}
 	default = LOAD_REGISTER
 	default {
 		tvfwModuleBeginWrap.dataWrap = <div class="module-group dual-module-group"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;">
 		tvfwModuleEndWrap.dataWrap = </div>
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;"><div class="{register:moduleBodyClass1}">
+		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
 30 = COA
@@ -308,7 +307,8 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;"><div class="{register:moduleBodyClass1}">|<div class="clearOnly">&nbsp;</div></div></div>
+		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
+		wrap.insertData = 1
 		source.current = 1
 		tables = tt_content
 	}
@@ -369,20 +369,19 @@
 20 = CASE
 20 {
 	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution}" style="width:{register:moduleWidth2}px;float:right;">
-		tvfwModuleEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .dualModuleGroup  -->
-	}
 	2 = LOAD_REGISTER
 	2 {
 		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution} module-2-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div></div><!-- end .dual-module-group  -->
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass2}">
+		tvfwModuleBodyEndWrap.dataWrap = </div></div>
 	}
 	default = LOAD_REGISTER
 	default {
 		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution}" style="width:{register:moduleWidth2}px;float:right;">
 		tvfwModuleEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .dualModuleGroup  -->
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth2}px;border-right-width:{register:moduleBodyBorderWidth2}px;"><div class="{register:moduleBodyClass2}">
+		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
 30 = COA
@@ -402,7 +401,8 @@
 	}
 	30 = RECORDS
 	30 {
-		stdWrap.dataWrap = <div class="moduleBody" style="border-left-width:{register:moduleBodyBorderWidth2}px;border-right-width:{register:moduleBodyBorderWidth2}px;"><div class="{register:moduleBodyClass2}">|<div class="clearOnly">&nbsp;</div></div></div>
+		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
+		wrap.insertData = 1
 		source.current = 1
 		tables = tt_content
 	}
