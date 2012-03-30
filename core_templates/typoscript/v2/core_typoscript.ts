@@ -904,7 +904,7 @@ plugin.tx_templavoilaframework {
 		key = {$plugin.tx_templavoilaframework.moduleFooterTotalHeight}
 		default = LOAD_REGISTER
 		default {
-			renderedModuleFooter = <div class="module-footer"><span>&nbsp;</span></div>
+			renderedModuleFooter = {$plugin.tx_templavoilaframework.moduleFooter}
 			renderedModuleFooter1.data = register:renderedModuleFooter
 		 	renderedModuleFooter2.data = register:renderedModuleFooter
 			renderedModuleFooter3.data = register:renderedModuleFooter

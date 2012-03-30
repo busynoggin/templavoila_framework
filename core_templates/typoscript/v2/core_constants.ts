@@ -46,6 +46,8 @@ plugin.tx_templavoilaframework.skinCSS = {$templavoila_framework.skinPath}css/ma
 #Sets the rendering for module headers
 plugin.tx_templavoilaframework.moduleHeaderWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span>|</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
 
+#Sets the rendering for module footers
+plugin.tx_templavoilaframework.moduleFooter = <div class="module-footer"><span>&nbsp;</span></div>
 
 ## This setups the default rendering for the content blocks
 plugin.tx_templavoilaframework {
