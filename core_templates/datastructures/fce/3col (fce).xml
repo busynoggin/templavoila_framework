@@ -121,7 +121,7 @@
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-1-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
@@ -156,7 +156,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	default = LOAD_REGISTER
@@ -226,7 +226,7 @@
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-2-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
@@ -250,7 +250,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	default = LOAD_REGISTER
@@ -320,7 +320,7 @@
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-3-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
@@ -344,7 +344,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div><!-- end .threeColumnGroup  -->
 	}
 	default = LOAD_REGISTER
