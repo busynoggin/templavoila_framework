@@ -240,7 +240,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
-					<TypoScriptObjPath>moduleGroupSetup</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.moduleGroupSetup</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_module_group_library>
 			<field_module_1 type="array">

@@ -324,7 +324,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
-					<TypoScriptObjPath>moduleGroupSetup</TypoScriptObjPath>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.moduleGroupSetup</TypoScriptObjPath>
 				</tx_templavoila>
 			</field_module_group_library>
 			<field_module_1 type="array">
@@ -351,7 +351,7 @@
 }
 20 = COA
 20 {
-	stdWrap.dataWrap = <div class="moduleGroup tripleModuleGroup"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;margin-right:{register:moduleGutter}px;">|</div>
+	stdWrap.dataWrap = <div class="moduleGroup tripleModuleGroup"><div class="{register:classModule1}{register:classModule1Distribution}" style="width:{register:moduleWidth1}px;float:left;margin-right:{register:globalGutter}px;">|</div>
 	10 = TEXT
 	10.data = register:renderedModuleHeader1
 	20 = LOAD_REGISTER
