@@ -99,8 +99,8 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-5 = CASE
-5 {
+10 = CASE
+10 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default {
@@ -112,8 +112,8 @@
 		originalColumnWidth3.data = register:columnWidth3
 	}
 }
-10 = LOAD_REGISTER
-10 {
+20 = LOAD_REGISTER
+20 {
 	columnGroupWidth.data = register:containerWidth
 	containerWidth.data = register:columnWidth1
 	maxImageWidth.data = register:containerWidth
@@ -126,8 +126,8 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = COA
-20 {
+30 = COA
+30 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:minFullImageWidth
@@ -135,8 +135,8 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:minFullImageWidth
 }
-30 = CASE
-30 {
+40 = CASE
+40 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default.nestingLevel = 1
@@ -146,14 +146,34 @@
 		level1ContainerWidth.data = register:columnGroupWidth
 	}
 }
-40 = RECORDS
-40 {
-	stdWrap.dataWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
+50 = CASE
+50 {
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} threeColumnGroup"><div class="column column-1{register:classColumn1Distribution}" style="width:{register:containerWidth}px;float:left;margin-right:{register:columnGutter}px;">
+		tvfwColumnEndWrap.dataWrap = </div>
+	}
+	2 = LOAD_REGISTER
+	2 {
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnEndWrap.dataWrap = </div>
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} threeColumnGroup"><div class="column column-1{register:classColumn1Distribution}" style="width:{register:containerWidth}px;float:left;margin-right:{register:columnGutter}px;">
+		tvfwColumnEndWrap.dataWrap = </div>
+	}
+}
+60 = RECORDS
+60 {
+	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
+	wrap.insertData = 1
 	source.current = 1
 	tables = tt_content
 }
-50 = LOAD_REGISTER
-50 {
+70 = LOAD_REGISTER
+70 {
 	containerWidth.data = register:columnGroupWidth
 	maxImageWidth.data = register:containerWidth
 }
@@ -188,8 +208,8 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-5 = CASE
-5 {
+10 = CASE
+10 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default {
@@ -200,8 +220,8 @@
 		containerWidth.data = register:originalColumnWidth2
 	}
 }
-10 = LOAD_REGISTER
-10 {
+20 = LOAD_REGISTER
+20 {
 	maxImageWidth.data = register:containerWidth
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
@@ -211,8 +231,8 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = COA
-20 {
+30 = COA
+30 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:minFullImageWidth
@@ -220,14 +240,34 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:minFullImageWidth
 }
-30 = RECORDS
-30 {
-	stdWrap.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div>
+40 = CASE
+40 {
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1 {
+		tvfwColumnBeginWrap.dataWrap = <div class="column column-2{register:classColumn2Distribution}" style="width:{register:containerWidth}px;float:left;">
+		tvfwColumnEndWrap.dataWrap = </div>
+	}
+	2 = LOAD_REGISTER
+	2 {
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnEndWrap.dataWrap = </div>
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwColumnBeginWrap.dataWrap = <div class="column column-2{register:classColumn2Distribution}" style="width:{register:containerWidth}px;float:left;">
+		tvfwColumnEndWrap.dataWrap = </div>
+	}
+}
+50 = RECORDS
+50 {
+	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
+	wrap.insertData = 1
 	source.current = 1
 	tables = tt_content
 }
-40 = LOAD_REGISTER
-40 {
+60 = LOAD_REGISTER
+60 {
 	containerWidth.data = register:columnGroupWidth
 	maxImageWidth.data = register:containerWidth
 }
@@ -262,8 +302,8 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-5 = CASE
-5 {
+10 = CASE
+10 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default {
@@ -274,8 +314,8 @@
 		containerWidth.data = register:originalColumnWidth3
 	}
 }
-10 = LOAD_REGISTER
-10 {
+20 = LOAD_REGISTER
+20 {
 	maxImageWidth.data = register:containerWidth
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
@@ -285,8 +325,8 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = COA
-20 {
+30 = COA
+30 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:minFullImageWidth
@@ -294,19 +334,39 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:minFullImageWidth
 }
-30 = RECORDS
-30 {
-	stdWrap.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-c{register:tx_templavoila_pi1.parentRec.uid}">|</div><div class="clear-only">&nbsp;</div></div><!-- end .three-column-group  -->
+40 = CASE
+40 {
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1 {
+		tvfwColumnBeginWrap.dataWrap = <div class="column column-3{register:classColumn3Distribution}" style="width:{register:containerWidth}px;float:right;">
+		tvfwColumnEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .threeColumnGroup  -->
+	}
+	2 = LOAD_REGISTER
+	2 {
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnEndWrap.dataWrap = </div><!-- end .threeColumnGroup  -->
+	}
+	default = LOAD_REGISTER
+	default {
+		tvfwColumnBeginWrap.dataWrap = <div class="column column-3{register:classColumn3Distribution}" style="width:{register:containerWidth}px;float:right;">
+		tvfwColumnEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .threeColumnGroup  -->
+	}
+}
+50 = RECORDS
+50 {
+	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
+	wrap.insertData = 1
 	source.current = 1
 	tables = tt_content
 }
-40 = LOAD_REGISTER
-40 {
+60 = LOAD_REGISTER
+60 {
 	containerWidth.data = register:columnGroupWidth
 	maxImageWidth.data = register:containerWidth
 }
-50 = CASE
-50 {
+70 = CASE
+70 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default {

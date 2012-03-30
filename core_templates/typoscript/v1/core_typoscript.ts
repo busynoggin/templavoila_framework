@@ -142,8 +142,6 @@ containerWidth {
 	}
 }
 
-
-
 ##############################################################
 # moduleGroupSetup is the library used to load the register
 # with the various values needed by the module groups. The
@@ -860,6 +858,8 @@ columnGroupSetup.40 {
 		classColumn3Distribution.noTrimWrap = | ||
 	}
 }
+
+plugin.tx_templavoilaframework.columnGroupSetup =< columnGroupSetup
 
 ##############################################################
 # The following allows for custom header, footer, preCode and
