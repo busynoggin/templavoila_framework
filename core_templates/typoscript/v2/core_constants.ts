@@ -43,6 +43,9 @@ plugin.tx_templavoilaframework.defaultHeaderInsideModule = {$content.defaultHead
 # Sets up the default for the skin CSS
 plugin.tx_templavoilaframework.skinCSS = {$templavoila_framework.skinPath}css/mainstyles.css
 
+#Sets the rendering for module headers
+plugin.tx_templavoilaframework.moduleHeaderWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span>|</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
+
 
 ## This setups the default rendering for the content blocks
 plugin.tx_templavoilaframework {
