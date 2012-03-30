@@ -397,7 +397,7 @@ moduleGroupSetup.40 {
 	default = LOAD_REGISTER
 	default {
 		tempModuleWidth.data = register:containerWidth
-		tempModuleWidth.dataWrap = (|-{register:moduleGutter})/2
+		tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
 		moduleWidth1.data = register:tempModuleWidth
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth
@@ -414,9 +414,9 @@ moduleGroupSetup.40 {
 	1323 = LOAD_REGISTER
 	1323 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = (|-({register:moduleGutter}*2))/3
+		tempModuleWidth1.dataWrap = (|-({register:globalGutter}*2))/3
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = (((|-({register:moduleGutter}*2))/3)*2)+{register:moduleGutter}
+		tempModuleWidth2.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -429,9 +429,9 @@ moduleGroupSetup.40 {
 	2313 = LOAD_REGISTER
 	2313 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = (((|-({register:moduleGutter}*2))/3)*2)+{register:moduleGutter}
+		tempModuleWidth1.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = (|-({register:moduleGutter}*2))/3
+		tempModuleWidth2.dataWrap = (|-({register:globalGutter}*2))/3
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -444,9 +444,9 @@ moduleGroupSetup.40 {
 	3414 = LOAD_REGISTER
 	3414 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = (((|-({register:moduleGutter}*3))/4)*3)+({register:moduleGutter}*2)
+		tempModuleWidth1.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -459,9 +459,9 @@ moduleGroupSetup.40 {
 	1434 = LOAD_REGISTER
 	1434 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = (((|-({register:moduleGutter}*3))/4)*3)+({register:moduleGutter}*2)
+		tempModuleWidth2.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -474,7 +474,7 @@ moduleGroupSetup.40 {
 	131313 = LOAD_REGISTER
 	131313 {
 		tempModuleWidth.data = register:containerWidth
-		tempModuleWidth.dataWrap = (|-({register:moduleGutter}*2))/3
+		tempModuleWidth.dataWrap = (|-({register:globalGutter}*2))/3
 		moduleWidth1.data = register:tempModuleWidth
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth
@@ -491,11 +491,11 @@ moduleGroupSetup.40 {
 	121414 = LOAD_REGISTER
 	121414 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = ((|-({register:moduleGutter}*3))/2)+{register:moduleGutter}
+		tempModuleWidth1.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
 		tempModuleWidth3.data = register:containerWidth
-		tempModuleWidth3.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth3.dataWrap = (|-({register:globalGutter}*3))/4
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -512,11 +512,11 @@ moduleGroupSetup.40 {
 	141214 = LOAD_REGISTER
 	141214 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = ((|-({register:moduleGutter}*3))/2)+{register:moduleGutter}
+		tempModuleWidth2.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 		tempModuleWidth3.data = register:containerWidth
-		tempModuleWidth3.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth3.dataWrap = (|-({register:globalGutter}*3))/4
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -533,11 +533,11 @@ moduleGroupSetup.40 {
 	141412 = LOAD_REGISTER
 	141412 {
 		tempModuleWidth1.data = register:containerWidth
-		tempModuleWidth1.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 		tempModuleWidth2.data = register:containerWidth
-		tempModuleWidth2.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
 		tempModuleWidth3.data = register:containerWidth
-		tempModuleWidth3.dataWrap = ((|-({register:moduleGutter}*3))/2)+{register:moduleGutter}
+		tempModuleWidth3.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 		moduleWidth1.data = register:tempModuleWidth1
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth2
@@ -554,7 +554,7 @@ moduleGroupSetup.40 {
 	14141414 = LOAD_REGISTER
 	14141414 {
 		tempModuleWidth.data = register:containerWidth
-		tempModuleWidth.dataWrap = (|-({register:moduleGutter}*3))/4
+		tempModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
 		moduleWidth1.data = register:tempModuleWidth
 		moduleWidth1.prioriCalc = intval
 		moduleWidth2.data = register:tempModuleWidth
