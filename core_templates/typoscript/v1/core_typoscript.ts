@@ -577,7 +577,7 @@ moduleGroupSetup.50.10 {
 	default = LOAD_REGISTER
 	default {
 		tempBodyWidthMod1.data = register:moduleWidth1
-		tempBodyWidthMod1.dataWrap = |-({register:moduleBodyLeftBuffer1}+{register:moduleBodyRightBuffer1})-(2*{register:moduleBodyWrapBorderWidth1})
+		tempBodyWidthMod1.dataWrap = |-({register:moduleBodyLeftBuffer1}+{register:moduleBodyRightBuffer1})-(2*{register:moduleBodyBorderWidth1})
 		bodyWidthMod1.data = register:tempBodyWidthMod1
 		bodyWidthMod1.prioriCalc = intval
 		moduleBodyClass1 = moduleBody

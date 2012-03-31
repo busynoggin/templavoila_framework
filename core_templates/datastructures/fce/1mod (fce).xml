@@ -143,7 +143,7 @@
 	2 = LOAD_REGISTER
 	2 {
 		tvfwModuleBeginWrap.dataWrap = <div class="module-group single-module-group"><div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwModuleEndWrap.dataWrap = </div></div><!-- end .singel-module-group -->
+		tvfwModuleEndWrap.dataWrap = </div></div><!-- end .single-module-group -->
 		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass1}">
 		tvfwModuleBodyEndWrap.dataWrap = </div></div>
 	}
@@ -151,12 +151,12 @@
 	default {
 		tvfwModuleBeginWrap.dataWrap = <div class="moduleGroup singleModule"><div class="{register:classModule1}" style="width:{register:moduleWidth1}px;">
 		tvfwModuleEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .singleModule  -->
-		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBody"><div class="{register:moduleBodyClass1}" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;">
+		tvfwModuleBodyBeginWrap.dataWrap = <div class="moduleBodyWrap"><div class="{register:moduleBodyClass1}" style="border-left-width:{register:moduleBodyBorderWidth1}px;border-right-width:{register:moduleBodyBorderWidth1}px;">
 		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
-20 = COA
-20 {
+30 = COA
+30 {
 	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
 	wrap.insertData = 1
 	10 = TEXT
@@ -180,8 +180,8 @@
 	50 = TEXT
 	50.data = register:renderedModuleFooter1
 }
-60 = LOAD_REGISTER
-60 {
+90 = LOAD_REGISTER
+90 {
 	containerWidth.data = register:moduleGroupWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType = 0
