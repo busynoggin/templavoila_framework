@@ -1358,7 +1358,7 @@ plugin.tx_templavoilaframework {
 		default = LOAD_REGISTER
 		default.columnGroupDefaultClass = column-group
 		1 = LOAD_REGISTER
-		1.columnGroupDefaultClass = column-group column-group-rule
+		1.columnGroupDefaultClass = column-group rule
 	}
 	columnGroupSetup.30 = CASE
 	columnGroupSetup.30 {
@@ -1366,7 +1366,7 @@ plugin.tx_templavoilaframework {
 		default = LOAD_REGISTER
 		default.columnGroupClass.data = register:columnGroupDefaultClass
 		1 = LOAD_REGISTER
-		1.columnGroupClass = column-group column-group-rule
+		1.columnGroupClass = column-group rule
 		2 = LOAD_REGISTER
 		2.columnGroupClass = column-group
 	}
