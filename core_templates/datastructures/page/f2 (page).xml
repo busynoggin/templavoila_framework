@@ -186,6 +186,15 @@
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
+25 = COA
+25 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:minFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:minFullImageWidth
+}
 30 = COA
 30 {
 	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
@@ -307,6 +316,15 @@
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
+25 = COA
+25 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:minFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:minFullImageWidth
+}
 30 = CONTENT
 30 {
 	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
@@ -383,6 +401,15 @@
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 	containerElementPresent = 0
+}
+25 = COA
+25 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:minFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:minFullImageWidth
 }
 30 = RECORDS
 30 {
@@ -502,6 +529,15 @@
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
 }
+25 = COA
+25 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:minFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:minFullImageWidth
+}
 30 = RECORDS
 30 {
 	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
@@ -597,6 +633,15 @@
 	maxImageWidth.data = register:containerWidth
 	originalContainerWidth.data = register:containerWidth
 	nestingLevel = 0
+}
+25 = COA
+25 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:minFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:minFullImageWidth
 }
 30 = CONTENT
 30 {
