@@ -52,7 +52,8 @@ plugin.tx_templavoilaframework {
 
 		30 = LOAD_REGISTER
 		30 {
-			autoHeadlineWrap = {$plugin.tx_templavoilaframework.autoHeadlineWrap}
+			autoHeadlineBeginWrap = {$plugin.tx_templavoilaframework.autoHeadlineBeginWrap}
+			autoHeadlineEndWrap = {$plugin.tx_templavoilaframework.autoHeadlineEndWrap}
 			globalGutter = {$plugin.tx_templavoilaframework.globalGutter}
 			minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			generatedContent-1contentsource = {$plugin.tx_templavoilaframework.generatedContent-1.source}

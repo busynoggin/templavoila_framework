@@ -8,6 +8,8 @@ dsConfig.5 {
 	tvfwRenderMode = {$plugin.tx_templavoilaframework.renderMode}
 	generatedContent-1contentsource = {$generatedContent-1.source}
 	generatedContent-2contentsource = {$generatedContent-2.source}
+	autoHeadlineBeginWrap = <h1 class="csc-firstHeader centralHeadline">
+	autoHeadlineEndWrap = </h1>
 }
 dsConfig.10 = CASE
 dsConfig.10 {

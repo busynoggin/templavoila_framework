@@ -203,7 +203,8 @@
 	10 {
 		data = page:title
 		htmlSpecialChars = 1
-		wrap = <h1 class="csc-firstHeader centralHeadline">|</h1>
+		wrap = {register:autoHeadlineBeginWrap}|{register:autoHeadlineEndWrap}
+		insertData = 1
 		if {
 			value.data = register:autoMainHeadline
 			equals = 0
