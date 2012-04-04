@@ -324,6 +324,7 @@
 	source.current = 1
 	tables = tt_content
 	stdWrap {
+		required = 1
 		wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
 		wrap.insertData = 1
 		## Set to load register only if content is present (required = 1) so that preCodeFeature & postCodeFeature is properly triggered
