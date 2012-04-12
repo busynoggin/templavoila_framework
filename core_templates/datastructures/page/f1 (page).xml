@@ -190,10 +190,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.data = register:minFullImageWidth
+		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:minFullImageWidth
+	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 }
 30 = COA
 30 {
@@ -321,10 +321,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.data = register:minFullImageWidth
+		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:minFullImageWidth
+	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 }
 30 = CONTENT
 30 {
@@ -407,10 +407,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.data = register:minFullImageWidth
+		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:minFullImageWidth
+	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 }
 30 = RECORDS
 30 {
@@ -535,10 +535,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.data = register:minFullImageWidth
+		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:minFullImageWidth
+	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
 }
 30 = CONTENT
 30 {

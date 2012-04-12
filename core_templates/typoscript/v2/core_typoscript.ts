@@ -55,7 +55,6 @@ plugin.tx_templavoilaframework {
 			autoHeadlineBeginWrap = {$plugin.tx_templavoilaframework.autoHeadlineBeginWrap}
 			autoHeadlineEndWrap = {$plugin.tx_templavoilaframework.autoHeadlineEndWrap}
 			globalGutter = {$plugin.tx_templavoilaframework.globalGutter}
-			minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			generatedContent-1contentsource = {$plugin.tx_templavoilaframework.generatedContent-1.source}
 			generatedContent-2contentsource = {$plugin.tx_templavoilaframework.generatedContent-2.source}
 			createColumnModuleCSS = {$plugin.tx_templavoilaframework.createColumnModuleCSS}
@@ -75,6 +74,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1afeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.feature.beginWrap}
 			f1afeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.feature.endWrap}
+			f1afeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1a.settings.feature.minFullImageWidth}
 			
 			## f1a contentBlock-1
 			f1acontentBlock-1width = {$plugin.tx_templavoilaframework.f1a.settings.contentBlock-1.width}
@@ -91,6 +91,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1acontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.contentBlock-1.beginWrap}
 			f1acontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.contentBlock-1.endWrap}
+			f1acontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1a.settings.contentBlock-1.minFullImageWidth}
 			
 			## f1b feature
 			f1bfeaturewidth = {$plugin.tx_templavoilaframework.f1b.settings.feature.width}
@@ -107,6 +108,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1bfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1b.wraps.feature.beginWrap}
 			f1bfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1b.wraps.feature.endWrap}
+			f1bfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1b.settings.feature.minFullImageWidth}
 
 			## f1b contentBlock-1
 			f1bcontentBlock-1width = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.width}
@@ -123,6 +125,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1bcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1b.wraps.contentBlock-1.beginWrap}
 			f1bcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1b.wraps.contentBlock-1.endWrap}
+			f1bcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.minFullImageWidth}
 			
 			## f1c feature
 			f1cfeaturewidth = {$plugin.tx_templavoilaframework.f1c.settings.feature.width}
@@ -139,6 +142,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1cfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1c.wraps.feature.beginWrap}
 			f1cfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1c.wraps.feature.endWrap}
+			f1cfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1c.settings.feature.minFullImageWidth}
 
 			## f1c contentBlock-1
 			f1ccontentBlock-1width = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.width}
@@ -155,6 +159,8 @@ plugin.tx_templavoilaframework {
 			}
 			f1ccontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1c.wraps.contentBlock-1.beginWrap}
 			f1ccontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1c.wraps.contentBlock-1.endWrap}
+			f1ccontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.minFullImageWidth}
+			
 			
 			## f1d feature
 			f1dfeaturewidth = {$plugin.tx_templavoilaframework.f1d.settings.feature.width}
@@ -171,6 +177,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1dfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.feature.beginWrap}
 			f1dfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.feature.endWrap}
+			f1dfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1d.settings.feature.minFullImageWidth}
 
 			## f1d contentBlock-1
 			f1dcontentBlock-1width = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.width}
@@ -187,6 +194,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1dcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.contentBlock-1.beginWrap}
 			f1dcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.contentBlock-1.endWrap}
+			f1dcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.minFullImageWidth}
 			
 			## f1d Generated Content 1
 			f1dgeneratedContent-1width = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.width}
@@ -203,6 +211,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1dgeneratedContent-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.generatedContent-1.beginWrap}
 			f1dgeneratedContent-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.generatedContent-1.endWrap}
+			f1dgeneratedContent-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.minFullImageWidth}
 			
 			## f1e feature
 			f1efeaturewidth = {$plugin.tx_templavoilaframework.f1e.settings.feature.width}
@@ -219,6 +228,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1efeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.feature.beginWrap}
 			f1efeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.feature.endWrap}
+			f1efeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1e.settings.feature.minFullImageWidth}
 
 			## f1e contentBlock-1
 			f1econtentBlock-1width = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.width}
@@ -235,6 +245,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1econtentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.contentBlock-1.beginWrap}
 			f1econtentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.contentBlock-1.endWrap}
+			f1econtentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.minFullImageWidth}
 			
 			## f1e Generated Content 2
 			f1egeneratedContent-2width = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.width}
@@ -251,6 +262,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1egeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.beginWrap}
 			f1egeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.endWrap}
+			f1egeneratedContent-2minFullImageWidth = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.minFullImageWidth}
 			
 			## f1f feature
 			f1ffeaturewidth = {$plugin.tx_templavoilaframework.f1f.settings.feature.width}
@@ -267,6 +279,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1ffeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.feature.beginWrap}
 			f1ffeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.feature.endWrap}
+			f1ffeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1f.settings.feature.minFullImageWidth}
 
 			## f1f contentBlock-1
 			f1fcontentBlock-1width = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.width}
@@ -283,6 +296,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1fcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.contentBlock-1.beginWrap}
 			f1fcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.contentBlock-1.endWrap}
+			f1fcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.minFullImageWidth}
 			
 			## f1f Generated Content 1
 			f1fgeneratedContent-1width = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.width}
@@ -299,6 +313,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1fgeneratedContent-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.generatedContent-1.beginWrap}
 			f1fgeneratedContent-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.generatedContent-1.endWrap}
+			f1fgeneratedContent-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.minFullImageWidth}
 
 
 			## f1f Generated Content 2
@@ -316,6 +331,7 @@ plugin.tx_templavoilaframework {
 			}
 			f1fgeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.generatedContent-2.beginWrap}
 			f1fgeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.generatedContent-2.endWrap}
+			f1fgeneratedContent-2minFullImageWidth = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.minFullImageWidth}
 			
 			## f2a feature
 			f2afeaturewidth = {$plugin.tx_templavoilaframework.f2a.settings.feature.width}
@@ -332,6 +348,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2afeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.feature.beginWrap}
 			f2afeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.feature.endWrap}
+			f2afeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f2a.settings.feature.minFullImageWidth}
 
 			## f2a contentBlock-1
 			f2acontentBlock-1width = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-1.width}
@@ -348,6 +365,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2acontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.contentBlock-1.beginWrap}
 			f2acontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.contentBlock-1.endWrap}
+			f2acontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-1.minFullImageWidth}
 
 			## f2a contentBlock-2
 			f2acontentBlock-2width = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.width}
@@ -364,6 +382,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2acontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.contentBlock-2.beginWrap}
 			f2acontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.contentBlock-2.endWrap}
+			f2acontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.minFullImageWidth}
 			
 			## f2b feature
 			f2bfeaturewidth = {$plugin.tx_templavoilaframework.f2b.settings.feature.width}
@@ -380,6 +399,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2bfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.feature.beginWrap}
 			f2bfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.feature.endWrap}
+			f2bfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f2b.settings.feature.minFullImageWidth}
 
 			## f2b contentBlock-1
 			f2bcontentBlock-1width = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-1.width}
@@ -396,6 +416,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2bcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.contentBlock-1.beginWrap}
 			f2bcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.contentBlock-1.endWrap}
+			f2bcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-1.minFullImageWidth}
 
 			## f2b contentBlock-2
 			f2bcontentBlock-2width = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.width}
@@ -412,6 +433,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2bcontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.contentBlock-2.beginWrap}
 			f2bcontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.contentBlock-2.endWrap}
+			f2bcontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.minFullImageWidth}
 			
 			## f2c feature
 			f2cfeaturewidth = {$plugin.tx_templavoilaframework.f2c.settings.feature.width}
@@ -428,6 +450,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2cfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.feature.beginWrap}
 			f2cfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.feature.endWrap}
+			f2cfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f2c.settings.feature.minFullImageWidth}
 
 			## f2c contentBlock-1
 			f2ccontentBlock-1width = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-1.width}
@@ -444,6 +467,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2ccontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.contentBlock-1.beginWrap}
 			f2ccontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.contentBlock-1.endWrap}
+			f2ccontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-1.minFullImageWidth}
 
 			## f2c contentBlock-2
 			f2ccontentBlock-2width = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.width}
@@ -460,6 +484,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2ccontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.contentBlock-2.beginWrap}
 			f2ccontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.contentBlock-2.endWrap}
+			f2ccontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.minFullImageWidth}
 			
 			## f2d feature
 			f2dfeaturewidth = {$plugin.tx_templavoilaframework.f2d.settings.feature.width}
@@ -476,6 +501,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2dfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.feature.beginWrap}
 			f2dfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.feature.endWrap}
+			f2dfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f2d.settings.feature.minFullImageWidth}
 
 			## f2d contentBlock-1
 			f2dcontentBlock-1width = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-1.width}
@@ -492,6 +518,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2dcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.contentBlock-1.beginWrap}
 			f2dcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.contentBlock-1.endWrap}
+			f2dcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-1.minFullImageWidth}
 
 			## f2d contentBlock-2
 			f2dcontentBlock-2width = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-2.width}
@@ -508,6 +535,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2dcontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.contentBlock-2.beginWrap}
 			f2dcontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.contentBlock-2.endWrap}
+			f2dcontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-2.minFullImageWidth}
 
 			## f2d Generated Content 1
 			f2dgeneratedContent-1width = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.width}
@@ -524,6 +552,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2dgeneratedContent-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.generatedContent-1.beginWrap}
 			f2dgeneratedContent-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.generatedContent-1.endWrap}
+			f2dgeneratedContent-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.minFullImageWidth}
 			
 			## f2e feature
 			f2efeaturewidth = {$plugin.tx_templavoilaframework.f2e.settings.feature.width}
@@ -540,6 +569,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2efeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.feature.beginWrap}
 			f2efeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.feature.endWrap}
+			f2efeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f2e.settings.feature.minFullImageWidth}
 
 			## f2e contentBlock-1
 			f2econtentBlock-1width = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-1.width}
@@ -556,6 +586,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2econtentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.contentBlock-1.beginWrap}
 			f2econtentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.contentBlock-1.endWrap}
+			f2econtentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-1.minFullImageWidth}
 
 			## f2e contentBlock-2
 			f2econtentBlock-2width = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-2.width}
@@ -572,6 +603,7 @@ plugin.tx_templavoilaframework {
 			}
 			f2econtentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.contentBlock-2.beginWrap}
 			f2econtentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.contentBlock-2.endWrap}
+			f2econtentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-2.minFullImageWidth}
 
 			## f2e Generated Content 1
 			f2egeneratedContent-2width = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.width}
@@ -587,7 +619,8 @@ plugin.tx_templavoilaframework {
 				required = 1
 			}
 			f2egeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.generatedContent-2.beginWrap}
-						f2egeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.generatedContent-2.endWrap}
+			f2egeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.generatedContent-2.endWrap}
+			f2egeneratedContent-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.minFullImageWidth}
 			
 			## f3a feature
 			f3afeaturewidth = {$plugin.tx_templavoilaframework.f3a.settings.feature.width}
@@ -604,6 +637,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3afeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.feature.beginWrap}
 			f3afeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.feature.endWrap}
+			f3afeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f3a.settings.feature.minFullImageWidth}
 
 			## f3a contentBlock-1
 			f3acontentBlock-1width = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-1.width}
@@ -620,6 +654,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3acontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-1.beginWrap}
 			f3acontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-1.endWrap}
+			f3acontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-1.minFullImageWidth}
 
 			## f3a contentBlock-2
 			f3acontentBlock-2width = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-2.width}
@@ -636,6 +671,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3acontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-2.beginWrap}
 			f3acontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-2.endWrap}
+			f3acontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-2.minFullImageWidth}
 
 			## f3a contentBlock-3
 			f3acontentBlock-3width = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.width}
@@ -652,6 +688,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3acontentBlock-3beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-3.beginWrap}
 			f3acontentBlock-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-3.endWrap}
+			f3acontentBlock-3minFullImageWidth = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.minFullImageWidth}
 			
 			## f3b feature
 			f3bfeaturewidth = {$plugin.tx_templavoilaframework.f3b.settings.feature.width}
@@ -668,6 +705,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3bfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.feature.beginWrap}
 			f3bfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.feature.endWrap}
+			f3bfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f3b.settings.feature.minFullImageWidth}
 
 			## f3b contentBlock-1
 			f3bcontentBlock-1width = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-1.width}
@@ -684,6 +722,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3bcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.contentBlock-1.beginWrap}
 			f3bcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.contentBlock-1.endWrap}
+			f3bcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-1.minFullImageWidth}
 
 			## f3b contentBlock-2
 			f3bcontentBlock-2width = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-2.width}
@@ -700,6 +739,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3bcontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.contentBlock-2.beginWrap}
 			f3bcontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.contentBlock-2.endWrap}
+			f3bcontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-2.minFullImageWidth}
 
 			## f3b contentBlock-3
 			f3bcontentBlock-3width = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-3.width}
@@ -716,6 +756,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3bcontentBlock-3beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.contentBlock-3.beginWrap}
 			f3bcontentBlock-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3b.wraps.contentBlock-3.endWrap}
+			f3bcontentBlock-3minFullImageWidth = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-3.minFullImageWidth}
 
 			## f3c feature
 			f3cfeaturewidth = {$plugin.tx_templavoilaframework.f3c.settings.feature.width}
@@ -732,6 +773,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3cfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.feature.beginWrap}
 			f3cfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.feature.endWrap}
+			f3cfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f3c.settings.feature.minFullImageWidth}
 
 			## f3c contentBlock-1
 			f3ccontentBlock-1width = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-1.width}
@@ -748,6 +790,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3ccontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.contentBlock-1.beginWrap}
 			f3ccontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.contentBlock-1.endWrap}
+			f3ccontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-1.minFullImageWidth}
 
 			## f3c contentBlock-2
 			f3ccontentBlock-2width = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-2.width}
@@ -764,6 +807,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3ccontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.contentBlock-2.beginWrap}
 			f3ccontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.contentBlock-2.endWrap}
+			f3ccontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-2.minFullImageWidth}
 
 			## f3c contentBlock-3
 			f3ccontentBlock-3width = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-3.width}
@@ -780,6 +824,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3ccontentBlock-3beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.contentBlock-3.beginWrap}
 			f3ccontentBlock-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3c.wraps.contentBlock-3.endWrap}
+			f3ccontentBlock-3minFullImageWidth = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-3.minFullImageWidth}
 
 			## f3d feature
 			f3dfeaturewidth = {$plugin.tx_templavoilaframework.f3d.settings.feature.width}
@@ -796,6 +841,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3dfeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.feature.beginWrap}
 			f3dfeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.feature.endWrap}
+			f3dfeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f3d.settings.feature.minFullImageWidth}
 
 			## f3d contentBlock-1
 			f3dcontentBlock-1width = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-1.width}
@@ -812,6 +858,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3dcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.contentBlock-1.beginWrap}
 			f3dcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.contentBlock-1.endWrap}
+			f3dcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-1.minFullImageWidth}
 
 			## f3d contentBlock-2
 			f3dcontentBlock-2width = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-2.width}
@@ -828,6 +875,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3dcontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.contentBlock-2.beginWrap}
 			f3dcontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.contentBlock-2.endWrap}
+			f3dcontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-2.minFullImageWidth}
 
 			## f3d contentBlock-3
 			f3dcontentBlock-3width = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-3.width}
@@ -844,6 +892,7 @@ plugin.tx_templavoilaframework {
 			}
 			f3dcontentBlock-3beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.contentBlock-3.beginWrap}
 			f3dcontentBlock-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3d.wraps.contentBlock-3.endWrap}
+			f3dcontentBlock-3minFullImageWidth = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-3.minFullImageWidth}
 		}
 	}
 	##############################################################

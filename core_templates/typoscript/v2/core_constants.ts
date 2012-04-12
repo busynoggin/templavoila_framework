@@ -62,36 +62,42 @@ plugin.tx_templavoilaframework {
 				tag = div
 				id = feature
 				class =
+				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			}
 			contentBlock-1 {
 				width = 960
 				tag = div
 				id = content-block-1
 				class =
+				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			}
 			contentBlock-2 {
 				width = 960
 				tag = div
 				id = content-block-2
 				class =
+				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			}
 			contentBlock-3 {
 				width = 960
 				tag = div
 				id = content-block-3
 				class =
+				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			}
 			generatedContent-1 {
 				width = 960
 				tag = div
 				id = generated-content-1
 				class =
+				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			}
 			generatedContent-2 {
 				width = 960
 				tag = div
 				id = generated-content-2
 				class =
+				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
 			}
 		}
 	}
