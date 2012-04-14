@@ -135,7 +135,16 @@ class tx_templavoilaframework_lib {
 		if ($relSkinPath) {
 			$absSkinPath = PATH_site . $relSkinPath;
 
-			$infoText = t3lib_div::getURL($absSkinPath . 'info.txt');
+			// @todo We eventually want to use YAML here.
+			if (@is_file($absSkinPath . 'Meta/Info.txt')) {
+				$infoPath = $absSkinPath . 'Meta/Info.txt';
+				$isVersion2Layout = TRUE;
+			} else {
+				$infoPath = $absSkinPath . 'info.txt';
+				$isVersion2Layout = FALSE;
+			}
+
+			$infoText = t3lib_div::getURL($infoPath);
 			if ($infoText) {
 				//$infoLines = t3lib_div::trimExplode('\n', $infoText);
 				$infoLines = preg_split('/[\r\n]+/', $infoText, -1, PREG_SPLIT_NO_EMPTY);
@@ -153,12 +162,24 @@ class tx_templavoilaframework_lib {
 			$infoArray['type'] = $skinType;
 			$infoArray['path'] = $relSkinPath;
 
-			if (@is_file($absSkinPath . 'screenshot.gif')) {
-				$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.gif');
+			if (@is_file($absSkinPath . $skinScreenshotPath . 'screenshot.gif')) {
+				if ($isVersion2Layout) {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.gif');
+				} else {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.gif');
+				}
 			} elseif (@is_file($absSkinPath . 'screenshot.png')) {
-				$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.png');
+				if ($isVersion2Layout) {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.png');
+				} else {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.png');
+				}
 			} elseif (@is_file($absSkinPath . 'screenshot.jpg')) {
-				$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.jpg');
+				if ($isVersion2Layout) {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.jpg');
+				} else {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.jpg');
+				}
 			}
 		} else {
 			return FALSE;
@@ -244,8 +265,13 @@ class tx_templavoilaframework_lib {
 				$absCorePath = PATH_site . $relCorePath;
 				$absSkinPath = PATH_site . $relSkinPath;
 
-				$skinConstants = @is_file($absSkinPath . 'typoscript/skin_constants.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '';
-				$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
+				if (@is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts')) {
+					$skinConstants = @is_file($absSkinPath . 'Configuration/TypoScript/Constants.ts') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/Constants.ts') : '';
+					$skinSetup = @is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') : '';
+				} else {
+					$skinConstants = @is_file($absSkinPath . 'typoscript/skin_constants.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '';
+					$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
+				}
 
 				$renderMode = self::getSkinRenderMode($skinConstants, $relSkinPath);
 				$coreSubrow = array(
