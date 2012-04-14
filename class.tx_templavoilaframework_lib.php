@@ -285,6 +285,7 @@ class tx_templavoilaframework_lib {
 				// Set old bnTemplates prefix for backwards compatibility.
 				$coreSubrow['constants'] .= chr(10) . 'bnTemplates.corePath = ' . $relCorePath;
 				$coreSubrow['constants'] .= chr(10) . 'templavoila_framework.corePath = ' . $relCorePath;
+				$coreSubrow['constants'] .= chr(10) . 'plugin.templavoila_framework.corePath = ' . $relCorePath;
 				$pObj->processTemplate($coreSubrow, $idList.',templavoilaframework_core', $pid, 'templavoilaframework_core', $templateID);
 
 				$skinSubrow = array(
@@ -300,6 +301,7 @@ class tx_templavoilaframework_lib {
 				// Set old bnTemplates prefix for backwards compatibility.
 				$skinSubrow['constants'] .= chr(10) . 'bnTemplates.skinPath = ' . $relSkinPath;
 				$skinSubrow['constants'] .= chr(10) . 'templavoila_framework.skinPath = ' . $relSkinPath;
+				$skinSubrow['constants'] .= chr(10) . 'plugin.templavoila_framework.skinPath = ' . $relSkinPath;
 				$pObj->processTemplate($skinSubrow, $idList . ',templavoilaframework_skin_' . $skin, $pid, 'templavoilaframework_skin_' . $skin, $templateID);
 			}
 		}
