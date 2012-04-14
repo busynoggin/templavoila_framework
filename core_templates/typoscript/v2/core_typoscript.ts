@@ -2296,8 +2296,8 @@ page {
 
 	includeCSS.tf_skin = {$plugin.tx_templavoilaframework.skinCSS}
 
-	includeJS.tf_skin = {$templavoila_framework.skinPath}js/skin.js
-	
+	includeJS.tf_skin = {$plugin.tx_templavoilaframework.skinJS}
+
 	## This will put CSS in external stylesheet for columns and modules
 	## provided register:createColumnModuleCSS is true 
 	cssInline {

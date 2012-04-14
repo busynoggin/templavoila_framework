@@ -41,7 +41,8 @@ plugin.tx_templavoilaframework.moduleTitleTag = h3
 plugin.tx_templavoilaframework.defaultHeaderInsideModule = {$content.defaultHeaderType}
 
 # Sets up the default for the skin CSS
-plugin.tx_templavoilaframework.skinCSS = {$templavoila_framework.skinPath}css/mainstyles.css
+plugin.tx_templavoilaframework.skinCSS = {$plugin.tx_templavoilaframework.skinPath}Resources/Public/Stylesheets/Screen.css
+plugin.tx_templavoilaframework.skinJS = {$plugin.tx_templavoilaframework.skinPath}Resources/Public/JavaScript/JavaScript.js
 
 #Sets the rendering for module headers
 plugin.tx_templavoilaframework.moduleHeaderWrap = <{$plugin.tx_templavoilaframework.moduleTitleTag} class="header"><span>|</span></{$plugin.tx_templavoilaframework.moduleTitleTag}>
