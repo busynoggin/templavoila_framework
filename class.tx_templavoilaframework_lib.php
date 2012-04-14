@@ -283,9 +283,12 @@ class tx_templavoilaframework_lib {
 				);
 
 				// Set old bnTemplates prefix for backwards compatibility.
-				$coreSubrow['constants'] .= chr(10) . 'bnTemplates.corePath = ' . $relCorePath;
-				$coreSubrow['constants'] .= chr(10) . 'templavoila_framework.corePath = ' . $relCorePath;
-				$coreSubrow['constants'] .= chr(10) . 'plugin.templavoila_framework.corePath = ' . $relCorePath;
+				if ($renderMode === 1) {
+					$coreSubrow['constants'] .= chr(10) . 'bnTemplates.corePath = ' . $relCorePath;
+					$coreSubrow['constants'] .= chr(10) . 'templavoila_framework.corePath = ' . $relCorePath;
+				} else {
+					$coreSubrow['constants'] .= chr(10) . 'plugin.tx_templavoilaframework.corePath = ' . $relCorePath;
+				}
 				$pObj->processTemplate($coreSubrow, $idList.',templavoilaframework_core', $pid, 'templavoilaframework_core', $templateID);
 
 				$skinSubrow = array(
@@ -299,9 +302,12 @@ class tx_templavoilaframework_lib {
 				);
 
 				// Set old bnTemplates prefix for backwards compatibility.
-				$skinSubrow['constants'] .= chr(10) . 'bnTemplates.skinPath = ' . $relSkinPath;
-				$skinSubrow['constants'] .= chr(10) . 'templavoila_framework.skinPath = ' . $relSkinPath;
-				$skinSubrow['constants'] .= chr(10) . 'plugin.templavoila_framework.skinPath = ' . $relSkinPath;
+				if ($renderMode === 1) {
+					$skinSubrow['constants'] .= chr(10) . 'bnTemplates.skinPath = ' . $relSkinPath;
+					$skinSubrow['constants'] .= chr(10) . 'templavoila_framework.skinPath = ' . $relSkinPath;
+				} else {
+					$skinSubrow['constants'] .= chr(10) . 'plugin.tx_templavoilaframework.skinPath = ' . $relSkinPath;
+				}
 				$pObj->processTemplate($skinSubrow, $idList . ',templavoilaframework_skin_' . $skin, $pid, 'templavoilaframework_skin_' . $skin, $templateID);
 			}
 		}
@@ -318,7 +324,7 @@ class tx_templavoilaframework_lib {
 		$tsParser = t3lib_div::makeInstance('t3lib_TSparser');
 		$tsParser->parse($constants);
 
-		$skinRenderMode = $tsParser->setup['plugin.']['tx_templavoilaframework.']['renderMode'];
+		$skinRenderMode = intval($tsParser->setup['plugin.']['tx_templavoilaframework.']['renderMode']);
 		if (!$skinRenderMode) {
 			t3lib_div::deprecationLog('The TemplaVoila Framework now requires that the render mode is set via tha \'plugin.templavoila_framework.renderMode\' TypoScript constant.' .
 			                          'This value currently defaults to 1 but will be removed in a future version of the TemplaVoila Framework.' .
