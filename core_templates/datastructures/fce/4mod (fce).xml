@@ -437,21 +437,30 @@
 		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
+25 = LOAD_REGISTER
+25 {
+	containerWidth.data = register:bodyWidthMod1
+	maxImageWidth.data = register:containerWidth
+	moduleBodyTopBuffer.data = register:moduleBodyTopBuffer1
+	moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer1
+	moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer1
+	moduleBodyRightBuffer.data = register:moduleBodyRightBuffer1
+}
 30 = COA
 30 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+40 = COA
+40 {
 	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
 	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader1
-	20 = LOAD_REGISTER
-	20 {
-		containerWidth.data = register:bodyWidthMod1
-		maxImageWidth.data = register:containerWidth
-		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer1
-		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer1
-		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer1
-		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer1
-	}
 	30 = RECORDS
 	30 {
 		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
@@ -531,21 +540,30 @@
 		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
+25 = LOAD_REGISTER
+25 {
+	containerWidth.data = register:bodyWidthMod2
+	maxImageWidth.data = register:containerWidth
+	moduleBodyTopBuffer.data = register:moduleBodyTopBuffer2
+	moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer2
+	moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer2
+	moduleBodyRightBuffer.data = register:moduleBodyRightBuffer2
+}
 30 = COA
 30 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+40 = COA
+40 {
 	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
 	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader2
-	20 = LOAD_REGISTER
-	20 {
-		containerWidth.data = register:bodyWidthMod2
-		maxImageWidth.data = register:containerWidth
-		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer2
-		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer2
-		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer2
-		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer2
-	}
 	30 = RECORDS
 	30 {
 		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
@@ -625,21 +643,30 @@
 		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
+25 = LOAD_REGISTER
+25 {
+	containerWidth.data = register:bodyWidthMod3
+	maxImageWidth.data = register:containerWidth
+	moduleBodyTopBuffer.data = register:moduleBodyTopBuffer3
+	moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer3
+	moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer3
+	moduleBodyRightBuffer.data = register:moduleBodyRightBuffer3
+}
 30 = COA
 30 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+40 = COA
+40 {
 	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
 	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader3
-	20 = LOAD_REGISTER
-	20 {
-		containerWidth.data = register:bodyWidthMod3
-		maxImageWidth.data = register:containerWidth
-		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer3
-		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer3
-		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer3
-		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer3
-	}
 	30 = RECORDS
 	30 {
 		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}
@@ -719,21 +746,30 @@
 		tvfwModuleBodyEndWrap.dataWrap = <div class="clearOnly">&nbsp;</div></div></div>
 	}
 }
+25 = LOAD_REGISTER
+25 {
+	containerWidth.data = register:bodyWidthMod4
+	maxImageWidth.data = register:containerWidth
+	moduleBodyTopBuffer.data = register:moduleBodyTopBuffer4
+	moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer4
+	moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer4
+	moduleBodyRightBuffer.data = register:moduleBodyRightBuffer4
+}
 30 = COA
-30	{
+30 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+40 = COA
+40	{
 	wrap = {register:tvfwModuleBeginWrap}|{register:tvfwModuleEndWrap}
 	wrap.insertData = 1
 	10 = TEXT
 	10.data = register:renderedModuleHeader4
-	20 = LOAD_REGISTER
-	20 {
-		containerWidth.data = register:bodyWidthMod4
-		maxImageWidth.data = register:containerWidth
-		moduleBodyTopBuffer.data = register:moduleBodyTopBuffer4
-		moduleBodyBottomBuffer.data = register:moduleBodyBottomBuffer4
-		moduleBodyLeftBuffer.data = register:moduleBodyLeftBuffer4
-		moduleBodyRightBuffer.data = register:moduleBodyRightBuffer4
-	}
 	30 = RECORDS
 	30 {
 		wrap = {register:tvfwModuleBodyBeginWrap}|{register:tvfwModuleBodyEndWrap}

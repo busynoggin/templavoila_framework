@@ -133,10 +133,10 @@
 30 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.data = register:minFullImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:minFullImageWidth
+	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
 40 = CASE
 40 {
@@ -238,10 +238,10 @@
 30 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.data = register:minFullImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:minFullImageWidth
+	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
 40 = CASE
 40 {

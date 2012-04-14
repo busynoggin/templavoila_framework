@@ -171,6 +171,7 @@
 		}
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}{register:tvfwTemplateCheck}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
 	}
 	default = LOAD_REGISTER
 	default {
@@ -190,10 +191,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+		isGreaterThan.data = register:tempMinFullImageWidth
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
 30 = COA
 30 {
@@ -290,6 +291,7 @@
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
 	}
 	default = LOAD_REGISTER
 	default {
@@ -314,10 +316,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+		isGreaterThan.data = register:tempMinFullImageWidth
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
 30 = RECORDS
 30 {
@@ -423,6 +425,7 @@
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
 	}
 	default = LOAD_REGISTER
 	default {
@@ -442,10 +445,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+		isGreaterThan.data = register:tempMinFullImageWidth
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
 30 = RECORDS
 30 {
@@ -528,6 +531,7 @@
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
 	}
 	default = LOAD_REGISTER
 	default {
@@ -547,10 +551,10 @@
 25 {
 	if {
 		value.data = register:maxImageWidth
-		isGreaterThan.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+		isGreaterThan.data = register:tempMinFullImageWidth
 	}
 	10 = LOAD_REGISTER
-	10.maxImageWidth.dataWrap = {register:{$templateKey}{$fieldKey}minFullImageWidth}
+	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
 30 = RECORDS
 30 {
