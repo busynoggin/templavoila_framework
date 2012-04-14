@@ -162,22 +162,20 @@ class tx_templavoilaframework_lib {
 			$infoArray['type'] = $skinType;
 			$infoArray['path'] = $relSkinPath;
 
-			if (@is_file($absSkinPath . $skinScreenshotPath . 'screenshot.gif')) {
-				if ($isVersion2Layout) {
+			if ($isVersion2Layout) {
+				if (@is_file($absSkinPath . 'Meta/Screenshot.gif')) {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.gif');
-				} else {
-					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.gif');
-				}
-			} elseif (@is_file($absSkinPath . 'screenshot.png')) {
-				if ($isVersion2Layout) {
+				} elseif (@is_file($absSkinPath . 'Meta/Screenshot.png')) {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.png');
-				} else {
-					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.png');
-				}
-			} elseif (@is_file($absSkinPath . 'screenshot.jpg')) {
-				if ($isVersion2Layout) {
+				} elseif (@is_file($absSkinPath . 'Mega/Screenshot.jpg')) {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.jpg');
-				} else {
+				}
+			} else {
+				if (@is_file($absSkinPath . 'screenshot.gif')) {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.gif');
+				} elseif (@is_file($absSkinPath . 'screenshot.png')) {
+					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.png');
+				} elseif (@is_file($absSkinPath . 'screenshot.jpg')) {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'screenshot.jpg');
 				}
 			}
