@@ -167,7 +167,7 @@ class tx_templavoilaframework_lib {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.gif');
 				} elseif (@is_file($absSkinPath . 'Meta/Screenshot.png')) {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.png');
-				} elseif (@is_file($absSkinPath . 'Mega/Screenshot.jpg')) {
+				} elseif (@is_file($absSkinPath . 'Meta/Screenshot.jpg')) {
 					$infoArray['icon'] = self::getPathForSkinThumbnail($relSkinPath . 'Meta/Screenshot.jpg');
 				}
 			} else {
