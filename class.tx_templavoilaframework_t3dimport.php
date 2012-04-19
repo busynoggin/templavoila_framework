@@ -7,7 +7,7 @@
  * All rights reserved
  *
  * This file is part of the Web-Empowered Church (WEC)
- * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries 
+ * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries
  * International (http://CTMIinc.org). The WEC is developing TYPO3-based
  * (http://typo3.org) free software for churches around the world. Our desire
  * is to use the Internet to help offer new life through Jesus Christ. Please
@@ -72,8 +72,14 @@ class tx_templavoilaframework_t3dimport {
 			$content[] = '<option ' . $selected . 'value="' . $sysFolder['uid'] . '">' . $sysFolder['title'] . ' (UID:' . $sysFolder['uid'] . ' PID:' . $sysFolder['pid'] . ')</option>';
 		}
 		$content[] = '</select>';
-		$content[] = '<input type="submit" name="doImport" value="Import" />';
-		$content[] = '<input type="hidden" name="submit" value="Update" />';
+
+		if (t3lib_div::int_from_ver(TYPO3_version) >= 4006000) {
+			$content[] = '<input type="submit" value="Import" onclick="document.getElementById(\'doImport\').value = 1; Ext.ComponentMgr.all.filterBy(function(item){ return (item.getXType()==\'form\' && item.title==\'Configuration\'); }).first().doSubmit(false);"/>';
+			$content[] = '<input type="hidden" id="doImport" name="doImport" value="0" />';
+		} else {
+			$content[] = '<input type="submit" name="doImport" value="Import" />';
+			$content[] = '<input type="hidden" name="submit" value="Update" />';
+		}
 
 		return implode(chr(10), $content);
 	}
