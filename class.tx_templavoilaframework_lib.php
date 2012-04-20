@@ -83,11 +83,14 @@ class tx_templavoilaframework_lib {
 	 */
 	public static function getCustomSkinKeys() {
 		$skinKeys = array();
-		$customSkinPath = self::getCustomSkinPath();
-		$skins = t3lib_div::get_dirs(PATH_site . $customSkinPath);
-		foreach ((array) $skins as $skin) {
-			if (substr($skin, 0, 1) != '.') {
-				$skinKeys[] = 'LOCAL:' . $skin;
+		$customSkinPaths = self::getCustomSkinPaths();
+
+		foreach ($customSkinPaths as $customSkinPath) {
+			$skins = t3lib_div::get_dirs(PATH_site . $customSkinPath);
+			foreach ((array) $skins as $skin) {
+				if (substr($skin, 0, 1) != '.') {
+					$skinKeys[] = 'LOCAL:' . $skin;
+				}
 			}
 		}
 
@@ -101,7 +104,7 @@ class tx_templavoilaframework_lib {
 	 * @return	string	$skin: The skin key.
 	 */
 	public static function getSkinPath($skin) {
-		$customSkinPath = self::getCustomSkinPath();
+		$customSkinPaths = self::getCustomSkinPaths();
 		list($skinType, $skinKey) = t3lib_div::trimExplode(':', $skin);
 		switch ($skinType) {
 			case 'EXT':
@@ -112,13 +115,34 @@ class tx_templavoilaframework_lib {
 				}
 				break;
 			case 'LOCAL':
-				$relSkinPath = $customSkinPath . $skinKey . '/';
-				if (!@is_dir(PATH_site . $relSkinPath)) {
-					$relSkinPath = FALSE;
+				foreach ($customSkinPaths as $customSkinPath) {
+					$relSkinPath = $customSkinPath . $skinKey . '/';
+					if (!@is_dir(PATH_site . $relSkinPath)) {
+						$relSkinPath = FALSE;
+					}
+
+					if ($relSkinPath) {
+						break;
+					}
 				}
 				break;
 		}
 		return $relSkinPath;
+	}
+
+	/**
+	 * Checks if the given path contains a skin.
+	 *
+	 * @param string $relativePath
+	 * @return boolean
+	 */
+	public static function isSkin($relativePath) {
+		$isSkin = FALSE;
+		if (@is_file(PATH_site . $relativePath . '/Configuration/TypoScript/TypoScript.ts') || @is_file(PATH_site . $relativePath . 'typoscript/skin_typoscript.ts')) {
+			$isSkin = TRUE;
+		}
+
+		return $isSkin;
 	}
 
 	/**
@@ -212,13 +236,13 @@ class tx_templavoilaframework_lib {
 	 *
 	 * @return string
 	 */
-	public static function getCustomSkinPath() {
+	public static function getCustomSkinPaths() {
 		$extConf = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['templavoila_framework']);
 		if (!$extConf['customSkinPath']) {
 			$extConf['customSkinPath'] = 'fileadmin/templates/';
 		}
 
-		return $extConf['customSkinPath'];
+		return t3lib_div::trimExplode(',', $extConf['customSkinPath']);
 	}
 
 	/**
@@ -244,19 +268,7 @@ class tx_templavoilaframework_lib {
 
 		if ($row['root'] && $row['skin_selector']) {
 			$skin = $row['skin_selector'];
-			list($skinType, $skinKey) = t3lib_div::trimExplode(':', $skin);
-			switch ($skinType) {
-				case 'EXT':
-					if (t3lib_extMgm::isLoaded($skinKey)) {
-						$relSkinPath = t3lib_extMgm::siteRelPath($skinKey);
-					} else {
-						$relSkinPath = FALSE;
-					}
-					break;
-				case 'LOCAL':
-					$relSkinPath = self::getCustomSkinPath() . $skinKey . '/';
-					break;
-			}
+			$relSkinPath = self::getSkinPath($skin);
 
 			if ($relSkinPath) {
 				$relCorePath = t3lib_extMgm::siteRelPath('templavoila_framework') . 'core_templates/';
