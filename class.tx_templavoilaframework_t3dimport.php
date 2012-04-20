@@ -72,8 +72,14 @@ class tx_templavoilaframework_t3dimport {
 			$content[] = '<option ' . $selected . 'value="' . $sysFolder['uid'] . '">' . $sysFolder['title'] . ' (UID:' . $sysFolder['uid'] . ' PID:' . $sysFolder['pid'] . ')</option>';
 		}
 		$content[] = '</select>';
-		$content[] = '<input type="submit" value="Import" onclick="document.getElementById(\'doImport\').value = 1; Ext.ComponentMgr.all.filterBy(function(item){ return (item.getXType()==\'form\' && item.title==\'Configuration\'); }).first().doSubmit(false);"/>';
-		$content[] = '<input type="hidden" id="doImport" name="doImport" value="0" />';
+
+		if (t3lib_div::int_from_ver(TYPO3_version) >= 4006000) {
+			$content[] = '<input type="submit" value="Import" onclick="document.getElementById(\'doImport\').value = 1; Ext.ComponentMgr.all.filterBy(function(item){ return (item.getXType()==\'form\' && item.title==\'Configuration\'); }).first().doSubmit(false);"/>';
+			$content[] = '<input type="hidden" id="doImport" name="doImport" value="0" />';
+		} else {
+			$content[] = '<input type="submit" name="doImport" value="Import" />';
+			$content[] = '<input type="hidden" name="submit" value="Update" />';
+		}
 
 		return implode(chr(10), $content);
 	}
