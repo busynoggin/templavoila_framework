@@ -278,9 +278,13 @@ class tx_templavoilaframework_lib {
 				if (@is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts')) {
 					$skinConstants = @is_file($absSkinPath . 'Configuration/TypoScript/Constants.ts') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/Constants.ts') : '';
 					$skinSetup = @is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') : '';
+					$skinIncludeStatic = @is_file($absSkinPath . 'Configuration/TypoScript/IncludeStatic.txt') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/IncludeStatic.txt') : '';
+					$skinIncludeStaticFile = @is_file($absSkinPath . 'Configuration/TypoScript/IncludeStaticFile.txt') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/IncludeStaticFile.txt') : '';
 				} else {
 					$skinConstants = @is_file($absSkinPath . 'typoscript/skin_constants.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '';
 					$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
+					$skinIncludeStatic = @is_file($absSkinPath . 'typoscript/include_static.txt') ? t3lib_div::getUrl($absSkinPath . 'typoscript/include_static.txt') : '';
+					$skinIncludeStaticFile = @is_file($absSkinPath . 'typoscript/include_static_file.txt') ? t3lib_div::getUrl($absSkinPath . 'typoscript/include_static_file.txt') : '';
 				}
 
 				$renderMode = self::getSkinRenderMode($skinConstants, $relSkinPath);
@@ -307,8 +311,8 @@ class tx_templavoilaframework_lib {
 					'constants'=>	$skinConstants,
 					'config'=>		$skinSetup,
 					'editorcfg'=>	'',
-					'include_static'=>	'',
-					'include_static_file'=>	'',
+					'include_static' => ($skinIncludeStatic) ? implode(',', array_unique(t3lib_div::intExplode(',', $skinIncludeStatic))) : '',
+					'include_static_file' => ($skinIncludeStaticFile) ? implode(',', array_unique(explode(',', $skinIncludeStaticFile))) : '',
 					'title' =>	$skin,
 					'uid' => md5($relSkinPath)
 				);
