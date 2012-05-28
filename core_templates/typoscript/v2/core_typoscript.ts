@@ -1131,7 +1131,7 @@ plugin.tx_templavoilaframework {
 			classModule1Distribution.noTrimWrap = | ||
 			classModule2Distribution = two-third
 			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = third-two-thirds
+			classModuleGroupDistribution = third-two-third
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		2313 = LOAD_REGISTER
@@ -1148,7 +1148,7 @@ plugin.tx_templavoilaframework {
 			classModule1Distribution.noTrimWrap = | ||
 			classModule2Distribution = third
 			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = two-thirds-third
+			classModuleGroupDistribution = two-third-third
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		3414 = LOAD_REGISTER
@@ -1165,7 +1165,7 @@ plugin.tx_templavoilaframework {
 			classModule1Distribution.noTrimW-qap = | ||
 			classModule2Distribution = one-quarter
 			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = three-quarters-quarter
+			classModuleGroupDistribution = three-quarter-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		1434 = LOAD_REGISTER
@@ -1182,7 +1182,7 @@ plugin.tx_templavoilaframework {
 			classModule1Distribution.noTrimWrap = | ||
 			classModule2Distribution = three-quarter
 			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = quarter-three-quarters
+			classModuleGroupDistribution = quarter-three-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		131313 = LOAD_REGISTER
@@ -1450,9 +1450,9 @@ plugin.tx_templavoilaframework {
 			columnWidth2.prioriCalc = intval
 			classColumn1Distribution = third
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = two-thirds
+			classColumn2Distribution = two-third
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = third-two-thirds
+			classColumnGroupDistribution = third-two-third
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		2313 = LOAD_REGISTER
@@ -1465,11 +1465,11 @@ plugin.tx_templavoilaframework {
 			columnWidth1.prioriCalc = intval
 			columnWidth2.data = register:tempColumnWidth2
 			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = two-thirds
+			classColumn1Distribution = two-third
 			classColumn1Distribution.noTrimWrap = | ||
 			classColumn2Distribution = third
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = two-thirds-third
+			classColumnGroupDistribution = two-third-third
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		3414 = LOAD_REGISTER
@@ -1482,11 +1482,11 @@ plugin.tx_templavoilaframework {
 			columnWidth1.prioriCalc = intval
 			columnWidth2.data = register:tempColumnWidth2
 			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = three-quarters
+			classColumn1Distribution = three-quarter
 			classColumn1Distribution.noTrimWrap = | ||
 			classColumn2Distribution = quarter
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = three-quarters-quarter
+			classColumnGroupDistribution = three-quarter-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		1434 = LOAD_REGISTER
@@ -1501,9 +1501,9 @@ plugin.tx_templavoilaframework {
 			columnWidth2.prioriCalc = intval
 			classColumn1Distribution = quarter
 			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = three-quarters
+			classColumn2Distribution = three-quarter
 			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = quarter-three-quarters
+			classColumnGroupDistribution = quarter-three-quarter
 			classColumnGroupDistribution.noTrimWrap = | ||
 		}
 		131313 = LOAD_REGISTER
