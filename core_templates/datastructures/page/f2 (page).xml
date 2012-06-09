@@ -200,16 +200,24 @@
 30 {
 	wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
 	wrap.insertData = 1
-	10 = TEXT
+	10 = COA
 	10 {
-		data = page:title
-		htmlSpecialChars = 1
-		wrap = {register:autoHeadlineBeginWrap}|{register:autoHeadlineEndWrap}
-		insertData = 1
 		if {
-			value.data = register:autoMainHeadline
-			equals = 0
-			negate = 1
+				value.data = register:disableAutoMainHeadline
+				equals = 1
+				negate = 1
+			}
+		10 = TEXT
+		10 {
+			data = page:title
+			htmlSpecialChars = 1
+			wrap = {register:autoHeadlineBeginWrap}|{register:autoHeadlineEndWrap}
+			insertData = 1
+			if {
+				value.data = register:autoMainHeadline
+				equals = 0
+				negate = 1
+			}
 		}
 	}
 	20 = RECORDS

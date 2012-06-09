@@ -219,6 +219,7 @@
 				negate = 1
 			}
 		}
+	}
 	20 = RECORDS
 	20 {
 		source.current = 1
