@@ -7,6 +7,10 @@ plugin.tx_templavoilaframework {
 	dsConfig {
 		5 = LOAD_REGISTER
 		5.tvfwRenderMode = {$plugin.tx_templavoilaframework.renderMode}
+		
+		7 = LOAD_REGISTER
+		7.disableAutoMainHeadline = {$plugin.tx_templavoilaframework.disableAutoMainHeadline}
+
 		10 = CASE
 		10 {
 			key.field = field_auto_header_switch
