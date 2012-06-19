@@ -873,6 +873,7 @@ plugin.tx_templavoilaframework.columnGroupSetup =< columnGroupSetup
 
 f1a.preCodeHeader =< preCodeHeader
 f1a.evaluatedPreCodeHeader =< f1a.preCodeHeader
+plugin.tx_templavoilaframework.f1a.evaluatedPreCodeHeader =< f1a.preCodeHeader
 
 f1a.header =< header
 f1a.evaluatedHeader =< f1a.header
@@ -924,6 +925,7 @@ plugin.tx_templavoilaframework.f1b.evaluatedPreCodeHeader =< f1b.preCodeHeader
 
 f1b.header =< header
 f1b.evaluatedHeader =< f1b.header
+plugin.tx_templavoilaframework.f1b.evaluatedPreCodeHeader =< f1b.preCodeHeader
 
 f1b.postCodeHeader =< postCodeHeader
 f1b.evaluatedPostCodeHeader =< f1b.postCodeHeader
