@@ -64,18 +64,15 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-10 = CASE
+## If this is not a nested column group then record column widths
+10 = COA
 10 {
-	key.data = register:nestingLevel
-	default = LOAD_REGISTER
-	default {
-	}
-	0 = LOAD_REGISTER
-	0 {
-		originalColumnWidth4.data = register:containerWidth
-	}
+	if.isFalse.data = register:nestingLevel
+	10 = LOAD_REGISTER
+	10.originalColumnWidth4.data = register:containerWidth
 }
 
+## Setup various renderings for responsive
 15 = CASE
 15 {
 	key.data = register:columnModuleRenderMode
@@ -113,6 +110,9 @@
 		classColumnDistribution.noTrimWrap = | ||
 	}
 }
+
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page.
+## Also, let system know there is a content element present for when it is in the feature content block
 20 = LOAD_REGISTER
 20 {	
 	maxImageWidth.data = register:containerWidth
@@ -125,8 +125,11 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-30 = COA
-30 {
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+25 = COA
+25 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:tempMinFullImageWidth
@@ -134,8 +137,10 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
-40 = CASE
-40 {
+
+## Record current nesting level
+30 = CASE
+30 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default.nestingLevel = 1
@@ -145,37 +150,30 @@
 		level1ContainerWidth.data = register:columnGroupWidth
 	}
 }
-50 = CASE
-50 {
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+40 = CASE
+40 {
 	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
-	2 = LOAD_REGISTER
-	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass}{register:classColumnGroupDistribution}"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
-	default = LOAD_REGISTER
-	default {
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
+	1 = TEXT
+	1TEXT.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
+	2 = TEXT
+	2.dataWrap = <div class="{register:columnGroupClass} four-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 }
-60 = RECORDS
-60 {
-	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
-	wrap.insertData = 1
+
+## Render the records
+50 = RECORDS
+50 {
 	source.current = 1
 	tables = tt_content
 }
-70 = LOAD_REGISTER
-70 {
-	containerWidth.data = register:columnGroupWidth
-	maxImageWidth.data = register:containerWidth
-}
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+60 = TEXT
+60.value = </div>
+
 ]]>
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
@@ -206,58 +204,9 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-10 = CASE
-10 {
-	key.data = register:nestingLevel
-	default = CASE
-	default {
-		key.data = register:columnModuleRenderMode
-		full = LOAD_REGISTER
-		full {
-			columnGroupWidth.data = register:containerWidth
-			containerWidth.data = register:containerWidth
-		}
-		alternate = LOAD_REGISTER
-		alternate {
-			tempContainerWidth.data = register:containerWidth
-			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-		default = LOAD_REGISTER
-		default {
-			tempContainerWidth.data = register:containerWidth
-			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-	}
-	1 = CASE
-	1 {
-		key.data = register:columnModuleRenderMode
-		full = LOAD_REGISTER
-		full {
-			columnGroupWidth.data = register:containerWidth
-			containerWidth.data = register:containerWidth
-		}
-		alternate = LOAD_REGISTER
-		alternate {
-			tempContainerWidth.data = register:originalColumnWidth4
-			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-		default = LOAD_REGISTER
-		default {
-			tempContainerWidth.data = register:originalColumnWidth4
-			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-	}
-}
-20 = LOAD_REGISTER
-20 {
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+15 = LOAD_REGISTER
+15 {
 	maxImageWidth.data = register:containerWidth
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
@@ -267,8 +216,11 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-30 = COA
-30 {
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+20 = COA
+20 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:tempMinFullImageWidth
@@ -276,37 +228,31 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
-40 = CASE
-40 {
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+30 = CASE
+30 {
 	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
-	2 = LOAD_REGISTER
-	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumnDistribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
-	default = LOAD_REGISTER
-	default {
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
+	1 = TEXT
+	1.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
+	2 = TEXT
+	2.dataWrap = <div class="column{register:classColumnDistribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 }
-50 = RECORDS
-50 {
-	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
-	wrap.insertData = 1
+
+## Render the records
+40 = RECORDS
+40 {
 	source.current = 1
 	tables = tt_content
 }
-60 = LOAD_REGISTER
-60 {
-	containerWidth.data = register:columnGroupWidth
-	maxImageWidth.data = register:containerWidth
-}
+
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+50 = TEXT
+50.value = </div>
+
 ]]>
 	
                     </TypoScript>
@@ -338,58 +284,9 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-10 = CASE
-10 {
-	key.data = register:nestingLevel
-	default = CASE
-	default {
-		key.data = register:columnModuleRenderMode
-		full = LOAD_REGISTER
-		full {
-			columnGroupWidth.data = register:containerWidth
-			containerWidth.data = register:containerWidth
-		}
-		alternate = LOAD_REGISTER
-		alternate {
-			tempContainerWidth.data = register:containerWidth
-			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-		default = LOAD_REGISTER
-		default {
-			tempContainerWidth.data = register:containerWidth
-			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-	}
-	1 = CASE
-	1 {
-		key.data = register:columnModuleRenderMode
-		full = LOAD_REGISTER
-		full {
-			columnGroupWidth.data = register:containerWidth
-			containerWidth.data = register:containerWidth
-		}
-		alternate = LOAD_REGISTER
-		alternate {
-			tempContainerWidth.data = register:originalColumnWidth4
-			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-		default = LOAD_REGISTER
-		default {
-			tempContainerWidth.data = register:originalColumnWidth4
-			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-	}
-}
-20 = LOAD_REGISTER
-20 {
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+15 = LOAD_REGISTER
+15 {
 	maxImageWidth.data = register:containerWidth
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
@@ -399,8 +296,11 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-30 = COA
-30 {
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+20 = COA
+20 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:tempMinFullImageWidth
@@ -408,37 +308,29 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
-40 = CASE
-40 {
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+30 = CASE
+30 {
 	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-3 oneQuarter" style="width:{register:containerWidth}px;float:left;">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
-	2 = LOAD_REGISTER
-	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumnDistribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
-	default = LOAD_REGISTER
-	default {
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-3 oneQuarter" style="width:{register:containerWidth}px;float:left;">
-		tvfwColumnEndWrap.dataWrap = </div>
-	}
+	1 = TEXT
+	1.dataWrap = <div class="column column-3 oneQuarter" style="width:{register:containerWidth}px;float:left;">
+	2 = TEXT
+	2.dataWrap = <div class="column{register:classColumnDistribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="column column-3 oneQuarter" style="width:{register:containerWidth}px;float:left;">
 }
-50 = RECORDS
-50 {
-	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
-	wrap.insertData = 1
+
+## Render the records
+40 = RECORDS
+40 {
 	source.current = 1
 	tables = tt_content
 }
-60 = LOAD_REGISTER
-60 {
-	containerWidth.data = register:columnGroupWidth
-	maxImageWidth.data = register:containerWidth
-}
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+50 = TEXT
+50.value = </div>
 ]]>
 	
                     </TypoScript>
@@ -470,58 +362,9 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-10 = CASE
-10 {
-	key.data = register:nestingLevel
-	default = CASE
-	default {
-		key.data = register:columnModuleRenderMode
-		full = LOAD_REGISTER
-		full {
-			columnGroupWidth.data = register:containerWidth
-			containerWidth.data = register:containerWidth
-		}
-		alternate = LOAD_REGISTER
-		alternate {
-			tempContainerWidth.data = register:containerWidth
-			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-		default = LOAD_REGISTER
-		default {
-			tempContainerWidth.data = register:containerWidth
-			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-	}
-	1 = CASE
-	1 {
-		key.data = register:columnModuleRenderMode
-		full = LOAD_REGISTER
-		full {
-			columnGroupWidth.data = register:containerWidth
-			containerWidth.data = register:containerWidth
-		}
-		alternate = LOAD_REGISTER
-		alternate {
-			tempContainerWidth.data = register:originalColumnWidth4
-			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-		default = LOAD_REGISTER
-		default {
-			tempContainerWidth.data = register:originalColumnWidth4
-			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			containerWidth.data = register:tempContainerWidth
-			containerWidth.prioriCalc = intval
-		}
-	}
-}
-20 = LOAD_REGISTER
-20 {
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+15 = LOAD_REGISTER
+15 {
 	maxImageWidth.data = register:containerWidth
 	tempAggregateCss.data = register:aggregateCss
 	thisCss {
@@ -531,8 +374,11 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-30 = COA
-30 {
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+20 = COA
+20 {
 	if {
 		value.data = register:maxImageWidth
 		isGreaterThan.data = register:tempMinFullImageWidth
@@ -540,39 +386,42 @@
 	10 = LOAD_REGISTER
 	10.maxImageWidth.data = register:tempMinFullImageWidth
 }
-40 = CASE
-40 {
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+30 = CASE
+30 {
 	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-4 oneQuarter" style="width:{register:containerWidth}px;float:right;">
-		tvfwColumnEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
-	}
-	2 = LOAD_REGISTER
-	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumnDistribution} column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
-		tvfwColumnEndWrap.dataWrap = </div></div><!-- end .four-column-group  -->
-	}
-	default = LOAD_REGISTER
-	default {
-		tvfwColumnBeginWrap.dataWrap = <div class="column column-4 oneQuarter" style="width:{register:containerWidth}px;float:right;">
-		tvfwColumnEndWrap.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
-	}
+	1 = TEXT
+	1.dataWrap = <div class="column column-4 oneQuarter" style="width:{register:containerWidth}px;float:right;">
+	2 = TEXT
+	2.dataWrap = <div class="column{register:classColumnDistribution} column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="column column-4 oneQuarter" style="width:{register:containerWidth}px;float:right;">
 }
-50 = RECORDS
-50 {
-	wrap = {register:tvfwColumnBeginWrap}|{register:tvfwColumnEndWrap}
-	wrap.insertData = 1
+
+## Render the records
+40 = RECORDS
+40 {
 	source.current = 1
 	tables = tt_content
 }
-60 = LOAD_REGISTER
-60 {
-	containerWidth.data = register:columnGroupWidth
-	maxImageWidth.data = register:containerWidth
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+
+50 = CASE
+50 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
+	2 = TEXT
+	2.dataWrap = </div></div><!-- end .four-column-group  -->
+	default = TEXT
+	default .dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
 }
-70 = CASE
-70 {
+
+## Set nesting level and containerWidth to what they should be based on nesting level
+90 = CASE
+90 {
 	key.data = register:nestingLevel
 	default = LOAD_REGISTER
 	default {
