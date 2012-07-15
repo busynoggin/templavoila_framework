@@ -1428,88 +1428,247 @@ plugin.tx_templavoilaframework {
 	columnGroupSetup.40 = CASE
 	columnGroupSetup.40 {
 		key.field = field_column_distribution
-		default = LOAD_REGISTER
+		default = CASE
 		default {
-			tempColumnWidth.data = register:containerWidth
-			tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
-			columnWidth1.data = register:tempColumnWidth
-			columnWidth1.prioriCalc = intval
-			columnWidth2.data = register:tempColumnWidth
-			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = half
-			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = half
-			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = half-half
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				columnWidth1.data = register:containerWidth
+				columnWidth2.data = register:containerWidth
+				columnWidth3.data = register:containerWidth
+				classColumn1Distribution = full
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = full
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			alternate = LOAD_REGISTER
+			alternate {
+				tempColumnWidth.data = register:containerWidth
+				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
+				columnWidth1.data = register:tempColumnWidth
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = half
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = half
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempColumnWidth.data = register:containerWidth
+				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
+				columnWidth1.data = register:tempColumnWidth
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = half
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = half
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		1323 = LOAD_REGISTER
+		
+		1323 = CASE
 		1323 {
-			tempColumnWidth1.data = register:containerWidth
-			tempColumnWidth1.dataWrap = (|-({register:globalGutter}*2))/3
-			tempColumnWidth2.data = register:containerWidth
-			tempColumnWidth2.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
-			columnWidth1.data = register:tempColumnWidth1
-			columnWidth1.prioriCalc = intval
-			columnWidth2.data = register:tempColumnWidth2
-			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = third
-			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = two-third
-			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = third-two-third
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				columnWidth1.data = register:containerWidth
+				columnWidth2.data = register:containerWidth
+				columnWidth3.data = register:containerWidth
+				classColumn1Distribution = full
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = full
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			alternate = LOAD_REGISTER
+			alternate {
+				tempColumnWidth.data = register:containerWidth
+				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
+				columnWidth1.data = register:tempColumnWidth
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = half
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = half
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempColumnWidth1.data = register:containerWidth
+				tempColumnWidth1.dataWrap = (|-({register:globalGutter}*2))/3
+				tempColumnWidth2.data = register:containerWidth
+				tempColumnWidth2.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
+				columnWidth1.data = register:tempColumnWidth1
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth2
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = third
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = two-third
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = third-two-third
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		2313 = LOAD_REGISTER
+
+		2313 = CASE
 		2313 {
-			tempColumnWidth1.data = register:containerWidth
-			tempColumnWidth1.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
-			tempColumnWidth2.data = register:containerWidth
-			tempColumnWidth2.dataWrap = (|-({register:globalGutter}*2))/3
-			columnWidth1.data = register:tempColumnWidth1
-			columnWidth1.prioriCalc = intval
-			columnWidth2.data = register:tempColumnWidth2
-			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = two-third
-			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = third
-			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = two-third-third
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				columnWidth1.data = register:containerWidth
+				columnWidth2.data = register:containerWidth
+				columnWidth3.data = register:containerWidth
+				classColumn1Distribution = full
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = full
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			alternate = LOAD_REGISTER
+			alternate {
+				tempColumnWidth.data = register:containerWidth
+				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
+				columnWidth1.data = register:tempColumnWidth
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = half
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = half
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempColumnWidth1.data = register:containerWidth
+				tempColumnWidth1.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
+				tempColumnWidth2.data = register:containerWidth
+				tempColumnWidth2.dataWrap = (|-({register:globalGutter}*2))/3
+				columnWidth1.data = register:tempColumnWidth1
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth2
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = two-third
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = third
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = two-third-third
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		3414 = LOAD_REGISTER
+
+		3414 = CASE
 		3414 {
-			tempColumnWidth1.data = register:containerWidth
-			tempColumnWidth1.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
-			tempColumnWidth2.data = register:containerWidth
-			tempColumnWidth2.dataWrap = (|-({register:globalGutter}*3))/4
-			columnWidth1.data = register:tempColumnWidth1
-			columnWidth1.prioriCalc = intval
-			columnWidth2.data = register:tempColumnWidth2
-			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = three-quarter
-			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = quarter
-			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = three-quarter-quarter
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				columnWidth1.data = register:containerWidth
+				columnWidth2.data = register:containerWidth
+				columnWidth3.data = register:containerWidth
+				classColumn1Distribution = full
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = full
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			alternate = LOAD_REGISTER
+			alternate {
+				tempColumnWidth.data = register:containerWidth
+				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
+				columnWidth1.data = register:tempColumnWidth
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = half
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = half
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempColumnWidth1.data = register:containerWidth
+				tempColumnWidth1.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
+				tempColumnWidth2.data = register:containerWidth
+				tempColumnWidth2.dataWrap = (|-({register:globalGutter}*3))/4
+				columnWidth1.data = register:tempColumnWidth1
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth2
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = three-quarter
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = quarter
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = three-quarter-quarter
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		1434 = LOAD_REGISTER
+	
+		1434 = CASE
 		1434 {
-			tempColumnWidth1.data = register:containerWidth
-			tempColumnWidth1.dataWrap = (|-({register:globalGutter}*3))/4
-			tempColumnWidth2.data = register:containerWidth
-			tempColumnWidth2.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
-			columnWidth1.data = register:tempColumnWidth1
-			columnWidth1.prioriCalc = intval
-			columnWidth2.data = register:tempColumnWidth2
-			columnWidth2.prioriCalc = intval
-			classColumn1Distribution = quarter
-			classColumn1Distribution.noTrimWrap = | ||
-			classColumn2Distribution = three-quarter
-			classColumn2Distribution.noTrimWrap = | ||
-			classColumnGroupDistribution = quarter-three-quarter
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				columnWidth1.data = register:containerWidth
+				columnWidth2.data = register:containerWidth
+				columnWidth3.data = register:containerWidth
+				classColumn1Distribution = full
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = full
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			alternate = LOAD_REGISTER
+			alternate {
+				tempColumnWidth.data = register:containerWidth
+				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
+				columnWidth1.data = register:tempColumnWidth
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = half
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = half
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempColumnWidth1.data = register:containerWidth
+				tempColumnWidth1.dataWrap = (|-({register:globalGutter}*3))/4
+				tempColumnWidth2.data = register:containerWidth
+				tempColumnWidth2.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
+				columnWidth1.data = register:tempColumnWidth1
+				columnWidth1.prioriCalc = intval
+				columnWidth2.data = register:tempColumnWidth2
+				columnWidth2.prioriCalc = intval
+				classColumn1Distribution = quarter
+				classColumn1Distribution.noTrimWrap = | ||
+				classColumn2Distribution = three-quarter
+				classColumn2Distribution.noTrimWrap = | ||
+				classColumnGroupDistribution = quarter-three-quarter
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
 
 		131313 = COA
