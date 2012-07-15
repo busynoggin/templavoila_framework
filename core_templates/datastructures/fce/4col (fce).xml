@@ -75,13 +75,46 @@
 		originalColumnWidth4.data = register:containerWidth
 	}
 }
+
+15 = CASE
+15 {
+	key.data = register:columnModuleRenderMode
+	full = LOAD_REGISTER
+	full {
+		columnGroupWidth.data = register:containerWidth
+		containerWidth.data = register:containerWidth
+		classColumnGroupDistribution = full-full-full-full
+		classColumnGroupDistribution.noTrimWrap = | ||
+		classColumnDistribution = full
+		classColumnDistribution.noTrimWrap = | ||
+	}
+	alternate = LOAD_REGISTER
+	alternate {
+		columnGroupWidth.data = register:containerWidth
+		tempContainerWidth.data = register:containerWidth
+		tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+		containerWidth.data = register:tempContainerWidth
+		containerWidth.prioriCalc = intval
+		classColumnGroupDistribution = half-half-half-half
+		classColumnGroupDistribution.noTrimWrap = | ||
+		classColumnDistribution = half
+		classColumnDistribution.noTrimWrap = | ||
+	}
+	default = LOAD_REGISTER
+	default {
+		columnGroupWidth.data = register:containerWidth
+		tempContainerWidth.data = register:containerWidth
+		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+		containerWidth.data = register:tempContainerWidth
+		containerWidth.prioriCalc = intval
+		classColumnGroupDistribution = quarter-quarter-quarter-quarter
+		classColumnGroupDistribution.noTrimWrap = | ||
+		classColumnDistribution = quarter
+		classColumnDistribution.noTrimWrap = | ||
+	}
+}
 20 = LOAD_REGISTER
-20 {
-	columnGroupWidth.data = register:containerWidth
-	tempContainerWidth.data = register:containerWidth
-	tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-	containerWidth.data = register:tempContainerWidth
-	containerWidth.prioriCalc = intval
+20 {	
 	maxImageWidth.data = register:containerWidth
 	containerElementPresent = 1
 	tempAggregateCss.data = register:aggregateCss
@@ -122,7 +155,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass} four-column-group"><div class="column quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="{register:columnGroupClass}{register:classColumnGroupDistribution}"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	default = LOAD_REGISTER
@@ -176,19 +209,51 @@
 10 = CASE
 10 {
 	key.data = register:nestingLevel
-	default = LOAD_REGISTER
+	default = CASE
 	default {
-		tempContainerWidth.data = register:containerWidth
-		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-		containerWidth.data = register:tempContainerWidth
-		containerWidth.prioriCalc = intval
+		key.data = register:columnModuleRenderMode
+		full = LOAD_REGISTER
+		full {
+			columnGroupWidth.data = register:containerWidth
+			containerWidth.data = register:containerWidth
+		}
+		alternate = LOAD_REGISTER
+		alternate {
+			tempContainerWidth.data = register:containerWidth
+			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
+		default = LOAD_REGISTER
+		default {
+			tempContainerWidth.data = register:containerWidth
+			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
 	}
-	1 = LOAD_REGISTER
+	1 = CASE
 	1 {
-		tempContainerWidth.data = register:originalColumnWidth4
-		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-		containerWidth.data = register:tempContainerWidth
-		containerWidth.prioriCalc = intval
+		key.data = register:columnModuleRenderMode
+		full = LOAD_REGISTER
+		full {
+			columnGroupWidth.data = register:containerWidth
+			containerWidth.data = register:containerWidth
+		}
+		alternate = LOAD_REGISTER
+		alternate {
+			tempContainerWidth.data = register:originalColumnWidth4
+			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
+		default = LOAD_REGISTER
+		default {
+			tempContainerWidth.data = register:originalColumnWidth4
+			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
 	}
 }
 20 = LOAD_REGISTER
@@ -221,7 +286,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column quarter column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumnDistribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	default = LOAD_REGISTER
@@ -276,19 +341,51 @@
 10 = CASE
 10 {
 	key.data = register:nestingLevel
-	default = LOAD_REGISTER
+	default = CASE
 	default {
-		tempContainerWidth.data = register:containerWidth
-		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-		containerWidth.data = register:tempContainerWidth
-		containerWidth.prioriCalc = intval
+		key.data = register:columnModuleRenderMode
+		full = LOAD_REGISTER
+		full {
+			columnGroupWidth.data = register:containerWidth
+			containerWidth.data = register:containerWidth
+		}
+		alternate = LOAD_REGISTER
+		alternate {
+			tempContainerWidth.data = register:containerWidth
+			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
+		default = LOAD_REGISTER
+		default {
+			tempContainerWidth.data = register:containerWidth
+			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
 	}
-	1 = LOAD_REGISTER
+	1 = CASE
 	1 {
-		tempContainerWidth.data = register:originalColumnWidth4
-		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-		containerWidth.data = register:tempContainerWidth
-		containerWidth.prioriCalc = intval
+		key.data = register:columnModuleRenderMode
+		full = LOAD_REGISTER
+		full {
+			columnGroupWidth.data = register:containerWidth
+			containerWidth.data = register:containerWidth
+		}
+		alternate = LOAD_REGISTER
+		alternate {
+			tempContainerWidth.data = register:originalColumnWidth4
+			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
+		default = LOAD_REGISTER
+		default {
+			tempContainerWidth.data = register:originalColumnWidth4
+			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
 	}
 }
 20 = LOAD_REGISTER
@@ -321,7 +418,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column quarter column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumnDistribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div>
 	}
 	default = LOAD_REGISTER
@@ -376,19 +473,51 @@
 10 = CASE
 10 {
 	key.data = register:nestingLevel
-	default = LOAD_REGISTER
+	default = CASE
 	default {
-		tempContainerWidth.data = register:containerWidth
-		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-		containerWidth.data = register:tempContainerWidth
-		containerWidth.prioriCalc = intval
+		key.data = register:columnModuleRenderMode
+		full = LOAD_REGISTER
+		full {
+			columnGroupWidth.data = register:containerWidth
+			containerWidth.data = register:containerWidth
+		}
+		alternate = LOAD_REGISTER
+		alternate {
+			tempContainerWidth.data = register:containerWidth
+			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
+		default = LOAD_REGISTER
+		default {
+			tempContainerWidth.data = register:containerWidth
+			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
 	}
-	1 = LOAD_REGISTER
+	1 = CASE
 	1 {
-		tempContainerWidth.data = register:originalColumnWidth4
-		tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
-		containerWidth.data = register:tempContainerWidth
-		containerWidth.prioriCalc = intval
+		key.data = register:columnModuleRenderMode
+		full = LOAD_REGISTER
+		full {
+			columnGroupWidth.data = register:containerWidth
+			containerWidth.data = register:containerWidth
+		}
+		alternate = LOAD_REGISTER
+		alternate {
+			tempContainerWidth.data = register:originalColumnWidth4
+			tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
+		default = LOAD_REGISTER
+		default {
+			tempContainerWidth.data = register:originalColumnWidth4
+			tempContainerWidth.dataWrap = (|-({register:globalGutter}*3))/4
+			containerWidth.data = register:tempContainerWidth
+			containerWidth.prioriCalc = intval
+		}
 	}
 }
 20 = LOAD_REGISTER
@@ -421,7 +550,7 @@
 	}
 	2 = LOAD_REGISTER
 	2 {
-		tvfwColumnBeginWrap.dataWrap = <div class="column quarter column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwColumnBeginWrap.dataWrap = <div class="column{register:classColumnDistribution} column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwColumnEndWrap.dataWrap = </div></div><!-- end .four-column-group  -->
 	}
 	default = LOAD_REGISTER
