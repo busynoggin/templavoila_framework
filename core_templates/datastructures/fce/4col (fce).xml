@@ -77,8 +77,8 @@
 		classColumnDistribution = full
 		classColumnDistribution.noTrimWrap = | ||
 	}
-	alternate = LOAD_REGISTER
-	alternate {
+	intermediate = LOAD_REGISTER
+	intermediate {
 		columnGroupWidth.data = register:containerWidth
 		tempContainerWidth.data = register:containerWidth
 		tempContainerWidth.dataWrap = (|-{register:globalGutter})/2

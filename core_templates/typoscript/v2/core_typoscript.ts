@@ -1440,11 +1440,11 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = full
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution = full full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 				columnWidth1.data = register:tempColumnWidth
@@ -1455,7 +1455,7 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution = intermediate half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1487,11 +1487,11 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = full
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution = full full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 				columnWidth1.data = register:tempColumnWidth
@@ -1502,7 +1502,7 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution = intermediate half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1536,11 +1536,11 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = full
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution = full full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 				columnWidth1.data = register:tempColumnWidth
@@ -1551,7 +1551,7 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution = intermediate half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1585,11 +1585,11 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = full
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution = full full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 				columnWidth1.data = register:tempColumnWidth
@@ -1600,7 +1600,7 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution = intermediate half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1634,11 +1634,11 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = full
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full
+				classColumnGroupDistribution = full full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 				columnWidth1.data = register:tempColumnWidth
@@ -1649,7 +1649,7 @@ plugin.tx_templavoilaframework {
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = half-half
+				classColumnGroupDistribution = intermediate half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1685,11 +1685,11 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = full
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full-full
+				classColumnGroupDistribution = full full-full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
 				columnWidth1.data = register:tempColumnWidth
@@ -1703,7 +1703,7 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = full
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = half-half-full
+				classColumnGroupDistribution = intermediate half-half-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1741,11 +1741,11 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = full
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full-full
+				classColumnGroupDistribution = full full-full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth2.data = register:containerWidth
 				tempColumnWidth2.dataWrap = (|-{register:globalGutter})/2
 				tempColumnWidth3.data = register:containerWidth
@@ -1761,7 +1761,7 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = half
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-half-half
+				classColumnGroupDistribution = intermediate full-half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -1803,35 +1803,37 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = full
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full-full
+				classColumnGroupDistribution = full full-full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempColumnWidth1.data = register:containerWidth
+				tempColumnWidth1.dataWrap = (|-{register:globalGutter})/2
 				tempColumnWidth2.data = register:containerWidth
 				tempColumnWidth2.dataWrap = (|-{register:globalGutter})/2
 				tempColumnWidth3.data = register:containerWidth
 				tempColumnWidth3.dataWrap = (|-{register:globalGutter})/2
-				columnWidth1.data = register:containerWidth
+				columnWidth1.data = register:tempColumnWidth1
+				columnWidth1.prioriCalc = intval
 				columnWidth2.data = register:tempColumnWidth2
 				columnWidth2.prioriCalc = intval
-				columnWidth3.data = register:tempColumnWidth3
-				columnWidth3.prioriCalc = intval
+				columnWidth3.data = register:containerWidth
 				classColumn1Distribution = full
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = half
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-half-half
+				classColumnGroupDistribution = intermediate half-half-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
 			default {
 				tempColumnWidth1.data = register:containerWidth
-				tempColumnWidth1.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
+				tempColumnWidth1.dataWrap = (|-({register:globalGutter}*3))/4
 				tempColumnWidth2.data = register:containerWidth
-				tempColumnWidth2.dataWrap = (|-({register:globalGutter}*3))/4
+				tempColumnWidth2.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
 				tempColumnWidth3.data = register:containerWidth
 				tempColumnWidth3.dataWrap = (|-({register:globalGutter}*3))/4
 				columnWidth1.data = register:tempColumnWidth1
@@ -1865,11 +1867,11 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = full
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-full-full
+				classColumnGroupDistribution = full full-full-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
-			alternate = LOAD_REGISTER
-			alternate {
+			intermediate = LOAD_REGISTER
+			intermediate {
 				tempColumnWidth1.data = register:containerWidth
 				tempColumnWidth1.dataWrap = (|-{register:globalGutter})/2
 				tempColumnWidth2.data = register:containerWidth
@@ -1885,7 +1887,7 @@ plugin.tx_templavoilaframework {
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = half
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = full-half-half
+				classColumnGroupDistribution = intermediate half-half-full
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -2640,6 +2642,60 @@ page {
 			wrap = .three-column-group > .column-1, .four-column-group > .column-1, .four-column-group > .column-2, .triple-module-group > .module-1, .quad-module-group > .module-1, .quad-module-group > .module-2 {margin-right:|px;}
 			if.isTrue.data = register:createColumnModuleCSS
 		}
+		
+		50 = TEXT
+		50 {
+			value (
+				.four-column-group.half-half-half-half  > .column-2 {
+					float: right;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.four-column-group.half-half-half-half  > .column-1 {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.four-column-group.half-half-half-half  > .column-3 {
+					clear: both;
+					margin-right: 0;
+				}
+				
+				.four-column-group.full-full-full-full  > .column,
+				.three-column-group.full > .column,
+				.two-column-group.full > .column {
+					clear: both;
+					margin-right: 0;
+					margin-bottom: 15px;
+					float: none;
+				}
+				
+				.three-column-group.intermediate > .column-1 {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.three-column-group.intermediate > .column-2 {
+					float: right;
+					margin-bottom: 15px;
+				}
+				
+				.three-column-group.intermediate.full-half-half > .column-2 {
+					float: left;
+				}
+				
+				.three-column-group.intermediate > .column-3 {
+					clear: both;
+					float: none;
+				}
+				
+				.three-column-group.intermediate.full-half-half > .column-3 {
+					clear: none;
+					float: right;
+				}
+				
+			)
+			if.isTrue.data = register:createColumnModuleCSS
+		}
+
 	}
 }
 
