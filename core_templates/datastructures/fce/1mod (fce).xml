@@ -137,8 +137,8 @@
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
-20 = CASE
-20 {
+15 = CASE
+15 {
 	key.data = register:tvfwRenderMode
 	2 = LOAD_REGISTER
 	2 {
