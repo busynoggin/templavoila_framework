@@ -404,7 +404,7 @@
 10 = LOAD_REGISTER
 10 {
 	moduleGroupWidth.data = register:containerWidth
-	containerWidth.data = register:moduleWidth1
+	containerWidth.data = register:quadModuleWidth
 	maxImageWidth.data = register:containerWidth
 	nestingLevel = 1
 	level1ContainerWidth.data = register:moduleGroupWidth
@@ -424,7 +424,7 @@
 	key.data = register:tvfwRenderMode
 	2 = LOAD_REGISTER
 	2 {
-		tvfwModuleBeginWrap.dataWrap = <div class="module-group quad-module-group"><div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleBeginWrap.dataWrap = <div class="module-group quad-module-group{register:classModuleGroupDistribution}"><div class="{register:classModule1}{register:quadModuleDistribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div>
 		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass1}">
 		tvfwModuleBodyEndWrap.dataWrap = </div></div>
@@ -510,7 +510,7 @@
 10 = LOAD_REGISTER
 10 {
 	moduleGroupWidth.data = register:containerWidth
-	containerWidth.data = register:moduleWidth2
+	containerWidth.data = register:quadModuleWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_2_frame
@@ -527,7 +527,7 @@
 	key.data = register:tvfwRenderMode
 	2 = LOAD_REGISTER
 	2 {
-		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:classModule2Distribution} module-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule2}{register:quadModuleDistribution} module-2-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div>
 		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass2}">
 		tvfwModuleBodyEndWrap.dataWrap = </div></div>
@@ -613,7 +613,7 @@
 10 = LOAD_REGISTER
 10 {
 	moduleGroupWidth.data = register:containerWidth
-	containerWidth.data = register:moduleWidth3
+	containerWidth.data = register:quadModuleWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_3_frame
@@ -630,7 +630,7 @@
 	key.data = register:tvfwRenderMode
 	2 = LOAD_REGISTER
 	2 {
-		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule3}{register:classModule3Distribution} module-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule3}{register:quadModuleDistribution} module-3-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div>
 		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass3}">
 		tvfwModuleBodyEndWrap.dataWrap = </div></div>
@@ -714,9 +714,9 @@
 					<TypoScript>
 <![CDATA[
 10 = LOAD_REGISTER
-10{
+10 {
 	moduleGroupWidth.data = register:containerWidth
-	containerWidth.data = register:moduleWidth4
+	containerWidth.data = register:quadModuleWidth
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_4_frame
@@ -733,7 +733,7 @@
 	key.data = register:tvfwRenderMode
 	2 = LOAD_REGISTER
 	2 {
-		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule4}{register:classModule3Distribution} module-4-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleBeginWrap.dataWrap = <div class="{register:classModule4}{register:quadModuleDistribution} module-4-c{register:tx_templavoila_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div></div><!-- end .quad-module-group  -->
 		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass4}">
 		tvfwModuleBodyEndWrap.dataWrap = </div></div>

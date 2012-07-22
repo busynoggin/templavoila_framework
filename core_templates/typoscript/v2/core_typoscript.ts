@@ -1652,55 +1652,29 @@ plugin.tx_templavoilaframework {
 			key.data = register:columnModuleRenderMode
 			full = LOAD_REGISTER
 			full {
-				moduleWidth1.data = register:containerWidth
-				moduleWidth2.data = register:containerWidth
-				moduleWidth3.data = register:containerWidth
-				classModule1Distribution = full
-				classModule1Distribution.noTrimWrap = | ||
-				classModule2Distribution = full
-				classModule2Distribution.noTrimWrap = | ||
-				classModule3Distribution = full
-				classModule3Distribution.noTrimWrap = | ||
-				classModule4Distribution = full
-				classModule4Distribution.noTrimWrap = | ||
+				quadModuleWidth.data = register:containerWidth
+				quadModuleDistribution = full
+				quadModuleDistribution.noTrimWrap = | ||
 				classModuleGroupDistribution = full full-full-full-full
 				classModuleGroupDistribution.noTrimWrap = | ||
 			}
 			intermediate = LOAD_REGISTER
 			intermediate {
-				tempModuleWidth.data = register:containerWidth
-				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
-				moduleWidth1.data = register:tempModuleWidth
-				moduleWidth1.prioriCalc = intval
-				moduleWidth2.data = register:tempModuleWidth
-				moduleWidth2.prioriCalc = intval
-				moduleWidth3.data = register:tempModuleWidth
-				moduleWidth3.prioriCalc = intval
-				moduleWidth4.data = register:tempModuleWidth
-				moduleWidth4.prioriCalc = intval
-				classModule1Distribution = half
-				classModule1Distribution.noTrimWrap = | ||
-				classModule2Distribution = half
-				classModule2Distribution.noTrimWrap = | ||
-				classModule3Distribution = half
-				classModule3Distribution.noTrimWrap = | ||
-				classModule4Distribution = half
-				classModule4Distribution.noTrimWrap = | ||
+				tempQuadModuleWidth.data = register:containerWidth
+				tempQuadModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				quadModuleWidth.data = register:tempQuadModuleWidth
+				quadModuleWidth.prioriCalc = intval
+				quadModuleDistribution = half
+				quadModuleDistribution.noTrimWrap = | ||
 				classModuleGroupDistribution = intermediate half-half-half-half
 				classModuleGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
 			default {
-				tempModuleWidth.data = register:containerWidth
-				tempModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
-				moduleWidth1.data = register:tempModuleWidth
-				moduleWidth1.prioriCalc = intval
-				moduleWidth2.data = register:tempModuleWidth
-				moduleWidth2.prioriCalc = intval
-				moduleWidth3.data = register:tempModuleWidth
-				moduleWidth3.prioriCalc = intval
-				moduleWidth4.data = register:tempModuleWidth
-				moduleWidth4.prioriCalc = intval
+				tempQuadModuleWidth.data = register:containerWidth
+				tempQuadModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
+				quadModuleWidth.data = register:tempModuleWidth
+				quadModuleWidth.prioriCalc = intval
 			}
 		}
 	}
