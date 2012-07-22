@@ -148,7 +148,7 @@
 40 {
 	key.data = register:tvfwRenderMode
 	1 = TEXT
-	1TEXT.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
+	1.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 	2 = TEXT
 	2.dataWrap = <div class="{register:columnGroupClass} four-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
 	default = TEXT
