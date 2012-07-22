@@ -313,6 +313,7 @@
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
+		columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
 	}
 	default = LOAD_REGISTER
 	default {
@@ -395,6 +396,7 @@
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
+		columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
 	}
 	default = LOAD_REGISTER
 	default {
@@ -529,6 +531,7 @@
 		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
 		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
 		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
+		columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
 	}
 	default = LOAD_REGISTER
 	default {

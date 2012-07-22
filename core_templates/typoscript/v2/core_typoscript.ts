@@ -65,6 +65,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1a feature
 			f1afeaturewidth = {$plugin.tx_templavoilaframework.f1a.settings.feature.width}
+			f1afeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1a.settings.feature.columnModuleRenderMode}
 			f1afeaturetag = {$plugin.tx_templavoilaframework.f1a.settings.feature.tag}
 			f1afeatureid = {$plugin.tx_templavoilaframework.f1a.settings.feature.id}
 			f1afeatureid {
@@ -100,6 +101,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1b feature
 			f1bfeaturewidth = {$plugin.tx_templavoilaframework.f1b.settings.feature.width}
+			f1bfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1b.settings.feature.columnModuleRenderMode}
 			f1bfeaturetag = {$plugin.tx_templavoilaframework.f1b.settings.feature.tag}
 			f1bfeatureid = {$plugin.tx_templavoilaframework.f1b.settings.feature.id}
 			f1bfeatureid {
@@ -117,6 +119,7 @@ plugin.tx_templavoilaframework {
 
 			## f1b contentBlock-1
 			f1bcontentBlock-1width = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.width}
+			f1bcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.columnModuleRenderMode}
 			f1bcontentBlock-1tag = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.tag}
 			f1bcontentBlock-1id = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.id}
 			f1bcontentBlock-1id {
@@ -134,6 +137,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1c feature
 			f1cfeaturewidth = {$plugin.tx_templavoilaframework.f1c.settings.feature.width}
+			f1cfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1c.settings.feature.columnModuleRenderMode}
 			f1cfeaturetag = {$plugin.tx_templavoilaframework.f1c.settings.feature.tag}
 			f1cfeatureid = {$plugin.tx_templavoilaframework.f1c.settings.feature.id}
 			f1cfeatureid {
@@ -151,6 +155,7 @@ plugin.tx_templavoilaframework {
 
 			## f1c contentBlock-1
 			f1ccontentBlock-1width = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.width}
+			f1ccontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.columnModuleRenderMode}
 			f1ccontentBlock-1tag = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.tag}
 			f1ccontentBlock-1id = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.id}
 			f1ccontentBlock-1id {
@@ -169,6 +174,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1d feature
 			f1dfeaturewidth = {$plugin.tx_templavoilaframework.f1d.settings.feature.width}
+			f1dfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1d.settings.feature.columnModuleRenderMode}
 			f1dfeaturetag = {$plugin.tx_templavoilaframework.f1d.settings.feature.tag}
 			f1dfeatureid = {$plugin.tx_templavoilaframework.f1d.settings.feature.id}
 			f1dfeatureid {
@@ -186,6 +192,7 @@ plugin.tx_templavoilaframework {
 
 			## f1d contentBlock-1
 			f1dcontentBlock-1width = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.width}
+			f1dcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.columnModuleRenderMode}
 			f1dcontentBlock-1tag = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.tag}
 			f1dcontentBlock-1id = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.id}
 			f1dcontentBlock-1id {
@@ -203,6 +210,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1d Generated Content 1
 			f1dgeneratedContent-1width = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.width}
+			f1dgeneratedContent-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.columnModuleRenderMode}
 			f1dgeneratedContent-1tag = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.tag}
 			f1dgeneratedContent-1id = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.id}
 			f1dgeneratedContent-1id {
@@ -220,6 +228,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1e feature
 			f1efeaturewidth = {$plugin.tx_templavoilaframework.f1e.settings.feature.width}
+			f1efeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1e.settings.feature.columnModuleRenderMode}
 			f1efeaturetag = {$plugin.tx_templavoilaframework.f1e.settings.feature.tag}
 			f1efeatureid = {$plugin.tx_templavoilaframework.f1e.settings.feature.id}
 			f1efeatureid {
@@ -237,6 +246,7 @@ plugin.tx_templavoilaframework {
 
 			## f1e contentBlock-1
 			f1econtentBlock-1width = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.width}
+			f1econtentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.columnModuleRenderMode}
 			f1econtentBlock-1tag = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.tag}
 			f1econtentBlock-1id = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.id}
 			f1econtentBlock-1id {
@@ -254,6 +264,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1e Generated Content 2
 			f1egeneratedContent-2width = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.width}
+			f1egeneratedContent-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.columnModuleRenderMode}
 			f1egeneratedContent-2tag = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.tag}
 			f1egeneratedContent-2id = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.id}
 			f1egeneratedContent-2id {
@@ -271,6 +282,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1f feature
 			f1ffeaturewidth = {$plugin.tx_templavoilaframework.f1f.settings.feature.width}
+			f1ffeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1f.settings.feature.columnModuleRenderMode}
 			f1ffeaturetag = {$plugin.tx_templavoilaframework.f1f.settings.feature.tag}
 			f1ffeatureid = {$plugin.tx_templavoilaframework.f1f.settings.feature.id}
 			f1ffeatureid {
@@ -288,6 +300,7 @@ plugin.tx_templavoilaframework {
 
 			## f1f contentBlock-1
 			f1fcontentBlock-1width = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.width}
+			f1fcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.columnModuleRenderMode}
 			f1fcontentBlock-1tag = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.tag}
 			f1fcontentBlock-1id = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.id}
 			f1fcontentBlock-1id {
@@ -305,6 +318,7 @@ plugin.tx_templavoilaframework {
 			
 			## f1f Generated Content 1
 			f1fgeneratedContent-1width = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.width}
+			f1fgeneratedContent-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.columnModuleRenderMode}
 			f1fgeneratedContent-1tag = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.tag}
 			f1fgeneratedContent-1id = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.id}
 			f1fgeneratedContent-1id {
@@ -323,6 +337,7 @@ plugin.tx_templavoilaframework {
 
 			## f1f Generated Content 2
 			f1fgeneratedContent-2width = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.width}
+			f1fgeneratedContent-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.columnModuleRenderMode}
 			f1fgeneratedContent-2tag = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.tag}
 			f1fgeneratedContent-2id = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.id}
 			f1fgeneratedContent-2id {
@@ -340,6 +355,7 @@ plugin.tx_templavoilaframework {
 			
 			## f2a feature
 			f2afeaturewidth = {$plugin.tx_templavoilaframework.f2a.settings.feature.width}
+			f2afeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2a.settings.feature.columnModuleRenderMode}
 			f2afeaturetag = {$plugin.tx_templavoilaframework.f2a.settings.feature.tag}
 			f2afeatureid = {$plugin.tx_templavoilaframework.f2a.settings.feature.id}
 			f2afeatureid {
@@ -357,6 +373,7 @@ plugin.tx_templavoilaframework {
 
 			## f2a contentBlock-1
 			f2acontentBlock-1width = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-1.width}
+			f2acontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-1.columnModuleRenderMode}
 			f2acontentBlock-1tag = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-1.tag}
 			f2acontentBlock-1id = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-1.id}
 			f2acontentBlock-1id {
@@ -374,6 +391,7 @@ plugin.tx_templavoilaframework {
 
 			## f2a contentBlock-2
 			f2acontentBlock-2width = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.width}
+			f2acontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.columnModuleRenderMode}
 			f2acontentBlock-2tag = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.tag}
 			f2acontentBlock-2id = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.id}
 			f2acontentBlock-2id {
@@ -391,6 +409,7 @@ plugin.tx_templavoilaframework {
 			
 			## f2b feature
 			f2bfeaturewidth = {$plugin.tx_templavoilaframework.f2b.settings.feature.width}
+			f2bfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2b.settings.feature.columnModuleRenderMode}
 			f2bfeaturetag = {$plugin.tx_templavoilaframework.f2b.settings.feature.tag}
 			f2bfeatureid = {$plugin.tx_templavoilaframework.f2b.settings.feature.id}
 			f2bfeatureid {
@@ -408,6 +427,7 @@ plugin.tx_templavoilaframework {
 
 			## f2b contentBlock-1
 			f2bcontentBlock-1width = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-1.width}
+			f2bcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-1.columnModuleRenderMode}
 			f2bcontentBlock-1tag = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-1.tag}
 			f2bcontentBlock-1id = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-1.id}
 			f2bcontentBlock-1id {
@@ -425,6 +445,7 @@ plugin.tx_templavoilaframework {
 
 			## f2b contentBlock-2
 			f2bcontentBlock-2width = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.width}
+			f2bcontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.columnModuleRenderMode}
 			f2bcontentBlock-2tag = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.tag}
 			f2bcontentBlock-2id = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.id}
 			f2bcontentBlock-2id {
@@ -442,6 +463,7 @@ plugin.tx_templavoilaframework {
 			
 			## f2c feature
 			f2cfeaturewidth = {$plugin.tx_templavoilaframework.f2c.settings.feature.width}
+			f2cfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2c.settings.feature.columnModuleRenderMode}
 			f2cfeaturetag = {$plugin.tx_templavoilaframework.f2c.settings.feature.tag}
 			f2cfeatureid = {$plugin.tx_templavoilaframework.f2c.settings.feature.id}
 			f2cfeatureid {
@@ -459,6 +481,7 @@ plugin.tx_templavoilaframework {
 
 			## f2c contentBlock-1
 			f2ccontentBlock-1width = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-1.width}
+			f2ccontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-1.columnModuleRenderMode}
 			f2ccontentBlock-1tag = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-1.tag}
 			f2ccontentBlock-1id = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-1.id}
 			f2ccontentBlock-1id {
@@ -476,6 +499,7 @@ plugin.tx_templavoilaframework {
 
 			## f2c contentBlock-2
 			f2ccontentBlock-2width = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.width}
+			f2ccontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.columnModuleRenderMode}
 			f2ccontentBlock-2tag = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.tag}
 			f2ccontentBlock-2id = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.id}
 			f2ccontentBlock-2id {
@@ -493,6 +517,7 @@ plugin.tx_templavoilaframework {
 			
 			## f2d feature
 			f2dfeaturewidth = {$plugin.tx_templavoilaframework.f2d.settings.feature.width}
+			f2dfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2d.settings.feature.columnModuleRenderMode}
 			f2dfeaturetag = {$plugin.tx_templavoilaframework.f2d.settings.feature.tag}
 			f2dfeatureid = {$plugin.tx_templavoilaframework.f2d.settings.feature.id}
 			f2dfeatureid {
@@ -510,6 +535,7 @@ plugin.tx_templavoilaframework {
 
 			## f2d contentBlock-1
 			f2dcontentBlock-1width = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-1.width}
+			f2dcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-1.columnModuleRenderMode}
 			f2dcontentBlock-1tag = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-1.tag}
 			f2dcontentBlock-1id = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-1.id}
 			f2dcontentBlock-1id {
@@ -527,6 +553,7 @@ plugin.tx_templavoilaframework {
 
 			## f2d contentBlock-2
 			f2dcontentBlock-2width = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-2.width}
+			f2dcontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-2.columnModuleRenderMode}
 			f2dcontentBlock-2tag = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-2.tag}
 			f2dcontentBlock-2id = {$plugin.tx_templavoilaframework.f2d.settings.contentBlock-2.id}
 			f2dcontentBlock-2id {
@@ -544,6 +571,7 @@ plugin.tx_templavoilaframework {
 
 			## f2d Generated Content 1
 			f2dgeneratedContent-1width = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.width}
+			f2dgeneratedContent-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.columnModuleRenderMode}
 			f2dgeneratedContent-1tag = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.tag}
 			f2dgeneratedContent-1id = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.id}
 			f2dgeneratedContent-1id {
@@ -561,6 +589,7 @@ plugin.tx_templavoilaframework {
 			
 			## f2e feature
 			f2efeaturewidth = {$plugin.tx_templavoilaframework.f2e.settings.feature.width}
+			f2efeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2e.settings.feature.columnModuleRenderMode}
 			f2efeaturetag = {$plugin.tx_templavoilaframework.f2e.settings.feature.tag}
 			f2efeatureid = {$plugin.tx_templavoilaframework.f2e.settings.feature.id}
 			f2efeatureid {
@@ -578,6 +607,7 @@ plugin.tx_templavoilaframework {
 
 			## f2e contentBlock-1
 			f2econtentBlock-1width = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-1.width}
+			f2econtentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-1.columnModuleRenderMode}
 			f2econtentBlock-1tag = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-1.tag}
 			f2econtentBlock-1id = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-1.id}
 			f2econtentBlock-1id {
@@ -595,6 +625,7 @@ plugin.tx_templavoilaframework {
 
 			## f2e contentBlock-2
 			f2econtentBlock-2width = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-2.width}
+			f2econtentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-2.columnModuleRenderMode}
 			f2econtentBlock-2tag = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-2.tag}
 			f2econtentBlock-2id = {$plugin.tx_templavoilaframework.f2e.settings.contentBlock-2.id}
 			f2econtentBlock-2id {
@@ -612,6 +643,7 @@ plugin.tx_templavoilaframework {
 
 			## f2e Generated Content 1
 			f2egeneratedContent-2width = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.width}
+			f2egeneratedContent-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.columnModuleRenderMode}
 			f2egeneratedContent-2tag = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.tag}
 			f2egeneratedContent-2id = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.id}
 			f2egeneratedContent-2id {
@@ -629,6 +661,7 @@ plugin.tx_templavoilaframework {
 			
 			## f3a feature
 			f3afeaturewidth = {$plugin.tx_templavoilaframework.f3a.settings.feature.width}
+			f3afeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f3a.settings.feature.columnModuleRenderMode}
 			f3afeaturetag = {$plugin.tx_templavoilaframework.f3a.settings.feature.tag}
 			f3afeatureid = {$plugin.tx_templavoilaframework.f3a.settings.feature.id}
 			f3afeatureid {
@@ -646,6 +679,7 @@ plugin.tx_templavoilaframework {
 
 			## f3a contentBlock-1
 			f3acontentBlock-1width = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-1.width}
+			f3acontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-1.columnModuleRenderMode}
 			f3acontentBlock-1tag = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-1.tag}
 			f3acontentBlock-1id = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-1.id}
 			f3acontentBlock-1id {
@@ -663,6 +697,7 @@ plugin.tx_templavoilaframework {
 
 			## f3a contentBlock-2
 			f3acontentBlock-2width = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-2.width}
+			f3acontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-2.columnModuleRenderMode}
 			f3acontentBlock-2tag = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-2.tag}
 			f3acontentBlock-2id = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-2.id}
 			f3acontentBlock-2id {
@@ -680,6 +715,7 @@ plugin.tx_templavoilaframework {
 
 			## f3a contentBlock-3
 			f3acontentBlock-3width = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.width}
+			f3acontentBlock-3columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.columnModuleRenderMode}
 			f3acontentBlock-3tag = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.tag}
 			f3acontentBlock-3id = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.id}
 			f3acontentBlock-3id {
@@ -697,6 +733,7 @@ plugin.tx_templavoilaframework {
 			
 			## f3b feature
 			f3bfeaturewidth = {$plugin.tx_templavoilaframework.f3b.settings.feature.width}
+			f3bfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f3b.settings.feature.columnModuleRenderMode}
 			f3bfeaturetag = {$plugin.tx_templavoilaframework.f3b.settings.feature.tag}
 			f3bfeatureid = {$plugin.tx_templavoilaframework.f3b.settings.feature.id}
 			f3bfeatureid {
@@ -714,6 +751,7 @@ plugin.tx_templavoilaframework {
 
 			## f3b contentBlock-1
 			f3bcontentBlock-1width = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-1.width}
+			f3bcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-1.columnModuleRenderMode}
 			f3bcontentBlock-1tag = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-1.tag}
 			f3bcontentBlock-1id = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-1.id}
 			f3bcontentBlock-1id {
@@ -731,6 +769,7 @@ plugin.tx_templavoilaframework {
 
 			## f3b contentBlock-2
 			f3bcontentBlock-2width = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-2.width}
+			f3bcontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-2.columnModuleRenderMode}
 			f3bcontentBlock-2tag = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-2.tag}
 			f3bcontentBlock-2id = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-2.id}
 			f3bcontentBlock-2id {
@@ -748,6 +787,7 @@ plugin.tx_templavoilaframework {
 
 			## f3b contentBlock-3
 			f3bcontentBlock-3width = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-3.width}
+			f3bcontentBlock-3columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-3.columnModuleRenderMode}
 			f3bcontentBlock-3tag = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-3.tag}
 			f3bcontentBlock-3id = {$plugin.tx_templavoilaframework.f3b.settings.contentBlock-3.id}
 			f3bcontentBlock-3id {
@@ -765,6 +805,7 @@ plugin.tx_templavoilaframework {
 
 			## f3c feature
 			f3cfeaturewidth = {$plugin.tx_templavoilaframework.f3c.settings.feature.width}
+			f3cfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f3c.settings.feature.columnModuleRenderMode}
 			f3cfeaturetag = {$plugin.tx_templavoilaframework.f3c.settings.feature.tag}
 			f3cfeatureid = {$plugin.tx_templavoilaframework.f3c.settings.feature.id}
 			f3cfeatureid {
@@ -782,6 +823,7 @@ plugin.tx_templavoilaframework {
 
 			## f3c contentBlock-1
 			f3ccontentBlock-1width = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-1.width}
+			f3ccontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-1.columnModuleRenderMode}
 			f3ccontentBlock-1tag = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-1.tag}
 			f3ccontentBlock-1id = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-1.id}
 			f3ccontentBlock-1id {
@@ -799,6 +841,7 @@ plugin.tx_templavoilaframework {
 
 			## f3c contentBlock-2
 			f3ccontentBlock-2width = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-2.width}
+			f3ccontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-2.columnModuleRenderMode}
 			f3ccontentBlock-2tag = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-2.tag}
 			f3ccontentBlock-2id = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-2.id}
 			f3ccontentBlock-2id {
@@ -816,6 +859,7 @@ plugin.tx_templavoilaframework {
 
 			## f3c contentBlock-3
 			f3ccontentBlock-3width = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-3.width}
+			f3ccontentBlock-3columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-3.columnModuleRenderMode}
 			f3ccontentBlock-3tag = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-3.tag}
 			f3ccontentBlock-3id = {$plugin.tx_templavoilaframework.f3c.settings.contentBlock-3.id}
 			f3ccontentBlock-3id {
@@ -833,6 +877,7 @@ plugin.tx_templavoilaframework {
 
 			## f3d feature
 			f3dfeaturewidth = {$plugin.tx_templavoilaframework.f3d.settings.feature.width}
+			f3dfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f3d.settings.feature.columnModuleRenderMode}
 			f3dfeaturetag = {$plugin.tx_templavoilaframework.f3d.settings.feature.tag}
 			f3dfeatureid = {$plugin.tx_templavoilaframework.f3d.settings.feature.id}
 			f3dfeatureid {
@@ -850,6 +895,7 @@ plugin.tx_templavoilaframework {
 
 			## f3d contentBlock-1
 			f3dcontentBlock-1width = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-1.width}
+			f3dcontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-1.columnModuleRenderMode}
 			f3dcontentBlock-1tag = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-1.tag}
 			f3dcontentBlock-1id = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-1.id}
 			f3dcontentBlock-1id {
@@ -867,6 +913,7 @@ plugin.tx_templavoilaframework {
 
 			## f3d contentBlock-2
 			f3dcontentBlock-2width = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-2.width}
+			f3dcontentBlock-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-2.columnModuleRenderMode}
 			f3dcontentBlock-2tag = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-2.tag}
 			f3dcontentBlock-2id = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-2.id}
 			f3dcontentBlock-2id {
@@ -884,6 +931,7 @@ plugin.tx_templavoilaframework {
 
 			## f3d contentBlock-3
 			f3dcontentBlock-3width = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-3.width}
+			f3dcontentBlock-3columnModuleRenderMode = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-3.columnModuleRenderMode}
 			f3dcontentBlock-3tag = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-3.tag}
 			f3dcontentBlock-3id = {$plugin.tx_templavoilaframework.f3d.settings.contentBlock-3.id}
 			f3dcontentBlock-3id {
