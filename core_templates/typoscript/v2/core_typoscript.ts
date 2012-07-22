@@ -1166,8 +1166,8 @@ plugin.tx_templavoilaframework {
 			moduleWidth1.prioriCalc = intval
 			moduleWidth2.data = register:tempModuleWidth2
 			moduleWidth2.prioriCalc = intval
-			classModule1Distribution = threeQuarter
-			classModule1Distribution.noTrimW-qap = | ||
+			classModule1Distribution = three-quarter
+			classModule1Distribution.noTrimWrap = | ||
 			classModule2Distribution = one-quarter
 			classModule2Distribution.noTrimWrap = | ||
 			classModuleGroupDistribution = three-quarter-quarter
