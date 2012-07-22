@@ -1151,197 +1151,559 @@ plugin.tx_templavoilaframework {
 	moduleGroupSetup.40 = CASE
 	moduleGroupSetup.40 {
 		key.data = register:moduleDistribution
-		default = LOAD_REGISTER
+		default = CASE
 		default {
-			tempModuleWidth.data = register:containerWidth
-			tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
-			moduleWidth1.data = register:tempModuleWidth
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth
-			moduleWidth2.prioriCalc = intval
-			classModule1Distribution = one-half
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = one-half
-			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = half-half
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
 		}
 		11 = LOAD_REGISTER
 		11 {
 			moduleWidth1.data = register:containerWidth
 		}
-		1323 = LOAD_REGISTER
+
+
+		1323 = CASE
 		1323 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = (|-({register:globalGutter}*2))/3
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			classModule1Distribution = third
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = two-third
-			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = third-two-third
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = (|-({register:globalGutter}*2))/3
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = third
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = two-third
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = third-two-third
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
 		}
+
 		2313 = LOAD_REGISTER
 		2313 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = (|-({register:globalGutter}*2))/3
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			classModule1Distribution = two-third
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = third
-			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = two-third-third
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = (((|-({register:globalGutter}*2))/3)*2)+{register:globalGutter}
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = (|-({register:globalGutter}*2))/3
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = two-third
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = third
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = two-third-third
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		3414 = LOAD_REGISTER
+
+
+
+
+		3414 = CASE
 		3414 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			classModule1Distribution = three-quarter
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = one-quarter
-			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = three-quarter-quarter
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = three-quarter
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-quarter
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = three-quarter-quarter
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		1434 = LOAD_REGISTER
+
+
+
+		1434 = CASE
 		1434 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			classModule1Distribution = one-quarter
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = three-quarter
-			classModule2Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = quarter-three-quarter
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = (((|-({register:globalGutter}*3))/4)*3)+({register:globalGutter}*2)
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				classModule1Distribution = one-quarter
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = three-quarter
+				classModule2Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = quarter-three-quarter
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		131313 = LOAD_REGISTER
+		
+		
+		131313 = CASE
 		131313 {
-			tempModuleWidth.data = register:containerWidth
-			tempModuleWidth.dataWrap = (|-({register:globalGutter}*2))/3
-			moduleWidth1.data = register:tempModuleWidth
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth
-			moduleWidth2.prioriCalc = intval
-			moduleWidth3.data = register:tempModuleWidth
-			moduleWidth3.prioriCalc = intval
-			classModule1Distribution = third
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = third
-			classModule2Distribution.noTrimWrap = | ||
-			classModule3Distribution = third
-			classModule3Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = third-third-third
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = half
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-({register:globalGutter}*2))/3
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth
+				moduleWidth3.prioriCalc = intval
+				classModule1Distribution = third
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = third
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = third
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = third-third-third
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		121414 = LOAD_REGISTER
+
+
+		121414 = CASE
 		121414 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
-			tempModuleWidth3.data = register:containerWidth
-			tempModuleWidth3.dataWrap = (|-({register:globalGutter}*3))/4
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			moduleWidth3.data = register:tempModuleWidth3
-			moduleWidth3.prioriCalc = intval
-			classModule1Distribution = one-half
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = one-quarter
-			classModule2Distribution.noTrimWrap = | ||
-			classModule3Distribution = one-quarter
-			classModule3Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = half-quarter-quarter
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth
+				moduleWidth3.prioriCalc = intval
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = half
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = half
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate full-half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
+				tempModuleWidth3.data = register:containerWidth
+				tempModuleWidth3.dataWrap = (|-({register:globalGutter}*3))/4
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth3
+				moduleWidth3.prioriCalc = intval
+				classModule1Distribution = one-half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-quarter
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = one-quarter
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = half-quarter-quarter
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		141214 = LOAD_REGISTER
+
+
+		141214 = CASE
 		141214 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
-			tempModuleWidth3.data = register:containerWidth
-			tempModuleWidth3.dataWrap = (|-({register:globalGutter}*3))/4
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			moduleWidth3.data = register:tempModuleWidth3
-			moduleWidth3.prioriCalc = intval
-			classModule1Distribution = one-quarter
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = one-half
-			classModule2Distribution.noTrimWrap = | ||
-			classModule3Distribution = one-quarter
-			classModule3Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = quarter-half-quarter
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = half
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
+				tempModuleWidth3.data = register:containerWidth
+				tempModuleWidth3.dataWrap = (|-({register:globalGutter}*3))/4
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth3
+				moduleWidth3.prioriCalc = intval
+				classModule1Distribution = one-quarter
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-half
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = one-quarter
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = quarter-half-quarter
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		141412 = LOAD_REGISTER
+		
+		
+		141412 = CASE
 		141412 {
-			tempModuleWidth1.data = register:containerWidth
-			tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
-			tempModuleWidth2.data = register:containerWidth
-			tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
-			tempModuleWidth3.data = register:containerWidth
-			tempModuleWidth3.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
-			moduleWidth1.data = register:tempModuleWidth1
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth2
-			moduleWidth2.prioriCalc = intval
-			moduleWidth3.data = register:tempModuleWidth3
-			moduleWidth3.prioriCalc = intval
-			classModule1Distribution = one-quarter
-			classModule1Distribution.noTrimWrap = | ||
-			classModule2Distribution = one-quarter
-			classModule2Distribution.noTrimWrap = | ||
-			classModule3Distribution = one-half
-			classModule3Distribution.noTrimWrap = | ||
-			classModuleGroupDistribution = quarter-quarter-half
-			classColumnGroupDistribution.noTrimWrap = | ||
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = half
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth1.data = register:containerWidth
+				tempModuleWidth1.dataWrap = (|-({register:globalGutter}*3))/4
+				tempModuleWidth2.data = register:containerWidth
+				tempModuleWidth2.dataWrap = (|-({register:globalGutter}*3))/4
+				tempModuleWidth3.data = register:containerWidth
+				tempModuleWidth3.dataWrap = ((|-({register:globalGutter}*3))/2)+{register:globalGutter}
+				moduleWidth1.data = register:tempModuleWidth1
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth2
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth3
+				moduleWidth3.prioriCalc = intval
+				classModule1Distribution = one-quarter
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = one-quarter
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = one-half
+				classModule3Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = quarter-quarter-half
+				classColumnGroupDistribution.noTrimWrap = | ||
+			}
 		}
-		14141414 = LOAD_REGISTER
+
+
+		14141414 = CASE
 		14141414 {
-			tempModuleWidth.data = register:containerWidth
-			tempModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
-			moduleWidth1.data = register:tempModuleWidth
-			moduleWidth1.prioriCalc = intval
-			moduleWidth2.data = register:tempModuleWidth
-			moduleWidth2.prioriCalc = intval
-			moduleWidth3.data = register:tempModuleWidth
-			moduleWidth3.prioriCalc = intval
-			moduleWidth4.data = register:tempModuleWidth
-			moduleWidth4.prioriCalc = intval
+			key.data = register:columnModuleRenderMode
+			full = LOAD_REGISTER
+			full {
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				moduleWidth3.data = register:containerWidth
+				classModule1Distribution = full
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = full
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = full
+				classModule3Distribution.noTrimWrap = | ||
+				classModule4Distribution = full
+				classModule4Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = full full-full-full-full
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			intermediate = LOAD_REGISTER
+			intermediate {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth
+				moduleWidth3.prioriCalc = intval
+				moduleWidth4.data = register:tempModuleWidth
+				moduleWidth4.prioriCalc = intval
+				classModule1Distribution = half
+				classModule1Distribution.noTrimWrap = | ||
+				classModule2Distribution = half
+				classModule2Distribution.noTrimWrap = | ||
+				classModule3Distribution = half
+				classModule3Distribution.noTrimWrap = | ||
+				classModule4Distribution = half
+				classModule4Distribution.noTrimWrap = | ||
+				classModuleGroupDistribution = intermediate half-half-half-half
+				classModuleGroupDistribution.noTrimWrap = | ||
+			}
+			default = LOAD_REGISTER
+			default {
+				tempModuleWidth.data = register:containerWidth
+				tempModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
+				moduleWidth1.data = register:tempModuleWidth
+				moduleWidth1.prioriCalc = intval
+				moduleWidth2.data = register:tempModuleWidth
+				moduleWidth2.prioriCalc = intval
+				moduleWidth3.data = register:tempModuleWidth
+				moduleWidth3.prioriCalc = intval
+				moduleWidth4.data = register:tempModuleWidth
+				moduleWidth4.prioriCalc = intval
+			}
 		}
 	}
-
-
 
 	### Sets the width of module content area
 
