@@ -1673,8 +1673,12 @@ plugin.tx_templavoilaframework {
 			default {
 				tempQuadModuleWidth.data = register:containerWidth
 				tempQuadModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
-				quadModuleWidth.data = register:tempModuleWidth
+				quadModuleWidth.data = register:tempQuadModuleWidth
 				quadModuleWidth.prioriCalc = intval
+				quadModuleDistribution = quarter
+				quadModuleDistribution.noTrimWrap = | ||
+				classModuleGroupDistribution = quarter-quarter-quarter-quarter
+				classModuleGroupDistribution.noTrimWrap = | ||
 			}
 		}
 	}
