@@ -1031,12 +1031,20 @@ plugin.tx_templavoilaframework {
 				default = LOAD_REGISTER
 				default.classModule1 = module module-1
 				0 = LOAD_REGISTER
-				0.classModule1 = module module-1 title-no-show
+				0 {
+					classModule1 = module module-1 title-no-show
+					renderedModuleHeader1 = &nbsp;
+					renderedModuleHeader1.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+				}
 			}
 			1 = LOAD_REGISTER
 			1.classModule1 = module module-1
 			2 = LOAD_REGISTER
-			2.classModule1 = module module-1 title-no-show
+			2 {
+				classModule1 = module module-1 title-no-show
+				renderedModuleHeader1 = &nbsp;
+				renderedModuleHeader1.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+			}
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -1063,12 +1071,20 @@ plugin.tx_templavoilaframework {
 				default = LOAD_REGISTER
 				default.classModule2 = module module-2
 				0 = LOAD_REGISTER
-				0.classModule2 = module module-2 title-no-show
+				0 {
+					classModule2 = module module-2 title-no-show
+					renderedModuleHeader2 = &nbsp;
+					renderedModuleHeader2.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+				}
 			}
 			1 = LOAD_REGISTER
 			1.classModule2 = module module-2
 			2 = LOAD_REGISTER
-			2.classModule2 = module module-2 title-no-show
+			2 {
+				classModule2 = module module-2 title-no-show
+				renderedModuleHeader2 = &nbsp;
+				renderedModuleHeader2.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+			}
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -1095,12 +1111,20 @@ plugin.tx_templavoilaframework {
 				default = LOAD_REGISTER
 				default.classModule3 = module module-3
 				0 = LOAD_REGISTER
-				0.classModule3 = module module-3 title-no-show
+				0 {
+					classModule3 = module module-3 title-no-show
+					renderedModuleHeader3 = &nbsp;
+					renderedModuleHeader3.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+				}
 			}
 			1 = LOAD_REGISTER
 			1.classModule3 = module module-3
 			2 = LOAD_REGISTER
-			2.classModule3 = module module-3 title-no-show
+			2 {
+				classModule3 = module module-3 title-no-show
+				renderedModuleHeader3 = &nbsp;
+				renderedModuleHeader3.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+			}
 		}
 		1 = LOAD_REGISTER
 		1 {
@@ -1128,12 +1152,20 @@ plugin.tx_templavoilaframework {
 				default = LOAD_REGISTER
 				default.classModule4 = module module-4
 				0 = LOAD_REGISTER
-				0.classModule4 = module module-4 title-no-show
+				0 {
+					classModule4 = module module-4 title-no-show
+					renderedModuleHeader4 = &nbsp;
+					renderedModuleHeader4.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+				}
 			}
 			1 = LOAD_REGISTER
 			1.classModule4 = module module-4
 			2 = LOAD_REGISTER
-			2.classModule4 = module module-4 title-no-show
+			2 {
+				classModule4 = module module-4 title-no-show
+				renderedModuleHeader4 = &nbsp;
+				renderedModuleHeader4.dataWrap = {$plugin.tx_templavoilaframework.moduleHeaderWrap}
+			}
 		}
 		1 = LOAD_REGISTER
 		1 {
