@@ -380,11 +380,13 @@
 	default {
 		nestingLevel = 0
 		containerWidth.data = register:originalContainerWidth
+		maxImageWidth.data = register:containerWidth
 	}
 	2 = LOAD_REGISTER
 	2 {
 		nestingLevel = 1
 		containerWidth.data = register:level1ContainerWidth
+		maxImageWidth.data = register:containerWidth
 	}
 }
 ]]>
