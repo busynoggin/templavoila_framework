@@ -6,10 +6,11 @@ plugin.tx_templavoilaframework {
 	dsConfig = COA
 	dsConfig {
 		5 = LOAD_REGISTER
-		5.tvfwRenderMode = {$plugin.tx_templavoilaframework.renderMode}
-		
-		7 = LOAD_REGISTER
-		7.disableAutoMainHeadline = {$plugin.tx_templavoilaframework.disableAutoMainHeadline}
+		5	{
+			tvfwRenderMode = {$plugin.tx_templavoilaframework.renderMode}
+			tvfwGeneratedContentRenderMode = {$plugin.tx_templavoilaframework.tvfwGeneratedContentRenderMode}
+			disableAutoMainHeadline = {$plugin.tx_templavoilaframework.disableAutoMainHeadline}
+		}
 
 		10 = CASE
 		10 {
@@ -3119,6 +3120,59 @@ page {
 				}
 				
 				.three-column-group.intermediate.full-half-half > .column-3 {
+					clear: none;
+					float: right;
+				}
+				
+			)
+			if.isTrue.data = register:createColumnModuleCSS
+		}
+		
+		60 = TEXT
+		60 {
+			value (
+				.quad-module-group.half-half-half-half  > .module-2 {
+					float: right;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.quad-module-group.half-half-half-half  > .module-1 {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.quad-module-group.half-half-half-half  > .module-3 {
+					clear: both;
+					margin-right: 0;
+				}
+				
+				.quad-module-group.full-full-full-full  > .module,
+				.triple-module-group.full > .module,
+				.dual-module-group.full > .module {
+					clear: both;
+					margin-right: 0;
+					margin-bottom: 15px;
+					float: none;
+				}
+				
+				.triple-module-group.intermediate > .module-1 {
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+				.triple-module-group.intermediate > .module-2 {
+					float: right;
+					margin-bottom: 15px;
+				}
+				
+				.triple-module-group.intermediate.full-half-half > .module-2 {
+					float: left;
+				}
+				
+				.triple-module-group.intermediate > .module-3 {
+					clear: both;
+					float: none;
+				}
+				
+				.triple-module-group.intermediate.full-half-half > .column-3 {
 					clear: none;
 					float: right;
 				}
