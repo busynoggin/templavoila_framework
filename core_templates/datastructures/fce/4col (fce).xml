@@ -72,7 +72,7 @@
 	full {
 		columnGroupWidth.data = register:containerWidth
 		containerWidth.data = register:containerWidth
-		classColumnGroupDistribution = full-full-full-full
+		classColumnGroupDistribution = full full-full-full-full
 		classColumnGroupDistribution.noTrimWrap = | ||
 		classColumnDistribution = full
 		classColumnDistribution.noTrimWrap = | ||
@@ -84,7 +84,7 @@
 		tempContainerWidth.dataWrap = (|-{register:globalGutter})/2
 		containerWidth.data = register:tempContainerWidth
 		containerWidth.prioriCalc = intval
-		classColumnGroupDistribution = half-half-half-half
+		classColumnGroupDistribution = intermediate half-half-half-half
 		classColumnGroupDistribution.noTrimWrap = | ||
 		classColumnDistribution = half
 		classColumnDistribution.noTrimWrap = | ||
