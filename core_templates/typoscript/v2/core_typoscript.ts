@@ -1684,7 +1684,10 @@ plugin.tx_templavoilaframework {
 			key.data = register:columnModuleRenderMode
 			full = LOAD_REGISTER
 			full {
-				quadModuleWidth.data = register:containerWidth
+				moduleWidth1.data = register:containerWidth
+				moduleWidth2.data = register:containerWidth
+				moduleWidth3.data = register:containerWidth
+				moduleWidth4.data = register:containerWidth
 				quadModuleDistribution = full
 				quadModuleDistribution.noTrimWrap = | ||
 				classModuleGroupDistribution = full full-full-full-full
@@ -1696,6 +1699,10 @@ plugin.tx_templavoilaframework {
 				tempQuadModuleWidth.dataWrap = (|-{register:globalGutter})/2
 				quadModuleWidth.data = register:tempQuadModuleWidth
 				quadModuleWidth.prioriCalc = intval
+				moduleWidth1.data = register:quadModuleWidth
+				moduleWidth2.data = register:quadModuleWidth
+				moduleWidth3.data = register:quadModuleWidth
+				moduleWidth4.data = register:quadModuleWidth
 				quadModuleDistribution = half
 				quadModuleDistribution.noTrimWrap = | ||
 				classModuleGroupDistribution = intermediate half-half-half-half
@@ -1707,6 +1714,10 @@ plugin.tx_templavoilaframework {
 				tempQuadModuleWidth.dataWrap = (|-({register:globalGutter}*3))/4
 				quadModuleWidth.data = register:tempQuadModuleWidth
 				quadModuleWidth.prioriCalc = intval
+				moduleWidth1.data = register:quadModuleWidth
+				moduleWidth2.data = register:quadModuleWidth
+				moduleWidth3.data = register:quadModuleWidth
+				moduleWidth4.data = register:quadModuleWidth
 				quadModuleDistribution = quarter
 				quadModuleDistribution.noTrimWrap = | ||
 				classModuleGroupDistribution = quarter-quarter-quarter-quarter
