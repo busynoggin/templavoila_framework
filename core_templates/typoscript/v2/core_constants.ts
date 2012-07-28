@@ -25,6 +25,9 @@ plugin.tx_templavoilaframework.generatedContent-1.source =
 # cat=Site Constants/general/i; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 2: Page ID of the secondary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
 plugin.tx_templavoilaframework.generatedContent-2.source =
 
+# This sets the generated content to be pulled from a sysfolder not a TV page.
+plugin.tx_templavoilaframework.tvfwGeneratedContentRenderMode = 0
+
 # This includes jQuery, enables jQuery.noConflict, and includes core.js for equal height modules.
 # Alternatively, you can disable the parts individually
 #
