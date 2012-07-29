@@ -53,6 +53,10 @@ plugin.tx_templavoilaframework.moduleHeaderWrap = <{$plugin.tx_templavoilaframew
 #Sets the rendering for module footers
 plugin.tx_templavoilaframework.moduleFooter = <div class="footer"><span>&nbsp;</span></div>
 
+#Sets the bottom margin for columns and modules
+plugin.tx_templavoilaframework.columnBottomMargin = 15
+plugin.tx_templavoilaframework.moduleBottomMargin = 15
+
 ## This setups the default rendering for the content blocks
 plugin.tx_templavoilaframework {
 	autoHeadlineBeginWrap = <h1 class="main-headline">

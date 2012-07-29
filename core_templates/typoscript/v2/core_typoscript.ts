@@ -63,6 +63,8 @@ plugin.tx_templavoilaframework {
 			generatedContent-1contentsource = {$plugin.tx_templavoilaframework.generatedContent-1.source}
 			generatedContent-2contentsource = {$plugin.tx_templavoilaframework.generatedContent-2.source}
 			createColumnModuleCSS = {$plugin.tx_templavoilaframework.createColumnModuleCSS}
+			tvfwColumnBottomMargin = {$plugin.tx_templavoilaframework.columnBottomMargin}
+			tvfwModuleBottomMargin = {$plugin.tx_templavoilaframework.moduleBottomMargin}
 			
 			## f1a feature
 			f1afeaturewidth = {$plugin.tx_templavoilaframework.f1a.settings.feature.width}
@@ -3054,127 +3056,118 @@ page {
 		if.isTrue.data = register:createColumnModuleCSS
 		10 = TEXT
 		10 {
-			data = register:aggregateCss
-			if.isTrue.data = register:createColumnModuleCSS
-		}
-		20 = TEXT
-		20 {
 			data = register:globalGutter
 			wrap = .column-group .column, .module-group .module {float:left;margin-right:|px;}
 		}
 
+		20 = TEXT
+		20 {
+			value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {margin-right:0;}
+		}
+		
 		30 = TEXT
 		30 {
-			value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {margin-right:0px;}
+			data = register:tvfwColumnBottomMargin
+			wrap = .column-group {margin-bottom: |px;}
 		}
+		
+		35 = TEXT
+		35 {
+			data = register:tvfwColumnBottomMargin
+			wrap (
+				.column-group.intermediate  > .column, .column-group.full  > .column {margin-bottom: |px;}
+				.column-group {margin-bottom:0;}
+			)
+		}
+		
+		40 = TEXT
+		40.value (
+			
+			.four-column-group.full  > .column,
+			.three-column-group.full > .column,
+			.two-column-group.full > .column {
+				clear: both;
+				margin-right: 0;
+				float: none;
+			}
+
+			.three-column-group.intermediate.half-half-full > .column-2 {
+				margin-right: 0;
+			}
+			
+			.three-column-group.intermediate.full-half-half > .column-2 {
+				clear: both;
+			}
+			
+			.three-column-group.intermediate.half-half-full > .column-3 {
+				clear: both;
+				float: none;
+			}
+
+			.four-column-group.intermediate  > .column-2 {
+				margin-right: 0;
+			}
+
+			.four-column-group.intermediate  > .column-3 {
+				clear: both;
+			}
+			
+		)
 		
 		50 = TEXT
 		50 {
-			value (
-				.four-column-group.half-half-half-half  > .column-2 {
-					float: right;
-					margin-right: 0;
-					margin-bottom: 15px;
-				}
-				.four-column-group.half-half-half-half  > .column-1 {
-					margin-right: 0;
-					margin-bottom: 15px;
-				}
-				.four-column-group.half-half-half-half  > .column-3 {
-					clear: both;
-					margin-right: 0;
-				}
-				
-				.four-column-group.full-full-full-full  > .column,
-				.three-column-group.full > .column,
-				.two-column-group.full > .column {
-					clear: both;
-					margin-right: 0;
-					margin-bottom: 15px;
-					float: none;
-				}
-				
-				.three-column-group.intermediate > .column-1 {
-					margin-right: 0;
-					margin-bottom: 15px;
-				}
-				.three-column-group.intermediate > .column-2 {
-					float: right;
-					margin-bottom: 15px;
-				}
-				
-				.three-column-group.intermediate.full-half-half > .column-2 {
-					float: left;
-				}
-				
-				.three-column-group.intermediate > .column-3 {
-					clear: both;
-					float: none;
-				}
-				
-				.three-column-group.intermediate.full-half-half > .column-3 {
-					clear: none;
-					float: right;
-				}
-				
+			data = register:tvfwModuleBottomMargin
+			wrap = .module-group {margin-bottom: |px;}
+		}
+		
+		55 = TEXT
+		55 {
+			data = register:tvfwModuleBottomMargin
+			wrap (
+				.module-group.intermediate  > .module, .module-group.full  > .module {margin-bottom: |px;}
+				.module-group {margin-bottom:0;}
 			)
 		}
 		
 		60 = TEXT
 		60 {
 			value (
-				.quad-module-group.half-half-half-half  > .module-2 {
-					float: right;
-					margin-right: 0;
-					margin-bottom: 15px;
-				}
-				.quad-module-group.half-half-half-half  > .module-1 {
-					margin-right: 0;
-					margin-bottom: 15px;
-				}
-				.quad-module-group.half-half-half-half  > .module-3 {
-					clear: both;
-					margin-right: 0;
-				}
-				
-				.quad-module-group.full-full-full-full  > .module,
+				.quad-module-group.full  > .module,
 				.triple-module-group.full > .module,
 				.dual-module-group.full > .module {
 					clear: both;
 					margin-right: 0;
-					margin-bottom: 15px;
 					float: none;
 				}
-				
-				.triple-module-group.intermediate > .module-1 {
+
+				.triple-module-group.intermediate.half-half-full > .module-2 {
 					margin-right: 0;
-					margin-bottom: 15px;
-				}
-				.triple-module-group.intermediate > .module-2 {
-					float: right;
-					margin-bottom: 15px;
 				}
 				
 				.triple-module-group.intermediate.full-half-half > .module-2 {
-					float: left;
+					clear: both;
 				}
 				
-				.triple-module-group.intermediate > .module-3 {
+				.triple-module-group.intermediate.half-half-full > .module-3 {
 					clear: both;
 					float: none;
 				}
-				
-				.triple-module-group.intermediate.full-half-half > .column-3 {
-					clear: none;
-					float: right;
+	
+				.quad-module-group.intermediate  > .module-2 {
+					margin-right: 0;
 				}
-				
+	
+				.quad-module-group.intermediate  > .module-3 {
+					clear: both;
+				}
 			)
 		}
 		
 		70 = TEXT
 		70.value = .module-feature img {display:block;}
-
+		
+		90 = TEXT
+		90.data = register:aggregateCss
 	}
 }
 
