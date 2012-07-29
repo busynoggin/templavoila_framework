@@ -26,7 +26,7 @@ plugin.tx_templavoilaframework.generatedContent-1.source =
 plugin.tx_templavoilaframework.generatedContent-2.source =
 
 # This sets the generated content to be pulled from a sysfolder not a TV page.
-plugin.tx_templavoilaframework.tvfwGeneratedContentRenderMode = 0
+plugin.tx_templavoilaframework.generatedContentRenderMode = 0
 
 # This includes jQuery, enables jQuery.noConflict, and includes core.js for equal height modules.
 # Alternatively, you can disable the parts individually

@@ -8,7 +8,7 @@ plugin.tx_templavoilaframework {
 		5 = LOAD_REGISTER
 		5	{
 			tvfwRenderMode = {$plugin.tx_templavoilaframework.renderMode}
-			tvfwGeneratedContentRenderMode = {$plugin.tx_templavoilaframework.tvfwGeneratedContentRenderMode}
+			tvfwGeneratedContentRenderMode = {$plugin.tx_templavoilaframework.generatedContentRenderMode}
 			disableAutoMainHeadline = {$plugin.tx_templavoilaframework.disableAutoMainHeadline}
 		}
 
@@ -1459,18 +1459,18 @@ plugin.tx_templavoilaframework {
 			intermediate {
 				tempModuleWidth.data = register:containerWidth
 				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
-				moduleWidth1.data = register:tempModuleWidth
-				moduleWidth1.prioriCalc = intval
+				moduleWidth1.data = register:containerWidth
 				moduleWidth2.data = register:tempModuleWidth
 				moduleWidth2.prioriCalc = intval
-				moduleWidth3.data = register:containerWidth
+				moduleWidth3.data = register:tempModuleWidth
+				moduleWidth3.prioriCalc = intval
 				classModule1Distribution = half
 				classModule1Distribution.noTrimWrap = | ||
 				classModule2Distribution = half
 				classModule2Distribution.noTrimWrap = | ||
 				classModule3Distribution = full
 				classModule3Distribution.noTrimWrap = | ||
-				classModuleGroupDistribution = intermediate half-half-full
+				classModuleGroupDistribution = intermediate full-half-half
 				classModuleGroupDistribution.noTrimWrap = | ||
 			}
 
@@ -1579,18 +1579,18 @@ plugin.tx_templavoilaframework {
 			intermediate {
 				tempModuleWidth.data = register:containerWidth
 				tempModuleWidth.dataWrap = (|-{register:globalGutter})/2
-				moduleWidth1.data = register:tempModuleWidth
-				moduleWidth1.prioriCalc = intval
+				moduleWidth1.data = register:containerWidth
 				moduleWidth2.data = register:tempModuleWidth
 				moduleWidth2.prioriCalc = intval
-				moduleWidth3.data = register:containerWidth
+				moduleWidth3.data = register:tempModuleWidth
+				moduleWidth3.prioriCalc = intval
 				classModule1Distribution = half
 				classModule1Distribution.noTrimWrap = | ||
 				classModule2Distribution = half
 				classModule2Distribution.noTrimWrap = | ||
 				classModule3Distribution = full
 				classModule3Distribution.noTrimWrap = | ||
-				classModuleGroupDistribution = intermediate half-half-full
+				classModuleGroupDistribution = intermediate full-half-half
 				classModuleGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -2124,18 +2124,18 @@ plugin.tx_templavoilaframework {
 			intermediate {
 				tempColumnWidth.data = register:containerWidth
 				tempColumnWidth.dataWrap = (|-{register:globalGutter})/2
-				columnWidth1.data = register:tempColumnWidth
-				columnWidth1.prioriCalc = intval
+				columnWidth1.data = register:containerWidth
 				columnWidth2.data = register:tempColumnWidth
 				columnWidth2.prioriCalc = intval
-				columnWidth3.data = register:containerWidth
+				columnWidth3.data = register:tempColumnWidth
+				columnWidth3.prioriCalc = intval
 				classColumn1Distribution = half
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = full
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = intermediate half-half-full
+				classColumnGroupDistribution = intermediate full-half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -2240,24 +2240,22 @@ plugin.tx_templavoilaframework {
 			}
 			intermediate = LOAD_REGISTER
 			intermediate {
-				tempColumnWidth1.data = register:containerWidth
-				tempColumnWidth1.dataWrap = (|-{register:globalGutter})/2
 				tempColumnWidth2.data = register:containerWidth
 				tempColumnWidth2.dataWrap = (|-{register:globalGutter})/2
 				tempColumnWidth3.data = register:containerWidth
 				tempColumnWidth3.dataWrap = (|-{register:globalGutter})/2
-				columnWidth1.data = register:tempColumnWidth1
-				columnWidth1.prioriCalc = intval
+				columnWidth1.data = register:containerWidth
 				columnWidth2.data = register:tempColumnWidth2
 				columnWidth2.prioriCalc = intval
-				columnWidth3.data = register:containerWidth
+				columnWidth3.data = register:tempColumnWidth3
+				columnWidth3.prioriCalc = intval
 				classColumn1Distribution = full
 				classColumn1Distribution.noTrimWrap = | ||
 				classColumn2Distribution = half
 				classColumn2Distribution.noTrimWrap = | ||
 				classColumn3Distribution = half
 				classColumn3Distribution.noTrimWrap = | ||
-				classColumnGroupDistribution = intermediate half-half-full
+				classColumnGroupDistribution = intermediate full-half-half
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 			default = LOAD_REGISTER
@@ -3053,6 +3051,7 @@ page {
 	## This will put CSS in external stylesheet for columns and modules
 	## provided register:createColumnModuleCSS is true 
 	cssInline {
+		if.isTrue.data = register:createColumnModuleCSS
 		10 = TEXT
 		10 {
 			data = register:aggregateCss
@@ -3060,19 +3059,13 @@ page {
 		}
 		20 = TEXT
 		20 {
-			value = .column-group > .column-1, .three-column-group > .column-2, .four-column-group > .column-2, .four-column-group > .column-3, .dual-module-group > .module-1, .triple-module-group > .module-1, .triple-module-group > .module-2, .quad-module-group > .module-1, .quad-module-group > .module-2, .quad-module-group > .module-3 {float:left;}
-			if.isTrue.data = register:createColumnModuleCSS
+			data = register:globalGutter
+			wrap = .column-group .column, .module-group .module {float:left;margin-right:|px;}
 		}
+
 		30 = TEXT
 		30 {
-			value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {float:right;}
-			if.isTrue.data = register:createColumnModuleCSS
-		}
-		40 = TEXT
-		40 {
-			data = register:globalGutter
-			wrap = .three-column-group > .column-1, .four-column-group > .column-1, .four-column-group > .column-2, .triple-module-group > .module-1, .quad-module-group > .module-1, .quad-module-group > .module-2 {margin-right:|px;}
-			if.isTrue.data = register:createColumnModuleCSS
+			value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {margin-right:0px;}
 		}
 		
 		50 = TEXT
@@ -3125,7 +3118,6 @@ page {
 				}
 				
 			)
-			if.isTrue.data = register:createColumnModuleCSS
 		}
 		
 		60 = TEXT
@@ -3178,7 +3170,6 @@ page {
 				}
 				
 			)
-			if.isTrue.data = register:createColumnModuleCSS
 		}
 
 	}
