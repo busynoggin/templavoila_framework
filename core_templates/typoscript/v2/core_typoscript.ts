@@ -3171,6 +3171,9 @@ page {
 				
 			)
 		}
+		
+		70 = TEXT
+		70.value = .module-feature img {display:block;}
 
 	}
 }
