@@ -21,11 +21,24 @@
 					<eType>select</eType>
 					<TypoScript>
 <![CDATA[
-10 = LOAD_REGISTER
+
+10 = CASE
 10 {
-	moduleSpaceAfter.field = field_space_after
-	moduleSpaceAfter.wrap = margin-bottom:|px;
+	key.field = field_space_after
+	
+	Normal = LOAD_REGISTER
+	Normal {
+		tvfwMarginBottom.data = register:moduleBodyTopBuffer
+		tvfwMarginBottom.noTrimWrap = | margin-bottom: |px;|
+	}
+
+	default = LOAD_REGISTER
+	default {
+		tvfwMarginBottom.field = field_space_after
+		tvfwMarginBottom.noTrimWrap = | margin-bottom: |px;|
+	}
 }
+
 ]]>
                     </TypoScript>
 				</tx_templavoila>
@@ -98,28 +111,57 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-	10 = LOAD_REGISTER
-	10 {
-		tempMaxImageWidth.data = register:containerWidth
-		tempMaxImageWidth.dataWrap = |+({register:moduleBodyLeftBuffer}+{register:moduleBodyRightBuffer})
-		maxImageWidth.data = register:tempMaxImageWidth
-		maxImageWidth.prioriCalc = intval
-	}
-	20 = IMAGE
-	20 {
-		file {
-			import = uploads/tx_templavoila/
-			import {
-				current = 1
-				listNum = 0
-			}
-			maxW.stdWrap.dataWrap = {register:maxImageWidth}
+
+10 = LOAD_REGISTER
+10 {
+	tempMaxImageWidth.data = register:containerWidth
+	tempMaxImageWidth.dataWrap = |+({register:moduleBodyLeftBuffer}+{register:moduleBodyRightBuffer})
+	maxImageWidth.data = register:tempMaxImageWidth
+	maxImageWidth.prioriCalc = intval
+}
+
+## Write the opening HTML based on whether v1 or v2 rendering
+15 = CASE
+15 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">
+	2 = TEXT
+	2.dataWrap = <div class="module-feature module-feature-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">
+}
+
+
+20 = IMAGE
+20 {
+	file {
+		import = uploads/tx_templavoila/
+		import {
+			current = 1
+			listNum = 0
 		}
-		altText.field = field_alt_text
-		stdWrap.typolink.parameter.field = field_link
-		stdWrap.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">|</div>
+		maxW.stdWrap.dataWrap = {register:maxImageWidth}
 	}
-	30 = RESTORE_REGISTER
+	altText.field = field_alt_text
+	stdWrap.typolink.parameter.field = field_link
+	stdWrap.wrap = |</div>
+}
+
+30 = RESTORE_REGISTER
+
+40 = LOAD_REGISTER
+40 {
+	tempAggregateCss.data = register:aggregateCss
+	tvfwModFeatureStyles.dataWrap = display:block;margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:tvfwMarginBottom};
+	thisCss {
+		data = register:tvfwModFeatureStyles
+		dataWrap = .module-feature-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {|}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+}
+
 ]]>
 					</TypoScript>
 				</tx_templavoila>
