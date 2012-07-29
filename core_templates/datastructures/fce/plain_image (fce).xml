@@ -41,9 +41,28 @@
 	plainImageMarginRight.field = field_margin_right
 	plainImageMarginRight.wrap = margin-right:|px;
 	plainImageZindex.field = field_z_index
-	plainImageZindex.wrap = z-index:|;position:relative;
+	plainImageZindex.wrap = z-index:|;
 	plainImageZindex.if.isTrue.field = field_z_index
 }
+
+## Load the style information based on whether v1 or v2 rendering
+15 = CASE
+15 {
+	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1 {
+		plainImageClass = class="plainImage"
+		plainImageStyles.dataWrap = style="{register:plainImageMarginTop}{register:plainImageMarginBottom}{register:plainImageMarginRight}{register:plainImageMarginLeft}{register:plainImageDisplay}{register:plainImageZindex}position:relative;"
+	}
+	2 = TEXT
+	2.plainImageStyles = class="plain-image"
+	default = LOAD_REGISTER
+	default {
+		plainImageClass = class="plainImage"
+		plainImageStyles.dataWrap = style="{register:plainImageMarginTop}{register:plainImageMarginBottom}{register:plainImageMarginRight}{register:plainImageMarginLeft}{register:plainImageDisplay}{register:plainImageZindex}position:relative;"
+	}
+}
+
 20 = IMAGE
 20 {
 	file {
@@ -52,14 +71,28 @@
 		import.listNum = 0
 		maxW.stdWrap.dataWrap = {register:plainImageMaxWidth1}{register:plainImageMaxWidth2}
 	}
-	params.dataWrap = class="plainImage" style="{register:plainImageMarginTop}{register:plainImageMarginBottom}{register:plainImageMarginRight}{register:plainImageMarginLeft}{register:plainImageDisplay}{register:plainImageZindex}"
+	params.dataWrap = {register:plainImageClass} {register:plainImageStyles}
 	altText.field = field_alt_text						
 	stdWrap.typolink {
 		parameter.field = field_link
 		ATagParams = class="plainImageLink"
 	}
 }
-30 = RESTORE_REGISTER
+
+
+40 = LOAD_REGISTER
+40 {
+	tempAggregateCss.data = register:aggregateCss
+	tvfwModFeatureStyles.dataWrap = {register:plainImageMarginTop}{register:plainImageMarginBottom}{register:plainImageMarginRight}{register:plainImageMarginLeft}{register:plainImageDisplay}{register:plainImageZindex}position:relative;
+	thisCss {
+		data = register:tvfwModFeatureStyles
+		dataWrap = #c{register:tx_templavoila_pi1.parentRec.uid} img |
+		noTrimWrap = | {|}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+}
+
+
 ]]>
 					</TypoScript>
 				</tx_templavoila>
@@ -68,7 +101,7 @@
 						<type>group</type>
 						<internal_type>file</internal_type>
 						<allowed>gif,png,jpg,jpeg</allowed>
-						<max_size>1000</max_size>
+						<max_size>5000</max_size>
 						<uploadfolder>uploads/tx_templavoila</uploadfolder>
 						<show_thumbs>1</show_thumbs>
 						<size>1</size>
