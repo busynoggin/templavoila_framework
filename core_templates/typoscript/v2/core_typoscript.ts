@@ -1287,7 +1287,7 @@ plugin.tx_templavoilaframework {
 			}
 		}
 
-		2313 = LOAD_REGISTER
+		2313 = CASE
 		2313 {
 			key.data = register:columnModuleRenderMode
 			full = LOAD_REGISTER
