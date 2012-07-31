@@ -321,8 +321,10 @@ class tx_templavoilaframework_lib {
 				if ($renderMode === 1) {
 					$skinSubrow['constants'] .= chr(10) . 'bnTemplates.skinPath = ' . $relSkinPath;
 					$skinSubrow['constants'] .= chr(10) . 'templavoila_framework.skinPath = ' . $relSkinPath;
+					$skinSubrow['constants'] .= chr(10) . 'templavoila_framework.skinKey = ' . $skin;
 				} else {
 					$skinSubrow['constants'] .= chr(10) . 'plugin.tx_templavoilaframework.skinPath = ' . $relSkinPath;
+					$skinSubrow['constants'] .= chr(10) . 'plugin.tx_templavoilaframework.skinKey = ' . $skin;
 				}
 				$pObj->processTemplate($skinSubrow, $idList . ',templavoilaframework_skin_' . $skin, $pid, 'templavoilaframework_skin_' . $skin, $templateID);
 			}
