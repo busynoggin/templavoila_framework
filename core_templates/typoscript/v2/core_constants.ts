@@ -57,12 +57,26 @@ plugin.tx_templavoilaframework.moduleFooter = <div class="footer"><span>&nbsp;</
 plugin.tx_templavoilaframework.columnBottomMargin = 15
 plugin.tx_templavoilaframework.moduleBottomMargin = 15
 
-## This setups the default rendering for the content blocks
+## Default Constants
 plugin.tx_templavoilaframework {
-	autoHeadlineBeginWrap = <h1 class="main-headline">
-	autoHeadlineEndWrap = </h1>
 	createColumnModuleCSS = 1
 	minFullImageWidth = 0
+	autoMainHeadlineDefault = 1
+	autoHeadlineBeginWrap = <h1 class="main-headline">
+	autoHeadlineEndWrap = </h1>
+	featureBleedDefault = 0
+	featureLeftPadding = 20
+	featureRightPadding = 20
+	globalGutter = 20
+	columnRuleDefault = 0
+	moduleBodyTopBuffer = 10
+	moduleBodyBottomBuffer = 10
+	moduleBodyLeftBuffer = 10
+	moduleBodyRightBuffer = 10
+	moduleBodyBorderWidth = 1
+	showModuleTitleDefault = 1
+	
+	## This setups the default rendering for the content blocks
 	baseDefaults {
 		settings {
 			feature {
