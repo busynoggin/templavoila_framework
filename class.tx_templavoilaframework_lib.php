@@ -232,6 +232,16 @@ class tx_templavoilaframework_lib {
 	}
 
 	/**
+	 * Gets the first path (relative to TYPO3 root) where custom skins can be found. Defaults to fileadmin/templates/.
+	 *
+	 * @return string
+	 */
+	public static function getCustomSkinPath() {
+		$customSkinPaths = self::getCustomSkinPaths();
+		return $customSkinPaths[0];
+	}
+
+	/**
 	 * Gets the path (relative to TYPO3 root) where custom skins can be found. Defaults to fileadmin/templates/.
 	 *
 	 * @return string
