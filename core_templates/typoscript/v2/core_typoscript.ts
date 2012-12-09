@@ -65,7 +65,7 @@ plugin.tx_templavoilaframework {
 			createColumnModuleCSS = {$plugin.tx_templavoilaframework.createColumnModuleCSS}
 			tvfwColumnBottomMargin = {$plugin.tx_templavoilaframework.columnBottomMargin}
 			tvfwModuleBottomMargin = {$plugin.tx_templavoilaframework.moduleBottomMargin}
-			
+
 			## f1a feature
 			f1afeaturewidth = {$plugin.tx_templavoilaframework.f1a.settings.feature.width}
 			f1afeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1a.settings.feature.columnModuleRenderMode}
@@ -83,7 +83,7 @@ plugin.tx_templavoilaframework {
 			f1afeaturebeginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.feature.beginWrap}
 			f1afeatureendWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.feature.endWrap}
 			f1afeatureminFullImageWidth = {$plugin.tx_templavoilaframework.f1a.settings.feature.minFullImageWidth}
-			
+
 			## f1a contentBlock-1
 			f1acontentBlock-1width = {$plugin.tx_templavoilaframework.f1a.settings.contentBlock-1.width}
 			f1acontentBlock-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1a.settings.contentBlock-1.columnModuleRenderMode}
@@ -101,7 +101,7 @@ plugin.tx_templavoilaframework {
 			f1acontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.contentBlock-1.beginWrap}
 			f1acontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1a.wraps.contentBlock-1.endWrap}
 			f1acontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1a.settings.contentBlock-1.minFullImageWidth}
-			
+
 			## f1b feature
 			f1bfeaturewidth = {$plugin.tx_templavoilaframework.f1b.settings.feature.width}
 			f1bfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1b.settings.feature.columnModuleRenderMode}
@@ -137,7 +137,7 @@ plugin.tx_templavoilaframework {
 			f1bcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1b.wraps.contentBlock-1.beginWrap}
 			f1bcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1b.wraps.contentBlock-1.endWrap}
 			f1bcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1b.settings.contentBlock-1.minFullImageWidth}
-			
+
 			## f1c feature
 			f1cfeaturewidth = {$plugin.tx_templavoilaframework.f1c.settings.feature.width}
 			f1cfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1c.settings.feature.columnModuleRenderMode}
@@ -173,8 +173,8 @@ plugin.tx_templavoilaframework {
 			f1ccontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1c.wraps.contentBlock-1.beginWrap}
 			f1ccontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1c.wraps.contentBlock-1.endWrap}
 			f1ccontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1c.settings.contentBlock-1.minFullImageWidth}
-			
-			
+
+
 			## f1d feature
 			f1dfeaturewidth = {$plugin.tx_templavoilaframework.f1d.settings.feature.width}
 			f1dfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1d.settings.feature.columnModuleRenderMode}
@@ -210,7 +210,7 @@ plugin.tx_templavoilaframework {
 			f1dcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.contentBlock-1.beginWrap}
 			f1dcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.contentBlock-1.endWrap}
 			f1dcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1d.settings.contentBlock-1.minFullImageWidth}
-			
+
 			## f1d Generated Content 1
 			f1dgeneratedContent-1width = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.width}
 			f1dgeneratedContent-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.columnModuleRenderMode}
@@ -228,7 +228,7 @@ plugin.tx_templavoilaframework {
 			f1dgeneratedContent-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.generatedContent-1.beginWrap}
 			f1dgeneratedContent-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1d.wraps.generatedContent-1.endWrap}
 			f1dgeneratedContent-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.minFullImageWidth}
-			
+
 			## f1e feature
 			f1efeaturewidth = {$plugin.tx_templavoilaframework.f1e.settings.feature.width}
 			f1efeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1e.settings.feature.columnModuleRenderMode}
@@ -264,7 +264,7 @@ plugin.tx_templavoilaframework {
 			f1econtentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.contentBlock-1.beginWrap}
 			f1econtentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.contentBlock-1.endWrap}
 			f1econtentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1e.settings.contentBlock-1.minFullImageWidth}
-			
+
 			## f1e Generated Content 2
 			f1egeneratedContent-2width = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.width}
 			f1egeneratedContent-2columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.columnModuleRenderMode}
@@ -282,7 +282,7 @@ plugin.tx_templavoilaframework {
 			f1egeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.beginWrap}
 			f1egeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1e.wraps.generatedContent-2.endWrap}
 			f1egeneratedContent-2minFullImageWidth = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.minFullImageWidth}
-			
+
 			## f1f feature
 			f1ffeaturewidth = {$plugin.tx_templavoilaframework.f1f.settings.feature.width}
 			f1ffeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f1f.settings.feature.columnModuleRenderMode}
@@ -318,7 +318,7 @@ plugin.tx_templavoilaframework {
 			f1fcontentBlock-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.contentBlock-1.beginWrap}
 			f1fcontentBlock-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.contentBlock-1.endWrap}
 			f1fcontentBlock-1minFullImageWidth = {$plugin.tx_templavoilaframework.f1f.settings.contentBlock-1.minFullImageWidth}
-			
+
 			## f1f Generated Content 1
 			f1fgeneratedContent-1width = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.width}
 			f1fgeneratedContent-1columnModuleRenderMode = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.columnModuleRenderMode}
@@ -355,7 +355,7 @@ plugin.tx_templavoilaframework {
 			f1fgeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.generatedContent-2.beginWrap}
 			f1fgeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f1f.wraps.generatedContent-2.endWrap}
 			f1fgeneratedContent-2minFullImageWidth = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.minFullImageWidth}
-			
+
 			## f2a feature
 			f2afeaturewidth = {$plugin.tx_templavoilaframework.f2a.settings.feature.width}
 			f2afeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2a.settings.feature.columnModuleRenderMode}
@@ -409,7 +409,7 @@ plugin.tx_templavoilaframework {
 			f2acontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.contentBlock-2.beginWrap}
 			f2acontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2a.wraps.contentBlock-2.endWrap}
 			f2acontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2a.settings.contentBlock-2.minFullImageWidth}
-			
+
 			## f2b feature
 			f2bfeaturewidth = {$plugin.tx_templavoilaframework.f2b.settings.feature.width}
 			f2bfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2b.settings.feature.columnModuleRenderMode}
@@ -463,7 +463,7 @@ plugin.tx_templavoilaframework {
 			f2bcontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.contentBlock-2.beginWrap}
 			f2bcontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2b.wraps.contentBlock-2.endWrap}
 			f2bcontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2b.settings.contentBlock-2.minFullImageWidth}
-			
+
 			## f2c feature
 			f2cfeaturewidth = {$plugin.tx_templavoilaframework.f2c.settings.feature.width}
 			f2cfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2c.settings.feature.columnModuleRenderMode}
@@ -517,7 +517,7 @@ plugin.tx_templavoilaframework {
 			f2ccontentBlock-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.contentBlock-2.beginWrap}
 			f2ccontentBlock-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2c.wraps.contentBlock-2.endWrap}
 			f2ccontentBlock-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2c.settings.contentBlock-2.minFullImageWidth}
-			
+
 			## f2d feature
 			f2dfeaturewidth = {$plugin.tx_templavoilaframework.f2d.settings.feature.width}
 			f2dfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2d.settings.feature.columnModuleRenderMode}
@@ -589,7 +589,7 @@ plugin.tx_templavoilaframework {
 			f2dgeneratedContent-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.generatedContent-1.beginWrap}
 			f2dgeneratedContent-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2d.wraps.generatedContent-1.endWrap}
 			f2dgeneratedContent-1minFullImageWidth = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.minFullImageWidth}
-			
+
 			## f2e feature
 			f2efeaturewidth = {$plugin.tx_templavoilaframework.f2e.settings.feature.width}
 			f2efeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f2e.settings.feature.columnModuleRenderMode}
@@ -661,7 +661,7 @@ plugin.tx_templavoilaframework {
 			f2egeneratedContent-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.generatedContent-2.beginWrap}
 			f2egeneratedContent-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.f2e.wraps.generatedContent-2.endWrap}
 			f2egeneratedContent-2minFullImageWidth = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.minFullImageWidth}
-			
+
 			## f3a feature
 			f3afeaturewidth = {$plugin.tx_templavoilaframework.f3a.settings.feature.width}
 			f3afeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f3a.settings.feature.columnModuleRenderMode}
@@ -733,7 +733,7 @@ plugin.tx_templavoilaframework {
 			f3acontentBlock-3beginWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-3.beginWrap}
 			f3acontentBlock-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.f3a.wraps.contentBlock-3.endWrap}
 			f3acontentBlock-3minFullImageWidth = {$plugin.tx_templavoilaframework.f3a.settings.contentBlock-3.minFullImageWidth}
-			
+
 			## f3b feature
 			f3bfeaturewidth = {$plugin.tx_templavoilaframework.f3b.settings.feature.width}
 			f3bfeaturecolumnModuleRenderMode = {$plugin.tx_templavoilaframework.f3b.settings.feature.columnModuleRenderMode}
@@ -953,7 +953,7 @@ plugin.tx_templavoilaframework {
 	}
 	##############################################################
 	# moduleGroupSetup is the library used to load the register
-	# with the various values needed by the module groups. The 
+	# with the various values needed by the module groups. The
 	# default values are supplied by the the skins via constants
 	##############################################################
 
@@ -982,7 +982,7 @@ plugin.tx_templavoilaframework {
 		moduleBodyLeftBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyLeftBuffer}
 		moduleBodyRightBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyRightBuffer}
 		moduleBodyBottomBuffer4 = {$plugin.tx_templavoilaframework.moduleBodyBottomBuffer}
-		defaultHeaderInsideModule = {$plugin.tx_templavoilaframework.defaultHeaderInsideModule}		
+		defaultHeaderInsideModule = {$plugin.tx_templavoilaframework.defaultHeaderInsideModule}
 		renderedModuleHeader1 {
 			field = field_module_1_title
 			parseFunc < lib.parseFunc
@@ -1018,7 +1018,7 @@ plugin.tx_templavoilaframework {
 		}
 		0 = LOAD_REGISTER
 		0 {
-			renderedModuleFooter = 
+			renderedModuleFooter =
 		}
 	}
 
@@ -1051,7 +1051,7 @@ plugin.tx_templavoilaframework {
 		}
 		1 = LOAD_REGISTER
 		1 {
-			renderedModuleHeader1 = 
+			renderedModuleHeader1 =
 			renderedModuleFooter1 =
 			classModule1 = module module-1 unframed
 			moduleBodyBorderWidth1 = 0
@@ -1091,7 +1091,7 @@ plugin.tx_templavoilaframework {
 		}
 		1 = LOAD_REGISTER
 		1 {
-			renderedModuleHeader2 = 
+			renderedModuleHeader2 =
 			renderedModuleFooter2 =
 			classModule2 = module module-2 unframed
 			moduleBodyBorderWidth2 = 0
@@ -1131,7 +1131,7 @@ plugin.tx_templavoilaframework {
 		}
 		1 = LOAD_REGISTER
 		1 {
-			renderedModuleHeader3 = 
+			renderedModuleHeader3 =
 			renderedModuleFooter3 =
 			classModule3 = module module-3 unframed
 			moduleBodyBorderWidth3 = 0
@@ -1172,7 +1172,7 @@ plugin.tx_templavoilaframework {
 		}
 		1 = LOAD_REGISTER
 		1 {
-			renderedModuleHeader4 = 
+			renderedModuleHeader4 =
 			renderedModuleFooter4 =
 			classModule4 = module module-4 unframed
 			moduleBodyBorderWidth4 = 0
@@ -1438,8 +1438,8 @@ plugin.tx_templavoilaframework {
 				classModuleGroupDistribution.noTrimWrap = | ||
 			}
 		}
-		
-		
+
+
 		131313 = CASE
 		131313 {
 			key.data = register:columnModuleRenderMode
@@ -1619,8 +1619,8 @@ plugin.tx_templavoilaframework {
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 		}
-		
-		
+
+
 		141412 = CASE
 		141412 {
 			key.data = register:columnModuleRenderMode
@@ -1908,7 +1908,7 @@ plugin.tx_templavoilaframework {
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 		}
-		
+
 		1323 = CASE
 		1323 {
 			key.data = register:columnModuleRenderMode
@@ -2055,7 +2055,7 @@ plugin.tx_templavoilaframework {
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 		}
-	
+
 		1434 = CASE
 		1434 {
 			key.data = register:columnModuleRenderMode
@@ -2160,7 +2160,7 @@ plugin.tx_templavoilaframework {
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 		}
-		
+
 		121414 = CASE
 		121414 {
 			key.data = register:columnModuleRenderMode
@@ -2284,7 +2284,7 @@ plugin.tx_templavoilaframework {
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 		}
-		
+
 		141412 = CASE
 		141412 {
 			key.data = register:columnModuleRenderMode
@@ -3011,7 +3011,7 @@ page {
 
 		# Enabled indexed search indexing.
 		index_enable = 1
-  
+
 		# Clear the cache at midnight so that scheduled content appears on time.
 		cache_clearAtMidnight = 1
 
@@ -3041,6 +3041,8 @@ page {
 				negate = 1
 			}
 		}
+		3 = TEXT
+		3.value = <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 		2 =< plugin.tx_templavoilaframework.additionalDocHeadCode
 
@@ -3051,7 +3053,7 @@ page {
 	includeJS.tf_skin = {$plugin.tx_templavoilaframework.skinJS}
 
 	## This will put CSS in external stylesheet for columns and modules
-	## provided register:createColumnModuleCSS is true 
+	## provided register:createColumnModuleCSS is true
 	cssInline {
 		if.isTrue.data = register:createColumnModuleCSS
 		10 = TEXT
@@ -3064,13 +3066,13 @@ page {
 		20 {
 			value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {margin-right:0;}
 		}
-		
+
 		30 = TEXT
 		30 {
 			data = register:tvfwColumnBottomMargin
 			wrap = .column-group {margin-bottom: |px;}
 		}
-		
+
 		35 = TEXT
 		35 {
 			data = register:tvfwColumnBottomMargin
@@ -3079,10 +3081,10 @@ page {
 				.column-group {margin-bottom:0;}
 			)
 		}
-		
+
 		40 = TEXT
 		40.value (
-			
+
 			.four-column-group.full  > .column,
 			.three-column-group.full > .column,
 			.two-column-group.full > .column {
@@ -3094,11 +3096,11 @@ page {
 			.three-column-group.intermediate.half-half-full > .column-2 {
 				margin-right: 0;
 			}
-			
+
 			.three-column-group.intermediate.full-half-half > .column-2 {
 				clear: both;
 			}
-			
+
 			.three-column-group.intermediate.half-half-full > .column-3 {
 				clear: both;
 				float: none;
@@ -3111,15 +3113,15 @@ page {
 			.four-column-group.intermediate  > .column-3 {
 				clear: both;
 			}
-			
+
 		)
-		
+
 		50 = TEXT
 		50 {
 			data = register:tvfwModuleBottomMargin
 			wrap = .module-group {margin-bottom: |px;}
 		}
-		
+
 		55 = TEXT
 		55 {
 			data = register:tvfwModuleBottomMargin
@@ -3128,7 +3130,7 @@ page {
 				.module-group {margin-bottom:0;}
 			)
 		}
-		
+
 		60 = TEXT
 		60 {
 			value (
@@ -3143,29 +3145,29 @@ page {
 				.triple-module-group.intermediate.half-half-full > .module-2 {
 					margin-right: 0;
 				}
-				
+
 				.triple-module-group.intermediate.full-half-half > .module-2 {
 					clear: both;
 				}
-				
+
 				.triple-module-group.intermediate.half-half-full > .module-3 {
 					clear: both;
 					float: none;
 				}
-	
+
 				.quad-module-group.intermediate  > .module-2 {
 					margin-right: 0;
 				}
-	
+
 				.quad-module-group.intermediate  > .module-3 {
 					clear: both;
 				}
 			)
 		}
-		
+
 		70 = TEXT
 		70.value = .module-feature img {display:block;}
-		
+
 		90 = TEXT
 		90.data = register:aggregateCss
 	}
@@ -3177,7 +3179,7 @@ page {
 	includeJSlibs.tf_jquery.forceOnTop = 1
 
 	includeJS.tf_core = {$plugin.tx_templavoilaframework.corePath}js/core.js
-	
+
 	jsInline {
 		1 = TEXT
 		1.dataWrap = jQuery.noConflict();
