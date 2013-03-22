@@ -1803,7 +1803,7 @@ page {
 
 [globalVar = LIT:1 = {$enableJQuery}]
 page {
-	includeJSlibs.tf_jquery = {$templavoila_framework.corePath}js/jquery-1.7.2.min.js
+	includeJSlibs.tf_jquery = {$templavoila_framework.corePath}js/jquery-1.9.1.min.js
 	includeJSlibs.tf_jquery.forceOnTop = 1
 
 	includeJS.tf_core = {$templavoila_framework.corePath}js/core.js
