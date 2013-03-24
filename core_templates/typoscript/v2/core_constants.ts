@@ -8,7 +8,7 @@ siteURL =
 plugin.tx_templavoilaframework.siteLogo =
 
 # cat=Site Constants/general/d; type=string; label=Copyright: Copyright for the site. The current year will automatically be added before this value.
-copyright = 
+copyright =
 
 # cat=Site Constants/general/e; type=options[October 22 2010=%B %d %Y, Oct 22 2010=%b %d %Y, 22 October 2010=%d %B %Y, 22 Oct 08=%d %b %y, 10/22/08=%m/%d/%y, 22.10.2010=%d.%m.%Y]; label=Date Format.
 dateFormat = %m/%d/%y
@@ -75,7 +75,10 @@ plugin.tx_templavoilaframework {
 	moduleBodyRightBuffer = 10
 	moduleBodyBorderWidth = 1
 	showModuleTitleDefault = 1
-	
+	// Include any top/bottom border or padding in the height parameter below.
+	// Enter zero if you do not want a footer on your module.
+	moduleFooterTotalHeight = 20
+
 	## This setups the default rendering for the content blocks
 	baseDefaults {
 		settings {
