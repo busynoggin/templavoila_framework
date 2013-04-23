@@ -3044,8 +3044,6 @@ page {
 		3 = TEXT
 		3.value = <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-		2 =< plugin.tx_templavoilaframework.additionalDocHeadCode
-
 	}
 
 	includeCSS.tf_skin = {$plugin.tx_templavoilaframework.skinCSS}
