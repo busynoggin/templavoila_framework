@@ -3173,7 +3173,7 @@ page {
 
 [globalVar = LIT:1 = {$plugin.tx_templavoilaframework.enableJQuery}]
 page {
-	includeJSlibs.tf_jquery = {$plugin.tx_templavoilaframework.corePath}js/jquery-1.8.3.min.js
+	includeJSlibs.tf_jquery = {$plugin.tx_templavoilaframework.corePath}js/jquery-1.9.1.min.js
 	includeJSlibs.tf_jquery.forceOnTop = 1
 
 	includeJS.tf_core = {$plugin.tx_templavoilaframework.corePath}js/core.js
