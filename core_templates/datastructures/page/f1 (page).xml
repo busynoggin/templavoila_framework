@@ -243,7 +243,7 @@
 						<multiple>1</multiple>
 						<show_thumbs>1</show_thumbs>
 					</config>
-					<label></label>
+					<label>Content Block 1</label>
 				</TCEforms>
 			</field_content_block_1>
 			<field_post_code_content_block_1 type="array">
@@ -366,7 +366,7 @@
 						<multiple>1</multiple>
 						<show_thumbs>1</show_thumbs>
 					</config>
-					<label></label>
+					<label>Feature</label>
 				</TCEforms>
 			</field_feature>
 			<field_pre_code_feature type="array">
