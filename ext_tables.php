@@ -5,7 +5,7 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $skinSelector = array(
 	'skin_selector' => array(
 		'exclude' => 1,
-		'label' => 'LLL:EXT:templavoila_framework/locallang_db.php:skinSelectorLabel',
+		'label' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang_db.xlf:skinSelectorLabel',
 		'displayCond' => 'FIELD:root:REQ:true',
 		'config' => array(
 			'type' => 'user',
