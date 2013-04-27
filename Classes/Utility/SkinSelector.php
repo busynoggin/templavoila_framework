@@ -1,4 +1,5 @@
 <?php
+namespace BusyNoggin\TemplavoilaFramework\Utility;
 
 /***************************************************************
  * Copyright notice
@@ -7,7 +8,7 @@
  * All rights reserved
  *
  * This file is part of the Web-Empowered Church (WEC)
- * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries 
+ * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries
  * International (http://CTMIinc.org). The WEC is developing TYPO3-based
  * (http://typo3.org) free software for churches around the world. Our desire
  * is to use the Internet to help offer new life through Jesus Christ. Please
@@ -35,7 +36,7 @@
  * @package TYPO3
  * @subpackage tx_templavoilaframework
  */
-class tx_templavoilaframework_skinselector {
+class SkinSelector {
 
 	/**
 	 * Displays the skin selector as a TCEForm's userfunc. Handles display of
@@ -46,8 +47,8 @@ class tx_templavoilaframework_skinselector {
 	 * @return	string
 	 */
 	public function display($PA, $pObj) {
-		if (self::allowSkinCopy() && t3lib_div::_GP('copySkin')) {
-			tx_templavoilaframework_lib::copySkinToLocal(t3lib_div::_GP('copySkin'));
+		if (self::allowSkinCopy() && \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('copySkin')) {
+			\BusyNoggin\TemplavoilaFramework\Framework::copySkinToLocal(\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('copySkin'));
 		}
 
 		$this->pObj = $pObj;
@@ -62,19 +63,19 @@ class tx_templavoilaframework_skinselector {
 	 * @return string  HTML output containing a table with the skin selector.
 	 */
 	public function renderSkinSelector($table, $row) {
-		$GLOBALS['LANG']->includeLLFile('EXT:templavoila_framework/locallang_db.xml');
+		$GLOBALS['LANG']->includeLLFile('EXT:templavoila_framework/Resources/Private/Language/locallang_db.xlf');
 
 		$uid = $row['uid'];
 		$currentSkin =  $row['skin_selector'];
-		$customSkins = tx_templavoilaframework_lib::getCustomSkinKeys();
-		$standardSkins = tx_templavoilaframework_lib::getStandardSkinKeys();
+		$customSkins = \BusyNoggin\TemplavoilaFramework\Framework::getCustomSkinKeys();
+		$standardSkins = \BusyNoggin\TemplavoilaFramework\Framework::getStandardSkinKeys();
 
 		$tmplHTML = array();
 		if (!count($customSkins) && !count($standardSkins)) {
 			$title = $GLOBALS['LANG']->getLL('noSkinsTitle');
-			$message = sprintf($GLOBALS['LANG']->getLL('noSkinsMessage'), tx_templavoilaframework_lib::getCustomSkinPath());
-			$severity = t3lib_FlashMessage::WARNING;
-			$flashMessage = t3lib_div::makeInstance('t3lib_FlashMessage', $message, $title, $severity);
+			$message = sprintf($GLOBALS['LANG']->getLL('noSkinsMessage'), \BusyNoggin\TemplavoilaFramework\Framework::getCustomSkinPath());
+			$severity = \TYPO3\CMS\Core\Messaging\FlashMessage::WARNING;
+			$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $message, $title, $severity);
 			$tmplHTML[] = $flashMessage->render();
 		} else {
 			if ($currentSkin) {
@@ -102,7 +103,7 @@ class tx_templavoilaframework_skinselector {
 			}
 
 			$pageRenderer = $GLOBALS['SOBE']->doc->getPageRenderer();
-			$pageRenderer->addCssInlineBlock('skinSelector', 
+			$pageRenderer->addCssInlineBlock('skinSelector',
 				'ul { margin-left: 0px; padding-left: 0px; padding-bottom: 20px; }
 				 li { list-style:none; padding: 8px 15px 8px 15px; clear:both; border-bottom: 1px solid #ccc }
 				 img { margin:0px;padding:0px; }
@@ -156,12 +157,12 @@ class tx_templavoilaframework_skinselector {
 	 * @return	string
 	 */
 	protected function drawSkinPreview($skin, $currentlySelected = FALSE) {
-		$skinInfo = tx_templavoilaframework_lib::getSkinInfo($skin);
+		$skinInfo = \BusyNoggin\TemplavoilaFramework\Framework::getSkinInfo($skin);
 		if ($skinInfo) {
 			if ($skinInfo['icon']) {
 				$previewIconFilename = $GLOBALS['BACK_PATH'] . $skinInfo['icon'];
 			} else {
-				$previewIconFilename = $GLOBALS['BACK_PATH'].'../'.t3lib_extMgm::siteRelPath('templavoila_framework').'/default_screenshot.gif';
+				$previewIconFilename = $GLOBALS['BACK_PATH'].'../' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('templavoila_framework') . '/Resources/Public/Images/DefaultScreenshot.gif';
 			}
 
 			$html = array();
@@ -187,13 +188,13 @@ class tx_templavoilaframework_skinselector {
 			$html[] = '<div class="buttonWrapper">';
 			if (!$currentlySelected) {
 			}
-			
+
 			if ($currentlySelected) {
 				$html[] = '<input type="submit" value="' . $GLOBALS['LANG']->getLL('unselectSkinButton') . '" onclick="$(\'skinSelector\').value = \'\'; TBE_EDITOR.submitForm();" /> ';
 			} else {
 				$html[] = '<input type="submit" value="' . $GLOBALS['LANG']->getLL('selectSkinButton') . '" onclick="$(\'skinSelector\').value = \'' . $skin . '\'; TBE_EDITOR.submitForm();" /> ';
 			}
-			
+
 			if (self::allowSkinCopy()) {
 				$html[] = '<input type="submit" value="' .  $GLOBALS['LANG']->getLL('copySkinButton') . '" onclick="document.getElementById(\'copySkin\').value = \'' . $skin . '\';" />';
 			}
@@ -223,10 +224,6 @@ class tx_templavoilaframework_skinselector {
 		return $allowSkinCopy;
 	}
 
-}
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_skinselector.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_skinselector.php']);
 }
 
 ?>
