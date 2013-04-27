@@ -1803,15 +1803,12 @@ page {
 
 [globalVar = LIT:1 = {$enableJQuery}]
 page {
-	includeJSlibs.tf_jquery = {$templavoila_framework.corePath}js/jquery-1.9.1.min.js
-	includeJSlibs.tf_jquery.forceOnTop = 1
-
-	includeJS.tf_core = {$templavoila_framework.corePath}js/core.js
-
-	jsInline {
-		1 = TEXT
-		1.dataWrap = jQuery.noConflict();
+	javascriptLibs {
+		jQuery = 1
+		jQuery.noConflict = 1
 	}
+
+	includeJS.tf_core = {$templavoila_framework.corePath}Resources/Public/JavaScript/core.js
 }
 [global]
 
