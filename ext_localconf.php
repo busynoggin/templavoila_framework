@@ -1,10 +1,10 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['includeStaticTypoScriptSourcesAtEnd'][] = 'EXT:templavoila_framework/class.tx_templavoilaframework_lib.php:&tx_templavoilaframework_lib->includeTypoScriptForFrameworkCoreAndSkins';
+$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['includeStaticTypoScriptSourcesAtEnd'][] = 'BusyNoggin\\TemplavoilaFramework\\Framework->includeTypoScriptForFrameworkCoreAndSkins';
 
 // Update TemplaVoila with special stylesheet and Javascript
-t3lib_extMgm::addPageTSConfig('
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
 	#Include js file for backend styling
 	mod.web_txtemplavoilaM1.javascript.file1 = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('templavoila_framework') . 'Resources/Public/JavaScript/backend.js
 
