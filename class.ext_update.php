@@ -16,7 +16,7 @@ class ext_update {
 		$content[] = '<h3>Import Template Objects</h3>';
 		$content[] = '<p>Using the Templavoila Framework requires several TemplaVoila Template Objects. Select a storage folder and import these onto your site. This import is usually only done with the first installation of the TemplaVoila Framework or on a major version upgrade.</p>';
 
-		$action = t3lib_div::_GP('action');
+		$action = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('action');
 		if ($action === 'import') {
 			$content[] = $this->importAction();
 		} else {
@@ -55,10 +55,10 @@ class ext_update {
 		}
 
 		$content[] = '<br />';
-		$content[] = '<form action="' . t3lib_div::linkThisScript(array('action' => 'import')) . '" method="post">';
+		$content[] = '<form action="' . \TYPO3\CMS\Core\Utility\GeneralUtility::linkThisScript(array('action' => 'import')) . '" method="post">';
 		$content[] = '<select name="pid" size="5">';
 
-		$sysFolders = t3lib_BEFunc::getRecordsByField('pages', 'doktype', 254, '', '', 'title');
+		$sysFolders = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecordsByField('pages', 'doktype', 254, '', '', 'title');
 		foreach ($sysFolders as $sysFolder) {
 			if ($sysFolder['uid'] == $pid) {
 				$selected = 'selected="selected"';
@@ -77,7 +77,7 @@ class ext_update {
 	}
 
 	protected function importAction() {
-		$pid = intval(t3lib_div::_GP('pid'));
+		$pid = intval(\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('pid'));
 		$result = $this->importTemplateObjects($pid);
 
 		if ($result) {
@@ -90,28 +90,27 @@ class ext_update {
 
 			$flashSubject = 'Template Objects Have Been Imported';
 			$flashText = 'Your import of the template objects was successful. Do not hit the import button again. You have now completed the TemplaVoila Framework extension installation.';
-			$flashSeverity = t3lib_flashMessage::OK;
+			$flashSeverity = \TYPO3\CMS\Core\Messaging\FlashMessage::OK;
 		}
 
 		if ($flashText) {
-			$flashMessage = t3lib_div::makeInstance('t3lib_flashMessage', $flashText, $flashSubject, $flashSeverity);
+			$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $flashText, $flashSubject, $flashSeverity);
 		}
 
 		return $flashMessage->render() . $this->showFormAction();
 	}
 
 	protected function pageHasTemplateObjects($pid) {
-		$templateObjects = t3lib_BEFunc::getRecordsByField('tx_templavoila_tmplobj', 'pid', $pid);
+		$templateObjects = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecordsByField('tx_templavoila_tmplobj', 'pid', $pid);
 		return count($templateObjects) > 0;
 	}
 
 	protected function importTemplateObjects($pid) {
-		$templateObjectPath = t3lib_extMgm::extPath('templavoila_framework') . 'template_objects.t3d';
+		$templateObjectPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('templavoila_framework') . 'Resources/Private/Content/TemplateObjects.t3d';
 		$data = null;
 
 		if(@is_file($templateObjectPath)) {
-			require_once(t3lib_extMgm::extPath('impexp') . 'class.tx_impexp.php');
-			$import = t3lib_div::makeInstance('tx_impexp');
+			$import = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeInstance('\TYPO3\\CMS\\Impexp\\ImportExport');
 			$import->init(0, 'import');
 			$import->enableLogging = TRUE;
 
@@ -125,23 +124,9 @@ class ext_update {
 	}
 
 	protected function writeExtensionConfiguration($extensionConfiguration) {
-		$typo3Version = explode('.', TYPO3_version);
-		$majorVersion = intval($typo3Version[0]);
-		if ($majorVersion >= 6) {
-			$configurationManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Configuration\\ConfigurationManager');
-			$configurationManager->setLocalConfigurationValueByPath('EXT/extConf/templavoila_framework', serialize($extensionConfiguration));
-			\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::removeCacheFiles();
-		} else {
-			$install = new t3lib_install();
-			$install->allowUpdateLocalConf = 1;
-			$install->updateIdentity = 'Caretaker Instance installation';
-
-			$lines = $install->writeToLocalconf_control();
-			$install->setValueInLocalconfFile($lines, '$TYPO3_CONF_VARS[\'EXT\'][\'extConf\'][\'templavoila_framework\']', serialize($extensionConfiguration));
-			$install->writeToLocalconf_control($lines);
-
-			t3lib_extMgm::removeCacheFiles();
-		}
+		$configurationManager = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Configuration\\ConfigurationManager');
+		$configurationManager->setLocalConfigurationValueByPath('EXT/extConf/templavoila_framework', serialize($extensionConfiguration));
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::removeCacheFiles();
 	}
 
 	protected function readExtensionConfiguration() {
