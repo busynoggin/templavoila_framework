@@ -12,9 +12,9 @@ t3lib_extMgm::addPageTSConfig('
 	mod.web_txtemplavoilaM1.stylesheet = ' . \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath('templavoila_framework') . 'Resources/Public/StyleSheets/backend.css
 ');
 
-$staticDataStructures = tx_templavoilaframework_lib::getStaticDataStructureArray(
-	'EXT:' . $_EXTKEY . '/core_templates/datastructures/page/',
-	'EXT:' . $_EXTKEY . '/core_templates/datastructures/fce/'
+$staticDataStructures = \BusyNoggin\TemplavoilaFramework\Framework::getStaticDataStructureArray(
+	'EXT:' . $_EXTKEY . '/Configuration/TemplaVoila/DataStructure/Page/',
+	'EXT:' . $_EXTKEY . '/Configuration/TemplaVoila/DataStructure/FCE/'
 );
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'] = array_merge(
 	(array) $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'],
