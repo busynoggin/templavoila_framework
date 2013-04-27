@@ -1,13 +1,15 @@
 <?php
+namespace \BusyNoggin\TemplavoilaFramework\Utility;
 
 /***************************************************************
  * Copyright notice
  *
+ * (c) 2013 Busy Noggin Digital
  * (c) 2010 Christian Technology Ministries International Inc.
  * All rights reserved
  *
  * This file is part of the Web-Empowered Church (WEC)
- * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries 
+ * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries
  * International (http://CTMIinc.org). The WEC is developing TYPO3-based
  * (http://typo3.org) free software for churches around the world. Our desire
  * is to use the Internet to help offer new life through Jesus Christ. Please
@@ -30,7 +32,7 @@
 
 /* Copied from Georg Ringer's constantsextended extension */
 
-class tx_templavoilaframework_pagelink {
+class PageLink {
 
 	/**
 	 * Builds an input form that also includes the link popup wizard.
@@ -69,32 +71,28 @@ class tx_templavoilaframework_pagelink {
 		$realConf = array();
 
 		// get the complete line from constants and find the key 'settings'
-		$conf = t3lib_div::trimExplode(';', $pObj->flatSetup[$key.'..']);
+		$conf = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(';', $pObj->flatSetup[$key.'..']);
 		foreach ($conf as $key=>$value) {
 			if (strpos($value, 'settings') !== false) {
 				$tempConf = $value;
 			}
 		}
-		
+
 		// if settings are found, split them accordingly
 		if ($tempConf!='') {
 			$tempConf = substr($tempConf, 9);
-			
-			$tempConf = t3lib_div::trimExplode(',', $tempConf);
-			
+
+			$tempConf = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $tempConf);
+
 			foreach ($tempConf as $key) {
-				$split = t3lib_div::trimExplode(':', $key);
+				$split = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(':', $key);
 				$realConf[$split[0]] = $split[1];
 			}
-			
+
 		}
-		
+
 		return $realConf;
 	}
-}
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_pagelink.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_pagelink.php']);
 }
 
 ?>

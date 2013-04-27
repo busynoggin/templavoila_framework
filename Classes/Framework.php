@@ -1,8 +1,10 @@
 <?php
+namespace BusyNoggin\TemplavoilaFramework;
 
 /***************************************************************
  * Copyright notice
  *
+ * (c) 2013 Busy Noggin Digital
  * (c) 2010 Christian Technology Ministries International Inc.
  * All rights reserved
  *
@@ -35,7 +37,7 @@
  * @package TYPO3
  * @subpackage tx_templavoilaframework
  */
-class tx_templavoilaframework_lib {
+class Framework {
 
 	/**
 	 * Gets the key for the skin applied on the specified page.
@@ -44,7 +46,7 @@ class tx_templavoilaframework_lib {
 	 * @return	string
 	 */
 	public static function getCurrentSkin($pageId) {
-		$tmpl = t3lib_div::makeInstance("t3lib_tsparser_ext");
+		$tmpl = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance("t3lib_tsparser_ext");
 		$tmpl->tt_track = 0;
 		$tmpl->init();
 		$templateRow = $tmpl->ext_getFirstTemplate($pageId);
@@ -86,7 +88,7 @@ class tx_templavoilaframework_lib {
 		$customSkinPaths = self::getCustomSkinPaths();
 
 		foreach ($customSkinPaths as $customSkinPath) {
-			$skins = t3lib_div::get_dirs(PATH_site . $customSkinPath);
+			$skins = \TYPO3\CMS\Core\Utility\GeneralUtility::get_dirs(PATH_site . $customSkinPath);
 			foreach ((array) $skins as $skin) {
 				if (substr($skin, 0, 1) != '.') {
 					$skinKeys[] = 'LOCAL:' . $skin;
@@ -105,11 +107,11 @@ class tx_templavoilaframework_lib {
 	 */
 	public static function getSkinPath($skin) {
 		$customSkinPaths = self::getCustomSkinPaths();
-		list($skinType, $skinKey) = t3lib_div::trimExplode(':', $skin);
+		list($skinType, $skinKey) = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(':', $skin);
 		switch ($skinType) {
 			case 'EXT':
-				if (t3lib_extMgm::isLoaded($skinKey)) {
-					$relSkinPath = t3lib_extMgm::siteRelPath($skinKey);
+				if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded($skinKey)) {
+					$relSkinPath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath($skinKey);
 				} else {
 					$relSkinPath = FALSE;
 				}
@@ -154,7 +156,7 @@ class tx_templavoilaframework_lib {
 	 */
 	public static function getSkinInfo($skin) {
 		$infoArray = array();
-		list($skinType, $skinKey) = t3lib_div::trimExplode(':', $skin);
+		list($skinType, $skinKey) = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(':', $skin);
 		$relSkinPath = self::getSkinPath($skin);
 		if ($relSkinPath) {
 			$absSkinPath = PATH_site . $relSkinPath;
@@ -168,13 +170,12 @@ class tx_templavoilaframework_lib {
 				$isVersion2Layout = FALSE;
 			}
 
-			$infoText = t3lib_div::getURL($infoPath);
+			$infoText = \TYPO3\CMS\Core\Utility\GeneralUtility::getURL($infoPath);
 			if ($infoText) {
-				//$infoLines = t3lib_div::trimExplode('\n', $infoText);
 				$infoLines = preg_split('/[\r\n]+/', $infoText, -1, PREG_SPLIT_NO_EMPTY);
 				foreach ($infoLines as $line) {
-					list($key, $value) = t3lib_div::trimExplode(':', $line, false, 2);
-					$key = t3lib_div::strtolower($key);
+					list($key, $value) = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(':', $line, false, 2);
+					$key = \TYPO3\CMS\Core\Utility\GeneralUtility::strtolower($key);
 					if (($key == 'title') || ($key == 'description')) {
 						$infoArray[$key] = $value;
 					}
@@ -226,7 +227,7 @@ class tx_templavoilaframework_lib {
 		$salt = basename($absoluteScreenshotPath) . ':' . filemtime($absoluteScreenshotPath) . ':' . $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'];
 		$params  = '&file=' . rawurlencode($absoluteScreenshotPath);
 		$params .= '&size=' . $width . 'x' . $height;
-		$params .= '&md5sum=' . t3lib_div::shortMD5($salt);
+		$params .= '&md5sum=' . \TYPO3\CMS\Core\Utility\GeneralUtility::shortMD5($salt);
 		$url = $thumbScript . '?&dummy=' . $GLOBALS['EXEC_TIME'] . $params;
 		return $url;
 	}
@@ -252,7 +253,7 @@ class tx_templavoilaframework_lib {
 			$extConf['customSkinPath'] = 'fileadmin/templates/';
 		}
 
-		return t3lib_div::trimExplode(',', $extConf['customSkinPath']);
+		return \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(',', $extConf['customSkinPath']);
 	}
 
 	/**
@@ -272,7 +273,7 @@ class tx_templavoilaframework_lib {
 		if (is_array($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/templavoila_framework/class.tx_templavoilaframework_lib.php']['assignSkinKey'])) {
 			$_params = array('skinKey' => &$row['skin_selector']);
 			foreach($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['ext/templavoila_framework/class.tx_templavoilaframework_lib.php']['assignSkinKey'] as $userFunc) {
-				$row['skin_selector'] = t3lib_div::callUserFunction($userFunc, $_params, $ref = NULL);
+				$row['skin_selector'] = \TYPO3\CMS\Core\Utility\GeneralUtility::callUserFunction($userFunc, $_params, $ref = NULL);
 			}
 		}
 
@@ -281,26 +282,26 @@ class tx_templavoilaframework_lib {
 			$relSkinPath = self::getSkinPath($skin);
 
 			if ($relSkinPath) {
-				$relCorePath = t3lib_extMgm::siteRelPath('templavoila_framework') . 'core_templates/';
+				$relCorePath = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::siteRelPath('templavoila_framework') . 'Configuration/';
 				$absCorePath = PATH_site . $relCorePath;
 				$absSkinPath = PATH_site . $relSkinPath;
 
 				if (@is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts')) {
-					$skinConstants = @is_file($absSkinPath . 'Configuration/TypoScript/Constants.ts') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/Constants.ts') : '';
-					$skinSetup = @is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') : '';
-					$skinIncludeStatic = @is_file($absSkinPath . 'Configuration/TypoScript/IncludeStatic.txt') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/IncludeStatic.txt') : '';
-					$skinIncludeStaticFile = @is_file($absSkinPath . 'Configuration/TypoScript/IncludeStaticFile.txt') ? t3lib_div::getUrl($absSkinPath . 'Configuration/TypoScript/IncludeStaticFile.txt') : '';
+					$skinConstants = @is_file($absSkinPath . 'Configuration/TypoScript/Constants.ts') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'Configuration/TypoScript/Constants.ts') : '';
+					$skinSetup = @is_file($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'Configuration/TypoScript/TypoScript.ts') : '';
+					$skinIncludeStatic = @is_file($absSkinPath . 'Configuration/TypoScript/IncludeStatic.txt') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'Configuration/TypoScript/IncludeStatic.txt') : '';
+					$skinIncludeStaticFile = @is_file($absSkinPath . 'Configuration/TypoScript/IncludeStaticFile.txt') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'Configuration/TypoScript/IncludeStaticFile.txt') : '';
 				} else {
-					$skinConstants = @is_file($absSkinPath . 'typoscript/skin_constants.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '';
-					$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? t3lib_div::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
-					$skinIncludeStatic = @is_file($absSkinPath . 'typoscript/include_static.txt') ? t3lib_div::getUrl($absSkinPath . 'typoscript/include_static.txt') : '';
-					$skinIncludeStaticFile = @is_file($absSkinPath . 'typoscript/include_static_file.txt') ? t3lib_div::getUrl($absSkinPath . 'typoscript/include_static_file.txt') : '';
+					$skinConstants = @is_file($absSkinPath . 'typoscript/skin_constants.ts') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'typoscript/skin_constants.ts') : '';
+					$skinSetup = @is_file($absSkinPath . 'typoscript/skin_typoscript.ts') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'typoscript/skin_typoscript.ts') : '';
+					$skinIncludeStatic = @is_file($absSkinPath . 'typoscript/include_static.txt') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'typoscript/include_static.txt') : '';
+					$skinIncludeStaticFile = @is_file($absSkinPath . 'typoscript/include_static_file.txt') ? \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absSkinPath . 'typoscript/include_static_file.txt') : '';
 				}
 
 				$renderMode = self::getSkinRenderMode($skinConstants, $relSkinPath);
 				$coreSubrow = array(
-					'constants' => t3lib_div::getUrl($absCorePath . 'typoscript/v' . $renderMode . '/core_constants.ts'),
-					'config' => t3lib_div::getUrl($absCorePath . 'typoscript/v' . $renderMode . '/core_typoscript.ts'),
+					'constants' => \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absCorePath . 'TypoScript/V' . $renderMode . '/Constants.ts'),
+					'config' => \TYPO3\CMS\Core\Utility\GeneralUtility::getUrl($absCorePath . 'TypoScript/V' . $renderMode . '/TypoScript.ts'),
 					'editorcfg' => '',
 					'include_static' => '',
 					'include_static_file' => '',
@@ -321,7 +322,7 @@ class tx_templavoilaframework_lib {
 					'constants'=>	$skinConstants,
 					'config'=>		$skinSetup,
 					'editorcfg'=>	'',
-					'include_static' => ($skinIncludeStatic) ? implode(',', array_unique(t3lib_div::intExplode(',', $skinIncludeStatic))) : '',
+					'include_static' => ($skinIncludeStatic) ? implode(',', array_unique(\TYPO3\CMS\Core\Utility\GeneralUtility::intExplode(',', $skinIncludeStatic))) : '',
 					'include_static_file' => ($skinIncludeStaticFile) ? implode(',', array_unique(explode(',', $skinIncludeStaticFile))) : '',
 					'title' =>	$skin,
 					'uid' => md5($relSkinPath)
@@ -349,12 +350,12 @@ class tx_templavoilaframework_lib {
 	 * @return string
 	 */
 	public static function getSkinRenderMode($constants, $relativeSkinPath) {
-		$tsParser = t3lib_div::makeInstance('t3lib_TSparser');
+		$tsParser = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\TypoScript\\Parser\\TypoScriptParser');
 		$tsParser->parse($constants);
 
 		$skinRenderMode = intval($tsParser->setup['plugin.']['tx_templavoilaframework.']['renderMode']);
 		if (!$skinRenderMode) {
-			t3lib_div::deprecationLog('The TemplaVoila Framework now requires that the render mode is set via tha \'plugin.templavoila_framework.renderMode\' TypoScript constant.' .
+			\TYPO3\CMS\Core\Utility\GeneralUtility::deprecationLog('The TemplaVoila Framework now requires that the render mode is set via tha \'plugin.templavoila_framework.renderMode\' TypoScript constant.' .
 			                          'This value currently defaults to 1 but will be removed in a future version of the TemplaVoila Framework.' .
 			                          'The skin at ' . $relativeSkinPath . ' should be updated to include this TypoScript constant.');
 			$skinRenderMode = 1;
@@ -392,7 +393,7 @@ class tx_templavoilaframework_lib {
 			)
 		);
 
-		$fileHandler = t3lib_div::makeInstance('t3lib_extFileFunctions');
+		$fileHandler = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\TYPO3\\CMS\\Core\\Utility\\File\\ExtendedFileUtility');
 		$fileHandler->init($filemounts, $TYPO3_CONF_VARS['BE']['fileExtensions']);
 		$fileHandler->init_actionPerms($GLOBALS['BE_USER']->getFileoperationPermissions());
 		$fileHandler->start($fileCommands);
@@ -412,19 +413,19 @@ class tx_templavoilaframework_lib {
 	public static function getStaticDataStructureArray($pageDSPath, $fceDSPath) {
 		$staticDataStructureArray = array();
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:pages.ds.f1.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.ds.f1.title',
 			'path' => $pageDSPath . 'f1 (page).xml',
 			'icon' => '',
 			'scope' => 1,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:pages.ds.f2.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.ds.f2.title',
 			'path' => $pageDSPath . 'f2 (page).xml',
 			'icon' => '',
 			'scope' => 1,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:pages.ds.f3.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.ds.f3.title',
 			'path' => $pageDSPath . 'f3 (page).xml',
 			'icon' => '',
 			'scope' => 1,
@@ -432,61 +433,61 @@ class tx_templavoilaframework_lib {
 
 		// Add FCE Data Structures
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.col2.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.col2.title',
 			'path' => $fceDSPath . '2col (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.col3.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.col3.title',
 			'path' => $fceDSPath . '3col (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.col4.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.col4.title',
 			'path' => $fceDSPath . '4col (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.mod1.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.mod1.title',
 			'path' => $fceDSPath . '1mod (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.mod2.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.mod2.title',
 			'path' => $fceDSPath . '2mod (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.mod3.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.mod3.title',
 			'path' => $fceDSPath . '3mod (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.mod4.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.mod4.title',
 			'path' => $fceDSPath . '4mod (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.plain_image.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.plain_image.title',
 			'path' => $fceDSPath . 'plain_image (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.feature_image.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.feature_image.title',
 			'path' => $fceDSPath . 'feature_image (fce).xml',
 			'icon' => '',
 			'scope' => 2,
 		);
 		$staticDataStructureArray[] = array(
-			'title' => 'LLL:EXT:templavoila_framework/lang/locallang.xml:fce.ds.html_wrapper.title',
+			'title' => 'LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.ds.html_wrapper.title',
 			'path' => $fceDSPath . 'html_wrapper (fce).xml',
 			'icon' => '',
 			'scope' => 2,
@@ -494,10 +495,6 @@ class tx_templavoilaframework_lib {
 
 		return $staticDataStructureArray;
 	}
-}
-
-if (defined('TYPO3_MODE') && $TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_lib.php'])	{
-	include_once($TYPO3_CONF_VARS[TYPO3_MODE]['XCLASS']['ext/templavoila_framework/class.tx_templavoilaframework_lib.php']);
 }
 
 ?>
