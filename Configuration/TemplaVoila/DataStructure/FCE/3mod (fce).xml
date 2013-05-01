@@ -31,25 +31,25 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.131313</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.131313</numIndex>
 								<numIndex index="1">131313</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.121414</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.121414</numIndex>
 								<numIndex index="1">121414</numIndex>
 							</numIndex>
 							<numIndex index="2" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.141214</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.141214</numIndex>
 								<numIndex index="1">141214</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.141412</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.141412</numIndex>
 								<numIndex index="1">141412</numIndex>
 							</numIndex>
 						</items>
 						<default>131313</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.label</label>
 				</TCEforms>
 			</field_module_distribution>
 			<field_module_1_title type="array">
@@ -70,7 +70,7 @@
 						<size>48</size>
 						<eval>trim</eval>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.title</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod1.title</label>
 				</TCEforms>
 			</field_module_1_title>
 			<field_module_1_show_title type="array">
@@ -87,21 +87,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.showTitle.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod1.showTitle.label</label>
 				</TCEforms>
 			</field_module_1_show_title>
 			<field_module_1_bleed type="array">
@@ -119,7 +119,7 @@
 						<eval>int</eval>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.bleed</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod1.bleed</label>
 				</TCEforms>
 			</field_module_1_bleed>
 			<field_module_1_frame type="array">
@@ -137,7 +137,7 @@
 						<eval>int</eval>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod1.colStyle</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod1.colStyle</label>
 				</TCEforms>
 			</field_module_1_frame>
 			<field_module_2_title type="array">
@@ -158,7 +158,7 @@
 						<size>48</size>
 						<eval>trim</eval>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.title</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod2.title</label>
 				</TCEforms>
 			</field_module_2_title>
 			<field_module_2_show_title type="array">
@@ -175,21 +175,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.showTitle.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod2.showTitle.label</label>
 				</TCEforms>
 			</field_module_2_show_title>
 			<field_module_2_bleed type="array">
@@ -207,7 +207,7 @@
 						<eval>int</eval>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.bleed</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod2.bleed</label>
 				</TCEforms>
 			</field_module_2_bleed>
 			<field_module_2_frame type="array">
@@ -225,7 +225,7 @@
 						<eval>int</eval>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod2.colStyle</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod2.colStyle</label>
 				</TCEforms>
 			</field_module_2_frame>
 			<field_module_3_title type="array">
@@ -246,7 +246,7 @@
 						<size>48</size>
 						<eval>trim</eval>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.title</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod3.title</label>
 				</TCEforms>
 			</field_module_3_title>
 			<field_module_3_show_title type="array">
@@ -263,21 +263,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.showTitle.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod3.showTitle.label</label>
 				</TCEforms>
 			</field_module_3_show_title>
 			<field_module_3_bleed type="array">
@@ -295,7 +295,7 @@
 						<eval>int</eval>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.bleed</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod3.bleed</label>
 				</TCEforms>
 			</field_module_3_bleed>
 			<field_module_3_frame type="array">
@@ -313,7 +313,7 @@
 						<eval>int</eval>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.mod3.colStyle</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.mod3.colStyle</label>
 				</TCEforms>
 			</field_module_3_frame>
 			<field_module_group_library type="array">

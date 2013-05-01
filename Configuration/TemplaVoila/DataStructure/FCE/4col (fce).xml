@@ -25,21 +25,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.bottomRule.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.bottomRule.label</label>
 				</TCEforms>
 			</field_group_rule>
 			<field_column_group_library type="array">
@@ -106,7 +106,7 @@
 ## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page.
 ## Also, let system know there is a content element present for when it is in the feature content block
 20 = LOAD_REGISTER
-20 {	
+20 {
 	maxImageWidth.data = register:containerWidth
 	containerElementPresent = 1
 	tempAggregateCss.data = register:aggregateCss
@@ -233,7 +233,7 @@
 50.value = </div>
 
 ]]>
-	
+
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
@@ -298,7 +298,7 @@
 50 = TEXT
 50.value = </div>
 ]]>
-	
+
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>

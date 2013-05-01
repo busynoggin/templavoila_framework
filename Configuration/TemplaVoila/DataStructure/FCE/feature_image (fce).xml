@@ -25,7 +25,7 @@
 10 = CASE
 10 {
 	key.field = field_space_after
-	
+
 	Normal = LOAD_REGISTER
 	Normal {
 		tvfwMarginBottom.data = register:moduleBodyTopBuffer
@@ -47,7 +47,7 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.spaceafter.normal</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.spaceafter.normal</numIndex>
 								<numIndex index="1">Normal</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
@@ -97,7 +97,7 @@
 						</items>
 						<default>Normal</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.spaceafter.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.spaceafter.label</label>
 				</TCEforms>
 			</field_space_after>
 			<field_image type="array">
@@ -177,7 +177,7 @@
 						<maxitems>1</maxitems>
 						<minitems>0</minitems>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.image</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.image</label>
 				</TCEforms>
 			</field_image>
 			<field_alt_text type="array">
@@ -199,7 +199,7 @@
 						<size>48</size>
 						<eval>trim</eval>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.alttext</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.alttext</label>
 				</TCEforms>
 			</field_alt_text>
 			<field_link type="array">
@@ -233,7 +233,7 @@
 							</link>
 						</wizards>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.link</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.link</label>
 				</TCEforms>
 			</field_link>
 		</el>

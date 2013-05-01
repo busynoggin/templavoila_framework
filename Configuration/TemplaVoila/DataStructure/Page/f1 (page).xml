@@ -26,21 +26,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:pages.autoHeadline.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.autoHeadline.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:pages.autoHeadline.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.autoHeadline.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="2" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:pages.autoHeadline.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.autoHeadline.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:pages.autoHeadline.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.autoHeadline.label</label>
 				</TCEforms>
 			</field_auto_header_switch>
 			<field_feature_bleed_switch type="array">
@@ -58,21 +58,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:pages.bleed.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.bleed.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:pages.bleed.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.bleed.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="2" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:pages.bleed.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.bleed.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:pages.bleed.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:pages.bleed.label</label>
 				</TCEforms>
 			</field_feature_bleed_switch>
 			<field_ds_config_library type="array">
