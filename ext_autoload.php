@@ -6,7 +6,6 @@ $extensionPath = t3lib_extMgm::extPath('templavoila_framework');
 return array(
 	'tx_templavoilaframework_lib' => $extensionPath . 'class.tx_templavoilaframework_lib.php',
 	'tx_templavoilaframework_pagelink' => $extensionPath . 'class.tx_templavoilaframework_pagelink.php',
-	'tx_templavoilaframework_skinselector' => $extensionPath . 'class.tx_templavoilaframework_skinselector.php',
-	'tx_templavoilaframework_t3dimport' => $extensionPath . 'class.tx_templavoilaframework_t3dimport.php',
+	'tx_templavoilaframework_skinselector' => $extensionPath . 'class.tx_templavoilaframework_skinselector.php'
 );
 ?>
