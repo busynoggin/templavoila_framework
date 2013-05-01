@@ -72,7 +72,7 @@
 		maxW.stdWrap.dataWrap = {register:plainImageMaxWidth1}{register:plainImageMaxWidth2}
 	}
 	params.dataWrap = {register:plainImageClass} {register:plainImageStyles}
-	altText.field = field_alt_text						
+	altText.field = field_alt_text
 	stdWrap.typolink {
 		parameter.field = field_link
 		ATagParams = class="plainImageLink"
@@ -108,7 +108,7 @@
 						<maxitems>1</maxitems>
 						<minitems>0</minitems>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.image</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.image</label>
 				</TCEforms>
 			</field_image>
 			<field_link type="array">
@@ -142,7 +142,7 @@
 							</link>
 						</wizards>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.link</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.link</label>
 				</TCEforms>
 			</field_link>
 			<field_alt_text type="array">
@@ -164,7 +164,7 @@
 						<size>48</size>
 						<eval>trim</eval>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.alttext</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.alttext</label>
 				</TCEforms>
 			</field_alt_text>
 			<field_max_width type="array">
@@ -190,9 +190,9 @@
 						</range>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.imagewidth</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.imagewidth</label>
 				</TCEforms>
-			</field_max_width>			
+			</field_max_width>
 			<field_margin_top type="array">
 				<type>no_map</type>
 				<tx_templavoila type="array">
@@ -216,7 +216,7 @@
 						</range>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.margintop</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.margintop</label>
 				</TCEforms>
 			</field_margin_top>
 			<field_margin_bottom type="array">
@@ -242,7 +242,7 @@
 						</range>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.marginbottom</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.marginbottom</label>
 				</TCEforms>
 			</field_margin_bottom>
 			<field_margin_right type="array">
@@ -268,7 +268,7 @@
 						</range>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.marginright</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.marginright</label>
 				</TCEforms>
 			</field_margin_right>
 			<field_margin_left type="array">
@@ -294,7 +294,7 @@
 						</range>
 						<default type="integer">0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.marginleft</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.marginleft</label>
 				</TCEforms>
 			</field_margin_left>
 			<field_z_index type="array">
@@ -316,7 +316,7 @@
 						<size>4</size>
 						<eval>trim</eval>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.zindex</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.zindex</label>
 				</TCEforms>
 			</field_z_index>
 			<field_display type="array">
@@ -334,25 +334,25 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.display.inline</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.display.inline</numIndex>
 								<numIndex index="1">display:inline</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.display.left</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.display.left</numIndex>
 								<numIndex index="1">float:left</numIndex>
 							</numIndex>
 							<numIndex index="2" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.display.right</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.display.right</numIndex>
 								<numIndex index="1">float:right</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.display.block</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.display.block</numIndex>
 								<numIndex index="1">display:block</numIndex>
 							</numIndex>
 						</items>
 						<default>display:block</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.display.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.display.label</label>
 				</TCEforms>
 			</field_display>
 		</el>

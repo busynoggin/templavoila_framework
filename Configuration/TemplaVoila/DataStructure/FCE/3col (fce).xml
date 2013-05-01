@@ -25,25 +25,25 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.131313</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.131313</numIndex>
 								<numIndex index="1">131313</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.121414</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.121414</numIndex>
 								<numIndex index="1">121414</numIndex>
 							</numIndex>
 							<numIndex index="2" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.141214</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.141214</numIndex>
 								<numIndex index="1">141214</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.141412</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.141412</numIndex>
 								<numIndex index="1">141412</numIndex>
 							</numIndex>
 						</items>
 						<default>131313</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.distribution.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.label</label>
 				</TCEforms>
 			</field_column_distribution>
 			<field_group_rule type="array">
@@ -60,21 +60,21 @@
 						<type>select</type>
 						<items type="array">
 							<numIndex index="0" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.default</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.default</numIndex>
 								<numIndex index="1">0</numIndex>
 							</numIndex>
 							<numIndex index="1" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.on</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.on</numIndex>
 								<numIndex index="1">1</numIndex>
 							</numIndex>
 							<numIndex index="3" type="array">
-								<numIndex index="0">LLL:EXT:templavoila_framework/lang/locallang.xml:fce.selector.off</numIndex>
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.off</numIndex>
 								<numIndex index="1">2</numIndex>
 							</numIndex>
 						</items>
 						<default>0</default>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.bottomRule.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.bottomRule.label</label>
 				</TCEforms>
 			</field_group_rule>
 			<field_column_group_library type="array">
@@ -181,7 +181,7 @@
 50.value = </div>
 
 ]]>
-	
+
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
@@ -287,7 +287,7 @@
 50 = TEXT
 50.value = </div>
 ]]>
-	
+
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>

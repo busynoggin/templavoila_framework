@@ -30,7 +30,7 @@
 						<cols>48</cols>
 						<rows>7</rows>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.prehtml.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.prehtml.label</label>
 				</TCEforms>
 			</field_pre_html>
 			<field_post_html type="array">
@@ -52,7 +52,7 @@
 						<cols>48</cols>
 						<rows>7</rows>
 					</config>
-					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.posthtml.label</label>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.posthtml.label</label>
 				</TCEforms>
 			</field_post_html>
 			<field_content type="array">
