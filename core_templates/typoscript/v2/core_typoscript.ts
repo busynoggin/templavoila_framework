@@ -3177,11 +3177,6 @@ page {
 	includeJSlibs.tf_jquery.forceOnTop = 1
 
 	includeJS.tf_core = {$plugin.tx_templavoilaframework.corePath}js/core.js
-
-	jsInline {
-		1 = TEXT
-		1.dataWrap = jQuery.noConflict();
-	}
 }
 [global]
 
