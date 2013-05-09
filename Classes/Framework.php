@@ -161,27 +161,32 @@ class Framework {
 		if ($relSkinPath) {
 			$absSkinPath = PATH_site . $relSkinPath;
 
-			// @todo We eventually want to use YAML here.
-			if (@is_file($absSkinPath . 'Meta/Info.txt')) {
-				$infoPath = $absSkinPath . 'Meta/Info.txt';
-				$isVersion2Layout = TRUE;
+			if (@is_file($absSkinPath . 'Meta/Info.yaml')) {
+				require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('templavoila_framework') . 'Resources\Private\Php\Spyc\Spyc.php');
+				$infoPath = $absSkinPath . 'Meta/Info.yaml';
+				$infoArray = Spyc::YAMLLoad($infoPath);
 			} else {
-				$infoPath = $absSkinPath . 'info.txt';
-				$isVersion2Layout = FALSE;
-			}
-
-			$infoText = \TYPO3\CMS\Core\Utility\GeneralUtility::getURL($infoPath);
-			if ($infoText) {
-				$infoLines = preg_split('/[\r\n]+/', $infoText, -1, PREG_SPLIT_NO_EMPTY);
-				foreach ($infoLines as $line) {
-					list($key, $value) = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(':', $line, false, 2);
-					$key = \TYPO3\CMS\Core\Utility\GeneralUtility::strtolower($key);
-					if (($key == 'title') || ($key == 'description')) {
-						$infoArray[$key] = $value;
-					}
+				if (@is_file($absSkinPath . 'Meta/Info.txt')) {
+					$infoPath = $absSkinPath . 'Meta/Info.txt';
+					$isVersion2Layout = TRUE;
+				} else {
+					$infoPath = $absSkinPath . 'info.txt';
+					$isVersion2Layout = FALSE;
 				}
-			} else {
-				$infoArray['title'] = $skinKey;
+
+				$infoText = \TYPO3\CMS\Core\Utility\GeneralUtility::getURL($infoPath);
+				if ($infoText) {
+					$infoLines = preg_split('/[\r\n]+/', $infoText, -1, PREG_SPLIT_NO_EMPTY);
+					foreach ($infoLines as $line) {
+						list($key, $value) = \TYPO3\CMS\Core\Utility\GeneralUtility::trimExplode(':', $line, false, 2);
+						$key = \TYPO3\CMS\Core\Utility\GeneralUtility::strtolower($key);
+						if (($key == 'title') || ($key == 'description')) {
+							$infoArray[$key] = $value;
+						}
+					}
+				} else {
+					$infoArray['title'] = $skinKey;
+				}
 			}
 
 			$infoArray['type'] = $skinType;
