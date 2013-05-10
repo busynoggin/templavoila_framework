@@ -227,13 +227,15 @@ class Framework {
 	protected static function getPathForSkinThumbnail($relativeScreenshotPath, $width = 130, $height = 98) {
 		$absoluteScreenshotPath = PATH_site . $relativeScreenshotPath;
 		$screenshotSize = $width . 'x' . $height;
+
 		$thumbScript = '../typo3/thumbs.php';
 
-		$salt = basename($absoluteScreenshotPath) . ':' . filemtime($absoluteScreenshotPath) . ':' . $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'];
-		$params  = '&file=' . rawurlencode($absoluteScreenshotPath);
+		$salt = basename($relativeScreenshotPath) . ':' . filemtime($absoluteScreenshotPath) . ':' . $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'];
+		$params  = '&file=' . rawurlencode('../' . $relativeScreenshotPath);
 		$params .= '&size=' . $width . 'x' . $height;
 		$params .= '&md5sum=' . \TYPO3\CMS\Core\Utility\GeneralUtility::shortMD5($salt);
 		$url = $thumbScript . '?&dummy=' . $GLOBALS['EXEC_TIME'] . $params;
+
 		return $url;
 	}
 
