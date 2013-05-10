@@ -162,10 +162,14 @@ class Framework {
 			$absSkinPath = PATH_site . $relSkinPath;
 
 			if (@is_file($absSkinPath . 'Meta/Info.yaml')) {
-				require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('templavoila_framework') . 'Resources\Private\Php\Spyc\Spyc.php');
+				$isVersion2Layout = TRUE;
+
+				require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath('templavoila_framework') . 'Resources/Private/Php/Spyc/Spyc.php');
 				$infoPath = $absSkinPath . 'Meta/Info.yaml';
-				$infoArray = Spyc::YAMLLoad($infoPath);
+				$infoArray = \Spyc::YAMLLoad($infoPath);
 			} else {
+				$isVersion2Layout = FALSE;
+
 				if (@is_file($absSkinPath . 'Meta/Info.txt')) {
 					$infoPath = $absSkinPath . 'Meta/Info.txt';
 					$isVersion2Layout = TRUE;
