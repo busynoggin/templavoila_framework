@@ -291,7 +291,7 @@
 	key.data = register:tvfwRenderMode
 	1 = LOAD_REGISTER
 	1	{
-		tvfwBlockBeginWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
+		tvfwBlockBeginWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
 		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
 		containerWidth = {$containerWidth}
 	}
@@ -305,7 +305,7 @@
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwBlockBeginWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
+		tvfwBlockBeginWrap.dataWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
 		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
 		containerWidth = {$containerWidth}
 	}
