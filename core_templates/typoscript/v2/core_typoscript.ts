@@ -3104,7 +3104,22 @@ page {
 			data = register:tvfwColumnBottomMargin
 			wrap (
 				.column-group.intermediate  > .column, .column-group.full  > .column {margin-bottom: |px;}
-				.column-group {margin-bottom:0;}
+				.column-group {
+					clear:both;
+					margin-bottom: 0;
+				}
+				.column-group:before,
+				.column-group:after {
+					content: '.';
+					display: block;
+					overflow: hidden;
+					visibility: hidden;
+					font-size: 0;
+					line-height: 0;
+					width: 0;
+					height: 0;
+				}
+				.column-group:after {clear: both}
 			)
 		}
 
@@ -3145,15 +3160,32 @@ page {
 		50 = TEXT
 		50 {
 			data = register:tvfwModuleBottomMargin
-			wrap = .module-group {margin-bottom: |px;}
-		}
-
-		55 = TEXT
-		55 {
-			data = register:tvfwModuleBottomMargin
 			wrap (
-				.module-group.intermediate  > .module, .module-group.full  > .module {margin-bottom: |px;}
-				.module-group {margin-bottom:0;}
+
+				.module-group {
+					clear:both;
+					margin-bottom: |px;
+				}
+
+				.module-group:before,
+				.module-group:after {
+					content: '.';
+					display: block;
+					overflow: hidden;
+					visibility: hidden;
+					font-size: 0;
+					line-height: 0;
+					width: 0;
+					height: 0;
+				}
+
+				.module-group:after {clear: both}
+
+				.module-group .module.unframed .body,
+				.module-group .module.unframed .inner-wrap {
+					padding: 0;
+					border: 0;
+				}
 			)
 		}
 
