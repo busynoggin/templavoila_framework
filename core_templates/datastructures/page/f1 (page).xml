@@ -421,74 +421,77 @@
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = CASE
+10 = COA
 10 {
-	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwBlockBeginWrap = <div id="generatedContent-1">
-		tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
-		containerWidth = {$containerWidth}
-	}
-	2 = LOAD_REGISTER
-	2 {
-		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
-		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
-		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
-		columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
-	}
-	default = LOAD_REGISTER
-	default {
-		tvfwBlockBeginWrap = <div id="generatedContent-1">
-		tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
-		containerWidth = {$containerWidth}
-	}
-}
-
-20 = LOAD_REGISTER
-20 {
-	maxImageWidth.data = register:containerWidth
-	originalContainerWidth.data = register:containerWidth
-	nestingLevel = 0
-}
-25 = COA
-25 {
-	if {
-		value.data = register:maxImageWidth
-		isGreaterThan.data = register:tempMinFullImageWidth
-	}
-	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:tempMinFullImageWidth
-}
-
-30 = CASE
-30 {
-	key.data = register:tvfwGeneratedContentRenderMode
-	1 = RECORDS
-	1 {
-		wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
-		wrap.insertData = 1
-		source.data = register:generatedContent-1contentsource
-		tables = pages
-		conf.pages = RECORDS
-		conf.pages {
-			tables = tt_content
-			source.data = t3datastructure : tx_templavoila_flex->field_content_block_1
+	if.isFalse.data = register:{$templateKey}{$fieldKey}disable
+	10 = CASE
+	10 {
+		key.data = register:tvfwRenderMode
+		1 = LOAD_REGISTER
+		1	{
+			tvfwBlockBeginWrap = <div id="generatedContent-1">
+			tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
+			containerWidth = {$containerWidth}
+		}
+		2 = LOAD_REGISTER
+		2 {
+			containerWidth.data = register:{$templateKey}{$fieldKey}width
+			tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
+			tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+			tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
+			columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
+		}
+		default = LOAD_REGISTER
+		default {
+			tvfwBlockBeginWrap = <div id="generatedContent-1">
+			tvfwBlockEndWrap = </div><!-- end #generatedContent-1  -->
+			containerWidth = {$containerWidth}
 		}
 	}
-	default = CONTENT
-	default {
-		wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
-		wrap.insertData = 1
-		table = tt_content
-		select {
-			pidInList.data = register:generatedContent-1contentsource
-			languageField = sys_language_uid
+
+	20 = LOAD_REGISTER
+	20 {
+		maxImageWidth.data = register:containerWidth
+		originalContainerWidth.data = register:containerWidth
+		nestingLevel = 0
+	}
+	25 = COA
+	25 {
+		if {
+			value.data = register:maxImageWidth
+			isGreaterThan.data = register:tempMinFullImageWidth
+		}
+		10 = LOAD_REGISTER
+		10.maxImageWidth.data = register:tempMinFullImageWidth
+	}
+
+	30 = CASE
+	30 {
+		key.data = register:tvfwGeneratedContentRenderMode
+		1 = RECORDS
+		1 {
+			wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+			wrap.insertData = 1
+			source.data = register:generatedContent-1contentsource
+			tables = pages
+			conf.pages = RECORDS
+			conf.pages {
+				tables = tt_content
+				source.data = t3datastructure : tx_templavoila_flex->field_content_block_1
+			}
+		}
+		default = CONTENT
+		default {
+			wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+			wrap.insertData = 1
+			table = tt_content
+			select {
+				pidInList.data = register:generatedContent-1contentsource
+				languageField = sys_language_uid
+			}
 		}
 	}
 }
-
 ]]>
 					</TypoScript>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
@@ -534,74 +537,77 @@
                     </TypoScript_constants>
 					<TypoScript>
 <![CDATA[
-10 = CASE
+10 = COA
 10 {
-	key.data = register:tvfwRenderMode
-	1 = LOAD_REGISTER
-	1	{
-		tvfwBlockBeginWrap = <div id="generatedContent-2">
-		tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
-		containerWidth = {$containerWidth}
-	}
-	2 = LOAD_REGISTER
-	2 {
-		containerWidth.data = register:{$templateKey}{$fieldKey}width
-		tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
-		tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
-		tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
-		columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
-	}
-	default = LOAD_REGISTER
-	default {
-		tvfwBlockBeginWrap = <div id="generatedContent-2">
-		tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
-		containerWidth = {$containerWidth}
-	}
-}
-
-20 = LOAD_REGISTER
-20 {
-	maxImageWidth.data = register:containerWidth
-	originalContainerWidth.data = register:containerWidth
-	nestingLevel = 0
-}
-25 = COA
-25 {
-	if {
-		value.data = register:maxImageWidth
-		isGreaterThan.data = register:tempMinFullImageWidth
-	}
-	10 = LOAD_REGISTER
-	10.maxImageWidth.data = register:tempMinFullImageWidth
-}
-
-30 = CASE
-30 {
-	key.data = register:tvfwGeneratedContentRenderMode
-	1 = RECORDS
-	1 {
-		wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
-		wrap.insertData = 1
-		source.data = register:generatedContent-2contentsource
-		tables = pages
-		conf.pages = RECORDS
-		conf.pages {
-			tables = tt_content
-			source.data = t3datastructure : tx_templavoila_flex->field_content_block_1
+	if.isFalse.data = register:{$templateKey}{$fieldKey}disable
+	10 = CASE
+	10 {
+		key.data = register:tvfwRenderMode
+		1 = LOAD_REGISTER
+		1	{
+			tvfwBlockBeginWrap = <div id="generatedContent-2">
+			tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
+			containerWidth = {$containerWidth}
+		}
+		2 = LOAD_REGISTER
+		2 {
+			containerWidth.data = register:{$templateKey}{$fieldKey}width
+			tvfwBlockBeginWrap.dataWrap = {register:{$templateKey}{$fieldKey}beginWrap}
+			tvfwBlockEndWrap.dataWrap = {register:{$templateKey}{$fieldKey}endWrap}
+			tempMinFullImageWidth.data = register:{$templateKey}{$fieldKey}minFullImageWidth
+			columnModuleRenderMode.data = register:{$templateKey}{$fieldKey}columnModuleRenderMode
+		}
+		default = LOAD_REGISTER
+		default {
+			tvfwBlockBeginWrap = <div id="generatedContent-2">
+			tvfwBlockEndWrap = </div><!-- end #generatedContent-2  -->
+			containerWidth = {$containerWidth}
 		}
 	}
-	default = CONTENT
-	default {
-		wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
-		wrap.insertData = 1
-		table = tt_content
-		select {
-			pidInList.data = register:generatedContent-2contentsource
-			languageField = sys_language_uid
+
+	20 = LOAD_REGISTER
+	20 {
+		maxImageWidth.data = register:containerWidth
+		originalContainerWidth.data = register:containerWidth
+		nestingLevel = 0
+	}
+	25 = COA
+	25 {
+		if {
+			value.data = register:maxImageWidth
+			isGreaterThan.data = register:tempMinFullImageWidth
+		}
+		10 = LOAD_REGISTER
+		10.maxImageWidth.data = register:tempMinFullImageWidth
+	}
+
+	30 = CASE
+	30 {
+		key.data = register:tvfwGeneratedContentRenderMode
+		1 = RECORDS
+		1 {
+			wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+			wrap.insertData = 1
+			source.data = register:generatedContent-2contentsource
+			tables = pages
+			conf.pages = RECORDS
+			conf.pages {
+				tables = tt_content
+				source.data = t3datastructure : tx_templavoila_flex->field_content_block_1
+			}
+		}
+		default = CONTENT
+		default {
+			wrap = {register:tvfwBlockBeginWrap}|{register:tvfwBlockEndWrap}
+			wrap.insertData = 1
+			table = tt_content
+			select {
+				pidInList.data = register:generatedContent-2contentsource
+				languageField = sys_language_uid
+			}
 		}
 	}
 }
-
 ]]>
 					</TypoScript>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>

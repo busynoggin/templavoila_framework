@@ -6,10 +6,38 @@ plugin.tx_templavoilaframework {
 	dsConfig = COA
 	dsConfig {
 		5 = LOAD_REGISTER
-		5	{
+		5 {
 			tvfwRenderMode = {$plugin.tx_templavoilaframework.renderMode}
 			tvfwGeneratedContentRenderMode = {$plugin.tx_templavoilaframework.generatedContentRenderMode}
 			disableAutoMainHeadline = {$plugin.tx_templavoilaframework.disableAutoMainHeadline}
+		}
+
+		7 = LOAD_REGISTER
+		7 {
+			f1ageneratedContent-1disable = 1
+			f1ageneratedContent-2disable = 1
+			f1bgeneratedContent-1disable = 1
+			f1bgeneratedContent-2disable = 1
+			f1cgeneratedContent-1disable = 1
+			f1cgeneratedContent-2disable = 1
+			f1dgeneratedContent-1disable = 0
+			f1dgeneratedContent-2disable = 1
+			f1egeneratedContent-1disable = 1
+			f1egeneratedContent-2disable = 0
+			f1fgeneratedContent-1disable = 0
+			f1fgeneratedContent-2disable = 0
+			f2ageneratedContent-1disable = 1
+			f2ageneratedContent-2disable = 1
+			f2bgeneratedContent-1disable = 1
+			f2bgeneratedContent-2disable = 1
+			f2cgeneratedContent-1disable = 1
+			f2cgeneratedContent-2disable = 1
+			f2dgeneratedContent-1disable = 0
+			f2dgeneratedContent-2disable = 1
+			f2egeneratedContent-1disable = 1
+			f2egeneratedContent-2disable = 0
+			f2fgeneratedContent-1disable = 0
+			f2fgeneratedContent-2disable = 0
 		}
 
 		10 = CASE
