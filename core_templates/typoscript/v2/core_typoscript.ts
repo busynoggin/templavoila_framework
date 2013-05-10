@@ -2272,7 +2272,7 @@ plugin.tx_templavoilaframework {
 				columnWidth1.prioriCalc = intval
 				columnWidth2.data = register:tempColumnWidth2
 				columnWidth2.prioriCalc = intval
-				columnWidth3.data = register:tempColumnWidth3I
+				columnWidth3.data = register:tempColumnWidth3
 				columnWidth3.prioriCalc = intval
 				classColumn1Distribution = quarter
 				classColumn1Distribution.noTrimWrap = | ||
