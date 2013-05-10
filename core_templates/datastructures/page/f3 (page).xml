@@ -154,6 +154,12 @@
 10 = CASE
 10 {
 	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockBeginWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
@@ -283,6 +289,12 @@
 10 = CASE
 10 {
 	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockBeginWrap = <div id="feature" class="{register:featureClass}"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div><!-- end #feature  -->
+		containerWidth = {$containerWidth}
+	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
@@ -412,6 +424,12 @@
 10 = CASE
 10 {
 	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockBeginWrap = <div id="contentBlock-2"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
@@ -513,6 +531,12 @@
 10 = CASE
 10 {
 	key.data = register:tvfwRenderMode
+	1 = LOAD_REGISTER
+	1	{
+		tvfwBlockBeginWrap = <div id="contentBlock-3"><!--TYPO3SEARCH_begin-->
+		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
+		containerWidth = {$containerWidth}
+	}
 	2 = LOAD_REGISTER
 	2 {
 		containerWidth.data = register:{$templateKey}{$fieldKey}width
