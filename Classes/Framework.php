@@ -46,7 +46,7 @@ class Framework {
 	 * @return	string
 	 */
 	public static function getCurrentSkin($pageId) {
-		$tmpl = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance("t3lib_tsparser_ext");
+		$tmpl = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance("TYPO3\\CMS\Core\TypoScript\ExtendedTemplateService");
 		$tmpl->tt_track = 0;
 		$tmpl->init();
 		$templateRow = $tmpl->ext_getFirstTemplate($pageId);
@@ -404,7 +404,7 @@ class Framework {
 			)
 		);
 
-		$fileHandler = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\TYPO3\\CMS\\Core\\Utility\\File\\ExtendedFileUtility');
+		$fileHandler = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Utility\\File\\ExtendedFileUtility');
 		$fileHandler->init($filemounts, $TYPO3_CONF_VARS['BE']['fileExtensions']);
 		$fileHandler->init_actionPerms($GLOBALS['BE_USER']->getFileoperationPermissions());
 		$fileHandler->start($fileCommands);
