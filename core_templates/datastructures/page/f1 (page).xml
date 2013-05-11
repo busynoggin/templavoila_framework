@@ -423,7 +423,10 @@
 <![CDATA[
 10 = COA
 10 {
-	if.isFalse.data = register:{$templateKey}{$fieldKey}disable
+	if {
+		isFalse.data = register:{$templateKey}{$fieldKey}disable
+		isTrue.data = register:generatedContent-1contentsource
+	}
 	10 = CASE
 	10 {
 		key.data = register:tvfwRenderMode
@@ -539,7 +542,10 @@
 <![CDATA[
 10 = COA
 10 {
-	if.isFalse.data = register:{$templateKey}{$fieldKey}disable
+	if {
+		isFalse.data = register:{$templateKey}{$fieldKey}disable
+		isTrue.data = register:generatedContent-2contentsource
+	}
 	10 = CASE
 	10 {
 		key.data = register:tvfwRenderMode
