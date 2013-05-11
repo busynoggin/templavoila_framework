@@ -22,11 +22,17 @@ class ext_update {
 	 */
 	public function main() {
 		$content = array();
+		$action = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('action');
+
+		if ($action === 'update_database') {
+			$content[] = $this->updateDatabase();
+		} elseif ($this->databaseNeedsUpdate()) {
+			$content[] = $this->showUpdateDatabaseForm();
+		}
 
 		$content[] = '<h3>Import Template Objects</h3>';
 		$content[] = '<p>Using the Templavoila Framework requires several TemplaVoila Template Objects. Select a storage folder and import these onto your site. This import is usually only done with the first installation of the TemplaVoila Framework or on a major version upgrade.</p>';
 
-		$action = \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('action');
 		if ($action === 'import') {
 			$content[] = $this->importAction();
 		} else {
@@ -109,7 +115,7 @@ class ext_update {
 		}
 
 		if ($flashText) {
-			$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $flashText, $flashSubject, $flashSeverity);
+			$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $flashText, $flashSubject, $flashSeverity);
 		}
 
 		return $flashMessage->render() . $this->showFormAction();
@@ -135,7 +141,7 @@ class ext_update {
 		$data = null;
 
 		if(@is_file($templateObjectPath)) {
-			$import = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeInstance('\TYPO3\\CMS\\Impexp\\ImportExport');
+			$import = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeInstance('TYPO3\\CMS\\Impexp\\ImportExport');
 			$import->init(0, 'import');
 			$import->enableLogging = TRUE;
 
@@ -175,6 +181,29 @@ class ext_update {
 	}
 
 	/**
+	 * Shows the database update form.
+	 *
+	 * @return string
+	 */
+	protected function showUpdateDatabaseForm() {
+		$content = array();
+
+		$content[] = '<p>Pages and content elements in your database are using old paths for data structures and template objects. These must be updated for your site to work properly.</p>';
+		$content[] = '<p>It is highly recommended that you backup your database before running this update.';
+		$content[] = '<form action="' . \TYPO3\CMS\Core\Utility\GeneralUtility::linkThisScript(array('action' => 'update_database')) . '" method="post">';
+		$content[] = '<input type="submit" value="Update Database" />';
+		$content[] = '</form>';
+
+		$flashSubject = 'Database Update Required';
+		$flashText = implode(chr(10), $content);
+		$flashSeverity = t3lib_flashMessage::WARNING;
+
+		$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $flashText, $flashSubject, $flashSeverity);
+
+		return $flashMessage->render();
+	}
+
+	/**
 	 * Checks if the database needs an update
 	 *
 	 * @return boolean
@@ -188,7 +217,7 @@ class ext_update {
 	 *
 	 * @return void
 	 */
-	public function updateDatabase() {
+	protected function updateDatabase() {
 		if ($this->pageDataStructureNeedsUpdate()) {
 			$this->updatePageDataStructure();
 		}
@@ -204,6 +233,19 @@ class ext_update {
 		if ($this->templateObjectFileRefNeedsUpdate()) {
 			$this->updateTemplateObjectFileRef();
 		}
+
+		if ($this->databaseNeedsUpdate()) {
+			$flashSubject = 'Database Not Updated';
+			$flashText = 'Pages and content elements could not be updated automatically. Try again or file a bug report.';
+			$flashSeverity = t3lib_flashMessage::ERROR;
+		} else {
+			$flashSubject = 'Database Updated';
+			$flashText = 'Pages and content elements have been updated to use the correct paths for data structures and template objects.';
+			$flashSeverity = t3lib_flashMessage::OK;
+		}
+
+		$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $flashText, $flashSubject, $flashSeverity);
+		return $flashMessage->render();
 	}
 
 	/**
@@ -212,8 +254,8 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function pageDataStructureNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'pages', 'tx_templavoila_ds LIKE \'%:path%\'');
-		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/'));
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'pages', 'tx_templavoila_ds LIKE :path OR tx_templavoila_next_ds LIKE :path');
+		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
 
@@ -227,12 +269,13 @@ class ext_update {
 	 */
 	protected function updatePageDataStructure() {
 		$oldPath = 'EXT:templavoila_framework/core_templates/datastructures/page/';
-		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/Pages/';
+		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/Page/';
 
 		$fieldsValues = array(
-			'tx_templavoila_ds' => 'replace(\'tx_templavoila_ds\', \'' . $oldPath . '\', \'' . $newPath . '\')'
+			'tx_templavoila_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')',
+			'tx_templavoila_next_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('pages', 'tx_templavoila_ds LIKE \'%' . $oldPath . '%\'', $fieldsValues);
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('pages', 'tx_templavoila_ds LIKE \'' . $oldPath . '%\' OR tx_templavoila_next_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoila_ds,tx_templavoila_next_ds');
 	}
 
 	/**
@@ -241,8 +284,8 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function contentDataStructureNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tt_content', 'tx_templavoila_ds LIKE \'%:path%\'');
-		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/'));
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tt_content', 'tx_templavoila_ds LIKE :path');
+		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
 
@@ -255,7 +298,13 @@ class ext_update {
 	 * @return void
 	 */
 	protected function updateContentDataStructure() {
+		$oldPath = 'EXT:templavoila_framework/core_templates/datastructures/fce/';
+		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/FCE/';
 
+		$fieldsValues = array(
+			'tx_templavoila_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
+		);
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tt_content', 'tx_templavoila_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoila_ds');
 	}
 
 	/**
@@ -264,12 +313,36 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function templateObjectDataStructureNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoila_tmplobj', 'fileref LIKE \'%:path%\'');
-		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/'));
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoila_tmplobj', 'fileref LIKE :path');
+		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
 
 		return $row[0] > 0;
+	}
+
+	/**
+	 * Updates the DS field for template objects
+	 *
+	 * @return void
+	 */
+	protected function updateTemplateObjectDataStructure() {
+		$oldPath = 'EXT:templavoila_framework/core_templates/datastructures/page/';
+		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/Page/';
+
+		$fieldsValues = array(
+			'datastructure' => 'replace(datastructure, \'' . $oldPath . '\', \'' . $newPath . '\')'
+		);
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'datastructure LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'datastructure');
+
+
+		$oldPath = 'EXT:templavoila_framework/core_templates/datastructures/fce/';
+		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/FCE/';
+
+		$fieldsValues = array(
+			'datastructure' => 'replace(datastructure, \'' . $oldPath . '\', \'' . $newPath . '\')'
+		);
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'datastructure LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'datastructure');
 	}
 
 	/**
@@ -278,14 +351,36 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function templateObjectFileRefNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoila_tmplobj', 'fileref LIKE \'%:path%\'');
-		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/'));
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoila_tmplobj', 'fileref LIKE :path');
+		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
 
 		return $row[0] > 0;
 	}
 
+	/**
+	 * Checks if the DS field on template objects needs an update
+	 *
+	 * @return boolean
+	 */
+	protected function updateTemplateObjectFileRef() {
+		$oldPath = 'EXT:templavoila_framework/core_templates/pages/';
+		$newPath = 'EXT:templavoila_framework/Resources/Private/Templates/Page/';
+
+		$fieldsValues = array(
+			'fileref' => 'replace(fileref, \'' . $oldPath . '\', \'' . $newPath . '\')'
+		);
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
+
+		$oldPath = 'EXT:templavoila_framework/core_templates/fce/';
+		$newPath = 'EXT:templavoila_framework/Resources/Private/Templates/FCE/';
+
+		$fieldsValues = array(
+			'fileref' => 'replace(fileref, \'' . $oldPath . '\', \'' . $newPath . '\')'
+		);
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
+	}
 }
 
 ?>
