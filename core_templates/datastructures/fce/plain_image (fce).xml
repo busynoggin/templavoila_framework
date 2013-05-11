@@ -28,8 +28,10 @@
 		isTrue.field = field_max_width
 		value.field = field_max_width
 	}
-	plainImageMaxWidth2.data = register:containerWidth
-	plainImageMaxWidth2.if.isFalse.field = field_max_width
+	plainImageMaxWidth2 {
+		data = register:containerWidth
+		if.isFalse.field = field_max_width
+	}
 	plainImageDisplay.field = field_display
 	plainImageDisplay.wrap = |;
 	plainImageMarginTop.field = field_margin_top
@@ -54,7 +56,7 @@
 		plainImageClass = class="plainImage"
 		plainImageStyles.dataWrap = style="{register:plainImageMarginTop}{register:plainImageMarginBottom}{register:plainImageMarginRight}{register:plainImageMarginLeft}{register:plainImageDisplay}{register:plainImageZindex}position:relative;"
 	}
-	2 = TEXT
+	2 = LOAD_REGISTER
 	2.plainImageStyles = class="plain-image"
 	default = LOAD_REGISTER
 	default {
@@ -72,10 +74,10 @@
 		maxW.stdWrap.dataWrap = {register:plainImageMaxWidth1}{register:plainImageMaxWidth2}
 	}
 	params.dataWrap = {register:plainImageClass} {register:plainImageStyles}
-	altText.field = field_alt_text						
+	altText.field = field_alt_text
 	stdWrap.typolink {
 		parameter.field = field_link
-		ATagParams = class="plainImageLink"
+		ATagParams = class="plain-image-link"
 	}
 }
 
@@ -192,7 +194,7 @@
 					</config>
 					<label>LLL:EXT:templavoila_framework/lang/locallang.xml:fce.imagewidth</label>
 				</TCEforms>
-			</field_max_width>			
+			</field_max_width>
 			<field_margin_top type="array">
 				<type>no_map</type>
 				<tx_templavoila type="array">
