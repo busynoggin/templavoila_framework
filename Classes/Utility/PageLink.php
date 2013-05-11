@@ -1,5 +1,5 @@
 <?php
-namespace \BusyNoggin\TemplavoilaFramework\Utility;
+namespace BusyNoggin\TemplavoilaFramework\Utility;
 
 /***************************************************************
  * Copyright notice
