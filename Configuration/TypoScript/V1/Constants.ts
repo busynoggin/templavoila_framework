@@ -4,7 +4,7 @@ siteTitle =
 # cat=Site Constants/general/b; type=string; label=Site URL: The domain for the site with the trailing slash included.(ex. http://www.mysite.com/)
 siteURL =
 
-# cat=Site Constants/general/c; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Site Logo: The path to the logo for your site which will appear in the header of every page (ex. fileadmin/images/mylogo.jpg). This setting is optional and may not be used by all skins.
+# cat=Site Constants/general/c; type=user[BusyNoggin\TemplavoilaFramework\Utility\PageLink->main]; label=Site Logo: The path to the logo for your site which will appear in the header of every page (ex. fileadmin/images/mylogo.jpg). This setting is optional and may not be used by all skins.
 siteLogo =
 
 # cat=Site Constants/general/d; type=string; label=Copyright: Copyright for the site. The current year will automatically be added before this value.
@@ -19,10 +19,10 @@ timeFormat = %I:%M %p
 # cat=Site Constants/general/g; type=options[October 22 2010 08:37 pm=%B %d %Y %I:%M %p, October 22 2010 20:37=%B %d %Y %H:%M, Oct 22 2010 08:37 pm=%b %d %Y %I:%M %p, Oct 22 2010 20:37=%b %d %Y %H:%M %p, 22 October 2010 08:37 pm=%d %B %Y %I:%M %p, 22 October 2010 20:37=%d %B %Y %H:%M, 22 Oct 08 08:37 pm=%d %b %y %I:%M %p, 22 Oct 08 20:37 pm=%d %b %y %H:%M, 10/22/08 08:37 pm=%m/%d/%y %I:%M %p, 10/22/08 20:37=%m/%d/%y %H:%M, 22.10.2010 08:37 pm=%d.%m.%Y %I:%M %p, 22.10.2010 20:37=%d.%m.%Y %H:%M]; label=Date/Time Format.
 dateTimeFormat = %m/%d/%y %I:%M %p
 
-# cat=Site Constants/general/h; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 1: Page ID of the primary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
+# cat=Site Constants/general/h; type=user[BusyNoggin\TemplavoilaFramework\Utility\PageLink->main]; label=Generated Content 1: Page ID of the primary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
 generatedContent-1.source =
 
-# cat=Site Constants/general/i; type=user[EXT:templavoila_framework/class.tx_templavoilaframework_pagelink.php:&tx_templavoilaframework_pagelink->main]; label=Generated Content 2: Page ID of the secondary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
+# cat=Site Constants/general/i; type=user[BusyNoggin\TemplavoilaFramework\Utility\PageLink->main]; label=Generated Content 2: Page ID of the secondary SysFolder for generated content. This SysFolder can contain menus, advertisements, and other content that appears on many pages throughout your site.
 generatedContent-2.source =
 
 # This includes jQuery, enables jQuery.noConflict, and includes core.js for equal height modules.
