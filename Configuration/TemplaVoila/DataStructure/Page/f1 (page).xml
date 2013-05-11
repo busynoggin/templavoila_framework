@@ -176,7 +176,7 @@
 	}
 	default = LOAD_REGISTER
 	default {
-		tvfwBlockBeginWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin--><h3 style="background:red;color:white;padding:10px;">You must declare a rendering mode in your skin constants <a href="http://www.busynoggin.com/" style="color:white;text-decoration:underline;">more info</a></h3>
+		tvfwBlockBeginWrap = <div id="contentBlock-1"><!--TYPO3SEARCH_begin--><h3 style="background:red;color:white;padding:10px;">You must declare a rendering mode in the first line of your skin constants using the constant "plugin.tx_templavoilaframework.renderMode" values are "1" for version 1 skins and "2" for version 2 skins.</h3>
 		tvfwBlockEndWrap = <!--TYPO3SEARCH_end--><div class="clearOnly">&nbsp;</div></div>
 		containerWidth = {$containerWidth}
 	}
