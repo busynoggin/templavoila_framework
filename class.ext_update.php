@@ -61,11 +61,11 @@ class ext_update {
 			if ($this->pageHasTemplateObjects($pid) && !$this->justImported) {
 				$flashSubject = 'Found Existing Template Objects';
 				$flashText = 'The SysFolder you\'ve selected for import already contains TemplaVoila Template Objects. Clicking the import button will create new Template Objects in addition to existing Template Objects.';
-				$flashSeverity = t3lib_flashMessage::WARNING;
+				$flashSeverity = \TYPO3\CMS\Core\Utility\GeneralUtility::WARNING;
 			}
 
 			if ($flashText) {
-				$flashMessage = t3lib_div::makeInstance('t3lib_flashMessage', $flashText, $flashSubject, $flashSeverity);
+				$flashMessage = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Messaging\\FlashMessage', $flashText, $flashSubject, $flashSeverity);
 				$content[] = $flashMessage->render();
 			}
 		}
@@ -141,7 +141,7 @@ class ext_update {
 		$data = null;
 
 		if(@is_file($templateObjectPath)) {
-			$import = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeInstance('TYPO3\\CMS\\Impexp\\ImportExport');
+			$import = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Impexp\\ImportExport');
 			$import->init(0, 'import');
 			$import->enableLogging = TRUE;
 
