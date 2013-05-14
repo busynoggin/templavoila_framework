@@ -147,6 +147,10 @@
 	border: none;
 }
 
+.t3-row-header {
+	height: auto;
+}
+
 
 
 /* added because we replace not just add to TV stylesheet */
