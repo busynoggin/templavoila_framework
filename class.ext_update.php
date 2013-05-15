@@ -61,7 +61,7 @@ class ext_update {
 			if ($this->pageHasTemplateObjects($pid) && !$this->justImported) {
 				$flashSubject = 'Found Existing Template Objects';
 				$flashText = 'The SysFolder you\'ve selected for import already contains TemplaVoila Template Objects. Clicking the import button will create new Template Objects in addition to existing Template Objects.';
-				$flashSeverity = \TYPO3\CMS\Core\Utility\GeneralUtility::WARNING;
+				$flashSeverity = \TYPO3\CMS\Core\Messaging\FlashMessage::WARNING;
 			}
 
 			if ($flashText) {
