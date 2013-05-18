@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Framework for TemplaVoila',
+	'title' => 'TemplaVoila Framework',
 	'description' => 'Implementation of the BusyNoggin Framework for TemplaVoila as a TYPO3 extension. See http://templavoila.busynoggin.com for more info.',
 	'category' => 'fe',
 	'shy' => 0,
