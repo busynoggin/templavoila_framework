@@ -5,7 +5,7 @@
     * optional: soft carriage return preferred.
 
 
-.. include:: /../Includes/MainInclude.txt
+.. include:: /Includes/MainInclude.txt
 
 ================================
 Editor Experience & Back End Layout
@@ -39,7 +39,6 @@ The page we are using as an example looks like this on the front end. The page t
     :width: 200
     :alt: Example Page
     :align: left
-    target: `a name`_
 
 **Standard Layout with TemplaVoila**
 

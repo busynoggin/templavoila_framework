@@ -5,7 +5,7 @@
     * optional: soft carriage return preferred.
 
 
-.. include:: /../Includes/MainInclude.txt
+.. include:: /Includes/MainInclude.txt
 
 ================================
 What's New in Version 2
