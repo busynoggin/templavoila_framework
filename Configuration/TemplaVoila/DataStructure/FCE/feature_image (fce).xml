@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<ROOT type="array">
+		<tx_templavoila type="array">
+			<title>ROOT</title>
+			<description>Inner mapping to #root-mapping-hook</description>
+		</tx_templavoila>
+		<type>array</type>
+		<el type="array">
+			<field_space_after type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<preview>disable</preview>
+					<title>Space After</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+					<TypoScript>
+<![CDATA[
+
+10 = CASE
+10 {
+	key.field = field_space_after
+
+	Normal = LOAD_REGISTER
+	Normal {
+		tvfwMarginBottom.data = register:moduleBodyTopBuffer
+		tvfwMarginBottom.noTrimWrap = | margin-bottom: |px;|
+	}
+
+	default = LOAD_REGISTER
+	default {
+		tvfwMarginBottom.field = field_space_after
+		tvfwMarginBottom.noTrimWrap = | margin-bottom: |px;|
+	}
+}
+
+]]>
+                    </TypoScript>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.spaceafter.normal</numIndex>
+								<numIndex index="1">Normal</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">0</numIndex>
+								<numIndex index="1">0</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">5</numIndex>
+								<numIndex index="1">5</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">10</numIndex>
+								<numIndex index="1">10</numIndex>
+							</numIndex>
+							<numIndex index="4" type="array">
+								<numIndex index="0">15</numIndex>
+								<numIndex index="1">15</numIndex>
+							</numIndex>
+							<numIndex index="5" type="array">
+								<numIndex index="0">20</numIndex>
+								<numIndex index="1">20</numIndex>
+							</numIndex>
+							<numIndex index="6" type="array">
+								<numIndex index="0">25</numIndex>
+								<numIndex index="1">25</numIndex>
+							</numIndex>
+							<numIndex index="7" type="array">
+								<numIndex index="0">30</numIndex>
+								<numIndex index="1">30</numIndex>
+							</numIndex>
+							<numIndex index="8" type="array">
+								<numIndex index="0">35</numIndex>
+								<numIndex index="1">35</numIndex>
+							</numIndex>
+							<numIndex index="9" type="array">
+								<numIndex index="0">40</numIndex>
+								<numIndex index="1">40</numIndex>
+							</numIndex>
+							<numIndex index="10" type="array">
+								<numIndex index="0">45</numIndex>
+								<numIndex index="1">45</numIndex>
+							</numIndex>
+							<numIndex index="11" type="array">
+								<numIndex index="0">50</numIndex>
+								<numIndex index="1">50</numIndex>
+							</numIndex>
+						</items>
+						<default>Normal</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.spaceafter.label</label>
+				</TCEforms>
+			</field_space_after>
+			<field_image type="array">
+				<tx_templavoila type="array">
+					<title>Image</title>
+					<description>Outer mapping to #image-mapping-hook</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>image</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+
+10 = LOAD_REGISTER
+10 {
+	tempMaxImageWidth.data = register:containerWidth
+	tempMaxImageWidth.dataWrap = |+({register:moduleBodyLeftBuffer}+{register:moduleBodyRightBuffer})
+	maxImageWidth.data = register:tempMaxImageWidth
+	maxImageWidth.prioriCalc = intval
+}
+
+## Write the opening HTML based on whether v1 or v2 rendering
+15 = CASE
+15 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">
+	2 = TEXT
+	2.dataWrap = <div class="module-feature module-feature-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">
+}
+
+
+20 = IMAGE
+20 {
+	file {
+		import = uploads/tx_templavoila/
+		import {
+			current = 1
+			listNum = 0
+		}
+		maxW.stdWrap.dataWrap = {register:maxImageWidth}
+	}
+	altText.field = field_alt_text
+	stdWrap.typolink.parameter.field = field_link
+	stdWrap.wrap = |</div>
+}
+
+30 = RESTORE_REGISTER
+
+40 = LOAD_REGISTER
+40 {
+	tempAggregateCss.data = register:aggregateCss
+	tvfwModFeatureStyles.dataWrap = display:block;margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:tvfwMarginBottom};
+	thisCss {
+		data = register:tvfwModFeatureStyles
+		dataWrap = .module-feature-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {|}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+}
+
+]]>
+					</TypoScript>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>file</internal_type>
+						<allowed>gif,png,jpg,jpeg</allowed>
+						<max_size>1000</max_size>
+						<uploadfolder>uploads/tx_templavoila</uploadfolder>
+						<show_thumbs>1</show_thumbs>
+						<size>1</size>
+						<maxitems>1</maxitems>
+						<minitems>0</minitems>
+					</config>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.image</label>
+				</TCEforms>
+			</field_image>
+			<field_alt_text type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<preview>disable</preview>
+					<title>Alt Image Text</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>input</eType>
+					<proc type="array">
+						<HSC type="integer">1</HSC>
+					</proc>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>input</type>
+						<size>48</size>
+						<eval>trim</eval>
+					</config>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.alttext</label>
+				</TCEforms>
+			</field_alt_text>
+			<field_link type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<preview>disable</preview>
+					<title>Link</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>link</eType>
+					<proc type="array">
+						<HSC type="integer">1</HSC>
+					</proc>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>input</type>
+						<size>15</size>
+						<max>256</max>
+						<checkbox></checkbox>
+						<eval>trim</eval>
+						<wizards type="array">
+							<_PADDING type="integer">2</_PADDING>
+							<link type="array">
+								<type>popup</type>
+								<title>Link</title>
+								<icon>link_popup.gif</icon>
+								<script>browse_links.php?mode=wizard</script>
+								<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+							</link>
+						</wizards>
+					</config>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.link</label>
+				</TCEforms>
+			</field_link>
+		</el>
+	</ROOT>
+</T3DataStructure>

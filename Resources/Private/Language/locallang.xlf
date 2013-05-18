@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-04-27T01:05:15Z" product-name="templavoila_framework">
+		<header/>
+		<body>
+			<trans-unit id="pages.ds.f1.title" xml:space="preserve">
+				<source>F1 Series: Feature and Main Content</source>
+			</trans-unit>
+			<trans-unit id="pages.ds.f2.title" xml:space="preserve">
+				<source>F2 Series: Feature, Main Content and Content Area 2</source>
+			</trans-unit>
+			<trans-unit id="pages.ds.f3.title" xml:space="preserve">
+				<source>F3 Series: Feature, Main Content, Content Area 2 and Content Area 3</source>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.label" xml:space="preserve">
+				<source>Page Title as Content Headline</source>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.on" xml:space="preserve">
+				<source>On</source>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.off" xml:space="preserve">
+				<source>Off</source>
+			</trans-unit>
+			<trans-unit id="pages.bleed.label" xml:space="preserve">
+				<source>Bleed Feature Content</source>
+			</trans-unit>
+			<trans-unit id="pages.bleed.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="pages.bleed.on" xml:space="preserve">
+				<source>Bleed</source>
+			</trans-unit>
+			<trans-unit id="pages.bleed.off" xml:space="preserve">
+				<source>Do Not Bleed</source>
+			</trans-unit>
+			<trans-unit id="pages.tabs.feature" xml:space="preserve">
+				<source>Feature</source>
+			</trans-unit>
+			<trans-unit id="pages.tabs.main_content" xml:space="preserve">
+				<source>Main Content</source>
+			</trans-unit>
+			<trans-unit id="pages.tabs.content_area2" xml:space="preserve">
+				<source>Content Area 2</source>
+			</trans-unit>
+			<trans-unit id="pages.tabs.content_area3" xml:space="preserve">
+				<source>Content Area 3</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.col2.title" xml:space="preserve">
+				<source>2 Column Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.col3.title" xml:space="preserve">
+				<source>3 Column Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.col4.title" xml:space="preserve">
+				<source>4 Column Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod1.title" xml:space="preserve">
+				<source>M1: Single Module Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod2.title" xml:space="preserve">
+				<source>M2: Dual Module Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod3.title" xml:space="preserve">
+				<source>M3: Triple Module Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod4.title" xml:space="preserve">
+				<source>M4: Quad Module Group</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.plain_image.title" xml:space="preserve">
+				<source>Plain Image</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.feature_image.title" xml:space="preserve">
+				<source>Module Feature Image</source>
+			</trans-unit>
+			<trans-unit id="fce.ds.html_wrapper.title" xml:space="preserve">
+				<source>HTML Wrapper</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.label" xml:space="preserve">
+				<source>Distribution</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.1212" xml:space="preserve">
+				<source>Half Half</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.1323" xml:space="preserve">
+				<source>Third / Two Third</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.2313" xml:space="preserve">
+				<source>Two Third / Third</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.3414" xml:space="preserve">
+				<source>Three Quarter / Quarter</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.1434" xml:space="preserve">
+				<source>Quarter / Three Quarter</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.131313" xml:space="preserve">
+				<source>Third Third Third</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.121414" xml:space="preserve">
+				<source>Half Quarter Quarter</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.141214" xml:space="preserve">
+				<source>Quarter Half Quarter</source>
+			</trans-unit>
+			<trans-unit id="fce.distribution.141412" xml:space="preserve">
+				<source>Quarter Quarter Half</source>
+			</trans-unit>
+			<trans-unit id="fce.bottomRule.label" xml:space="preserve">
+				<source>Bottom Rule</source>
+			</trans-unit>
+			<trans-unit id="fce.col2.header" xml:space="preserve">
+				<source>2 Column Group</source>
+			</trans-unit>
+			<trans-unit id="fce.col3.header" xml:space="preserve">
+				<source>3 Column Group</source>
+			</trans-unit>
+			<trans-unit id="fce.col4.header" xml:space="preserve">
+				<source>4 Column Group</source>
+			</trans-unit>
+			<trans-unit id="fce.mod1.header" xml:space="preserve">
+				<source>Single Module</source>
+			</trans-unit>
+			<trans-unit id="fce.mod1.title" xml:space="preserve">
+				<source>MODULE 1: Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod1.showTitle.label" xml:space="preserve">
+				<source>MODULE 1: Show Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod1.bleed" xml:space="preserve">
+				<source>MODULE 1: Bleed (edge to edge)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod1.colStyle" xml:space="preserve">
+				<source>MODULE 1: Column Style (no frame)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod2.header" xml:space="preserve">
+				<source>Dual Module</source>
+			</trans-unit>
+			<trans-unit id="fce.mod2.title" xml:space="preserve">
+				<source>MODULE 2: Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod2.showTitle.label" xml:space="preserve">
+				<source>MODULE 2: Show Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod2.bleed" xml:space="preserve">
+				<source>MODULE 2: Bleed (edge to edge)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod2.colStyle" xml:space="preserve">
+				<source>MODULE 2: Column Style (no frame)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod3.header" xml:space="preserve">
+				<source>Triple Module</source>
+			</trans-unit>
+			<trans-unit id="fce.mod3.title" xml:space="preserve">
+				<source>MODULE 3: Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod3.showTitle.label" xml:space="preserve">
+				<source>MODULE 3: Show Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod3.bleed" xml:space="preserve">
+				<source>MODULE 3: Bleed (edge to edge)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod3.colStyle" xml:space="preserve">
+				<source>MODULE 3: Column Style (no frame)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod4.header" xml:space="preserve">
+				<source>Quad Module</source>
+			</trans-unit>
+			<trans-unit id="fce.mod4.title" xml:space="preserve">
+				<source>MODULE 4: Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod4.showTitle.label" xml:space="preserve">
+				<source>MODULE 4: Show Title</source>
+			</trans-unit>
+			<trans-unit id="fce.mod4.bleed" xml:space="preserve">
+				<source>MODULE 4: Bleed (edge to edge)</source>
+			</trans-unit>
+			<trans-unit id="fce.mod4.colStyle" xml:space="preserve">
+				<source>MODULE 4: Column Style (no frame)</source>
+			</trans-unit>
+			<trans-unit id="fce.html_wrapper.header" xml:space="preserve">
+				<source>Special HTML Wrapper</source>
+			</trans-unit>
+			<trans-unit id="fce.prehtml.label" xml:space="preserve">
+				<source>Pre HTML</source>
+			</trans-unit>
+			<trans-unit id="fce.posthtml.label" xml:space="preserve">
+				<source>Post HTML</source>
+			</trans-unit>
+			<trans-unit id="fce.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="fce.link" xml:space="preserve">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="fce.alttext" xml:space="preserve">
+				<source>Alt Image Text</source>
+			</trans-unit>
+			<trans-unit id="fce.imagewidth" xml:space="preserve">
+				<source>Image Width (Leave default of 0 to restrain to container width)</source>
+			</trans-unit>
+			<trans-unit id="fce.margintop" xml:space="preserve">
+				<source>Margin-Top</source>
+			</trans-unit>
+			<trans-unit id="fce.marginbottom" xml:space="preserve">
+				<source>Margin-Bottom</source>
+			</trans-unit>
+			<trans-unit id="fce.marginleft" xml:space="preserve">
+				<source>Margin-Left</source>
+			</trans-unit>
+			<trans-unit id="fce.marginright" xml:space="preserve">
+				<source>Margin-Right</source>
+			</trans-unit>
+			<trans-unit id="fce.zindex" xml:space="preserve">
+				<source>Z-Index (Determines stacking order. Normally left blank)</source>
+			</trans-unit>
+			<trans-unit id="fce.display.label" xml:space="preserve">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="fce.display.inline" xml:space="preserve">
+				<source>Normal (inline)</source>
+			</trans-unit>
+			<trans-unit id="fce.display.left" xml:space="preserve">
+				<source>Float Left</source>
+			</trans-unit>
+			<trans-unit id="fce.display.right" xml:space="preserve">
+				<source>Float Right</source>
+			</trans-unit>
+			<trans-unit id="fce.display.block" xml:space="preserve">
+				<source>Display Block</source>
+			</trans-unit>
+			<trans-unit id="fce.selector.default" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="fce.selector.on" xml:space="preserve">
+				<source>On</source>
+			</trans-unit>
+			<trans-unit id="fce.selector.off" xml:space="preserve">
+				<source>Off</source>
+			</trans-unit>
+			<trans-unit id="fce.selector.bleedDefault" xml:space="preserve">
+				<source>Default</source>
+			</trans-unit>
+			<trans-unit id="fce.selector.bleedOn" xml:space="preserve">
+				<source>Bleed</source>
+			</trans-unit>
+			<trans-unit id="fce.selector.bleedOff" xml:space="preserve">
+				<source>Do Not Bleed</source>
+			</trans-unit>
+			<trans-unit id="fce.spaceafter.label" xml:space="preserve">
+				<source>Space After</source>
+			</trans-unit>
+			<trans-unit id="fce.spaceafter.normal" xml:space="preserve">
+				<source>Normal</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

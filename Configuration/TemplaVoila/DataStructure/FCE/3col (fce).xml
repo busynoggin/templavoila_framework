@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable>1</langDisable>
+		<disableDataPreview>1</disableDataPreview>
+	</meta>
+	<ROOT type="array">
+		<tx_templavoila type="array">
+			<title>ROOT</title>
+			<description>Inner mapping to #root-mapping-hook</description>
+		</tx_templavoila>
+		<type>array</type>
+		<el type="array">
+			<field_column_distribution type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>Column Distribution</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.131313</numIndex>
+								<numIndex index="1">131313</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.121414</numIndex>
+								<numIndex index="1">121414</numIndex>
+							</numIndex>
+							<numIndex index="2" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.141214</numIndex>
+								<numIndex index="1">141214</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.141412</numIndex>
+								<numIndex index="1">141412</numIndex>
+							</numIndex>
+						</items>
+						<default>131313</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.distribution.label</label>
+				</TCEforms>
+			</field_column_distribution>
+			<field_group_rule type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>Bottom Rule</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>select</eType>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>select</type>
+						<items type="array">
+							<numIndex index="0" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.default</numIndex>
+								<numIndex index="1">0</numIndex>
+							</numIndex>
+							<numIndex index="1" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.on</numIndex>
+								<numIndex index="1">1</numIndex>
+							</numIndex>
+							<numIndex index="3" type="array">
+								<numIndex index="0">LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.selector.off</numIndex>
+								<numIndex index="1">2</numIndex>
+							</numIndex>
+						</items>
+						<default>0</default>
+					</config>
+					<label>LLL:EXT:templavoila_framework/Resources/Private/Language/locallang.xlf:fce.bottomRule.label</label>
+				</TCEforms>
+			</field_group_rule>
+			<field_column_group_library type="array">
+				<type>no_map</type>
+				<tx_templavoila type="array">
+					<title>Column Group Library</title>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>TypoScriptObject</eType>
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.columnGroupSetup</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_column_group_library>
+			<field_column_1 type="array">
+				<tx_templavoila type="array">
+					<title>Column 1</title>
+					<description>Outer to first column</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>ce</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+## If this is not a nested column group then record column widths and the column 2 distribution class to be able to retrieve later in nested column situations
+10 = COA
+10 {
+	if.isFalse.data = register:nestingLevel
+	10 = LOAD_REGISTER
+	10 {
+		originalColumnWidth1.data = register:columnWidth1
+		originalColumnWidth2.data = register:columnWidth2
+		originalColumnWidth3.data = register:columnWidth3
+		originalClassColumn2Distribution.data = register:classColumn2Distribution
+		originalClassColumn3Distribution.data = register:classColumn3Distribution
+	}
+}
+
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page.
+## Also, let system know there is a content element present for when it is in the feature content block
+15 = LOAD_REGISTER
+15 {
+	columnGroupWidth.data = register:containerWidth
+	containerWidth.data = register:columnWidth1
+	maxImageWidth.data = register:containerWidth
+	containerElementPresent = 1
+	tempAggregateCss.data = register:aggregateCss
+	thisCss {
+		data = register:containerWidth
+		dataWrap = .column-1-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {width:|px;}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+}
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+20 = COA
+20 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+
+## Record current nesting level
+25 = CASE
+25 {
+	key.data = register:nestingLevel
+	default = LOAD_REGISTER
+	default.nestingLevel = 1
+	1 = LOAD_REGISTER
+	1 {
+		nestingLevel = 2
+		level1ContainerWidth.data = register:columnGroupWidth
+	}
+}
+
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+30 = CASE
+30 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.dataWrap = <div class="{register:columnGroupClass} threeColumnGroup"><div class="column column-1{register:classColumn1Distribution}" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
+	2 = TEXT
+	2.dataWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="{register:columnGroupClass} threeColumnGroup"><div class="column column-1{register:classColumn1Distribution}" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
+}
+
+## Render the records
+40 = RECORDS
+40 {
+	source.current = 1
+	tables = tt_content
+}
+
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+50 = TEXT
+50.value = </div>
+
+]]>
+
+                    </TypoScript>
+					<enableDragDrop>1</enableDragDrop>
+					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tt_content</allowed>
+						<size>5</size>
+						<maxitems>200</maxitems>
+						<minitems>0</minitems>
+						<multiple>1</multiple>
+						<show_thumbs>1</show_thumbs>
+					</config>
+					<label></label>
+				</TCEforms>
+			</field_column_1>
+			<field_column_2 type="array">
+				<tx_templavoila type="array">
+					<title>Column 2</title>
+					<description>Outer to second column</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>ce</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+## check the nesting level and set containerWidth accordingly
+10 = CASE
+10 {
+	key.data = register:nestingLevel
+	default = LOAD_REGISTER
+	default {
+		containerWidth.data = register:columnWidth2
+	}
+	1 = LOAD_REGISTER
+	1 {
+		containerWidth.data = register:originalColumnWidth2
+	}
+}
+
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+15 = LOAD_REGISTER
+15 {
+	maxImageWidth.data = register:containerWidth
+	tempAggregateCss.data = register:aggregateCss
+	thisCss {
+		data = register:containerWidth
+		dataWrap = .column-2-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {width:|px;}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+}
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+20 = COA
+20 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+30 = CASE
+30 {
+	key.data = register:nestingLevel
+	2 = CASE
+	2 {
+		key.data = register:tvfwRenderMode
+		1 = TEXT
+		1.dataWrap = <div class="column column-2{register:classColumn2Distribution}" style="width:{register:containerWidth}px;float:left;">
+		2 = TEXT
+		2.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		default = TEXT
+		default.dataWrap = <div class="column column-2{register:classColumn2Distribution}" style="width:{register:containerWidth}px;float:left;">
+	}
+	default = CASE
+	default {
+		key.data = register:tvfwRenderMode
+		1 = TEXT
+		1.dataWrap = <div class="column column-2{register:originalClassColumn2Distribution}" style="width:{register:containerWidth}px;float:left;">
+		2 = TEXT
+		2.dataWrap = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		default = TEXT
+		default.dataWrap = <div class="column column-2{register:originalClassColumn2Distribution}" style="width:{register:containerWidth}px;float:left;">
+	}
+}
+
+## Render the records
+40 = RECORDS
+40 {
+	source.current = 1
+	tables = tt_content
+}
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+50 = TEXT
+50.value = </div>
+]]>
+
+                    </TypoScript>
+					<enableDragDrop>1</enableDragDrop>
+					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tt_content</allowed>
+						<size>5</size>
+						<maxitems>200</maxitems>
+						<minitems>0</minitems>
+						<multiple>1</multiple>
+						<show_thumbs>1</show_thumbs>
+					</config>
+					<label></label>
+				</TCEforms>
+			</field_column_2>
+			<field_column_3 type="array">
+				<tx_templavoila type="array">
+					<title>Column 3</title>
+					<description>Outer to third column</description>
+					<sample_data type="array">
+						<numIndex index="0"></numIndex>
+					</sample_data>
+					<eType>ce</eType>
+					<tags>div:outer</tags>
+					<TypoScript>
+<![CDATA[
+## check the nesting level and set containerWidth accordingly
+10 = CASE
+10 {
+	key.data = register:nestingLevel
+	default = LOAD_REGISTER
+	default {
+		containerWidth.data = register:columnWidth3
+	}
+	1 = LOAD_REGISTER
+	1 {
+		containerWidth.data = register:originalColumnWidth3
+	}
+}
+
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+15 = LOAD_REGISTER
+15 {
+	maxImageWidth.data = register:containerWidth
+	tempAggregateCss.data = register:aggregateCss
+	thisCss {
+		data = register:containerWidth
+		dataWrap = .column-3-c{register:tx_templavoila_pi1.parentRec.uid} |
+		noTrimWrap = | {width:|px;}|
+	}
+	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+}
+
+## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
+## Had to make this a COA in order to get the if statement to work correctly
+20 = COA
+20 {
+	if {
+		value.data = register:maxImageWidth
+		isGreaterThan.data = register:tempMinFullImageWidth
+	}
+	10 = LOAD_REGISTER
+	10.maxImageWidth.data = register:tempMinFullImageWidth
+}
+
+## Write the opening HTML for the column based on whether v1 or v2 rendering
+30 = CASE
+30 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.dataWrap = <div class="column column-3{register:classColumn3Distribution}" style="width:{register:containerWidth}px;float:right;">
+	2 = TEXT
+	2.dataWrap = <div class="column{register:classColumn3Distribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+	default = TEXT
+	default.dataWrap = <div class="column column-3{register:classColumn3Distribution}" style="width:{register:containerWidth}px;float:right;">
+}
+
+## Render the records
+40 = RECORDS
+40 {
+	source.current = 1
+	tables = tt_content
+}
+
+## Write the ending HTML for the column based on whether v1 or v2 rendering
+50 = CASE
+50 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .threeColumnGroup  -->
+	2 = TEXT
+	2.dataWrap = </div></div><!-- end .threeColumnGroup  -->
+	default = TEXT
+	default.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .threeColumnGroup  -->
+}
+
+## Set nesting level and containerWidth to what they should be based on nesting level
+90 = CASE
+90 {
+	key.data = register:nestingLevel
+	default = LOAD_REGISTER
+	default {
+		nestingLevel = 0
+		containerWidth.data = register:originalContainerWidth
+		maxImageWidth.data = register:containerWidth
+	}
+	2 = LOAD_REGISTER
+	2 {
+		nestingLevel = 1
+		containerWidth.data = register:level1ContainerWidth
+		maxImageWidth.data = register:containerWidth
+	}
+}
+]]>
+                    </TypoScript>
+					<enableDragDrop>1</enableDragDrop>
+					<oldStyleColumnNumber type="integer">1</oldStyleColumnNumber>
+				</tx_templavoila>
+				<TCEforms type="array">
+					<config type="array">
+						<type>group</type>
+						<internal_type>db</internal_type>
+						<allowed>tt_content</allowed>
+						<size>5</size>
+						<maxitems>200</maxitems>
+						<minitems>0</minitems>
+						<multiple>1</multiple>
+						<show_thumbs>1</show_thumbs>
+					</config>
+					<label></label>
+				</TCEforms>
+			</field_column_3>
+		</el>
+	</ROOT>
+</T3DataStructure>

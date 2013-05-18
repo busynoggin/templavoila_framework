@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<ROOT type="array">
+		<el type="array">
+			<field_feature type="array">
+				<tx_templavoila type="array">
+					<TypoScript_constants>
+<containerWidth>{$containerWidth.f1a.feature}</containerWidth>
+<templateKey>f1a</templateKey>
+<fieldKey>feature</fieldKey>
+                    </TypoScript_constants>
+				</tx_templavoila>
+			</field_feature>
+			<field_content_block_1 type="array">
+				<tx_templavoila type="array">
+					<TypoScript_constants>
+<containerWidth>{$containerWidth.f1a.contentBlock-1}</containerWidth>
+<templateKey>f1a</templateKey>
+<fieldKey>contentBlock-1</fieldKey>
+<maxRenderMode>2</maxRenderMode>
+                    </TypoScript_constants>
+				</tx_templavoila>
+			</field_content_block_1>
+			<field_pre_code_header type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPreCodeHeader</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_header>
+			<field_header type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedHeader</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_header>
+			<field_post_code_header type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPostCodeHeader</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_header>
+			<field_pre_code_feature type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPreCodeFeature</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_feature>
+			<field_post_code_feature type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPostCodeFeature</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_feature>
+			<field_pre_code_content type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPreCodeContent</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_content>
+			<field_pre_code_content_block_1 type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPreCodeContentBlock-1</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_content_block_1>
+			<field_post_code_content_block_1 type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPostContentBlock-1</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_content_block_1>
+			<field_pre_code_footer type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPreCodeFooter</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_footer>
+			<field_footer type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedFooter</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_footer>
+			<field_post_code_footer type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f1a.evaluatedPostCodeFooter</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_footer>
+		</el>
+	</ROOT>
+</T3DataStructure>

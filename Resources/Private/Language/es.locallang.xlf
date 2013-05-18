@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="es" datatype="plaintext" original="messages" date="2013-04-27T01:05:15Z" product-name="templavoila_framework">
+		<header/>
+		<body>
+			<trans-unit id="pages.ds.f1.title" xml:space="preserve" approved="yes">
+				<source>F1 Series: Feature and Main Content</source>
+				<target>Series F1: Destacado y contenido principal</target>
+			</trans-unit>
+			<trans-unit id="pages.ds.f2.title" xml:space="preserve" approved="yes">
+				<source>F2 Series: Feature, Main Content and Content Area 2</source>
+				<target>Series F2: Destacado, contenido principal y area de contenido 2</target>
+			</trans-unit>
+			<trans-unit id="pages.ds.f3.title" xml:space="preserve" approved="yes">
+				<source>F3 Series: Feature, Main Content, Content Area 2 and Content Area 3</source>
+				<target>Series F3: Destacado, contenido principal, area de contenido 2 y area de contenido 3</target>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.label" xml:space="preserve" approved="yes">
+				<source>Page Title as Content Headline</source>
+				<target>Titulo de pagina como cabecera de contenido</target>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.default" xml:space="preserve" approved="yes">
+				<source>Default</source>
+				<target>Default</target>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.on" xml:space="preserve" approved="yes">
+				<source>On</source>
+				<target>On</target>
+			</trans-unit>
+			<trans-unit id="pages.autoHeadline.off" xml:space="preserve" approved="yes">
+				<source>Off</source>
+				<target>Off</target>
+			</trans-unit>
+			<trans-unit id="pages.bleed.label" xml:space="preserve" approved="yes">
+				<source>Bleed Feature Content</source>
+				<target>Contenido destacado sangrado</target>
+			</trans-unit>
+			<trans-unit id="pages.bleed.default" xml:space="preserve" approved="yes">
+				<source>Default</source>
+				<target>Default</target>
+			</trans-unit>
+			<trans-unit id="pages.bleed.on" xml:space="preserve" approved="yes">
+				<source>Bleed</source>
+				<target>Sangrado</target>
+			</trans-unit>
+			<trans-unit id="pages.bleed.off" xml:space="preserve" approved="yes">
+				<source>Do Not Bleed</source>
+				<target>No sangrar</target>
+			</trans-unit>
+			<trans-unit id="pages.tabs.feature" xml:space="preserve" approved="yes">
+				<source>Feature</source>
+				<target>Destacado</target>
+			</trans-unit>
+			<trans-unit id="pages.tabs.main_content" xml:space="preserve" approved="yes">
+				<source>Main Content</source>
+				<target>Contenido principal</target>
+			</trans-unit>
+			<trans-unit id="pages.tabs.content_area2" xml:space="preserve" approved="yes">
+				<source>Content Area 2</source>
+				<target>Area de contenido 2</target>
+			</trans-unit>
+			<trans-unit id="pages.tabs.content_area3" xml:space="preserve" approved="yes">
+				<source>Content Area 3</source>
+				<target>Area de contenido 3</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.col2.title" xml:space="preserve" approved="yes">
+				<source>2 Column Group</source>
+				<target>Grupo de 2 columnas</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.col3.title" xml:space="preserve" approved="yes">
+				<source>3 Column Group</source>
+				<target>Grupo de 3 columnas</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.col4.title" xml:space="preserve" approved="yes">
+				<source>4 Column Group</source>
+				<target>Grupo de 4 columnas</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod1.title" xml:space="preserve" approved="yes">
+				<source>M1: Single Module Group</source>
+				<target>M1: Grupo en un unico modulo (caja)</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod2.title" xml:space="preserve" approved="yes">
+				<source>M2: Dual Module Group</source>
+				<target>M2: Grupo de dos modulos (cajas)</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod3.title" xml:space="preserve" approved="yes">
+				<source>M3: Triple Module Group</source>
+				<target>M3: Grupo de 3 modulos (cajas)</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.mod4.title" xml:space="preserve" approved="yes">
+				<source>M4: Quad Module Group</source>
+				<target>M4: Grupo de 4 modulos (cajas)</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.plain_image.title" xml:space="preserve" approved="yes">
+				<source>Plain Image</source>
+				<target>Imagen plana</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.feature_image.title" xml:space="preserve" approved="yes">
+				<source>Module Feature Image</source>
+				<target>Modulo de imagen destacada</target>
+			</trans-unit>
+			<trans-unit id="fce.ds.html_wrapper.title" xml:space="preserve" approved="yes">
+				<source>HTML Wrapper</source>
+				<target>Envoltorio HTML</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.label" xml:space="preserve" approved="yes">
+				<source>Distribution</source>
+				<target>Distribucion</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.1212" xml:space="preserve" approved="yes">
+				<source>Half Half</source>
+				<target>Mitad y mitad</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.1323" xml:space="preserve" approved="yes">
+				<source>Third / Two Third</source>
+				<target>Un tercio / dos tercios</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.2313" xml:space="preserve" approved="yes">
+				<source>Two Third / Third</source>
+				<target>Dos tercios / un tercio</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.3414" xml:space="preserve" approved="yes">
+				<source>Three Quarter / Quarter</source>
+				<target>Tres cuartos / un cuarto</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.1434" xml:space="preserve" approved="yes">
+				<source>Quarter / Three Quarter</source>
+				<target>Un cuarto / tres cuartos</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.131313" xml:space="preserve" approved="yes">
+				<source>Third Third Third</source>
+				<target>Un tercio, un tercio, un tercio</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.121414" xml:space="preserve" approved="yes">
+				<source>Half Quarter Quarter</source>
+				<target>Medio Cuarto Cuarto</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.141214" xml:space="preserve" approved="yes">
+				<source>Quarter Half Quarter</source>
+				<target>Cuarto Mitad Cuarto</target>
+			</trans-unit>
+			<trans-unit id="fce.distribution.141412" xml:space="preserve" approved="yes">
+				<source>Quarter Quarter Half</source>
+				<target>Cuarto Cuarto Mitad</target>
+			</trans-unit>
+			<trans-unit id="fce.bottomRule.label" xml:space="preserve" approved="yes">
+				<source>Bottom Rule</source>
+				<target>Linea inferior</target>
+			</trans-unit>
+			<trans-unit id="fce.col2.header" xml:space="preserve" approved="yes">
+				<source>2 Column Group</source>
+				<target>Grupo de 2 columnas</target>
+			</trans-unit>
+			<trans-unit id="fce.col3.header" xml:space="preserve" approved="yes">
+				<source>3 Column Group</source>
+				<target>Grupo de 3 columnas</target>
+			</trans-unit>
+			<trans-unit id="fce.col4.header" xml:space="preserve" approved="yes">
+				<source>4 Column Group</source>
+				<target>Grupo de 4 columnas</target>
+			</trans-unit>
+			<trans-unit id="fce.mod1.header" xml:space="preserve" approved="yes">
+				<source>Single Module</source>
+				<target>Grupo en un unico modulo (caja)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod1.title" xml:space="preserve" approved="yes">
+				<source>MODULE 1: Title</source>
+				<target>MODULO 1: Titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod1.showTitle.label" xml:space="preserve" approved="yes">
+				<source>MODULE 1: Show Title</source>
+				<target>MODULO 1: Mostrar titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod1.bleed" xml:space="preserve" approved="yes">
+				<source>MODULE 1: Bleed (edge to edge)</source>
+				<target>MODULO 1: Sangrar (borde a borde)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod1.colStyle" xml:space="preserve" approved="yes">
+				<source>MODULE 1: Column Style (no frame)</source>
+				<target>MODULO 1: Estilo de columna (sin marco)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod2.header" xml:space="preserve" approved="yes">
+				<source>Dual Module</source>
+				<target>Grupo de dos modulos (cajas)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod2.title" xml:space="preserve" approved="yes">
+				<source>MODULE 2: Title</source>
+				<target>MODULO 2: Titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod2.showTitle.label" xml:space="preserve" approved="yes">
+				<source>MODULE 2: Show Title</source>
+				<target>MODULO 2: Mostrar titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod2.bleed" xml:space="preserve" approved="yes">
+				<source>MODULE 2: Bleed (edge to edge)</source>
+				<target>MODULO 2: Sangrar (borde a borde)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod2.colStyle" xml:space="preserve" approved="yes">
+				<source>MODULE 2: Column Style (no frame)</source>
+				<target>MODULO 2: Estilo de columna (sin marco)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod3.header" xml:space="preserve" approved="yes">
+				<source>Triple Module</source>
+				<target>Grupo de 3 modulos (cajas)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod3.title" xml:space="preserve" approved="yes">
+				<source>MODULE 3: Title</source>
+				<target>MODULO 3: Titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod3.showTitle.label" xml:space="preserve" approved="yes">
+				<source>MODULE 3: Show Title</source>
+				<target>MODULO 3: Mostrar titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod3.bleed" xml:space="preserve" approved="yes">
+				<source>MODULE 3: Bleed (edge to edge)</source>
+				<target>MODULO 3: Sangrar (borde a borde)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod3.colStyle" xml:space="preserve" approved="yes">
+				<source>MODULE 3: Column Style (no frame)</source>
+				<target>MODULO 3: Estilo de columna (sin marco)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod4.header" xml:space="preserve" approved="yes">
+				<source>Quad Module</source>
+				<target>Grupo de 4 modulos (cajas)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod4.title" xml:space="preserve" approved="yes">
+				<source>MODULE 4: Title</source>
+				<target>MODULO 4: Titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod4.showTitle.label" xml:space="preserve" approved="yes">
+				<source>MODULE 4: Show Title</source>
+				<target>MODULO 4: Mostrar titulo</target>
+			</trans-unit>
+			<trans-unit id="fce.mod4.bleed" xml:space="preserve" approved="yes">
+				<source>MODULE 4: Bleed (edge to edge)</source>
+				<target>MODULO 4: Sangrar (borde a borde)</target>
+			</trans-unit>
+			<trans-unit id="fce.mod4.colStyle" xml:space="preserve" approved="yes">
+				<source>MODULE 4: Column Style (no frame)</source>
+				<target>MODULO 4: Estilo de columna (sin marco)</target>
+			</trans-unit>
+			<trans-unit id="fce.html_wrapper.header" xml:space="preserve" approved="yes">
+				<source>Special HTML Wrapper</source>
+				<target>Envoltorio HTML</target>
+			</trans-unit>
+			<trans-unit id="fce.prehtml.label" xml:space="preserve" approved="yes">
+				<source>Pre HTML</source>
+				<target>Pre HTML</target>
+			</trans-unit>
+			<trans-unit id="fce.posthtml.label" xml:space="preserve" approved="yes">
+				<source>Post HTML</source>
+				<target>Post HTML</target>
+			</trans-unit>
+			<trans-unit id="fce.image" xml:space="preserve" approved="yes">
+				<source>Image</source>
+				<target>Imagen</target>
+			</trans-unit>
+			<trans-unit id="fce.link" xml:space="preserve" approved="yes">
+				<source>Link</source>
+				<target>Link</target>
+			</trans-unit>
+			<trans-unit id="fce.alttext" xml:space="preserve" approved="yes">
+				<source>Alt Image Text</source>
+				<target>Texto alternativo de imagen</target>
+			</trans-unit>
+			<trans-unit id="fce.imagewidth" xml:space="preserve" approved="yes">
+				<source>Image Width (Leave default of 0 to restrain to container width)</source>
+				<target>Ancho de imagen (Dejar a 0 por defecto para limitar el ancho al contenedor)</target>
+			</trans-unit>
+			<trans-unit id="fce.margintop" xml:space="preserve" approved="yes">
+				<source>Margin-Top</source>
+				<target>Margen superior</target>
+			</trans-unit>
+			<trans-unit id="fce.marginbottom" xml:space="preserve" approved="yes">
+				<source>Margin-Bottom</source>
+				<target>Margen inferior</target>
+			</trans-unit>
+			<trans-unit id="fce.marginleft" xml:space="preserve" approved="yes">
+				<source>Margin-Left</source>
+				<target>Margen izquierdo</target>
+			</trans-unit>
+			<trans-unit id="fce.marginright" xml:space="preserve" approved="yes">
+				<source>Margin-Right</source>
+				<target>Margen derecho</target>
+			</trans-unit>
+			<trans-unit id="fce.zindex" xml:space="preserve" approved="yes">
+				<source>Z-Index (Determines stacking order. Normally left blank)</source>
+				<target>Z-Index (Determina el orden de apilamiento, normalmente dejar en blanco)</target>
+			</trans-unit>
+			<trans-unit id="fce.display.label" xml:space="preserve" approved="yes">
+				<source>Display</source>
+				<target>Mostrar</target>
+			</trans-unit>
+			<trans-unit id="fce.display.inline" xml:space="preserve" approved="yes">
+				<source>Normal (inline)</source>
+				<target>Normal (inline)</target>
+			</trans-unit>
+			<trans-unit id="fce.display.left" xml:space="preserve" approved="yes">
+				<source>Float Left</source>
+				<target>Flotar izquierda</target>
+			</trans-unit>
+			<trans-unit id="fce.display.right" xml:space="preserve" approved="yes">
+				<source>Float Right</source>
+				<target>Flotar derecha</target>
+			</trans-unit>
+			<trans-unit id="fce.display.block" xml:space="preserve" approved="yes">
+				<source>Display Block</source>
+				<target>Mostrar en bloque</target>
+			</trans-unit>
+			<trans-unit id="fce.selector.default" xml:space="preserve" approved="yes">
+				<source>Default</source>
+				<target>Default</target>
+			</trans-unit>
+			<trans-unit id="fce.selector.on" xml:space="preserve" approved="yes">
+				<source>On</source>
+				<target>On</target>
+			</trans-unit>
+			<trans-unit id="fce.selector.off" xml:space="preserve" approved="yes">
+				<source>Off</source>
+				<target>Off</target>
+			</trans-unit>
+			<trans-unit id="fce.selector.bleedDefault" xml:space="preserve" approved="yes">
+				<source>Default</source>
+				<target>Default</target>
+			</trans-unit>
+			<trans-unit id="fce.selector.bleedOn" xml:space="preserve" approved="yes">
+				<source>Bleed</source>
+				<target>Sangrar</target>
+			</trans-unit>
+			<trans-unit id="fce.selector.bleedOff" xml:space="preserve" approved="yes">
+				<source>Do Not Bleed</source>
+				<target>No sangrar</target>
+			</trans-unit>
+			<trans-unit id="fce.spaceafter.label" xml:space="preserve" approved="yes">
+				<source>Space After</source>
+				<target>Espacio despues</target>
+			</trans-unit>
+			<trans-unit id="fce.spaceafter.normal" xml:space="preserve" approved="yes">
+				<source>Normal</source>
+				<target>Normal</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

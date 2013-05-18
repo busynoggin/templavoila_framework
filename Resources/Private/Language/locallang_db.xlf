@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-04-27T01:05:20Z" product-name="templavoila_framework">
+		<header/>
+		<body>
+			<trans-unit id="skinSelectorTab" xml:space="preserve">
+				<source>Skin Selector</source>
+			</trans-unit>
+			<trans-unit id="skinSelectorLabel" xml:space="preserve">
+				<source>Select a skin</source>
+			</trans-unit>
+			<trans-unit id="title" xml:space="preserve">
+				<source>Select Site Skin</source>
+			</trans-unit>
+			<trans-unit id="currentSkin" xml:space="preserve">
+				<source>Currently Selected Skin</source>
+			</trans-unit>
+			<trans-unit id="customSkinPath" xml:space="preserve">
+				<source>Custom skin located at %s</source>
+			</trans-unit>
+			<trans-unit id="standardSkin" xml:space="preserve">
+				<source>Standard Skin</source>
+			</trans-unit>
+			<trans-unit id="customSkin" xml:space="preserve">
+				<source>Custom Skin</source>
+			</trans-unit>
+			<trans-unit id="customSkins" xml:space="preserve">
+				<source>Custom Skins</source>
+			</trans-unit>
+			<trans-unit id="standardSkins" xml:space="preserve">
+				<source>Standard Skins</source>
+			</trans-unit>
+			<trans-unit id="noSkinSelected" xml:space="preserve">
+				<source>No Skin Selected</source>
+			</trans-unit>
+			<trans-unit id="noSkinsTitle" xml:space="preserve">
+				<source>No Skins Available</source>
+			</trans-unit>
+			<trans-unit id="noSkinsMessage" xml:space="preserve">
+				<source>No skins are currently installed. You can import standard skins from the TYPO3 Extension Repository or create custom skins at %s.</source>
+			</trans-unit>
+			<trans-unit id="selectSkinButton" xml:space="preserve">
+				<source>Select Skin</source>
+			</trans-unit>
+			<trans-unit id="unselectSkinButton" xml:space="preserve">
+				<source>Unselect Skin</source>
+			</trans-unit>
+			<trans-unit id="copySkinButton" xml:space="preserve">
+				<source>Copy Skin</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

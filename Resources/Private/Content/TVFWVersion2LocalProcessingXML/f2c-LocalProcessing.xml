@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<ROOT type="array">
+		<el type="array">
+			<field_feature type="array">
+				<tx_templavoila type="array">
+					<TypoScript_constants>
+<containerWidth>{$containerWidth.f2c.feature}</containerWidth>
+<templateKey>f2c</templateKey>
+<fieldKey>feature</fieldKey>
+                    </TypoScript_constants>
+				</tx_templavoila>
+			</field_feature>
+			<field_content_block_1 type="array">
+				<tx_templavoila type="array">
+					<TypoScript_constants>
+<containerWidth>{$containerWidth.f2c.contentBlock-1}</containerWidth>
+<templateKey>f2c</templateKey>
+<fieldKey>contentBlock-1</fieldKey>
+<maxRenderMode>2</maxRenderMode>
+                    </TypoScript_constants>
+				</tx_templavoila>
+			</field_content_block_1>
+			<field_content_block_2 type="array">
+				<tx_templavoila type="array">
+					<TypoScript_constants>
+<containerWidth>{$containerWidth.f2c.contentBlock-2}</containerWidth>
+<templateKey>f2c</templateKey>
+<fieldKey>contentBlock-2</fieldKey>
+                    </TypoScript_constants>
+				</tx_templavoila>
+			</field_content_block_2>
+			<field_pre_code_header type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPreCodeHeader</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_header>
+			<field_header type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedHeader</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_header>
+			<field_post_code_header type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPostCodeHeader</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_header>
+			<field_pre_code_feature type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPreCodeFeature</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_feature>
+			<field_post_code_feature type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPostCodeFeature</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_feature>
+			<field_pre_code_content type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPreCodeContent</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_content>
+			<field_pre_code_content_block_1 type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPreCodeContentBlock-1</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_content_block_1>
+			<field_post_code_content_block_1 type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPostContentBlock-1</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_content_block_1>
+			<field_pre_code_content_block_2 type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPreCodeContentBlock-2</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_content_block_2>
+			<field_post_code_content_block_2 type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPostContentBlock-2</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_content_block_2>
+			<field_pre_code_footer type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPreCodeFooter</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_pre_code_footer>
+			<field_footer type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedFooter</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_footer>
+			<field_post_code_footer type="array">
+				<tx_templavoila type="array">
+					<TypoScriptObjPath>plugin.tx_templavoilaframework.f2c.evaluatedPostCodeFooter</TypoScriptObjPath>
+				</tx_templavoila>
+			</field_post_code_footer>
+		</el>
+	</ROOT>
+</T3DataStructure>
