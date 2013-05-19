@@ -17,7 +17,8 @@ TemplaVoila Framework
 :Version: 2.0.0
 :Description: Manual for the TYPO3 extension "|TemplaVoila Framework|" and its application
 :Language: en
-:Author: |Ron Hall|
+:Author: |Ron Hall & Jeff Segars|
+:Company: |Busy Noggin Digital|
 :Creation: May 15, 2013
 :Generation: |time|
 :License: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_

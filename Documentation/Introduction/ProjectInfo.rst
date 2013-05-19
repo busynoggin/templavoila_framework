@@ -14,9 +14,7 @@ Project Information
 Contact
 ================================
 
-You can contact the developers at templavoila@busynoggin.com.
-
-// @todo-ron  maybe change that to templavoilaframework@busynoggin.com or extensions@busynoggin.com
+You can contact the developers at extensions@busynoggin.com.
 
 Reporting Bugs
 ================================

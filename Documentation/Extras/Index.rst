@@ -27,4 +27,11 @@ If you want your headers to show on the front end (or not), go to TemplaVoila (t
 
 
 
+The TemplaVoila Framework and Busy Noggin Digital's Adaptive Profiles
+================================
+
+
+Site Builder Lab
+================================
+
 // @todo-ron need to finish
