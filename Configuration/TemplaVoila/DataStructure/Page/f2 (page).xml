@@ -646,8 +646,9 @@
 <fieldKey>generatedContent-2</fieldKey>
                     </TypoScript_constants>
 					<TypoScript>
+
 <![CDATA[
-10 = CASE
+10 = COA
 10 {
 	if {
 		isFalse.data = register:{$templateKey}{$fieldKey}disable
@@ -684,7 +685,6 @@
 		originalContainerWidth.data = register:containerWidth
 		nestingLevel = 0
 	}
-
 	25 = COA
 	25 {
 		if {
