@@ -37,6 +37,7 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
     Configuration/Index
     Templates/Index
     Workflow/Index
+    Extras/Index
 
 // @todo-ron need to finish
 
