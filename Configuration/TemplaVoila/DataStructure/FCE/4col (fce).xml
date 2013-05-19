@@ -103,19 +103,19 @@
 	}
 }
 
-## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page.
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW Column Modulw CSS for the page.
 ## Also, let system know there is a content element present for when it is in the feature content block
 20 = LOAD_REGISTER
 20 {
 	maxImageWidth.data = register:containerWidth
 	containerElementPresent = 1
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .column-1-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 
 ## Reset the maxImageWidth if it is smaller than minFullImageWidth set for the site.
@@ -196,16 +196,16 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-## Set up the CSS for the column width adding it to the aggregate TVFW CSS for the page
+## Set up the CSS for the column width adding it to the aggregate TVFW Column Modulw CSS for the page.
 15 = LOAD_REGISTER
 15 {
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .column-2-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 
 ## Write the opening HTML for the column based on whether v1 or v2 rendering
@@ -263,16 +263,16 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW Column Modulw CSS for the page.
 15 = LOAD_REGISTER
 15 {
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .column-3-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 
 ## Write the opening HTML for the column based on whether v1 or v2 rendering
@@ -328,16 +328,16 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW CSS for the page
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW Column Modulw CSS for the page.
 15 = LOAD_REGISTER
 15 {
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .column-4-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 
 ## Write the opening HTML for the column based on whether v1 or v2 rendering

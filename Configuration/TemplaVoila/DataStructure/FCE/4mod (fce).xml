@@ -411,13 +411,13 @@
 	containerElementPresent = 1
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_1_frame
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .module-1-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 20 = CASE
 20 {
@@ -514,13 +514,13 @@
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_2_frame
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .module-2-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 20 = CASE
 20 {
@@ -617,13 +617,13 @@
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_3_frame
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .module-3-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 20 = CASE
 20 {
@@ -720,13 +720,13 @@
 	maxImageWidth.data = register:containerWidth
 	defaultHeaderType.data = register:defaultHeaderInsideModule
 	defaultHeaderType.if.isFalse.field = field_module_4_frame
-	tempAggregateCss.data = register:aggregateCss
+	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
 		dataWrap = .module-4-c{register:tx_templavoila_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
-	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
+	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
 }
 20 = CASE
 20 {

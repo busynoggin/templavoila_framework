@@ -3081,146 +3081,153 @@ page {
 	## This will put CSS in external stylesheet for columns and modules
 	## provided register:createColumnModuleCSS is true
 	cssInline {
-		if.isTrue.data = register:createColumnModuleCSS
-		10 = TEXT
+		10 = COA
 		10 {
-			data = register:globalGutter
-			wrap = .column-group .column, .module-group .module {float:left;margin-right:|px;}
-		}
-
-		20 = TEXT
-		20 {
-			value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {margin-right:0;}
-		}
-
-		30 = TEXT
-		30 {
-			data = register:tvfwColumnBottomMargin
-			wrap = .column-group {margin-bottom: |px;}
-		}
-
-		35 = TEXT
-		35 {
-			data = register:tvfwColumnBottomMargin
-			wrap (
-				.column-group.intermediate  > .column, .column-group.full  > .column {margin-bottom: |px;}
-				.column-group {
-					clear:both;
-					margin-bottom: 0;
-				}
-				.column-group:before,
-				.column-group:after {
-					content: '.';
-					display: block;
-					overflow: hidden;
-					visibility: hidden;
-					font-size: 0;
-					line-height: 0;
-					width: 0;
-					height: 0;
-				}
-				.column-group:after {clear: both}
-			)
-		}
-
-		40 = TEXT
-		40.value (
-
-			.four-column-group.full  > .column,
-			.three-column-group.full > .column,
-			.two-column-group.full > .column {
-				clear: both;
-				margin-right: 0;
-				float: none;
+			if.isTrue.data = register:createColumnModuleCSS
+			10 = TEXT
+			10 {
+				data = register:globalGutter
+				wrap = .column-group .column, .module-group .module {float:left;margin-right:|px;}
 			}
 
-			.three-column-group.intermediate.half-half-full > .column-2 {
-				margin-right: 0;
+			20 = TEXT
+			20 {
+				value = .two-column-group > .column-2, .three-column-group > .column-3, .four-column-group > .column-4, .dual-module-group > .module-2, .triple-module-group > .module-3, .quad-module-group > .module-4 {margin-right:0;}
 			}
 
-			.three-column-group.intermediate.full-half-half > .column-2 {
-				clear: both;
+			30 = TEXT
+			30 {
+				data = register:tvfwColumnBottomMargin
+				wrap = .column-group {margin-bottom: |px;}
 			}
 
-			.three-column-group.intermediate.half-half-full > .column-3 {
-				clear: both;
-				float: none;
+			35 = TEXT
+			35 {
+				data = register:tvfwColumnBottomMargin
+				wrap (
+					.column-group.intermediate  > .column, .column-group.full  > .column {margin-bottom: |px;}
+					.column-group {
+						clear:both;
+						margin-bottom: 0;
+					}
+					.column-group:before,
+					.column-group:after {
+						content: '.';
+						display: block;
+						overflow: hidden;
+						visibility: hidden;
+						font-size: 0;
+						line-height: 0;
+						width: 0;
+						height: 0;
+					}
+					.column-group:after {clear: both}
+				)
 			}
 
-			.four-column-group.intermediate  > .column-2 {
-				margin-right: 0;
-			}
+			40 = TEXT
+			40.value (
 
-			.four-column-group.intermediate  > .column-3 {
-				clear: both;
-			}
-
-		)
-
-		50 = TEXT
-		50 {
-			data = register:tvfwModuleBottomMargin
-			wrap (
-
-				.module-group {
-					clear:both;
-					margin-bottom: |px;
-				}
-
-				.module-group:before,
-				.module-group:after {
-					content: '.';
-					display: block;
-					overflow: hidden;
-					visibility: hidden;
-					font-size: 0;
-					line-height: 0;
-					width: 0;
-					height: 0;
-				}
-
-				.module-group:after {clear: both}
-
-				.module-group .module.unframed .body,
-				.module-group .module.unframed .inner-wrap {
-					padding: 0;
-					border: 0;
-				}
-			)
-		}
-
-		60 = TEXT
-		60 {
-			value (
-				.quad-module-group.full  > .module,
-				.triple-module-group.full > .module,
-				.dual-module-group.full > .module {
+				.four-column-group.full  > .column,
+				.three-column-group.full > .column,
+				.two-column-group.full > .column {
 					clear: both;
 					margin-right: 0;
 					float: none;
 				}
 
-				.triple-module-group.intermediate.half-half-full > .module-2 {
+				.three-column-group.intermediate.half-half-full > .column-2 {
 					margin-right: 0;
 				}
 
-				.triple-module-group.intermediate.full-half-half > .module-2 {
+				.three-column-group.intermediate.full-half-half > .column-2 {
 					clear: both;
 				}
 
-				.triple-module-group.intermediate.half-half-full > .module-3 {
+				.three-column-group.intermediate.half-half-full > .column-3 {
 					clear: both;
 					float: none;
 				}
 
-				.quad-module-group.intermediate  > .module-2 {
+				.four-column-group.intermediate  > .column-2 {
 					margin-right: 0;
 				}
 
-				.quad-module-group.intermediate  > .module-3 {
+				.four-column-group.intermediate  > .column-3 {
 					clear: both;
 				}
+
 			)
+
+			50 = TEXT
+			50 {
+				data = register:tvfwModuleBottomMargin
+				wrap (
+
+					.module-group {
+						clear:both;
+						margin-bottom: |px;
+					}
+
+					.module-group:before,
+					.module-group:after {
+						content: '.';
+						display: block;
+						overflow: hidden;
+						visibility: hidden;
+						font-size: 0;
+						line-height: 0;
+						width: 0;
+						height: 0;
+					}
+
+					.module-group:after {clear: both}
+
+					.module-group .module.unframed .body,
+					.module-group .module.unframed .inner-wrap {
+						padding: 0;
+						border: 0;
+					}
+				)
+			}
+
+			60 = TEXT
+			60 {
+				value (
+					.quad-module-group.full  > .module,
+					.triple-module-group.full > .module,
+					.dual-module-group.full > .module {
+						clear: both;
+						margin-right: 0;
+						float: none;
+					}
+
+					.triple-module-group.intermediate.half-half-full > .module-2 {
+						margin-right: 0;
+					}
+
+					.triple-module-group.intermediate.full-half-half > .module-2 {
+						clear: both;
+					}
+
+					.triple-module-group.intermediate.half-half-full > .module-3 {
+						clear: both;
+						float: none;
+					}
+
+					.quad-module-group.intermediate  > .module-2 {
+						margin-right: 0;
+					}
+
+					.quad-module-group.intermediate  > .module-3 {
+						clear: both;
+					}
+				)
+			}
+
+			90 = TEXT
+			90.data = register:aggregateColumnModuleCss
+
 		}
 
 		70 = TEXT
