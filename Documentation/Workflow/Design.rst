@@ -28,3 +28,5 @@ Any medium has technical issues of which designers must be aware. For print you 
 - Finally, if your designer has little or no experience designing for the web, get a new designer. If fact, if you needed to be told to design in RGB then please get another designer.
 
 Having said all this, web design is not as limiting as some designers (and coders) would lead you to believe. Those who think so are way behind the times.
+
+// @todo-ron need to finish

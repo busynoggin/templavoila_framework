@@ -75,6 +75,7 @@ Install and setup the TemplaVoila Framework extension
 
 -   Clear the TYPO3 cache and view the front end of your site.
 
-    // @todo-ron screenshots
+// @todo-ron screenshots
 
+// @todo-ron need to finish
 

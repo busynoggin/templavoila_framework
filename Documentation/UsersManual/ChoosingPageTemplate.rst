@@ -28,3 +28,5 @@ This content is unique to the page but secondary to the main content.
 
 **Generated Content Blocks**
 These house information that is automatically generated and displayed on multiple pages in a site. This can include any or all of the following: menus, links, ads, teasers, etc. Generated content is not edited on the page, but rather in a place the developer has set up to contain the content.
+
+// @todo-ron need to finish

@@ -35,3 +35,5 @@ Distribution: This is how the modules are porportioned ("Half Half," "Quarter Qu
 **Bleed:** Causes the content to bleed. Adds a class to the module body for bleed and changes the max image width. See also module feature image.
 
 **Unframed:** When checked the module will look like a column. Allows you visually to have columns next to and between modules.
+
+// @todo-ron need to finish

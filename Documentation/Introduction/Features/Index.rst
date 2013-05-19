@@ -12,8 +12,6 @@
 Features
 ================================
 
-// @todo-ron write some text here
-
 .. toctree::
     :maxdepth: 2
     :titlesonly:
@@ -24,6 +22,3 @@ Features
     Standardization
     EditorExperience
     MappingBlocksVsElements
-
-
-

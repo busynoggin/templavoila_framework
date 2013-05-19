@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'TemplaVoila Framework',
-	'description' => 'The TemplaVoila Framework provides developers a code base and set of best practices for producing any site design in TYPO3 quickly, easily and consistently. It also makes it easy to reuse code from project to project because of its consistent structure. What the Framework does for editors is to allow them to create a variety of page variations using the columns and modules provided. This means they can often change a page layout without having to call a developer for a new template.',
+	'description' => 'The TemplaVoila Framework provides developers with a code base and set of best practices for producing any site design in TYPO3 quickly, easily and consistently. It also makes it easy to reuse code from project to project because of its consistent structure. The Framework allows content editors to create a variety of looks by changing the original layout using the columns and modules provided. This means they can often change a page layout without having to call a developer for a new template.',
 	'category' => 'fe',
 	'shy' => 0,
 	'version' => '2.0.0',

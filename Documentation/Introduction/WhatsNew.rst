@@ -26,3 +26,5 @@ What about Version 1?
 ================================
 
 If you are on TYPO3 version 4.7 or below we recommend you stay on TemplaVoila Framework version 1.2.6. When you do move to TYPO3 version 6 you will need to upgrade to TemplaVoila Framework version 2. However, you will still be able to run your version 1 skins with simply the addtion of one line of TypoScript. See the upgrade instructions in this manual. There will still be documentation for version 1 at templavoila.busynoggin.com, but the version is no longer supported so we recommend you build any new skins on TemplaVoila Framework version 2.
+
+// @todo-ron need to finish

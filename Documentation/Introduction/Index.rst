@@ -12,16 +12,13 @@
 Introduction
 ================================
 
-// @todo-ron Write a little history here
-
 .. toctree::
     :maxdepth: 5
     :titlesonly:
     :glob:
 
     WhatDoesItDo
-    WhatYouNeedToKnow
-    WhatsNew
     Features/Index
+    SKillsYouNeed
+    WhatsNew
     ProjectInfo
-

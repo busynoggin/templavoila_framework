@@ -40,3 +40,5 @@ However, if it is necessary for you to move to version 2, these are the steps yo
 - Clear your TYPO3 cache and you should be back up and running.
 
 // @todo-ron  Is it only the page template objects that need the new XML or do flexible content template objects also need to be modified?
+
+// @todo-ron need to finish
