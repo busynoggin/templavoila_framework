@@ -21,12 +21,23 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         - property
-        - description
+        - details
         - default
 
     *
         -
-            Generated Content Source
+            renderMode
+        -
+            Description
+                This constant must be at the beginning of your skin constants. It tells the Framework which rendering to use.
+        -
+            Null
+
+    *
+        -
+            generatedContent-1.source
+
+            generatedContent-2.source
         -
             Description
                 These two constants are to be set to the id of the pages / folders in the TYPO3 page where your generated content will reside.
@@ -136,7 +147,7 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         -
-            Bottom Margin for Columns
+            columnBottomMargin
         -
             Description
                 This is for the margin in pixels you want to have below your column groups
@@ -147,7 +158,7 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         -
-            Bottom Margin for Modules
+            moduleBottomMargin
         -
             Description
                 This is for the margin in pixels you want to have below your module groups
@@ -194,7 +205,7 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         -
-            Auto Main Headline beginning wrap
+            autoHeadlineBeginWrap
         -
             Description
                 This will be the code in front of the text for the auto headline when it is generated. Match it to autoHeadlineEndWrap.
@@ -205,7 +216,7 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         -
-            Auto Main Headline ending wrap
+            autoHeadlineEndWrap
         -
             Description
                 This will be the code after the text for the auto headline when it is generated. Match it to autoHeadlineBeginWrap.
@@ -216,7 +227,7 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         -
-            Feature bleed default
+            featureBleedDefault
         -
             Description
                 Set this constant to "1" if you want feature content to bleed by default or set it to "0" if you want it not to bleed by default. In either case the default can be overridden on a page by page basis via a drop down menu in the page properties.
@@ -229,7 +240,9 @@ YourSkinDirectory/Configuration/TypoScript/Constants.ts
 
     *
         -
-            Feature left and right padding
+            featureLeftPadding
+
+            featureRightPadding
         -
             Description
                 These values are needed so the framework can adjust the max image widths for the feature area. When calculating the values add the CSS padding and border values together for your no-bleed feature.

@@ -20,3 +20,9 @@ Although the overall concepts remain the same, the coding and structure of the s
 - The ability to change the tag on the various content areas in framework. For example, #content-block-1  can now be a section or article tag rather than the default div tag.
 -  all in-line styles have been moved to an external CSS file. This allows for easier overrides and for better accessibility scoring.
 - easier accommodation of responses / adaptive designs when used with the Adaptive Profiles extension from Busy Noggin (bn_adaptiveprofiles).
+
+================================
+What about Version 1?
+================================
+
+If you are on TYPO3 version 4.7 or below we recommend you stay on TemplaVoila Framework version 1.2.6. When you do move to TYPO3 version 6 you will need to upgrade to TemplaVoila Framework version 2. However, you will still be able to run your version 1 skins with simply the addtion of one line of TypoScript. See the upgrade instructions in this manual. There will still be documentation for version 1 at templavoila.busynoggin.com, but the version is no longer supported so we recommend you build any new skins on TemplaVoila Framework version 2.

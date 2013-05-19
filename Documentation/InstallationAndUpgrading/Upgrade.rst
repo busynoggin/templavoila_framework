@@ -33,7 +33,7 @@ However, if it is necessary for you to move to version 2, these are the steps yo
 - Temporarily unistall the TemplaVoila Framework extension
 - Upgrade to latest version of TemplaVoila
 - Upgrade to TYPO3 version 6.x.
-- Upgrade to TemplaVoila Framework version 2 and install it
+- Upgrade to TemplaVoila Framework version 2 and then reinstall it
 - At the beginning of your version 1 skin constants add this line: plugin.tx_templavoilaframework.renderMode = 1
 - Run the update script
 - Replace existing local processing XML in all TemplaVoila Framework template objects with the new XML needed for version 2. You can find the needed XML here.
