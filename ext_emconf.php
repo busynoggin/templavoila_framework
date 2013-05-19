@@ -12,10 +12,10 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'TemplaVoila Framework',
-	'description' => 'Implementation of the BusyNoggin Framework for TemplaVoila as a TYPO3 extension. See http://templavoila.busynoggin.com for more info.',
+	'description' => 'The TemplaVoila Framework provides developers a code base and set of best practices for producing any site design in TYPO3 quickly, easily and consistently. It also makes it easy to reuse code from project to project because of its consistent structure. What the Framework does for editors is to allow them to create a variety of page variations using the columns and modules provided. This means they can often change a page layout without having to call a developer for a new template.',
 	'category' => 'fe',
 	'shy' => 0,
-	'version' => '2.0.0a1',
+	'version' => '2.0.0',
 	'dependencies' => 'templavoila',
 	'conflicts' => '',
 	'priority' => '',
@@ -28,8 +28,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearcacheonload' => 0,
 	'lockType' => '',
 	'author' => 'Busy Noggin Digital',
-	'author_email' => 'ron@busynoggin.com,devteam@webempoweredchurch.org',
-	'author_company' => 'Busy Noggin Inc and Christian Technology Ministries International Inc.',
+	'author_email' => 'templavoila@busynoggin.com',
+	'author_company' => 'Busy Noggin, Inc',
 	'CGLcompliance' => '',
 	'CGLcompliance_note' => '',
 	'constraints' => array(
