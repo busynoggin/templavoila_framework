@@ -1810,7 +1810,7 @@ page {
 		jQuery.noConflict = 1
 	}
 
-	includeJS.tf_core = {$templavoila_framework.corePath}Resources/Public/JavaScript/core.js
+	includeJS.tf_core = EXT:templavoila_framework/Resources/Public/JavaScript/core_v1.js
 }
 [global]
 

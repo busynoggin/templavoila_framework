@@ -3244,7 +3244,7 @@ page {
 		jQuery = 1
 	}
 
-	includeJS.tf_core = {$plugin.tx_templavoilaframework.corePath}Resources/Public/JavaScript/core.js
+	includeJS.tf_core = EXT:templavoila_framework/Resources/Public/JavaScript/core.js
 }
 [global]
 
