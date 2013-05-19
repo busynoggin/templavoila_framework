@@ -925,7 +925,7 @@ plugin.tx_templavoilaframework.f1b.evaluatedPreCodeHeader =< f1b.preCodeHeader
 
 f1b.header =< header
 f1b.evaluatedHeader =< f1b.header
-plugin.tx_templavoilaframework.f1b.evaluatedPreCodeHeader =< f1b.preCodeHeader
+plugin.tx_templavoilaframework.f1b.evaluatedHeader =< f1b.header
 
 f1b.postCodeHeader =< postCodeHeader
 f1b.evaluatedPostCodeHeader =< f1b.postCodeHeader
@@ -934,6 +934,8 @@ plugin.tx_templavoilaframework.f1b.evaluatedPostCodeHeader =< f1b.postCodeHeader
 f1b.preCodeFeature =< preCodeFeature
 f1b.evaluatedPreCodeFeature =< f1b.preCodeFeature
 f1b.evaluatedPreCodeFeature.if.isFalse.data = register:noFeatureContentFlag
+plugin.tx_templavoilaframework.f1b.evaluatedPreCodeFeature =< f1b.preCodeFeature
+plugin.tx_templavoilaframework.f1b.evaluatedPreCodeFeature.if.isFalse.data = register:noFeatureContentFlag
 
 f1b.postCodeFeature =< postCodeFeature
 f1b.evaluatedPostCodeFeature =< f1b.postCodeFeature
