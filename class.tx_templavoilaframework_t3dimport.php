@@ -73,7 +73,13 @@ class tx_templavoilaframework_t3dimport {
 		}
 		$content[] = '</select>';
 
-		if (t3lib_div::int_from_ver(TYPO3_version) >= 4006000) {
+		if (class_exists('t3lib_utility_VersionNumber')) {
+			$typo3VersionAsInteger = t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version);
+		} else {
+			$typo3VersionAsInteger = t3lib_div::int_from_ver(TYPO3_version);
+		}
+
+		if ($typo3VersionAsInteger >= 4006000) {
 			$content[] = '<input type="submit" value="Import" onclick="document.getElementById(\'doImport\').value = 1; Ext.ComponentMgr.all.filterBy(function(item){ return (item.getXType()==\'form\' && item.title==\'Configuration\'); }).first().doSubmit(false);"/>';
 			$content[] = '<input type="hidden" id="doImport" name="doImport" value="0" />';
 		} else {
