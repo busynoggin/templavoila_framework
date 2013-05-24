@@ -1,7 +1,13 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-if (t3lib_div::int_from_ver(TYPO3_version) >= 4004000) {
+if (class_exists('t3lib_utility_VersionNumber')) {
+	$versionAsInteger = t3lib_utility_VersionNumber::convertVersionNumberToInteger(TYPO3_version);
+} else {
+	$versionAsInteger = t3lib_div::int_from_ver(TYPO3_version);
+}
+
+if ($versionAsInteger >= 4004000) {
 	$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['includeStaticTypoScriptSourcesAtEnd'][] = 'EXT:templavoila_framework/class.tx_templavoilaframework_lib.php:&tx_templavoilaframework_lib->includeTypoScriptForFrameworkCoreAndSkins';
 	$backendStylesheet = 'backend.css';
 } else {
