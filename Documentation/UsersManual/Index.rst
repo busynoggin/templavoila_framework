@@ -11,7 +11,6 @@
 Users Manual
 ================================
 
-// @todo-ron Describe what this section is for
 
 .. toctree::
 	:maxdepth: 1
@@ -21,5 +20,3 @@ Users Manual
 	ChoosingPageTemplate
 	MagicalFeature
 	UtilityFCEs/Index
-
-// @todo-ron need to finish

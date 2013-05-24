@@ -12,8 +12,6 @@
 Configuration
 ================================
 
-// @todo-ron Write intro for this section
-
 .. toctree::
     :maxdepth: 5
     :titlesonly:
@@ -22,5 +20,3 @@ Configuration
     Info
     Constants
     TypoScript
-
-// @todo-ron need to finish

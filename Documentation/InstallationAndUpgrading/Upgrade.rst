@@ -36,7 +36,7 @@ However, if it is necessary for you to move to version 2, these are the steps yo
 - Upgrade to TemplaVoila Framework version 2 and then reinstall it
 - At the beginning of your version 1 skin constants add this line: plugin.tx_templavoilaframework.renderMode = 1
 - Run the update script
-- Replace existing local processing XML in all TemplaVoila Framework template objects with the new XML needed for version 2. You can find the needed XML here.
+- Replace existing local processing XML in all TemplaVoila Framework template objects with the new XML needed for version 2. You can find the needed XML in /typo3conf/ext/templavoila_framework/Resources/Private/Content/TVFWVersion2LocalProcessingXML/
 - Clear your TYPO3 cache and you should be back up and running.
 
 // @todo-ron  Is it only the page template objects that need the new XML or do flexible content template objects also need to be modified?

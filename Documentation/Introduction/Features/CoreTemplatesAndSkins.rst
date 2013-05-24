@@ -15,13 +15,37 @@ Sites like `CSS Zen Garden <http://www.csszengarden.com/>`_ do a good job of sho
 
 // @todo-ron Make zen garden come up in exernal window.
 
-The flexibility provided by CSS is magnified when you combine it with the ability of TypoScript to change the site's underlying HTML structure and to control the maximum width of images in various content areas.
+The flexibility provided by CSS is magnified when you combine it with the ability of TypoScript to change the site's underlying HTML structure and to control the maximum width of images and the widths of columns in various content areas.
 
 The TemplaVoila Framework takes advantage of CSS inheritance and the similar behavior of TypoScript. It uses a set of core templates which are then modified by skins. This, combined with the included cloumns and modules, allows for the page templates in the TemplaVoila Framework to be used for vastly different visual designs without creating and remapping new templates.
 
 The Framework is so flexible that over 95% of the visual designs on the web can be built using only the Framework's core templates.
 
-// @todo-ron give varied design examples using the same template
+**These four site designs use the same template within the TemplaVoila Framework.**
+
+.. list-table::
+
+	*
+		-
+			.. figure:: Images/fogo.jpg
+				:width: 280
+				:alt: Example Page
+
+		-
+			.. figure:: Images/fusion.jpg
+				:width: 280
+				:alt: Example Page
+
+	*
+		-
+			.. figure:: Images/noggin.jpg
+				:width: 280
+				:alt: Example Page
+
+		-
+			.. figure:: Images/r1soft.jpg
+				:width: 280
+				:alt: Example Page
 
 Available Skins
 ================================
@@ -30,7 +54,9 @@ Previously, there are a number of version 1 skins in the TYPO3 extension reposit
 
 However, we do not recommend using the version 1 skins for any new site development. Rather, you should develop a custom skin for your site using version 2 code. There is a Busy Noggin wireframe skin based on version 2 code. Instructions for downloading that skin are later in this document. This wireframe skin can be used as a starting point for new skins.
 
-Skins can be extensions or simply reside in your custom skin directory. You only need to make a skin an extension if you intend to distribute it via the TYPO3 TER. Therefore, it is likely that most and probably all of your skins will reside in your custom skin directory.
+Skins can be extensions or simply reside in your custom skin directory. You only need to make a skin an extension if you intend to distribute it via the TYPO3 TER. Therefore, it is likely that all of your skins will reside in your custom skin directory.
+
+// @todo-ron Initially update Wireframe skin and T-Bone starter in the TER with constant to run with TVFW v2.
 
 // @todo-ron Update Wireframe skin in the TER to the v2 skin. Upgrade AT-Bone starter to v2 and set both to require v2
 
@@ -40,7 +66,7 @@ You can switch between skins with the Skin Selector. Instructions for how to use
 
 You can find out how to create new custom skins in Workflow.
 
-If you need to satisfy your inner geek, then check out the explanation of code to understand how the core templates and skins work.
+.. If you need to satisfy your inner geek, then check out the explanation of code to understand how the core templates and skins work.
 
 // @todo-ron Make sure the mentioned section exists
 

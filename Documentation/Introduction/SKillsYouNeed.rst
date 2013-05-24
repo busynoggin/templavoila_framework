@@ -27,14 +27,11 @@ Ideally, you will:
 
 Experienced developers who often use TemplaVoila to build sites will find it easier than most to understand this framework since they are already familiar with TypoScript, front-end code and TemplaVoila.
 
-One note to those who have used Templavoila before,
-you are used to building full static files with HTML, CSS and JavaScript then mapping them in TemplaVoila. In this framework page templates are already mapped. You will not be mapping any templates unless you decide to build a unique Flexible Content Element (FCE) not already included in the framework.
+One note to those who have used Templavoila before.You are used to building full static files with HTML, CSS and JavaScript then mapping them in TemplaVoila. In this framework page templates are already mapped. You will not be mapping any templates unless you decide to build a unique Flexible Content Element (FCE) not already included in the framework.
 
 ================================
 System Requirements
 ================================
 
 - Templavoila 1.8 or above.
-- TYPO3 version 6 or above.
-
-// @todo-ron need to finish
+- TYPO3 version 6.0 or above.

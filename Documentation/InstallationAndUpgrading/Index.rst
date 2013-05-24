@@ -12,8 +12,6 @@
 Installation & Upgrading
 ================================
 
-// @todo-ron Write some text here
-
 .. toctree::
 	:maxdepth: 2
 	:titlesonly:
@@ -21,5 +19,3 @@ Installation & Upgrading
 
 	Installation
 	Upgrade
-
-// @todo-ron need to finish
