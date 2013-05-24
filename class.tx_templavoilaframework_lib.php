@@ -7,7 +7,7 @@
  * All rights reserved
  *
  * This file is part of the Web-Empowered Church (WEC)
- * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries 
+ * (http://WebEmpoweredChurch.org) ministry of Christian Technology Ministries
  * International (http://CTMIinc.org). The WEC is developing TYPO3-based
  * (http://typo3.org) free software for churches around the world. Our desire
  * is to use the Internet to help offer new life through Jesus Christ. Please
@@ -415,7 +415,12 @@ class tx_templavoilaframework_lib {
 	 * @return int
 	 */
 	public static function getTemplaVoilaVersionAsInt() {
-		return t3lib_div::int_from_ver(self::getTemplaVoilaVersion()); 
+		if (class_exists('t3lib_utility_VersionNumber')) {
+			$versionAsInteger = t3lib_utility_VersionNumber::convertVersionNumberToInteger(self::getTemplaVoilaVersion());
+		} else {
+			$versionAsInteger = t3lib_div::int_from_ver(self::getTemplaVoilaVersion());
+		}
+		return $versionAsInteger;
 	}
 
 
