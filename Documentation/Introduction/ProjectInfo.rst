@@ -19,16 +19,12 @@ You can contact the developers at extensions@busynoggin.com.
 Reporting Bugs
 ================================
 
-You can report bugs and suggest features for the TemplaVoila Framework project on Forge.
-
-// @todo-ron  link to forge
+You can report bugs and suggest features for the TemplaVoila Framework project on `Forge <http://forge.typo3.org/projects/show/extension-templavoila_framework/>`_.
 
 Known Issues
 ================================
 
 No known issues
-
-// @todo-ron what about load order with like timtab or other?
 
 Releases & Changelog
 ================================
@@ -182,4 +178,5 @@ Releases & Changelog
             Initial release.
 
 
-// @todo-ron need to finish
+// @todo-ron what about load order with like timtab or other?
+// @todo-ron update photo in Forge

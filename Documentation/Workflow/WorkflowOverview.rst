@@ -23,9 +23,7 @@ The following is the workflow we use at Busy Noggin to produce TYPO3-driven webs
 - Develop a working prototype.
 - Work up the visual design mockups.
 - Visualize the HTML structure and choose the page templates.
-- Integrate the visual design into TYPO3 by creating a template skin.
-    - Code the page design into the Busy Noggin static HTML starter files (HTML, CSS, JavaScript)
-    - Write the skin based on the static HTML starters
+- Integrate the visual design into TYPO3 by building a template skin.
 - Code any special functionality with custom content elements or extensions
 - Load the content and launch the site.
 

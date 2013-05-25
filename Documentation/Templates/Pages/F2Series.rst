@@ -32,10 +32,11 @@ Templates F2a, F2b and F2c
 
 These templates each contain a header, footer, feature content (F), main content (c1) and secondary content (c2). They are identical except for the ID on the body tag (f2a, f2b, f2c). These ID's allow them to be targeted independently with CSS.
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F2abc.png
+    :alt: Plain Image
+    :align: left
 
 
 Template F2d
@@ -43,10 +44,11 @@ Template F2d
 
 This is the same as F2a except it has an area for generated content (g1) that comes just before the main content (c1). This area pulls from the sysFolder indicated by the TypoScript constant "generatedContent-1.source." It has an ID on the body tag of "f2d."
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F2d.png
+    :alt: Plain Image
+    :align: left
 
 
 Template F2e
@@ -54,9 +56,10 @@ Template F2e
 
 Identical to F2d except the generated content (g20 comes after the content (c2) and is generated from the sysFolder indicated by the TypoScript constant "generatedContent-2.source." This template has an ID of "f2e" on the body tag.
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F2e.png
+    :alt: Plain Image
+    :align: left
 
 // @todo-ron need to finish

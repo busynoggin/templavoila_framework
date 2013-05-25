@@ -20,14 +20,18 @@ There are 2, 3 and 4 columns groups provied with the Framework.
 **Examples of Columns**
 Below are is a dual column group (set half-half) and a triple column group (set half-quarter-quarter). Notice the image widths are automatically adjusted with changes to the columns.
 
-// @todo-ron add screen
+.. figure:: Images/ColumnExample.png
+    :width: 500
+    :alt: Columns Example
 
 Options for Columns
 ================================
 
 The options for columnns can be adjusted by editing the column group.
 
-// @todo-ron add screeb
+.. figure:: Images/ColumnGroupOptions.gif
+    :alt: Column Options
+    :align: left
 
 **Distribution**: This is how the columns are proportioned (half-half, quarter-quarter-half", etc.)
 
@@ -44,7 +48,11 @@ This page template has a generated content block on the left, a main content blo
 
 The content below and the content to the right are exact copies of a two column group. The columns self-adjust to fit the content area in which they are placed.
 
-// @todo-ron add screen
+.. figure:: Images/SelfAdjustingColumns.png
+    :width: 600
+    :alt: Self Adjusting Columns
+
+
 
 Nesting
 ================================
@@ -53,6 +61,9 @@ Column Groups can be nested inside of modules or other columns.
 
 **Note on Nesting:** Modules should not be nested or weird things will happen. Columns should only be nested one level as anything beyond will break your layout.
 
-// @todo-ron add screen
+.. figure:: Images/Nesting.png
+    :width: 600
+    :alt: Self Adjusting Columns
+
 
 // @todo-ron need to finish

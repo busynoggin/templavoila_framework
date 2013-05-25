@@ -30,10 +30,11 @@ Templates F1a, F1b and F1c
 --------------------------------
 These templates each contain a header, footer, feature content (F) and main content (c1). They are identical except for the ID on the body tag (f1a, f1b, f1c). These ID's allow them to be targeted independently with CSS.
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F1abc.png
+    :alt: Plain Image
+    :align: left
 
 
 Template F1d
@@ -41,10 +42,11 @@ Template F1d
 
 This is the same as F1a except it has an area for generated content (g1) that comes just before the main content (c1). This area pulls from the sysFolder indicated by the TypoScript constant "generatedContent-1.source." It has an ID on the body tag of "f1d."
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F1d.png
+    :alt: Plain Image
+    :align: left
 
 
 Template F1e
@@ -52,10 +54,11 @@ Template F1e
 
 Identical to F1d except the generated content (g2) comes after the main content (c1) and comes from the sysFolder indicated by the TypoScript constant "generatedContent-2.source" and it is an ID of "f1e" on the body tag.
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F1e.png
+    :alt: Plain Image
+    :align: left
 
 
 Template F1f
@@ -63,9 +66,10 @@ Template F1f
 
 Identical to f1d except it has two areas for generated content (g1 & g2) and an ID of "f1f" on the body.
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F1f.png
+    :alt: Plain Image
+    :align: left
 
 // @todo-ron need to finish

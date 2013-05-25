@@ -18,3 +18,4 @@ However, standardization does not have to mean bland, limited visual design. Two
 
 Standardizing code and approach also means that you know exactly where to go when enhancing a site that you completed long ago.
 
+.. // @todo-ron Make zen garden come up in exernal window.

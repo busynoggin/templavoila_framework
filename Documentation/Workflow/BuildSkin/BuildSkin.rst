@@ -65,9 +65,9 @@ We generally copy an existing starter skin, rename it and edit it to create our 
 Code Static HTML Pages
 ================================
 
-This is actually an optional step. In the past we just started writing the TypoScript to create the HTML, the CSS and the JavaScript all at the same time.
+This is actually an optional step. In the past we just started writing the TypoScript to create the HTML, the CSS and the JavaScript all at the same time. There are times when we still do that.
 
-However, recently as we have worked more in teams we have been first coding the page templates as static files. This means that front-end developers that are not familiar with TypoScript can code the pages and then be followed by TypoScript expert who can quickly write the TypoScript to output the desired HTML.
+However, as we have been working more in teams we have started first coded the page templates as static files. This means that front-end developers who are not familiar with TypoScript can code the pages and then be followed by TypoScript expert who can quickly write the TypoScript to output the desired HTML.
 
 The files you will work with in this stage are located at:
 

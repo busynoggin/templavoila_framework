@@ -11,9 +11,8 @@
 Mapping Blocks vs Elements
 ================================
 
-When we first started working with TemplaVoila, we had a tendency to map our templates similar to the examples in the Futuristic Template Building tutorial. We generally would map TypoScript objects to individual elements; however, in the TemplaVoila Framework, TypoScript objects are mapped to larger areas.
+When we first started working with TemplaVoila, we had a tendency to map our templates similar to the examples in the `Futuristic Template Building tutorial <http://typo3.org/documentation/document-library/tutorials/doc_tut_ftb1/1.0.1/view/>`_. We generally would map TypoScript objects to individual elements; however, in the TemplaVoila Framework, TypoScript objects are mapped to larger areas.
 
-// @todo-ron link FTB tutorial
 
 Let's take a look at this header design..
 
@@ -30,7 +29,7 @@ In the past we would have mapped the masthead, utility menu and global menu as s
 	:width: 500
 	:alt: Example Page
 
-This approach meant that if the utility menu (#3) was eliminated or the coding on the search changed, then we would be making those changes in the DS and template files plus having to make changes in multiple files and update the mapping on all the templates for the site.
+This approach meant that if the utility menu (#3) was eliminated or the coding on the search changed, then we would be making those changes in the DS and template files which meant having to make changes in multiple files and update the mapping on all the templates for the site.
 
 The TemplaVoila Framework Way
 ================================
@@ -47,5 +46,3 @@ Some of the practical advantages of this approach are:
 - A single set of page templates can be used over and over for a variety of designs without remapping.
 - Sites with totally different designs can have very large differences in their HTML code yet use the same core templates. This allows skins to be switched without remapping.
 - Future changes to the underlying structure can be easily made in a single place in the code.
-
-// @todo-ron need to finish

@@ -12,16 +12,41 @@ TemplaVoila Framework
 ================================
 
 
-:Extension name: |TemplaVoila Framework|
-:Extension key: |templavoila_framework|
-:Version: 2.0.0
-:Description: Manual for the TYPO3 extension "|TemplaVoila Framework|" and its application
-:Language: en
-:Author: |Ron Hall & Jeff Segars|
-:Company: |Busy Noggin Digital|
-:Creation: May 15, 2013
-:Generation: |time|
-:License: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
+:Extension name:
+    TemplaVoila Framework
+
+:Extension key:
+    templavoila_framework
+
+:Version:
+    2.0.0
+
+:Description:
+    Manual for the TYPO3 extension "TemplaVoila Framework" and its application
+
+:Author:
+    Ron Hall & Jeff Segars
+
+:Company:
+    Busy Noggin Digital
+
+:Website:
+    `www.busynoggin.com <http://www.busynoggin.com/>`_
+
+:Email:
+    extensions@busynoggin.com
+
+:Language:
+    en
+
+:Creation:
+    May 15, 2013
+
+:Rendered:
+    |today|
+
+:License:
+    Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
 
 The content of this document is related to TYPO3, a GNU/GPL CMS/Framework available from `www.typo3.org
 <http://www.typo3.org/>`_
@@ -40,5 +65,5 @@ The content of this document is related to TYPO3, a GNU/GPL CMS/Framework availa
     Workflow/Index
     Extras/Index
 
-// @todo-ron need to finish
+// @todo-ron test email
 

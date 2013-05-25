@@ -17,11 +17,11 @@ FCE Headers
 
 If you want your headers to show on the front end (or not), go to TemplaVoila (templavoila) in the extension manager, click on the configuration icon and then check (or uncheck) "Enable Headers for FCEs"
 
-.. figure:: /Images/ConfigurationGear.png
+.. figure:: Images/ConfigurationGear.png
     :alt: Example Page
     :align: left
 
-.. figure:: /Images/EnableFCEHeader.png
+.. figure:: Images/EnableFCEHeader.png
     :alt: Example Page
     :align: left
 

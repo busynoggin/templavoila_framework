@@ -15,15 +15,15 @@ Skills You Need to Have
 To develop sites using this framework you will need to:
 
 - have a solid understanding of HTML and CSS.
-- have the ability to look at a visual layout and determine the HTML structure needed to produce it for the web (i.e. knowing where you need div's, what needs to be floated or positioned, etc.)
+- have the ability to look at a visual layout and determine the HTML structure needed to produce it for the web (i.e. knowing where you need div's, what needs to be floated or positioned, etc.).
 - be able to write HTML with a text editor. If you use a visual editor that keeps you from dealing with the source code then you will not be able to use this framework.
-- have some ability in coding TypoScript
+- have some ability in coding TypoScript.
 
 Ideally, you will:
 
-- have strong experience in coding TypoScript, HTML, CSS and JavaScript
-- have worked through the TemplaVoila tutorial entitled Futuristic Template Building.
-- have experience in building sites with TemplaVoila (the more the better)
+- have strong experience in coding HTML, CSS, JavaScript and TypoScript.
+- have worked through the TemplaVoila tutorial entitled `Futuristic Template Building tutorial <http://typo3.org/documentation/document-library/tutorials/doc_tut_ftb1/1.0.1/view/>`_. The screenshots in that tutorial are dated, but it still provides a real understanding of how to create templates in TemplaVoila.
+- have experience in building sites with TemplaVoila (the more the better).
 
 Experienced developers who often use TemplaVoila to build sites will find it easier than most to understand this framework since they are already familiar with TypoScript, front-end code and TemplaVoila.
 

@@ -11,7 +11,7 @@
 Adaptable layouts
 ================================
 
-At Busy Noggin, there was a time in our work with TemplaVoila where we realized that it was possible to develop a set of standardized page templates and reusable Flexible Content Elements (FCEs) that could be combined to produce custom site designs quickly and consistently.
+There was a time Busy Noggin where we realized in our work with TemplaVoila that it was possible to develop a set of standardized page templates and reusable Flexible Content Elements (FCEs) that could be combined to produce custom site designs quickly and consistently.
 
 The TemplaVoila Framework relies upon page templates that can produce a wide range of visual designs while being standardized "under the hood." To accomplish this it uses:
 

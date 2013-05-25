@@ -29,7 +29,9 @@ Install and setup the TemplaVoila Framework extension
 
 -   Create a custom skin directory in filadmin. Typically it is fileadmin/templates/skins/.
 
--	Retrieve and install the TemplaVoila Framework (templavoila_framework) in the extension manager.
+-	Copy the TemplaVoila Framework extension into typo3conf/ext/ and install it with the extension manager.
+
+.. // @todo-ron update above when in TER. Retrieve and install the TemplaVoila Framework (templavoila_framework) in the extension manager.
 
 -   Click the configuration icon and make sure the default custom skin path matches the path to the directory you created earlier. You can have multiple paths separated by a comma though it is normal to store all your custom skins in one directory.
 

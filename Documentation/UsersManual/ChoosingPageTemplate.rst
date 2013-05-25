@@ -13,7 +13,7 @@ Choosing a Page Template
 
 The TemplaVoila Framework comes with 15 basic page templates. The design of your site will determine how many of those templates are needed for your site.  These templates are selected just like any TemplaVoila page templates. Go to the appearance tab in the page properties and select the template you need.
 
-.. figure:: Images/SkinSelector.png
+.. figure:: Images/SelectTemplate.png
     :width: 500
     :alt: Skin Selector
 

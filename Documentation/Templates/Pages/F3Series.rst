@@ -33,10 +33,11 @@ Templates F3a and F3b
 
 These templates each contain a header, footer, feature content (F), main content (c1), secondary content (c2)  and addtional content (c3). They are identical except for the ID on the body tag (f3a, f3b). These ID's allow them to be targeted independently with CSS.
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F3ab.png
+    :alt: Plain Image
+    :align: left
 
 
 Templates F3c and F3d
@@ -44,9 +45,10 @@ Templates F3c and F3d
 
 These are identical to template F3a except the order of the main content (c10 and the secondary content (c2)  has been switched. Also the IDs on the body tags are different (F3c, F3d)
 
-When user enters feature content.
+Left is when feature content is entered and right is when it is not.
 
-
-When user does not enter feature content.
+.. figure:: Images/F3cd.png
+    :alt: Plain Image
+    :align: left
 
 // @todo-ron need to finish
