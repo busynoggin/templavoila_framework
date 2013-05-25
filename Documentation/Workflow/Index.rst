@@ -22,7 +22,5 @@ Workflow
     InfoArchitecture/Index
     Design
     BuildSkin/Index
-    CodeUniqueFunctionality
-    LoadContentAndLaunch
+    UniqueFunctionalityAndContent
 
-// @todo-ron need to finish

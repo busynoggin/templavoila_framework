@@ -23,5 +23,3 @@ Because of the TemplaVoila Framework our internal starter package, at Busy Noggi
     :glob:
 
     BuildSkin
-
-// @todo-ron need to finish

@@ -26,19 +26,32 @@ The Upgrade Process
 
 If you are ready to move to version 2, these are the steps you must follow.
 
-- Prepare backup copies of needed files in case you have to rollback to your current state.
-	+ Save a copy of your current version of TemplaVoila Framework.
-	+ Save a copy of your skin.
-	+ Backup your database.
-- Make sure you are on TemplaVoila Framework 1.3.
-- Upgrade to latest version of TemplaVoila
-- Upgrade to TYPO3 version 6.x.
-- Upgrade to TemplaVoila Framework version 2 and then reinstall it
-- At the beginning of your version 1 skin constants add this line: plugin.tx_templavoilaframework.renderMode = 1
-- Run the update script
-- Replace existing local processing XML in all TemplaVoila Framework template objects with the new XML needed for version 2. You can find the needed XML in /typo3conf/ext/templavoila_framework/Resources/Private/Content/TVFWVersion2LocalProcessingXML/
-- Clear your TYPO3 cache and you should be back up and running.
+-
+    Prepare backup copies of needed files in case you have to rollback to your current state.
+        +   Save a copy of your current version of TemplaVoila Framework.
+        +   Save a copy of your skin.
+    	+  Backup your database.
+-
+    Make sure you are on TemplaVoila Framework 1.3.
+-
+    Upgrade to latest version of TemplaVoila
+-
+    Upgrade to TYPO3 version 6.x.
+-
+    Upgrade to TemplaVoila Framework version 2.
+-
+    At the beginning of your version 1 skin constants add this line: plugin.tx_templavoilaframework.renderMode = 1
+-
+    Run the update script. First, in the extension manager you click the "Execute the update script" icon for the TemplaVoila Framework. The click the "Update Database" button.
 
-// @todo-ron  Is it only the page template objects that need the new XML or do flexible content template objects also need to be modified?
+    .. figure:: Images/UpdateScript.png
+        :alt: Update Script
+        :align: left
 
-// @todo-ron need to finish
+    .. figure:: Images/UpdateDB.png
+        :alt: Update Database
+        :align: left
+-
+    Replace existing local processing XML in all TemplaVoila Framework page template objects (F1a, F1b, etc.) with the new XML needed for version 2. You can find the needed XML in /typo3conf/ext/templavoila_framework/Resources/Private/Content/TVFWVersion2LocalProcessingXML/
+-
+    Clear your TYPO3 cache and you should be back up and running.

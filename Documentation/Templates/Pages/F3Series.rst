@@ -51,4 +51,3 @@ Left is when feature content is entered and right is when it is not.
     :alt: Plain Image
     :align: left
 
-// @todo-ron need to finish

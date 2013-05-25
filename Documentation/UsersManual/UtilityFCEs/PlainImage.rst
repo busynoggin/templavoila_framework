@@ -42,4 +42,3 @@ The following images are place with the Plain Image utility FCE. Both are set to
     :alt: Plain Image
     :align: left
 
-// @todo-ron need to finish

@@ -13,7 +13,7 @@ Working with Modules
 
 Module groups are Flexible Content Elements (FCEs) for displaying content in modules inside of page content blocks. They can be used to create special layouts instead of generating more main page templates.
 
-Module groups have options and also automatically adjust their width and max image widths to the page content block in which they are placed. Columns can also be nested inside modules (up to one level).
+Module groups have options and also automatically adjust their width and max image widths to the page content block in which they are placed. Columns can be nested inside modules (up to one level) though it is generally recommended to avoid nesting.
 
 A Note on Module Backgrounds
 ================================
@@ -31,6 +31,8 @@ Here are the various options for module groups and their individual modules. The
     :alt: Column Options
     :align: left
 
+**Note:** The Space Before and Space After that were in version 1 of the Framework have been eliminated. Use the normal space before and after of TYPO3 content elements.
+
 **Options on each module**
 
 **Show Title:** A value is set globally to show or not show module titles by default. The default can be overridden by the user on a per page basis.
@@ -42,5 +44,3 @@ Here are the various options for module groups and their individual modules. The
 .. figure:: Images/ModuleOptions.gif
     :alt: Column Options
     :align: left
-
-// @todo-ron need to finish

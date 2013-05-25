@@ -30,8 +30,5 @@ If you want your headers to show on the front end (or not), go to TemplaVoila (t
 The TemplaVoila Framework and Busy Noggin Digital's Adaptive Profiles
 ================================
 
+The Adaptive Profiles extension (bn_adaptiveprofiles) by Busy Noggin Digital is a great companion the the TemplaVoila Framework. Together they make adative / responsive web sites both easier to code and more powerful.
 
-Site Builder Lab
-================================
-
-// @todo-ron need to finish

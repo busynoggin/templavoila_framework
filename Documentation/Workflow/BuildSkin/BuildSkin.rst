@@ -87,4 +87,3 @@ You will need to edit TypoScript in the skin to create proper HTML for header, f
 
 The preCode and postCode objects are very important for making major changes to a page's structure without remapping page templates.
 
-// @todo-ron need to finish

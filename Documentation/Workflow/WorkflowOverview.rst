@@ -26,5 +26,3 @@ The following is the workflow we use at Busy Noggin to produce TYPO3-driven webs
 - Integrate the visual design into TYPO3 by building a template skin.
 - Code any special functionality with custom content elements or extensions
 - Load the content and launch the site.
-
-// @todo-ron need to finish

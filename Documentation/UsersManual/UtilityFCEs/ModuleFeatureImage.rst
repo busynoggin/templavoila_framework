@@ -17,5 +17,3 @@ The Module Feature Image is designed to handle a very special situation within m
     :alt: Plain Image
     :align: left
     :width: 600
-
-// @todo-ron need to finish

@@ -61,5 +61,3 @@ Left is when feature content is entered and right is when it is not.
 .. figure:: Images/F2e.png
     :alt: Plain Image
     :align: left
-
-// @todo-ron need to finish

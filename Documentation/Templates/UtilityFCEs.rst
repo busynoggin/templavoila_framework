@@ -15,4 +15,6 @@ Across the web, sites have a variety of ways of arranging content within content
 
 Of course, a developer still has all the templating power of TemplaVoila at his fingertips to construct FCEs that handle specialized layout needs.
 
-// @todo-ron need to finish
+See the Users Manual section of this manual for details on the Utility FCEs.
+
+// @todo-ron add link to section explaining Utility FCEs

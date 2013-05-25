@@ -42,4 +42,3 @@ Once the infomation archtecture is nailed down and replicated in the working pro
 - The programmer can begin installing extensions, setting up users, etc.
 - The content editor can begin entering content. Initially the content will be presented in the wireframe but will automatically be reformatted when the final skin is integrated.
 
-// @todo-ron need to finish
