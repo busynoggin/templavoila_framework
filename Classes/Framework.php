@@ -376,44 +376,6 @@ class Framework {
 	}
 
 	/**
-	 * Makes a new, local copy of a given skin key.
-	 *
-	 * @param	string	$skinKey: The skin to copy.
-	 * @return	void
-	 */
-	public static function copySkinToLocal($skinKey) {
-		$copyFrom = self::getSkinPath($skinKey);
-		$copyTo = self::getCustomSkinPath();
-
-		$filemounts['1'] = array(
-			'name' => $copyTo,
-			'path' => PATH_site . $copyTo
-		);
-		$filemounts['2'] = array(
-			'name' => 'typo3conf/ext/',
-			'path' => PATH_site . 'typo3conf/ext/'
-		);
-
-		$fileCommands = array(
-			'copy' => array(
-				array(
-					'data' => PATH_site . $copyFrom,
-					'target' => PATH_site . $copyTo,
-					'altName' => 1
-				)
-			)
-		);
-
-		$fileHandler = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Utility\\File\\ExtendedFileUtility');
-		$fileHandler->init($filemounts, $TYPO3_CONF_VARS['BE']['fileExtensions']);
-		$fileHandler->init_actionPerms($GLOBALS['BE_USER']->getFileoperationPermissions());
-		$fileHandler->start($fileCommands);
-
-		$fileHandler->processData();
-		$fileHandler->printLogErrorMessages();
-	}
-
-	/**
 	 * Gets the static data structure array.  This array changed in TemplaVoila 1.5.
 	 * See ext_localconf.php and ext_tables.php for usage.
 	 *

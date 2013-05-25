@@ -40,17 +40,13 @@ class SkinSelector {
 
 	/**
 	 * Displays the skin selector as a TCEForm's userfunc. Handles display of
-	 * skins and copying skins but leaves the saving to TCEmain.
+	 * skins but leaves the saving to TCEmain.
 	 *
 	 * @param	array	$PA
 	 * @param	object	$pObj
 	 * @return	string
 	 */
 	public function display($PA, $pObj) {
-		if (self::allowSkinCopy() && \TYPO3\CMS\Core\Utility\GeneralUtility::_GP('copySkin')) {
-			\BusyNoggin\TemplavoilaFramework\Framework::copySkinToLocal(\TYPO3\CMS\Core\Utility\GeneralUtility::_GP('copySkin'));
-		}
-
 		$this->pObj = $pObj;
 		return $this->renderSkinSelector($PA['table'], $PA['row']);
 	}
@@ -141,9 +137,6 @@ class SkinSelector {
 				$tmplHTML[] = '</ul>';
 			}
 			$tmplHTML[] = '<input type="hidden" name="data[' . $table . '][' . $uid . '][skin_selector]" id="skinSelector" value="' . $row['skin_selector'] . '" />';
-			if (self::allowSkinCopy()) {
-				$tmplHTML[] = '<input id="copySkin" type="hidden" name="copySkin" value="0" />';
-			}
 		}
 
 		return implode(chr(10), $tmplHTML);
@@ -195,9 +188,6 @@ class SkinSelector {
 				$html[] = '<input type="submit" value="' . $GLOBALS['LANG']->getLL('selectSkinButton') . '" onclick="$(\'skinSelector\').value = \'' . $skin . '\'; TBE_EDITOR.submitForm();" /> ';
 			}
 
-			if (self::allowSkinCopy()) {
-				$html[] = '<input type="submit" value="' .  $GLOBALS['LANG']->getLL('copySkinButton') . '" onclick="document.getElementById(\'copySkin\').value = \'' . $skin . '\';" />';
-			}
 			$html[] = '</div>';
 			$html[] = '</div>';
 
@@ -205,23 +195,6 @@ class SkinSelector {
 		} else {
 			return FALSE;
 		}
-	}
-
-	/**
-	 * Checks whether skin copying is allowed. This may eventually be a permissions
-	 * check but is currently based on OS because TYPO3 file functions do not support
-	 * recursive copies in Windows.
-	 *
-	 * @return boolean
-	 */
-	protected function allowSkinCopy() {
-		if (TYPO3_OS !== 'WIN') {
-			$allowSkinCopy = TRUE;
-		} else {
-			$allowSkinCopy = FALSE;
-		}
-
-		return $allowSkinCopy;
 	}
 
 }
