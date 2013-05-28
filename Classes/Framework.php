@@ -288,7 +288,7 @@ class Framework {
 			}
 		}
 
-		if ($row['root'] && $row['skin_selector']) {
+		if ($row['skin_selector']) {
 			$skin = $row['skin_selector'];
 			$relSkinPath = self::getSkinPath($skin);
 
