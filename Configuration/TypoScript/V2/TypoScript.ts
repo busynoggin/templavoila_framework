@@ -14,30 +14,30 @@ plugin.tx_templavoilaframework {
 
 		7 = LOAD_REGISTER
 		7 {
-			f1ageneratedContent-1disable = 1
-			f1ageneratedContent-2disable = 1
-			f1bgeneratedContent-1disable = 1
-			f1bgeneratedContent-2disable = 1
-			f1cgeneratedContent-1disable = 1
-			f1cgeneratedContent-2disable = 1
-			f1dgeneratedContent-1disable = 0
-			f1dgeneratedContent-2disable = 1
-			f1egeneratedContent-1disable = 1
-			f1egeneratedContent-2disable = 0
-			f1fgeneratedContent-1disable = 0
-			f1fgeneratedContent-2disable = 0
-			f2ageneratedContent-1disable = 1
-			f2ageneratedContent-2disable = 1
-			f2bgeneratedContent-1disable = 1
-			f2bgeneratedContent-2disable = 1
-			f2cgeneratedContent-1disable = 1
-			f2cgeneratedContent-2disable = 1
-			f2dgeneratedContent-1disable = 0
-			f2dgeneratedContent-2disable = 1
-			f2egeneratedContent-1disable = 1
-			f2egeneratedContent-2disable = 0
-			f2fgeneratedContent-1disable = 0
-			f2fgeneratedContent-2disable = 0
+			f1ageneratedContent-1disable = {$plugin.tx_templavoilaframework.f1a.settings.generatedContent-1.disable}
+			f1ageneratedContent-2disable = {$plugin.tx_templavoilaframework.f1a.settings.generatedContent-2.disable}
+			f1bgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f1b.settings.generatedContent-1.disable}
+			f1bgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f1b.settings.generatedContent-2.disable}
+			f1cgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f1c.settings.generatedContent-1.disable}
+			f1cgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f1c.settings.generatedContent-2.disable}
+			f1dgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-1.disable}
+			f1dgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f1d.settings.generatedContent-2.disable}
+			f1egeneratedContent-1disable = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-1.disable}
+			f1egeneratedContent-2disable = {$plugin.tx_templavoilaframework.f1e.settings.generatedContent-2.disable}
+			f1fgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-1.disable}
+			f1fgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f1f.settings.generatedContent-2.disable}
+			f2ageneratedContent-1disable = {$plugin.tx_templavoilaframework.f2a.settings.generatedContent-1.disable}
+			f2ageneratedContent-2disable = {$plugin.tx_templavoilaframework.f2a.settings.generatedContent-2.disable}
+			f2bgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f2b.settings.generatedContent-1.disable}
+			f2bgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f2b.settings.generatedContent-2.disable}
+			f2cgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f2c.settings.generatedContent-1.disable}
+			f2cgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f2c.settings.generatedContent-2.disable}
+			f2dgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-1.disable}
+			f2dgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f2d.settings.generatedContent-2.disable}
+			f2egeneratedContent-1disable = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-1.disable}
+			f2egeneratedContent-2disable = {$plugin.tx_templavoilaframework.f2e.settings.generatedContent-2.disable}
+			f2fgeneratedContent-1disable = {$plugin.tx_templavoilaframework.f2f.settings.generatedContent-1.disable}
+			f2fgeneratedContent-2disable = {$plugin.tx_templavoilaframework.f2f.settings.generatedContent-2.disable}
 		}
 
 		10 = CASE

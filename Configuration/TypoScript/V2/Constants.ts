@@ -116,6 +116,7 @@ plugin.tx_templavoilaframework {
 				id = generated-content-1
 				class =
 				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
+				disable = 0
 			}
 			generatedContent-2 {
 				width = 960
@@ -123,6 +124,7 @@ plugin.tx_templavoilaframework {
 				id = generated-content-2
 				class =
 				minFullImageWidth = {$plugin.tx_templavoilaframework.minFullImageWidth}
+				disable = 0
 			}
 		}
 	}
@@ -136,6 +138,8 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f1acontentBlock-1tag} {register:f1acontentBlock-1id} {register:f1acontentBlock-1class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1acontentBlock-1tag}>
 		}
+		generatedContent-1.disable = 1
+		generatedContent-2.disable = 1
 	}
 	f1b.settings < .baseDefaults.settings
 	f1b.wraps {
@@ -147,6 +151,8 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f1bcontentBlock-1tag} {register:f1bcontentBlock-1id} {register:f1bcontentBlock-1class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1bcontentBlock-1tag}>
 		}
+		generatedContent-1.disable = 1
+		generatedContent-2.disable = 1
 	}
 	f1c.settings < .baseDefaults.settings
 	f1c.wraps {
@@ -158,6 +164,8 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f1ccontentBlock-1tag} {register:f1ccontentBlock-1id} {register:f1ccontentBlock-1class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1ccontentBlock-1tag}>
 		}
+		generatedContent-1.disable = 1
+		generatedContent-2.disable = 1
 	}
 	f1d.settings < .baseDefaults.settings
 	f1d.wraps {
@@ -172,7 +180,9 @@ plugin.tx_templavoilaframework {
 		generatedContent-1 {
 			beginWrap = <{register:f1dgeneratedContent-1tag} {register:f1dgeneratedContent-1id} {register:f1dgeneratedContent-1class}>
 			endWrap = <div class="clear-only">&nbsp;</div></{register:f1dgeneratedContent-1tag}>
+			disable = 0
 		}
+		generatedContent-2.disable = 1
 	}
 	f1e.settings < .baseDefaults.settings
 	f1e.wraps {
@@ -184,9 +194,11 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f1econtentBlock-1tag} {register:f1econtentBlock-1id} {register:f1econtentBlock-1class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f1econtentBlock-1tag}>
 		}
+		generatedContent-1.disable = 1
 		generatedContent-2 {
 			beginWrap = <{register:f1egeneratedContent-2tag} {register:f1egeneratedContent-2id} {register:f1egeneratedContent-2class}>
 			endWrap = <div class="clear-only">&nbsp;</div></{register:f1egeneratedContent-2tag}>
+			disable = 0
 		}
 	}
 	f1f.settings < .baseDefaults.settings
@@ -202,10 +214,12 @@ plugin.tx_templavoilaframework {
 		generatedContent-1 {
 			beginWrap = <{register:f1fgeneratedContent-1tag} {register:f1fgeneratedContent-1id} {register:f1fgeneratedContent-1class}>
 			endWrap = <div class="clear-only">&nbsp;</div></{register:f1fgeneratedContent-1tag}>
+			disable = 0
 		}
 		generatedContent-2 {
 			beginWrap = <{register:f1fgeneratedContent-2tag} {register:f1fgeneratedContent-2id} {register:f1fgeneratedContent-2class}>
 			endWrap = <div class="clear-only">&nbsp;</div></{register:f1fgeneratedContent-2tag}>
+			disable = 0
 		}
 	}
 	f2a.settings < .baseDefaults.settings
@@ -222,6 +236,8 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f2acontentBlock-2tag} {register:f2acontentBlock-2id} {register:f2acontentBlock-2class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2acontentBlock-2tag}>
 		}
+		generatedContent-1.disable = 1
+		generatedContent-2.disable = 1
 	}
 	f2b.settings < .baseDefaults.settings
 	f2b.wraps {
@@ -237,6 +253,8 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f2bcontentBlock-2tag} {register:f2bcontentBlock-2id} {register:f2bcontentBlock-2class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2bcontentBlock-2tag}>
 		}
+		generatedContent-1.disable = 1
+		generatedContent-2.disable = 1
 	}
 	f2c.settings < .baseDefaults.settings
 	f2c.wraps {
@@ -252,6 +270,8 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f2ccontentBlock-2tag} {register:f2ccontentBlock-2id} {register:f2ccontentBlock-2class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2ccontentBlock-2tag}>
 		}
+		generatedContent-1.disable = 1
+		generatedContent-2.disable = 1
 	}
 	f2d.settings < .baseDefaults.settings
 	f2d.wraps {
@@ -270,7 +290,9 @@ plugin.tx_templavoilaframework {
 		generatedContent-1 {
 			beginWrap = <{register:f2dgeneratedContent-1tag} {register:f2dgeneratedContent-1id} {register:f2dgeneratedContent-1class}>
 			endWrap = <div class="clear-only">&nbsp;</div></{register:f2dgeneratedContent-1tag}>
+			disable = 0
 		}
+		generatedContent-2.disable = 1
 	}
 	f2e.settings < .baseDefaults.settings
 	f2e.wraps {
@@ -286,9 +308,11 @@ plugin.tx_templavoilaframework {
 			beginWrap = <{register:f2econtentBlock-2tag} {register:f2econtentBlock-2id} {register:f2econtentBlock-2class}><!--TYPO3SEARCH_begin-->
 			endWrap = <!--TYPO3SEARCH_end--><div class="clear-only">&nbsp;</div></{register:f2econtentBlock-2tag}>
 		}
+		generatedContent-1.disable = 1
 		generatedContent-2 {
 			beginWrap = <{register:f2egeneratedContent-2tag} {register:f2egeneratedContent-2id} {register:f2egeneratedContent-2class}>
 			endWrap = <div class="clear-only">&nbsp;</div></{register:f2egeneratedContent-2tag}>
+			disable = 0
 		}
 	}
 	f3a.settings < .baseDefaults.settings
