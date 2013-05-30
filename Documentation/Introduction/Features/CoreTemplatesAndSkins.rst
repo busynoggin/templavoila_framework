@@ -52,7 +52,7 @@ There are a number of version 1 skins in the TYPO3 extension repository (TER). T
 
 plugin.tx_templavoilaframework.renderMode = 1
 
-However, we do not recommend using the version 1 skins for any new site development. Rather, you should develop a custom skin for your site using version 2 code. There is a Busy Noggin Wireframe Skin based on version 2 code. This wireframe skin can be used as a starting point for new skins. This skin will be in the TER when version 2 of the Framework is in the TER. The skin is included in the download of the pre-release version 2 of the Framework located at `www.busynoggin.com/fileadmin/extensions/TVFW2PreRelease.zip <http://www.busynoggin.com/fileadmin/extensions/TVFW2PreRelease.zip>`_.
+However, we do not recommend using the version 1 skins for any new site development. Rather, you should develop a custom skin for your site using version 2 code. There is a Busy Noggin Wireframe Skin based on version 2 code. This wireframe skin can be used as a starting point for new skins. This skin will be in the TER when version 2 of the Framework is in the TER. The skin is included in the download of the pre-release version 2 of the Framework located at `www.busynoggin.com/fileadmin/extensions/bn_prototypingskin.zip <http://www.busynoggin.com/fileadmin/extensions/bn_prototypingskin.zip>`_.
 
 Skins can be extensions or simply reside in your custom skin directory. You only need to make a skin an extension if you intend to distribute it via the TYPO3 TER. Therefore, it is likely that all of your skins will reside in your custom skin directory.
 

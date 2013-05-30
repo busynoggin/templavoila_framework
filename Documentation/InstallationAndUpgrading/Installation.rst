@@ -50,6 +50,8 @@ Install and setup the TemplaVoila Framework extension
         :alt: Example Page
         :align: left
 
+-   Clear the TYPO3 configuration cache.
+
 -   In the root page of your site and in the Appearance tab of the page properties select a page template.
 
     .. figure:: Images/AssignPageTemplate.png

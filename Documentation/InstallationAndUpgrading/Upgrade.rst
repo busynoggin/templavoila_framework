@@ -16,6 +16,8 @@ If you already have TVFW version 2 installed and running, then you simply need t
 
 If your site is currently running on TVFW version 1.x, then upgrading is a bit more involved.
 
+We have not yet released TVFW to the TER. You can get a copy for now from `github.com/busynoggin <https://github.com/busynoggin>'_. We will release the version 2 to the TYPO3 Extension Repository (TER) during June, 2013.
+
 Should You Upgrade?
 --------------------------------
 
@@ -32,7 +34,7 @@ If you are ready to move to version 2, these are the steps you must follow.
         +   Save a copy of your skin.
     	+  Backup your database.
 -
-    Make sure you are on TemplaVoila Framework 1.3.
+    Make sure you are on TemplaVoila Framework 1.3. We are currently experiencing trouble getting this version into the TER. So, as an alternate, you can uninstall your copy of the Framework to allow the TYPO3 6.1 upgrade. You would then install version 2 of the Framework.
 -
     Upgrade to latest version of TemplaVoila
 -
