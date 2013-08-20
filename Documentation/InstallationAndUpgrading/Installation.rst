@@ -21,6 +21,8 @@ Before you begin:
 Install and setup the TemplaVoila Framework extension
 ================================
 
+The TemplaVoila Framework extension will be availble in the TER in the Fall. You can get a copy now at `github.com/busynoggin <http://github.com/busynoggin>`_. A manual is located at `www.busynoggin.com/extensions/bn_templavoilaframework/ <http://www.busynoggin.com/extensions/bn_templavoilaframework/>`_
+
 -   Create a folder in the TYPO3 page tree to contain your template objects. It is typically named "Site Resources." Next create folders for Generated Content 1 and Generated Content 2. Note their uids. You can find the uid by hovering over the folder icon.
 
     .. figure:: Images/FolderSetup.png
