@@ -273,7 +273,7 @@ class ext_update {
 
 		$fieldsValues = array(
 			'tx_templavoila_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')',
-			'tx_templavoila_next_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
+			'tx_templavoila_next_ds' => 'replace(tx_templavoila_next_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
 		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('pages', 'tx_templavoila_ds LIKE \'' . $oldPath . '%\' OR tx_templavoila_next_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoila_ds,tx_templavoila_next_ds');
 	}
