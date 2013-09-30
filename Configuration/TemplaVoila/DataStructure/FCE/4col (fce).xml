@@ -150,7 +150,7 @@
 	1 = TEXT
 	1.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 	2 = TEXT
-	2.dataWrap = <div class="{register:columnGroupClass} four-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+	2.dataWrap = {register:fourColumnGroupcolumn-1beginWrap}
 	default = TEXT
 	default.dataWrap = <div class="{register:columnGroupClass} fourColumnGroup"><div class="column column-1 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 }
@@ -164,7 +164,7 @@
 
 ## Write the ending HTML for the column based on whether v1 or v2 rendering
 60 = TEXT
-60.value = </div>
+60.dataWrap = {register:fourColumnGroupcolumn-1endWrap}
 
 ]]>
                     </TypoScript>
@@ -215,7 +215,7 @@
 	1 = TEXT
 	1.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 	2 = TEXT
-	2.dataWrap = <div class="column{register:classColumnDistribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+	2.dataWrap = {register:fourColumnGroupcolumn-2beginWrap}
 	default = TEXT
 	default.dataWrap = <div class="column column-2 oneQuarter" style="width:{register:containerWidth}px;float:left;margin-right:{register:globalGutter}px;">
 }
@@ -230,7 +230,7 @@
 
 ## Write the ending HTML for the column based on whether v1 or v2 rendering
 50 = TEXT
-50.value = </div>
+50.dataWrap = {register:fourColumnGroupcolumn-2endWrap}
 
 ]]>
 
@@ -282,7 +282,7 @@
 	1 = TEXT
 	1.dataWrap = <div class="column column-3 oneQuarter" style="width:{register:containerWidth}px;float:left;">
 	2 = TEXT
-	2.dataWrap = <div class="column{register:classColumnDistribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+	2.dataWrap = {register:fourColumnGroupcolumn-3beginWrap}
 	default = TEXT
 	default.dataWrap = <div class="column column-3 oneQuarter" style="width:{register:containerWidth}px;float:left;">
 }
@@ -296,7 +296,7 @@
 
 ## Write the ending HTML for the column based on whether v1 or v2 rendering
 50 = TEXT
-50.value = </div>
+50.dataWrap = {register:fourColumnGroupcolumn-3endWrap}
 ]]>
 
                     </TypoScript>
@@ -347,7 +347,7 @@
 	1 = TEXT
 	1.dataWrap = <div class="column column-4 oneQuarter" style="width:{register:containerWidth}px;float:right;">
 	2 = TEXT
-	2.dataWrap = <div class="column{register:classColumnDistribution} column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
+	2.dataWrap = {register:fourColumnGroupcolumn-4beginWrap}
 	default = TEXT
 	default.dataWrap = <div class="column column-4 oneQuarter" style="width:{register:containerWidth}px;float:right;">
 }
@@ -367,7 +367,7 @@
 	1 = TEXT
 	1.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
 	2 = TEXT
-	2.dataWrap = </div></div><!-- end .four-column-group  -->
+	2.dataWrap = {register:threeColumnGroupcolumn-4endWrap}
 	default = TEXT
 	default .dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
 }

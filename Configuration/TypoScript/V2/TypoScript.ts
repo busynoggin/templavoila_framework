@@ -1867,7 +1867,9 @@ plugin.tx_templavoilaframework {
 
 	columnGroupSetup = COA
 	columnGroupSetup.10 = LOAD_REGISTER
-	columnGroupSetup.10.columnRuleDefault = {$plugin.tx_templavoilaframework.columnRuleDefault}
+	columnGroupSetup.10 {
+		columnRuleDefault = {$plugin.tx_templavoilaframework.columnRuleDefault}
+	}
 
 	columnGroupSetup.20 = CASE
 	columnGroupSetup.20 {
@@ -2374,6 +2376,34 @@ plugin.tx_templavoilaframework {
 				classColumnGroupDistribution.noTrimWrap = | ||
 			}
 		}
+	}
+
+	columnGroupSetup = COA
+	columnGroupSetup.50 = LOAD_REGISTER
+	columnGroupSetup.50 {
+		twoColumnGroupcolumn-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.twoColumnGroup.column-1.beginWrap}
+		twoColumnGroupcolumn-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.twoColumnGroup.column-1.endWrap}
+		twoColumnGroupcolumn-2beginWrapdefault.dataWrap = {$plugin.tx_templavoilaframework.twoColumnGroup.column-2.beginWrap.default}
+		twoColumnGroupcolumn-2beginWraplevel-2.dataWrap = {$plugin.tx_templavoilaframework.twoColumnGroup.column-2.beginWrap.level-2}
+		twoColumnGroupcolumn-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.twoColumnGroup.column-2.endWrap}
+
+		threeColumnGroupcolumn-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-1.beginWrap}
+		threeColumnGroupcolumn-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-1.endWrap}
+		threeColumnGroupcolumn-2beginWrapdefault.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-2.beginWrap.default}
+		threeColumnGroupcolumn-2beginWraplevel-2.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-2.beginWrap.level-2}
+		threeColumnGroupcolumn-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-2.endWrap}
+		threeColumnGroupcolumn-3beginWrapdefault.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-3.beginWrap.default}
+		threeColumnGroupcolumn-3beginWraplevel-2.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-3.beginWrap.level-2}
+		threeColumnGroupcolumn-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.threeColumnGroup.column-3.endWrap}
+
+		fourColumnGroupcolumn-1beginWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-1.beginWrap}
+		fourColumnGroupcolumn-1endWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-1.endWrap}
+		fourColumnGroupcolumn-2beginWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-2.beginWrap}
+		fourColumnGroupcolumn-2endWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-2.endWrap}
+		fourColumnGroupcolumn-3beginWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-3.beginWrap}
+		fourColumnGroupcolumn-3endWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-3.endWrap}
+		fourColumnGroupcolumn-4beginWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-4.beginWrap}
+		fourColumnGroupcolumn-4endWrap.dataWrap = {$plugin.tx_templavoilaframework.fourColumnGroup.column-4.endWrap}
 	}
 
 	##############################################################

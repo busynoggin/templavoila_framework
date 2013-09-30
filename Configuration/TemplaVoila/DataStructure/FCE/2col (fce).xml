@@ -164,7 +164,8 @@
 	1 = TEXT
 	1.dataWrap = <div class="{register:columnGroupClass} twoColumnGroup"><div class="column column-1{register:classColumn1Distribution}" style="width:{register:containerWidth}px;float:left;">
 	2 = TEXT
-	2.dataWrap = <div class="{register:columnGroupClass} two-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+	2.dataWrap = {register:twoColumnGroupcolumn-1beginWrap}
+
 	default = TEXT
 	default.dataWrap = <div class="{register:columnGroupClass} twoColumnGroup"><div class="column column-1{register:classColumn1Distribution}" style="width:{register:containerWidth}px;float:left;">
 }
@@ -178,7 +179,7 @@
 
 ## Write the ending HTML for the column based on whether v1 or v2 rendering
 50 = TEXT
-50.value = </div>
+50.dataWrap = {register:twoColumnGroupcolumn-1endWrap}
 
 ]]>
 
@@ -261,7 +262,7 @@
 		1 = TEXT
 		1.dataWrap = <div class="column column-2{register:classColumn2Distribution}" style="width:{register:containerWidth}px;float:right;">
 		2 = TEXT
-		2.dataWrap = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		2.dataWrap = {register:twoColumnGroupcolumn-2beginWraplevel-2}
 		default = TEXT
 		default.dataWrap = <div class="column column-2{register:classColumn2Distribution}" style="width:{register:containerWidth}px;float:right;">
 	}
@@ -271,7 +272,7 @@
 		1 = TEXT
 		1.dataWrap = <div class="column column-2{register:originalClassColumn2Distribution}" style="width:{register:containerWidth}px;float:right;">
 		2 = TEXT
-		2.dataWrap = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+		2.dataWrap = {register:twoColumnGroupcolumn-2beginWrapdefault}
 		default = TEXT
 		default.dataWrap = <div class="column column-2{register:originalClassColumn2Distribution}" style="width:{register:containerWidth}px;float:right;">
 	}
@@ -291,7 +292,7 @@
 	1 = TEXT
 	1.value = </div><div class="clearOnly">&nbsp;</div></div><!-- end .twoColumnGroup  -->
 	2 = TEXT
-	2.value = </div></div><!-- end .two-column-group  -->
+	2.dataWrap = {register:twoColumnGroupcolumn-2endWrap}
 	default = TEXT
 	default.value = </div><div class="clearOnly">&nbsp;</div></div><!-- end .twoColumnGroup  -->
 }
