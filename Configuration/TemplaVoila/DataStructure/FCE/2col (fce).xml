@@ -103,17 +103,6 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-## If this is not a nested column group then record column widths and the column 2 distribution class to be able to retrieve later in nested column situations
-10 = COA
-10 {
-	if.isFalse.data = register:nestingLevel
-	10 = LOAD_REGISTER
-	10 {
-		originalColumnWidth1.data = register:columnWidth1
-		originalColumnWidth2.data = register:columnWidth2
-		originalClassColumn2Distribution.data = register:classColumn2Distribution
-	}
-}
 
 ## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW Column Modulw CSS for the page.
 ## Also, let system know there is a content element present for when it is in the feature content block

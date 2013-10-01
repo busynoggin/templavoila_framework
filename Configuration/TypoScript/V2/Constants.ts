@@ -85,7 +85,7 @@ plugin.tx_templavoilaframework {
 			endWrap = </div>
 		}
 		column-2 {
-			beginWrap.default = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap.default = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:originalParentID}">
 			beginWrap.level-2 = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
 			endWrap = </div></div><!-- end .two-column-group  -->
 		}
@@ -97,13 +97,13 @@ plugin.tx_templavoilaframework {
 			endWrap = </div>
 		}
 		column-2 {
-			beginWrap.default = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap.default = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:originalParentID}">
 			beginWrap.level-2 = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 
 		column-3 {
-			beginWrap.default = <div class="column{register:originalClassColumn3Distribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap.default = <div class="column{register:originalClassColumn3Distribution} column-3 column-3-c{register:originalParentID}">
 			beginWrap.level-2 = <div class="column{register:classColumn3Distribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
 			endWrap = </div></div><!-- end .three-column-group  -->
 		}

@@ -328,7 +328,7 @@
 					<tags>div:outer</tags>
 					<TypoScript>
 <![CDATA[
-## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW Column Modulw CSS for the page.
+## Set up intial maxImageWidth and the CSS for the column width adding it to the aggregate TVFW Column Module CSS for the page.
 15 = LOAD_REGISTER
 15 {
 	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
@@ -367,7 +367,7 @@
 	1 = TEXT
 	1.dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
 	2 = TEXT
-	2.dataWrap = {register:threeColumnGroupcolumn-4endWrap}
+	2.dataWrap = {register:fourColumnGroupcolumn-4endWrap}
 	default = TEXT
 	default .dataWrap = </div><div class="clearOnly">&nbsp;</div></div><!-- end .fourColumnGroup  -->
 }
