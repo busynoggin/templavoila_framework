@@ -176,3 +176,7 @@
 .typo3-docheader-buttons {
 	height: auto;
 }
+
+.t3-row-header a {
+	float: left;
+}
