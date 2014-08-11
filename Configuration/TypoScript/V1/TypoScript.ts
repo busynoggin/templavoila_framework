@@ -863,6 +863,23 @@ columnGroupSetup.40 {
 	}
 }
 
+## If this is not a nested column group then record column widths and the column 2 distribution class to be able to retrieve later in nested column situations
+
+columnGroupSetup.50 = COA
+columnGroupSetup.50 {
+	if.isFalse.data = register:nestingLevel
+	10 = LOAD_REGISTER
+	10 {
+		originalColumnWidth1.data = register:columnWidth1
+		originalColumnWidth2.data = register:columnWidth2
+		originalColumnWidth3.data = register:columnWidth3
+		originalClassColumn2Distribution.data = register:classColumn2Distribution
+		originalClassColumn3Distribution.data = register:classColumn3Distribution
+		originalParentID.data = register:tx_templavoila_pi1.parentRec.uid
+	}
+}
+
+
 plugin.tx_templavoilaframework.columnGroupSetup =< columnGroupSetup
 
 ##############################################################

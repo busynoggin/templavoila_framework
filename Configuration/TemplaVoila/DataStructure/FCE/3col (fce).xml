@@ -164,8 +164,16 @@
 
 
 ## Write the ending HTML for the column based on whether v1 or v2 rendering
-50 = TEXT
-50.dataWrap = {register:threeColumnGroupcolumn-1endWrap}
+50 = CASE
+50 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.value = </div>
+	2 = TEXT
+	2.dataWrap = {register:twoColumnGroupcolumn-1endWrap}
+	default = TEXT
+	default.value = </div>
+}
 
 ]]>
 
@@ -271,8 +279,17 @@
 }
 
 ## Write the ending HTML for the column based on whether v1 or v2 rendering
-50 = TEXT
-50.dataWrap = {register:threeColumnGroupcolumn-2endWrap}
+50 = CASE
+50 {
+	key.data = register:tvfwRenderMode
+	1 = TEXT
+	1.value = </div>
+	2 = TEXT
+	2.dataWrap = {register:twoColumnGroupcolumn-1endWrap}
+	default = TEXT
+	default.value = </div>
+}
+
 ]]>
 
                     </TypoScript>
