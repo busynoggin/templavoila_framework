@@ -1,7 +1,7 @@
 <?php
 if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 
-$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['includeStaticTypoScriptSourcesAtEnd'][] = 'BusyNoggin\\TemplavoilaFramework\\Framework->includeTypoScriptForFrameworkCoreAndSkins';
+$TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tstemplate.php']['includeStaticTypoScriptSourcesAtEnd'][] = BusyNoggin\TemplavoilaFramework\Framework::class . '->includeTypoScriptForFrameworkCoreAndSkins';
 
 // Update TemplaVoila with special stylesheet and Javascript
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
@@ -20,5 +20,3 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'] = 
 	(array) $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['templavoila']['staticDataStructures'],
 	$staticDataStructures
 );
-
-?>

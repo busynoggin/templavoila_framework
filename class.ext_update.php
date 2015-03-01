@@ -382,5 +382,3 @@ class ext_update {
 		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
 	}
 }
-
-?>

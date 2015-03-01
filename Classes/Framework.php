@@ -46,7 +46,7 @@ class Framework {
 	 * @return	string
 	 */
 	public static function getCurrentSkin($pageId) {
-		$tmpl = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance("TYPO3\\CMS\Core\TypoScript\ExtendedTemplateService");
+		$tmpl = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(TYPO3\CMS\Core\TypoScript\ExtendedTemplateService::class);
 		$tmpl->tt_track = 0;
 		$tmpl->init();
 		$templateRow = $tmpl->ext_getFirstTemplate($pageId);
@@ -469,5 +469,3 @@ class Framework {
 		return $staticDataStructureArray;
 	}
 }
-
-?>

@@ -94,5 +94,3 @@ class PageLink {
 		return $realConf;
 	}
 }
-
-?>
