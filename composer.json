@@ -1,0 +1,12 @@
+{
+	"name": "busy-noggin/templavoila-framework",
+	"type": "typo3-cms-extension",
+	"description": "The TemplaVoila Framework provides developers with a code base and set of best practices for producing any site design in TYPO3 quickly, easily and consistently. It also makes it easy to reuse code from project to project because of its consistent structure. The Framework allows content editors to create a variety of looks by changing the original layout using the columns and modules provided. This means they can often change a page layout without having to call a developer for a new template.",
+	"homepage": "http://www.busynoggin.com",
+	"license": ["GPL-2.0+"],
+	"keywords": ["TYPO3 CMS"],
+	"support": {
+		"issues": "http://www.busynoggin.com"
+	},
+	"version": "2.0.0"
+}
