@@ -98,7 +98,7 @@ class SkinSelector {
 				$tmplHTML[] = '</div>';
 			}
 
-			$pageRenderer = $GLOBALS['SOBE']->doc->getPageRenderer();
+			$pageRenderer = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Page\PageRenderer::class);
 			$pageRenderer->addCssInlineBlock('skinSelector',
 				'ul { margin-left: 0px; padding-left: 0px; padding-bottom: 20px; }
 				 li { list-style:none; padding: 8px 15px 8px 15px; clear:both; border-bottom: 1px solid #ccc }
