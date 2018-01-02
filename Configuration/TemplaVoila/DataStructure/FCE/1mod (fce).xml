@@ -5,15 +5,15 @@
 		<disableDataPreview>1</disableDataPreview>
 	</meta>
 	<ROOT type="array">
-		<tx_templavoila type="array">
+		<tx_templavoilaplus type="array">
 			<title>ROOT</title>
 			<description>Inner Mapping to #root-mapping-hook</description>
-		</tx_templavoila>
+		</tx_templavoilaplus>
 		<type>array</type>
 		<el type="array">
 			<field_module_distribution type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Module Distribution</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
@@ -25,11 +25,11 @@
 10.moduleDistribution = 11
 ]]>
                     </TypoScript>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_module_distribution>
 			<field_module_1_title type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>MODULE 1: Title</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
@@ -38,7 +38,7 @@
 					<proc type="array">
 						<HSC type="integer">1</HSC>
 					</proc>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -50,13 +50,13 @@
 			</field_module_1_title>
 			<field_module_1_show_title type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>MODULE 1: Show Title</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>
@@ -81,13 +81,13 @@
 			</field_module_1_show_title>
 			<field_module_1_bleed type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>MODULE 1: Bleed</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>int</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>check</type>
@@ -99,17 +99,17 @@
 			</field_module_1_bleed>
 			<field_module_group_library type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Module Group Library</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.moduleGroupSetup</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_module_group_library>
 			<field_module_1 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Module 1</title>
 					<description>Outer to first module</description>
 					<sample_data type="array">
@@ -132,7 +132,7 @@
 	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .module-1-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .module-1-c{register:tx_templavoilaplus_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
@@ -142,7 +142,7 @@
 	key.data = register:tvfwRenderMode
 	2 = LOAD_REGISTER
 	2 {
-		tvfwModuleBeginWrap.dataWrap = <div class="module-group single-module-group"><div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+		tvfwModuleBeginWrap.dataWrap = <div class="module-group single-module-group"><div class="{register:classModule1}{register:classModule1Distribution} module-1-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 		tvfwModuleEndWrap.dataWrap = </div></div><!-- end .single-module-group -->
 		tvfwModuleBodyBeginWrap.dataWrap = <div class="body"><div class="{register:moduleBodyClass1}">
 		tvfwModuleBodyEndWrap.dataWrap = </div></div>
@@ -200,7 +200,7 @@
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>

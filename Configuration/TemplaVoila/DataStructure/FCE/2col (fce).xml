@@ -5,21 +5,21 @@
 		<disableDataPreview>1</disableDataPreview>
 	</meta>
 	<ROOT type="array">
-		<tx_templavoila type="array">
+		<tx_templavoilaplus type="array">
 			<title>ROOT</title>
 			<description>Inner mapping to #root-mapping-hook</description>
-		</tx_templavoila>
+		</tx_templavoilaplus>
 		<type>array</type>
 		<el type="array">
 			<field_column_distribution type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Column Distribution</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>
@@ -52,13 +52,13 @@
 			</field_column_distribution>
 			<field_group_rule type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Bottom Rule</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>
@@ -83,17 +83,17 @@
 			</field_group_rule>
 			<field_column_group_library type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Column Group Library</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.columnGroupSetup</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_column_group_library>
 			<field_column_1 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Column 1</title>
 					<description>Outer to first column</description>
 					<sample_data type="array">
@@ -115,7 +115,7 @@
 	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-1-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-1-c{register:tx_templavoilaplus_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
@@ -183,7 +183,7 @@
                     </TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -199,7 +199,7 @@
 				</TCEforms>
 			</field_column_1>
 			<field_column_2 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Column 2</title>
 					<description>Outer to second column</description>
 					<sample_data type="array">
@@ -231,7 +231,7 @@
 	tempAggregateColumnModuleCss.data = register:aggregateColumnModuleCss
 	thisCss {
 		data = register:containerWidth
-		dataWrap = .column-2-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .column-2-c{register:tx_templavoilaplus_pi1.parentRec.uid} |
 		noTrimWrap = | {width:|px;}|
 	}
 	aggregateColumnModuleCss.dataWrap = {register:tempAggregateColumnModuleCss} {register:thisCss}
@@ -316,7 +316,7 @@
                     </TypoScript>
 					<oldStyleColumnNumber type="integer">1</oldStyleColumnNumber>
 					<enableDragDrop>1</enableDragDrop>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>

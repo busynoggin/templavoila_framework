@@ -4,14 +4,14 @@
 		<langDisable>1</langDisable>
 	</meta>
 	<ROOT type="array">
-		<tx_templavoila type="array">
+		<tx_templavoilaplus type="array">
 			<title>ROOT</title>
 			<description>Inner mapping to #root-mapping-hook</description>
-		</tx_templavoila>
+		</tx_templavoilaplus>
 		<type>array</type>
 		<el type="array">
 			<field_image type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Image</title>
 					<description>Outer mapping to #image-mapping-hook</description>
 					<sample_data type="array">
@@ -19,8 +19,8 @@
 					</sample_data>
 					<eType>image</eType>
 					<tags>div:outer</tags>
-					<TypoScript>
-<![CDATA[
+					<TypoScript><![CDATA[
+
 10 = LOAD_REGISTER
 10 {
 	plainImageMaxWidth1.field = field_max_width
@@ -88,16 +88,16 @@
 	tvfwModFeatureStyles.dataWrap = {register:plainImageMarginTop}{register:plainImageMarginBottom}{register:plainImageMarginRight}{register:plainImageMarginLeft}{register:plainImageDisplay}{register:plainImageZindex}position:relative;
 	thisCss {
 		data = register:tvfwModFeatureStyles
-		dataWrap = #c{register:tx_templavoila_pi1.parentRec.uid} img |
+		dataWrap = #c{register:tx_templavoilaplus_pi1.parentRec.uid} img |
 		noTrimWrap = | {|}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
 
 
-]]>
-					</TypoScript>
-				</tx_templavoila>
+
+					]]></TypoScript>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -115,7 +115,7 @@
 			</field_image>
 			<field_link type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Link</title>
 					<sample_data type="array">
@@ -125,7 +125,7 @@
 					<proc type="array">
 						<HSC type="integer">1</HSC>
 					</proc>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -139,8 +139,10 @@
 								<type>popup</type>
 								<title>Link</title>
 								<icon>link_popup.gif</icon>
-								<script>browse_links.php?mode=wizard</script>
 								<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+								<module type="array">
+									<name>wizard_link</name>
+								</module>
 							</link>
 						</wizards>
 					</config>
@@ -149,7 +151,7 @@
 			</field_link>
 			<field_alt_text type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Alt Image Text</title>
 					<sample_data type="array">
@@ -159,7 +161,7 @@
 					<proc type="array">
 						<HSC type="integer">1</HSC>
 					</proc>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -171,7 +173,7 @@
 			</field_alt_text>
 			<field_max_width type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Image Width (Leave default of 0 to restrain to container width)</title>
 					<description>No Mapping</description>
@@ -179,7 +181,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>int</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -197,7 +199,7 @@
 			</field_max_width>
 			<field_margin_top type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Margin-Top</title>
 					<description>No Mapping</description>
@@ -205,7 +207,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>int</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -223,7 +225,7 @@
 			</field_margin_top>
 			<field_margin_bottom type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Margin-Bottom</title>
 					<description>No Mapping</description>
@@ -231,7 +233,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>int</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -249,7 +251,7 @@
 			</field_margin_bottom>
 			<field_margin_right type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Margin-Right</title>
 					<description>No Mapping</description>
@@ -257,7 +259,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>int</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -275,7 +277,7 @@
 			</field_margin_right>
 			<field_margin_left type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Margin-Left</title>
 					<description>No Mapping</description>
@@ -283,7 +285,7 @@
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>int</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -301,7 +303,7 @@
 			</field_margin_left>
 			<field_z_index type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Z-Index (A number that determines stacking order. Normally left blank)</title>
 					<sample_data type="array">
@@ -311,7 +313,7 @@
 					<proc type="array">
 						<HSC type="integer">1</HSC>
 					</proc>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -323,14 +325,14 @@
 			</field_z_index>
 			<field_display type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Display</title>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>

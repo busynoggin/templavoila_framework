@@ -2390,7 +2390,7 @@ plugin.tx_templavoilaframework {
 			originalColumnWidth3.data = register:columnWidth3
 			originalClassColumn2Distribution.data = register:classColumn2Distribution
 			originalClassColumn3Distribution.data = register:classColumn3Distribution
-			originalParentID.data = register:tx_templavoila_pi1.parentRec.uid
+			originalParentID.data = register:tx_templavoilaplus_pi1.parentRec.uid
 		}
 	}
 
@@ -3295,10 +3295,10 @@ page {
 
 # Let TemplaVoila render the page content.
 page.10 = USER
-page.10.userFunc = tx_templavoila_pi1->main_page
+page.10.userFunc = Ppi\TemplaVoilaPlus\Controller\FrontendController->main_page
 
 # Temporarily disabled - See http://bugs.typo3.org/view.php?id=17890
 # page.10.renderUnmapped = false
 
 page.10.disableExplosivePreview = 1
-plugin.tx_templavoila_pi1.disableExplosivePreview = 1
+plugin.tx_templavoilaplus_pi1.disableExplosivePreview = 1

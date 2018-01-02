@@ -4,15 +4,15 @@
 		<langDisable>1</langDisable>
 	</meta>
 	<ROOT type="array">
-		<tx_templavoila type="array">
+		<tx_templavoilaplus type="array">
 			<title>ROOT</title>
 			<description>Inner mapping to #root-mapping-hook</description>
-		</tx_templavoila>
+		</tx_templavoilaplus>
 		<type>array</type>
 		<el type="array">
 			<field_space_after type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Space After</title>
 					<sample_data type="array">
@@ -20,7 +20,7 @@
 					</sample_data>
 					<eType>select</eType>
 					<TypoScript>
-<![CDATA[
+
 
 10 = CASE
 10 {
@@ -39,9 +39,9 @@
 	}
 }
 
-]]>
+
                     </TypoScript>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>
@@ -101,7 +101,7 @@
 				</TCEforms>
 			</field_space_after>
 			<field_image type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Image</title>
 					<description>Outer mapping to #image-mapping-hook</description>
 					<sample_data type="array">
@@ -109,8 +109,8 @@
 					</sample_data>
 					<eType>image</eType>
 					<tags>div:outer</tags>
-					<TypoScript>
-<![CDATA[
+					<TypoScript><![CDATA[
+
 
 10 = LOAD_REGISTER
 10 {
@@ -127,7 +127,7 @@
 	1 = TEXT
 	1.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">
 	2 = TEXT
-	2.dataWrap = <div class="module-feature module-feature-c{register:tx_templavoila_pi1.parentRec.uid}">
+	2.dataWrap = <div class="module-feature module-feature-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 	default = TEXT
 	default.dataWrap = <div class="moduleFeature" style="margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:moduleSpaceAfter}margin-right:-{register:moduleBodyTopBuffer}px;">
 }
@@ -156,15 +156,15 @@
 	tvfwModFeatureStyles.dataWrap = display:block;margin-top:-{register:moduleBodyTopBuffer}px;margin-left:-{register:moduleBodyLeftBuffer}px;{register:tvfwMarginBottom};
 	thisCss {
 		data = register:tvfwModFeatureStyles
-		dataWrap = .module-feature-c{register:tx_templavoila_pi1.parentRec.uid} |
+		dataWrap = .module-feature-c{register:tx_templavoilaplus_pi1.parentRec.uid} |
 		noTrimWrap = | {|}|
 	}
 	aggregateCss.dataWrap = {register:tempAggregateCss} {register:thisCss}
 }
 
-]]>
-					</TypoScript>
-				</tx_templavoila>
+
+					]]></TypoScript>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -182,7 +182,7 @@
 			</field_image>
 			<field_alt_text type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Alt Image Text</title>
 					<sample_data type="array">
@@ -192,7 +192,7 @@
 					<proc type="array">
 						<HSC type="integer">1</HSC>
 					</proc>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -204,7 +204,7 @@
 			</field_alt_text>
 			<field_link type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<preview>disable</preview>
 					<title>Link</title>
 					<sample_data type="array">
@@ -214,7 +214,7 @@
 					<proc type="array">
 						<HSC type="integer">1</HSC>
 					</proc>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>input</type>
@@ -228,8 +228,10 @@
 								<type>popup</type>
 								<title>Link</title>
 								<icon>link_popup.gif</icon>
-								<script>browse_links.php?mode=wizard</script>
 								<JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+								<module type="array">
+									<name>wizard_link</name>
+								</module>
 							</link>
 						</wizards>
 					</config>

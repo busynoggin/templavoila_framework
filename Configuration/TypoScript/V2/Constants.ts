@@ -81,51 +81,51 @@ plugin.tx_templavoilaframework {
 
 	twoColumnGroup {
 		column-1 {
-			beginWrap = <div class="{register:columnGroupClass} two-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap = <div class="{register:columnGroupClass} two-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 		column-2 {
 			beginWrap.default = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:originalParentID}">
-			beginWrap.level-2 = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap.level-2 = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div></div><!-- end .two-column-group  -->
 		}
 	}
 
 	threeColumnGroup {
 		column-1 {
-			beginWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap = <div class="{register:columnGroupClass} three-column-group{register:classColumnGroupDistribution}"><div class="column{register:classColumn1Distribution} column-1 column-1-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 		column-2 {
 			beginWrap.default = <div class="column{register:originalClassColumn2Distribution} column-2 column-2-c{register:originalParentID}">
-			beginWrap.level-2 = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap.level-2 = <div class="column{register:classColumn2Distribution} column-2 column-2-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 
 		column-3 {
 			beginWrap.default = <div class="column{register:originalClassColumn3Distribution} column-3 column-3-c{register:originalParentID}">
-			beginWrap.level-2 = <div class="column{register:classColumn3Distribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap.level-2 = <div class="column{register:classColumn3Distribution} column-3 column-3-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div></div><!-- end .three-column-group  -->
 		}
 	}
 
 	fourColumnGroup {
 		column-1 {
-			beginWrap = <div class="{register:columnGroupClass} four-column-group"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap = <div class="{register:columnGroupClass} four-column-group"><div class="column{register:classColumnDistribution} quarter column-1 column-1-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 		column-2 {
-			beginWrap = <div class="column{register:classColumnDistribution} column-2 column-2-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap = <div class="column{register:classColumnDistribution} column-2 column-2-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 
 		column-3 {
-			beginWrap = <div class="column{register:classColumnDistribution} column-3 column-3-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap = <div class="column{register:classColumnDistribution} column-3 column-3-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div>
 		}
 
 		column-4 {
-			beginWrap = <div class="column{register:classColumnDistribution} column-4 column-4-c{register:tx_templavoila_pi1.parentRec.uid}">
+			beginWrap = <div class="column{register:classColumnDistribution} column-4 column-4-c{register:tx_templavoilaplus_pi1.parentRec.uid}">
 			endWrap = </div></div><!-- end .four-column-group  -->
 		}
 	}

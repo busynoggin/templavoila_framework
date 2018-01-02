@@ -127,7 +127,7 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function pageHasTemplateObjects($pid) {
-		$templateObjects = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecordsByField('tx_templavoila_tmplobj', 'pid', $pid);
+		$templateObjects = \TYPO3\CMS\Backend\Utility\BackendUtility::getRecordsByField('tx_templavoilaplus_tmplobj', 'pid', $pid);
 		return count($templateObjects) > 0;
 	}
 
@@ -254,7 +254,7 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function pageDataStructureNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'pages', 'tx_templavoila_ds LIKE :path OR tx_templavoila_next_ds LIKE :path');
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'pages', 'tx_templavoilaplus_ds LIKE :path OR tx_templavoilaplus_next_ds LIKE :path');
 		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
@@ -272,10 +272,10 @@ class ext_update {
 		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/Page/';
 
 		$fieldsValues = array(
-			'tx_templavoila_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')',
-			'tx_templavoila_next_ds' => 'replace(tx_templavoila_next_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
+			'tx_templavoilaplus_ds' => 'replace(tx_templavoilaplus_ds, \'' . $oldPath . '\', \'' . $newPath . '\')',
+			'tx_templavoilaplus_next_ds' => 'replace(tx_templavoilaplus_next_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('pages', 'tx_templavoila_ds LIKE \'' . $oldPath . '%\' OR tx_templavoila_next_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoila_ds,tx_templavoila_next_ds');
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('pages', 'tx_templavoilaplus_ds LIKE \'' . $oldPath . '%\' OR tx_templavoilaplus_next_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoilaplus_ds,tx_templavoilaplus_next_ds');
 	}
 
 	/**
@@ -284,7 +284,7 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function contentDataStructureNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tt_content', 'tx_templavoila_ds LIKE :path');
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tt_content', 'tx_templavoilaplus_ds LIKE :path');
 		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
@@ -302,9 +302,9 @@ class ext_update {
 		$newPath = 'EXT:templavoila_framework/Configuration/TemplaVoila/DataStructure/FCE/';
 
 		$fieldsValues = array(
-			'tx_templavoila_ds' => 'replace(tx_templavoila_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
+			'tx_templavoilaplus_ds' => 'replace(tx_templavoilaplus_ds, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tt_content', 'tx_templavoila_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoila_ds');
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tt_content', 'tx_templavoilaplus_ds LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'tx_templavoilaplus_ds');
 	}
 
 	/**
@@ -313,7 +313,7 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function templateObjectDataStructureNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoila_tmplobj', 'fileref LIKE :path');
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoilaplus_tmplobj', 'fileref LIKE :path');
 		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
@@ -333,7 +333,7 @@ class ext_update {
 		$fieldsValues = array(
 			'datastructure' => 'replace(datastructure, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'datastructure LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'datastructure');
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoilaplus_tmplobj', 'datastructure LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'datastructure');
 
 
 		$oldPath = 'EXT:templavoila_framework/core_templates/datastructures/fce/';
@@ -342,7 +342,7 @@ class ext_update {
 		$fieldsValues = array(
 			'datastructure' => 'replace(datastructure, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'datastructure LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'datastructure');
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoilaplus_tmplobj', 'datastructure LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'datastructure');
 	}
 
 	/**
@@ -351,7 +351,7 @@ class ext_update {
 	 * @return boolean
 	 */
 	protected function templateObjectFileRefNeedsUpdate() {
-		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoila_tmplobj', 'fileref LIKE :path');
+		$statement = $GLOBALS['TYPO3_DB']->prepare_SELECTquery('COUNT(*)', 'tx_templavoilaplus_tmplobj', 'fileref LIKE :path');
 		$statement->execute(array(':path' => 'EXT:templavoila_framework/core_templates/%'));
 		$row = $statement->fetch(\TYPO3\CMS\Core\Database\PreparedStatement::FETCH_NUM);
 		$statement->free();
@@ -371,7 +371,7 @@ class ext_update {
 		$fieldsValues = array(
 			'fileref' => 'replace(fileref, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoilaplus_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
 
 		$oldPath = 'EXT:templavoila_framework/core_templates/fce/';
 		$newPath = 'EXT:templavoila_framework/Resources/Private/Templates/FCE/';
@@ -379,6 +379,6 @@ class ext_update {
 		$fieldsValues = array(
 			'fileref' => 'replace(fileref, \'' . $oldPath . '\', \'' . $newPath . '\')'
 		);
-		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoila_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
+		$GLOBALS['TYPO3_DB']->exec_UPDATEquery('tx_templavoilaplus_tmplobj', 'fileref LIKE \'' . $oldPath . '%\'', $fieldsValues, $no_quote_fields = 'fileref');
 	}
 }

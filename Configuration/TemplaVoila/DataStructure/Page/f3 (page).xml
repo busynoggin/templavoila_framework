@@ -5,22 +5,22 @@
 		<disableDataPreview>1</disableDataPreview>
 	</meta>
 	<ROOT type="array">
-		<tx_templavoila type="array">
+		<tx_templavoilaplus type="array">
 			<title>ROOT</title>
 			<description>Inner mapping to body tag. Remember to also inclube body tag in the header parts</description>
-		</tx_templavoila>
+		</tx_templavoilaplus>
 		<type>array</type>
 		<el type="array">
 			<field_auto_header_switch type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Page Title as Content Headline</title>
 					<description>No mapping</description>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>
@@ -45,14 +45,14 @@
 			</field_auto_header_switch>
 			<field_feature_bleed_switch type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Bleed Feature Content</title>
 					<description>No mapping</description>
 					<sample_data type="array">
 						<numIndex index="0"></numIndex>
 					</sample_data>
 					<eType>select</eType>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>select</type>
@@ -77,7 +77,7 @@
 			</field_feature_bleed_switch>
 			<field_ds_config_library type="array">
 				<type>no_map</type>
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>DS Configuration Library</title>
 					<description>No mapping</description>
 					<sample_data type="array">
@@ -85,10 +85,10 @@
 					</sample_data>
 					<eType>TypoScriptObject</eType>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.dsConfig</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_ds_config_library>
 			<field_pre_code_header type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Header Pre Code</title>
 					<description>Outer mapping to #preCodeHeader. This code will appear right after the body tag and before the header</description>
 					<sample_data type="array">
@@ -97,10 +97,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeHeader</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_header>
 			<field_header type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Header</title>
 					<description>Outer to #header</description>
 					<sample_data type="array">
@@ -109,10 +109,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.header</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_header>
 			<field_post_code_header type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Header Post Code</title>
 					<description>Outer mapping to #postCodeHeader. This code will appear right after the header</description>
 					<sample_data type="array">
@@ -121,10 +121,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeHeader</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_post_code_header>
 			<field_pre_code_content_block_1 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Main Content Pre Code</title>
 					<description>Outer mapping to #preCodeContentBlock-1. This code will appear right before the Main Content.</description>
 					<sample_data type="array">
@@ -133,10 +133,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-1</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_content_block_1>
 			<field_content_block_1 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Main Content (Content Block 1)</title>
 					<description>Outer to #contentBlock-1</description>
 					<sample_data type="array">
@@ -231,7 +231,7 @@
 					</TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -247,7 +247,7 @@
 				</TCEforms>
 			</field_content_block_1>
 			<field_post_code_content_block_1 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Main Content Post Code</title>
 					<description>Outer mapping to #postCodeContentBlock-1. This code will appear right after the Main Content.</description>
 					<sample_data type="array">
@@ -256,10 +256,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-1</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_post_code_content_block_1>
 			<field_pre_code_content type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Content Pre Code</title>
 					<description>Outer mapping to #preCodeContent. This code will appear right after feature and header and before any Generated Content or Content Block</description>
 					<sample_data type="array">
@@ -268,10 +268,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContent</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_content>
 			<field_feature type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Feature Content</title>
 					<description>Outer to #feature</description>
 					<sample_data type="array">
@@ -354,7 +354,7 @@
 					</TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -370,7 +370,7 @@
 				</TCEforms>
 			</field_feature>
 			<field_pre_code_feature type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Feature Pre Code</title>
 					<description>Outer mapping to #preCodeFeature. This code will appear just before the feature if there is one. It will not appear if there is no feature.</description>
 					<sample_data type="array">
@@ -379,10 +379,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.evaluatedPreCodeFeature</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_feature>
 			<field_post_code_feature type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Feature Post Code</title>
 					<description>Outer mapping to #postCodeFeature. This code will appear just after the feature if there is one. It will not appear if there is no feature.</description>
 					<sample_data type="array">
@@ -391,10 +391,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.evaluatedPostCodeFeature</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_post_code_feature>
 			<field_pre_code_content_block_2 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Secondary Content Pre Code</title>
 					<description>Outer mapping to #preCodeContentBlock-2. This code will appear right before the Secondary Content.</description>
 					<sample_data type="array">
@@ -403,10 +403,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-2</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_content_block_2>
 			<field_content_block_2 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Secondary Content (Content Block 2)</title>
 					<description>Outer to #contentBlock-2</description>
 					<sample_data type="array">
@@ -473,7 +473,7 @@
 					</TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -489,7 +489,7 @@
 				</TCEforms>
 			</field_content_block_2>
 			<field_post_code_content_block_2 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Secondary Content Post Code</title>
 					<description>Outer mapping to #postCodeContentBlock-2. This code will appear right after the Secondary Content.</description>
 					<sample_data type="array">
@@ -498,10 +498,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-2</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_post_code_content_block_2>
 			<field_pre_code_content_block_3 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Additional Content Pre Code</title>
 					<description>Outer mapping to #preCodeContentBlock-3. This code will appear right before the Additional Content.</description>
 					<sample_data type="array">
@@ -510,10 +510,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeContentBlock-3</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_content_block_3>
 			<field_content_block_3 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Additional Content (Content Block 3)</title>
 					<description>Outer to #contentBlock-3</description>
 					<sample_data type="array">
@@ -580,7 +580,7 @@
 					</TypoScript>
 					<enableDragDrop>1</enableDragDrop>
 					<oldStyleColumnNumber type="integer">0</oldStyleColumnNumber>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 				<TCEforms type="array">
 					<config type="array">
 						<type>group</type>
@@ -596,7 +596,7 @@
 				</TCEforms>
 			</field_content_block_3>
 			<field_post_code_content_block_3 type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Addtional Content Post Code</title>
 					<description>Outer mapping to #postCodeContentBlock-3. This code will appear right after the Addtional Content.</description>
 					<sample_data type="array">
@@ -605,10 +605,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeContentBlock-3</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_post_code_content_block_3>
 			<field_pre_code_footer type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Footer Pre Code</title>
 					<description>Outer mapping to #preCodeFooter. This code will appear right after the footer and before the closing body tag</description>
 					<sample_data type="array">
@@ -617,10 +617,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.preCodeFooter</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_pre_code_footer>
 			<field_footer type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Footer</title>
 					<description>Outer to #footer</description>
 					<sample_data type="array">
@@ -629,10 +629,10 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.footer</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_footer>
 			<field_post_code_footer type="array">
-				<tx_templavoila type="array">
+				<tx_templavoilaplus type="array">
 					<title>Footer Post Code</title>
 					<description>Outer mapping to #postCodeFooter. This code will appear right after the footer and before the closing body tag</description>
 					<sample_data type="array">
@@ -641,7 +641,7 @@
 					<eType>TypoScriptObject</eType>
 					<tags>div:outer</tags>
 					<TypoScriptObjPath>plugin.tx_templavoilaframework.postCodeFooter</TypoScriptObjPath>
-				</tx_templavoila>
+				</tx_templavoilaplus>
 			</field_post_code_footer>
 		</el>
 	</ROOT>
