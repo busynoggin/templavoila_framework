@@ -28,7 +28,7 @@ generatedContent-2.source =
 # This includes jQuery, enables jQuery.noConflict, and includes core.js for equal height modules.
 # Alternatively, you can disable the parts individually
 #
-# page.includeJSlibs.tf_jquery >
+# page.includeJSLibs.tf_jquery >
 # page.includeJS.tf_core >
 # page.jsInline.1 >
 enableJQuery = 1
