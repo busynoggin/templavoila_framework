@@ -9,4 +9,10 @@
 		"issues": "http://www.busynoggin.com"
 	},
 	"version": "2.0.0"
+	,
+    "autoload": {
+        "psr-4": {
+            "BusyNoggin\\TemplavoilaFramework\\": "Classes/"
+        }
+    }
 }
